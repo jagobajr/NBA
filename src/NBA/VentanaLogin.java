@@ -69,7 +69,7 @@ public class VentanaLogin extends JFrame {
 		
 		textField_1 = new JTextField();
 		textField_1.setBackground(UIManager.getColor("PopupMenu.selectionBackground"));
-		textField_1.setBounds(6, 150, 300, 26);
+		textField_1.setBounds(6, 150, 300, 36);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
