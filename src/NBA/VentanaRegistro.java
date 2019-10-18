@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class VentanaMercado extends JFrame {
+public class VentanaRegistro extends JFrame {
 
 	private JPanel contentPane;
 
@@ -18,7 +18,7 @@ public class VentanaMercado extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaMercado frame = new VentanaMercado();
+					VentanaRegistro frame = new VentanaRegistro();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,10 +30,9 @@ public class VentanaMercado extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaMercado() {
-		setTitle("MERCADO");
+	public VentanaRegistro() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 390, 500);
+		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -41,4 +40,3 @@ public class VentanaMercado extends JFrame {
 	}
 
 }
- 

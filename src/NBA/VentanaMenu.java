@@ -40,7 +40,7 @@ public class VentanaMenu extends JFrame {
 	public VentanaMenu() {
 		setBackground(new Color(105, 105, 105));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 230, 405);
+		setBounds(100, 100, 231, 405);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(128, 128, 128));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
