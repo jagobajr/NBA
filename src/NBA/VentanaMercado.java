@@ -59,7 +59,7 @@ public class VentanaMercado extends JFrame {
 		contentPane.add(btnVender);
 		
 		JLabel lblComprar = new JLabel("Comprar");
-		lblComprar.setBounds(158, 46, 46, 14);
+		lblComprar.setBounds(158, 46, 82, 14);
 		contentPane.add(lblComprar);
 		
 		JLabel lblNombrePuntosPrecio = new JLabel("Nombre  Puntos  Precio  Finaliza en  Media");
