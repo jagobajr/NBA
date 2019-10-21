@@ -64,10 +64,11 @@ public class VentanaMercado extends JFrame {
 		
 		JLabel lblNombrePuntosPrecio = new JLabel("Nombre  Puntos  Precio  Finaliza en  Media");
 		lblNombrePuntosPrecio.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNombrePuntosPrecio.setBounds(20, 67, 354, 14);
+		lblNombrePuntosPrecio.setBounds(20, 67, 344, 14);
 		contentPane.add(lblNombrePuntosPrecio);
 		
 		JPanel panelJugador = new JPanel();
+		panelJugador.setBackground(new Color(245, 255, 250));
 		panelJugador.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panelJugador.setBounds(10, 92, 364, 73);
 		contentPane.add(panelJugador);
@@ -94,6 +95,7 @@ public class VentanaMercado extends JFrame {
 		panelJugador.add(label_Puntos);
 		
 		JPanel panel_jug2 = new JPanel();
+		panel_jug2.setBackground(new Color(245, 255, 250));
 		panel_jug2.setLayout(null);
 		panel_jug2.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_jug2.setBounds(10, 166, 364, 73);
@@ -120,6 +122,7 @@ public class VentanaMercado extends JFrame {
 		panel_jug2.add(label_8);
 		
 		JPanel panel_jug3 = new JPanel();
+		panel_jug3.setBackground(new Color(245, 255, 250));
 		panel_jug3.setLayout(null);
 		panel_jug3.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_jug3.setBounds(10, 241, 364, 73);
@@ -146,6 +149,7 @@ public class VentanaMercado extends JFrame {
 		panel_jug3.add(label_13);
 		
 		JPanel panel_jug4 = new JPanel();
+		panel_jug4.setBackground(new Color(245, 255, 250));
 		panel_jug4.setLayout(null);
 		panel_jug4.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_jug4.setBounds(10, 316, 364, 73);
@@ -172,6 +176,7 @@ public class VentanaMercado extends JFrame {
 		panel_jug4.add(label_18);
 		
 		Panel panel_jug5 = new Panel();
+		panel_jug5.setBackground(new Color(230, 230, 250));
 		panel_jug5.setBounds(10, 391, 364, 60);
 		contentPane.add(panel_jug5);
 		panel_jug5.setLayout(null);
