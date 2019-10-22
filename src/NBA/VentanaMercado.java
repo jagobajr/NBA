@@ -212,6 +212,18 @@ public class VentanaMercado extends JFrame {
 		Label label_dinero4 = new Label("Dinero\r\n");
 		label_dinero4.setBounds(252, 28, 53, 22);
 		panel_jug5.add(label_dinero4);
+		
+		JButton btnAtras = new JButton("Atras");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaMenu nuevaVentana = new VentanaMenu();
+				nuevaVentana.setVisible(true);
+				VentanaMercado.this.dispose();
+			}
+			
+		});
+		btnAtras.setBounds(10, 0, 115, 14);
+		contentPane.add(btnAtras);
 	}
 }
  

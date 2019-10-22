@@ -9,7 +9,11 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
+import javax.swing.JButton;
 
 public class VentanaClasificacion extends JFrame {
 
@@ -215,5 +219,17 @@ public class VentanaClasificacion extends JFrame {
 		puntos_10.setColumns(10);
 		puntos_10.setBounds(262, 335, 51, 26);
 		contentPane.add(puntos_10);
+		
+		JButton btnAtras = new JButton("Atras");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaMenu nuevaVentana = new VentanaMenu();
+				nuevaVentana.setVisible(true);
+				VentanaClasificacion.this.dispose();
+			}
+			
+		});
+		btnAtras.setBounds(15, 3, 115, 29);
+		contentPane.add(btnAtras);
 	}
 }

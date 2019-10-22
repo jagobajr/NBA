@@ -24,7 +24,7 @@ public class VentanaEquipo extends JFrame {
 	private JTextField DatosBase;
 
 	/**
-	 * Launch the application.
+	 * Launch the application..
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
