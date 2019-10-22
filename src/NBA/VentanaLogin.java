@@ -9,10 +9,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.JProgressBar;
 import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class VentanaLogin extends JFrame {
 
@@ -64,7 +68,7 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblContrasea = new JLabel("Contraseña:");
+		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
 		lblContrasea.setBounds(6, 119, 105, 16);
 		contentPane.add(lblContrasea);
 		
@@ -74,13 +78,21 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
-		JLabel label = new JLabel("");
-		label.setBounds(287, 77, 61, 16);
-		contentPane.add(label);
+		JButton btnAqui = new JButton("Aqui");
+		btnAqui.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaRegistro nuevaVentana = new VentanaRegistro();
+				nuevaVentana.setVisible(true);
+				VentanaLogin.this.dispose();
+			}
+				
+		});
+		btnAqui.setBackground(Color.WHITE);
+		btnAqui.setBounds(220, 278, 72, 29);
+		contentPane.add(btnAqui);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("/Users/jagoba.jr/Desktop/DEUSTO📚💎/19-20/Programacion/Imagenes para el proyecto/LOGO.png"));
-		lblNewLabel.setBounds(158, 106, 210, 305);
-		contentPane.add(lblNewLabel);
+		JLabel lblNoTienesUna = new JLabel("No tienes una cuenta? Registrate");
+		lblNoTienesUna.setBounds(15, 282, 207, 20);
+		contentPane.add(lblNoTienesUna);
 	}
 }

@@ -71,7 +71,7 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(correo);
 		correo.setColumns(10);
 		
-		JLabel lblContrasea = new JLabel("Contraseña:");
+		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
 		lblContrasea.setEnabled(false);
 		lblContrasea.setBounds(81, 209, 128, 16);
 		contentPane.add(lblContrasea);

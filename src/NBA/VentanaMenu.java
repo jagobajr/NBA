@@ -53,13 +53,16 @@ public class VentanaMenu extends JFrame {
 		contentPane.add(lblMenu);
 		
 		JButton btnClasificacion = new JButton("CLASIFICACION");
-		btnClasificacion.setEnabled(false);
-		btnClasificacion.setBackground(Color.DARK_GRAY);
+		btnClasificacion.setBackground(Color.WHITE);
 		btnClasificacion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				VentanaClasificacion nuevaVentana = new VentanaClasificacion();
+				nuevaVentana.setVisible(true);
+				VentanaMenu.this.dispose();
+
 			}
 		});
-		btnClasificacion.setForeground(Color.WHITE);
+		btnClasificacion.setForeground(Color.BLACK);
 		btnClasificacion.setBounds(6, 95, 218, 57);
 		contentPane.add(btnClasificacion);
 		
@@ -73,12 +76,19 @@ public class VentanaMenu extends JFrame {
 		contentPane.add(btnEquipo);
 		
 		JButton btnMercado = new JButton("MERCADO");
-		btnMercado.setEnabled(false);
+		btnMercado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaMercado nuevaVentana = new VentanaMercado();
+				nuevaVentana.setVisible(true);
+				VentanaMenu.this.dispose();
+			}
+				
+		});
 		btnMercado.setBounds(6, 189, 218, 57);
 		contentPane.add(btnMercado);
 		
 		JButton btnCerrarSesion = new JButton("CERRAR SESION");
-		btnCerrarSesion.setBounds(43, 335, 142, 42);
+		btnCerrarSesion.setBounds(38, 291, 142, 42);
 		contentPane.add(btnCerrarSesion);
 	}
 
