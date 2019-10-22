@@ -41,7 +41,8 @@ public class VentanaActividad extends JFrame {
 		setContentPane(contentPane);
 		
 		
-		JButton btnAtras = new JButton("Atras");
+		
+		JButton btnAtras = new JButton("Atras ");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaMercado nuevaVentana = new VentanaMercado();
