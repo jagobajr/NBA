@@ -17,7 +17,6 @@ import java.awt.event.ActionEvent;
 public class VentanaMenu extends JFrame {
 
 	private JPanel contentPane;
-
 	/**
 	 * Launch the application.
 	 */
