@@ -101,7 +101,7 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(lblEdadopcional);
 		
 		JSpinner spinner = new JSpinner();
-		spinner.setBounds(245, 105, 34, 26);
+		spinner.setBounds(245, 105, 56, 26);
 		contentPane.add(spinner);
 	}
 }
