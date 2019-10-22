@@ -42,25 +42,13 @@ public class VentanaComprar extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaComprar() {
-		setTitle("MERCADO");
+		setTitle("COMPRAR");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 390, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JButton btnComprar = new JButton("Comprar");
-		btnComprar.setBounds(10, 24, 170, 23);
-		contentPane.add(btnComprar);
-		
-		JButton btnVender = new JButton("Vender");
-		btnVender.setBounds(176, 24, 188, 23);
-		contentPane.add(btnVender);
-		
-		JLabel lblComprar = new JLabel("Comprar");
-		lblComprar.setBounds(158, 46, 82, 14);
-		contentPane.add(lblComprar);
 		
 		JLabel lblNombrePuntosPrecio = new JLabel("Nombre  Puntos  Precio  Finaliza en  Media");
 		lblNombrePuntosPrecio.setHorizontalAlignment(SwingConstants.CENTER);
@@ -216,14 +204,26 @@ public class VentanaComprar extends JFrame {
 		JButton btnAtras = new JButton("Atras");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				VentanaMercado nuevaVentana = new VentanaMercado();
+				nuevaVentana.setVisible(true);
+				VentanaComprar.this.dispose();
+			}
+			
+		});
+		btnAtras.setBounds(10, 0, 115, 22);
+		contentPane.add(btnAtras);
+		
+		JButton btnMenu = new JButton("Menu");
+		btnMenu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
 				VentanaMenu nuevaVentana = new VentanaMenu();
 				nuevaVentana.setVisible(true);
 				VentanaComprar.this.dispose();
 			}
 			
 		});
-		btnAtras.setBounds(10, 0, 115, 14);
-		contentPane.add(btnAtras);
+		btnMenu.setBounds(10, 29, 115, 22);
+		contentPane.add(btnMenu);
 	}
 }
  
