@@ -8,8 +8,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 import java.awt.Dialog.ModalExclusionType;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import java.awt.Color;
@@ -131,5 +135,18 @@ public class VentanaEquipo extends JFrame {
 		JLabel FotoBase = new JLabel("New label");
 		FotoBase.setBounds(283, 256, 55, 53);
 		contentPane.add(FotoBase);
+		
+		JButton btnAtras = new JButton("Atras");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaMenu nuevaVentana = new VentanaMenu();
+				nuevaVentana.setVisible(true);
+				VentanaEquipo.this.dispose();
+			}
+			
+		});
+		btnAtras.setBounds(15, 3, 43, 143);
+		contentPane.add(btnAtras);
 	}
+	
 }

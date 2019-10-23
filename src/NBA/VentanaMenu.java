@@ -68,12 +68,18 @@ public class VentanaMenu extends JFrame {
 		
 		JButton btnEquipo = new JButton("PLANTILLA");
 		btnEquipo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaEquipo ventanaQuinteto= new VentanaEquipo();
+				ventanaQuinteto.setVisible(true);
+				VentanaMenu.this.dispose();
 			}
 		});
-		btnEquipo.setEnabled(false);
+		
 		btnEquipo.setBounds(6, 147, 218, 47);
 		contentPane.add(btnEquipo);
+		
+		
+		
 		
 		JButton btnMercado = new JButton("MERCADO");
 		btnMercado.addActionListener(new ActionListener() {
