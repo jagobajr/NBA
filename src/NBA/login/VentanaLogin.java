@@ -28,7 +28,7 @@ public class VentanaLogin extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtusuario;
-	private JPasswordField txtcontraseña;
+	private JPasswordField txtcontra;
 
 	/**
 	 * Launch the application.
@@ -66,7 +66,7 @@ public class VentanaLogin extends JFrame {
 				SqlUsuarios modSql = new SqlUsuarios();
 			    Usuarios mod = new Usuarios();
 			        
-			    String pass = new String(txtcontraseña.getPassword());
+			    String pass = new String(txtcontra.getPassword());
 			        
 			    if (!txtusuario.getText().equals("") && !pass.equals("")) {
 			            
@@ -94,7 +94,7 @@ public class VentanaLogin extends JFrame {
 
 			private void limpiar() {
 				txtusuario.setText("");
-		        txtcontraseña.setText("");
+		        txtcontra.setText("");
 				
 			}
 		});
@@ -133,8 +133,8 @@ public class VentanaLogin extends JFrame {
 		lblNoTienesUna.setBounds(15, 282, 207, 20);
 		contentPane.add(lblNoTienesUna);
 		
-		txtcontraseña = new JPasswordField();
-		txtcontraseña.setBounds(6, 151, 300, 40);
-		contentPane.add(txtcontraseña);
+		txtcontra= new JPasswordField();
+		txtcontra.setBounds(6, 151, 300, 40);
+		contentPane.add(txtcontra);
 	}
 }
