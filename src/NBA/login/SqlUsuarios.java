@@ -16,7 +16,7 @@ public class SqlUsuarios extends ConexionRegistro{
 		PreparedStatement ps = null;
 		Connection con = getConexion();
 		
-		String sql ="INSERT INTO usuarios (usuario, contraseña, correo) VALUES (?,?,?)";
+		String sql ="INSERT INTO usuarios (usuario, password, correo) VALUES (?,?,?)";
 		
 		try {
 			ps = con.prepareStatement(sql);
@@ -41,7 +41,7 @@ public class SqlUsuarios extends ConexionRegistro{
 	        ResultSet rs = null;
 	        Connection con = getConexion();
 
-			String sql ="SELECT id, usuario, contraseña, id_tipo FROM usuarios WHERE usuario = ? LIMIT 1";
+			String sql ="SELECT id, usuario, password, id_tipo FROM usuarios WHERE usuario = ? LIMIT 1";
 
 	        try {
 	            ps = con.prepareStatement(sql);
