@@ -16,12 +16,12 @@ public class SqlUsuarios extends ConexionRegistro{
 		PreparedStatement ps = null;
 		Connection con = getConexion();
 		
-		String sql ="INSERT INTO usuarios (usuario, contraseÃ±a, correo) VALUES (?,?,?)";
+		String sql ="INSERT INTO usuarios (usuario, contraseña, correo) VALUES (?,?,?)";
 		
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, usr.getUsuario());
-			ps.setString(2, usr.getContraseña());
+			ps.setString(2, usr.getContra());
 			ps.setString(3, usr.getCorreo());
 			ps.execute();
 			return true;
@@ -41,7 +41,7 @@ public class SqlUsuarios extends ConexionRegistro{
 	        ResultSet rs = null;
 	        Connection con = getConexion();
 
-			String sql ="SELECT id, usuario, contraseÃ±a, id_tipo FROM usuarios WHERE usuario = ? LIMIT 1";
+			String sql ="SELECT id, usuario, contraseña, id_tipo FROM usuarios WHERE usuario = ? LIMIT 1";
 
 	        try {
 	            ps = con.prepareStatement(sql);
@@ -49,7 +49,7 @@ public class SqlUsuarios extends ConexionRegistro{
 	            rs = ps.executeQuery();
 
 	            if (rs.next()) {
-	                if (usr.getContraseña().equals(rs.getString(3))) {
+	                if (usr.getContra().equals(rs.getString(3))) {
 	                    usr.setId(rs.getInt(1));
 	                    usr.setIdTipo(rs.getInt(4));
 	                    return true;

@@ -73,7 +73,7 @@ public class VentanaLogin extends JFrame {
 			        String nuevoPass = Hash.sha1(pass);
 			            
 			        mod.setUsuario(txtusuario.getText());
-			        mod.setContraseña(nuevoPass);
+			        mod.setContra(nuevoPass);
 			            
 			        if (modSql.login(mod)) {
 			                
