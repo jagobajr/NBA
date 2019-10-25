@@ -106,7 +106,7 @@ public class VentanaRegistro extends JFrame {
 			                        String nuevoPass = Hash.sha1(pass);
 
 			                        mod.setUsuario(datos_usuario.getText());
-			                        mod.setContraseña(nuevoPass);
+			                        mod.setContraseÃ±a(nuevoPass);
 			                        mod.setCorreo(correo.getText());
 
 			                        if (modSql.registrar(mod)) {
@@ -127,7 +127,7 @@ public class VentanaRegistro extends JFrame {
 			                }
 
 				}else {
-					JOptionPane.showMessageDialog(null,"Las contraseñas no coinciden");
+					JOptionPane.showMessageDialog(null,"Las contraseï¿½as no coinciden");
 				}
 				
 				

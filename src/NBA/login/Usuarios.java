@@ -3,7 +3,7 @@ package NBA.login;
 public class Usuarios {
 	private int id;
 	private String usuario;
-	private String contraseña;
+	private String contraseÃ±a;
 	private String correo;
 	private int idTipo;
 	
@@ -19,11 +19,11 @@ public class Usuarios {
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
-	public String getContraseña() {
-		return contraseña;
+	public String getContraseÃ±a() {
+		return contraseÃ±a;
 	}
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContraseÃ±a(String contraseÃ±a) {
+		this.contraseÃ±a = contraseÃ±a;
 	}
 	public String getCorreo() {
 		return correo;
