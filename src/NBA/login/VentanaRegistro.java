@@ -106,7 +106,7 @@ public class VentanaRegistro extends JFrame {
 			                        String nuevoPass = Hash.sha1(pass);
 
 			                        mod.setUsuario(datos_usuario.getText());
-			                        mod.setPassword(nuevoPass);
+			                        mod.setContraseña(nuevoPass);
 			                        mod.setCorreo(correo.getText());
 
 			                        if (modSql.registrar(mod)) {
