@@ -9,6 +9,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.JScrollPane;
+import javax.swing.border.CompoundBorder;
 
 public class VentanaVender extends JFrame {
 
@@ -37,11 +41,12 @@ public class VentanaVender extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 460, 523);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.ORANGE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
 		JButton btnAtras = new JButton("Atras");
+		btnAtras.setBounds(15, 16, 115, 22);
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaMercado nuevaVentana = new VentanaMercado();
@@ -50,10 +55,11 @@ public class VentanaVender extends JFrame {
 			}
 			
 		});
-		btnAtras.setBounds(15, 16, 115, 22);
+		contentPane.setLayout(null);
 		contentPane.add(btnAtras);
 		
 		JButton btnMenu = new JButton("Menu");
+		btnMenu.setBounds(15, 41, 115, 22);
 		btnMenu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaMenu nuevaVentana = new VentanaMenu();
@@ -62,7 +68,13 @@ public class VentanaVender extends JFrame {
 			}
 			
 		});
-		btnMenu.setBounds(15, 41, 115, 22);
 		contentPane.add(btnMenu);
+		
+		JLabel lblNewLabel = new JLabel("                                       VENDER");
+		lblNewLabel.setBounds(0, 79, 438, 20);
+		lblNewLabel.setLabelFor(lblNewLabel);
+		lblNewLabel.setForeground(Color.BLACK);
+		lblNewLabel.setBackground(Color.BLACK);
+		contentPane.add(lblNewLabel);
 	}
 }

@@ -44,8 +44,9 @@ public class VentanaComprar extends JFrame {
 	public VentanaComprar() {
 		setTitle("COMPRAR");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 390, 500);
+		setBounds(100, 100, 414, 500);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.ORANGE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
