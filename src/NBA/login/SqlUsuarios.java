@@ -104,7 +104,7 @@ public class SqlUsuarios extends ConexionRegistro{
 
     public boolean esEmail(String correo) {
 
-        // Patrón para validar el email
+        // Patrï¿½n para validar el email
         Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 
         Matcher mather = pattern.matcher(correo);

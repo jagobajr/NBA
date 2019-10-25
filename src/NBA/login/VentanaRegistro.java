@@ -127,7 +127,7 @@ public class VentanaRegistro extends JFrame {
 			                }
 
 				}else {
-					JOptionPane.showMessageDialog(null,"Las contraseñas no coinciden");
+					JOptionPane.showMessageDialog(null,"Las contraseï¿½as no coinciden");
 				}
 				
 				
