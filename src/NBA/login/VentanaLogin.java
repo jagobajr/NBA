@@ -77,8 +77,9 @@ public class VentanaLogin extends JFrame {
 			            
 			        if (modSql.login(mod)) {
 			                
-			            VentanaMenu frmMenu = new VentanaMenu();
-			            frmMenu.setVisible(true);
+			            VentanaMenu nuevaVentana = new VentanaMenu();
+			            nuevaVentana.setVisible(true);
+			            VentanaLogin.this.dispose();
 			                
 			            } else {
 			                JOptionPane.showMessageDialog(null, "Datos incorrectos");

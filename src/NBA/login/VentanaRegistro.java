@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import NBA.VentanaMenu;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -108,6 +111,9 @@ public class VentanaRegistro extends JFrame {
 
 			                        if (modSql.registrar(mod)) {
 			                            JOptionPane.showMessageDialog(null, "Registro Guardado");
+			                            VentanaMenu nuevaVentana = new VentanaMenu();
+			    			            nuevaVentana.setVisible(true);
+			    			            VentanaRegistro.this.dispose();
 			                            limpiar();
 			                        } else {
 			                            JOptionPane.showMessageDialog(null, "Error al Guardar");
