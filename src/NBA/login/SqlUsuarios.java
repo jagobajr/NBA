@@ -21,7 +21,7 @@ public class SqlUsuarios extends ConexionRegistro{
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, usr.getUsuario());
-			ps.setString(2, usr.getContraseña());
+			ps.setString(2, usr.getPassword());
 			ps.setString(3, usr.getCorreo());
 			ps.execute();
 			return true;
@@ -49,7 +49,7 @@ public class SqlUsuarios extends ConexionRegistro{
 	            rs = ps.executeQuery();
 
 	            if (rs.next()) {
-	                if (usr.getContraseña().equals(rs.getString(3))) {
+	                if (usr.getPassword().equals(rs.getString(3))) {
 	                    usr.setId(rs.getInt(1));
 	                    usr.setIdTipo(rs.getInt(4));
 	                    return true;
