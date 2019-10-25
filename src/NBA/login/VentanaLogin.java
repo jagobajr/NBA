@@ -6,8 +6,13 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import NBA.VentanaMenu;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,12 +22,13 @@ import javax.swing.UIManager;
 import javax.swing.JProgressBar;
 import javax.swing.ImageIcon;
 import java.awt.Color;
+import javax.swing.JPasswordField;
 
 public class VentanaLogin extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField txtusuario;
+	private JPasswordField txtcontraseña;
 
 	/**
 	 * Launch the application.
@@ -54,6 +60,43 @@ public class VentanaLogin extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnLogIn = new JButton("Log In");
+		btnLogIn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				 
+				SqlUsuarios modSql = new SqlUsuarios();
+			    Usuarios mod = new Usuarios();
+			        
+			    String pass = new String(txtcontraseña.getPassword());
+			        
+			    if (!txtusuario.getText().equals("") && !pass.equals("")) {
+			            
+			        String nuevoPass = Hash.sha1(pass);
+			            
+			        mod.setUsuario(txtusuario.getText());
+			        mod.setContraseña(nuevoPass);
+			            
+			        if (modSql.login(mod)) {
+			                
+			            VentanaMenu frmMenu = new VentanaMenu();
+			            frmMenu.setVisible(true);
+			                
+			            } else {
+			                JOptionPane.showMessageDialog(null, "Datos incorrectos");
+			                limpiar();
+			            }
+			        } else {
+			            JOptionPane.showMessageDialog(null, "Debe ingresar sus datos");
+			        }
+
+
+			}
+
+			private void limpiar() {
+				txtusuario.setText("");
+		        txtcontraseña.setText("");
+				
+			}
+		});
 		btnLogIn.setBackground(UIManager.getColor("PopupMenu.selectionBackground"));
 		btnLogIn.setBounds(6, 207, 83, 29);
 		contentPane.add(btnLogIn);
@@ -62,21 +105,15 @@ public class VentanaLogin extends JFrame {
 		lblUsuario.setBounds(6, 43, 61, 16);
 		contentPane.add(lblUsuario);
 		
-		textField = new JTextField();
-		textField.setBackground(UIManager.getColor("PopupMenu.selectionBackground"));
-		textField.setBounds(6, 72, 300, 36);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtusuario = new JTextField();
+		txtusuario.setBackground(UIManager.getColor("PopupMenu.selectionBackground"));
+		txtusuario.setBounds(6, 72, 300, 36);
+		contentPane.add(txtusuario);
+		txtusuario.setColumns(10);
 		
 		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
 		lblContrasea.setBounds(6, 119, 105, 16);
 		contentPane.add(lblContrasea);
-		
-		textField_1 = new JTextField();
-		textField_1.setBackground(UIManager.getColor("PopupMenu.selectionBackground"));
-		textField_1.setBounds(6, 150, 300, 36);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
 		
 		JButton btnAqui = new JButton("Aqui");
 		btnAqui.addActionListener(new ActionListener() {
@@ -94,5 +131,9 @@ public class VentanaLogin extends JFrame {
 		JLabel lblNoTienesUna = new JLabel("No tienes una cuenta? Registrate");
 		lblNoTienesUna.setBounds(15, 282, 207, 20);
 		contentPane.add(lblNoTienesUna);
+		
+		txtcontraseña = new JPasswordField();
+		txtcontraseña.setBounds(6, 151, 300, 40);
+		contentPane.add(txtcontraseña);
 	}
 }

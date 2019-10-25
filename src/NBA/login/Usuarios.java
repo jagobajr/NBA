@@ -5,6 +5,7 @@ public class Usuarios {
 	private String usuario;
 	private String contraseña;
 	private String correo;
+	private int idTipo;
 	
 	public int getId() {
 		return id;
@@ -30,5 +31,10 @@ public class Usuarios {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-
+	public int getIdTipo() {
+		return idTipo;
+	}
+	public void setIdTipo(int id) {
+		this.idTipo = idTipo;
+	}
 }

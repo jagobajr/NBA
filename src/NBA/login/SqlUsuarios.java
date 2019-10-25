@@ -36,6 +36,42 @@ public class SqlUsuarios extends ConexionRegistro{
 		
 	}
 	
+	  public boolean login(Usuarios usr) {
+	        PreparedStatement ps = null;
+	        ResultSet rs = null;
+	        Connection con = getConexion();
+
+			String sql ="SELECT id, usuario, contraseña, id_tipo FROM usuarios WHERE usuario = ? LIMIT 1";
+
+	        try {
+	            ps = con.prepareStatement(sql);
+	            ps.setString(1, usr.getUsuario());
+	            rs = ps.executeQuery();
+
+	            if (rs.next()) {
+	                if (usr.getContraseña().equals(rs.getString(3))) {
+	                    usr.setId(rs.getInt(1));
+	                    usr.setIdTipo(rs.getInt(4));
+	                    return true;
+	                } else {
+	                    return false;
+	                }
+	            }
+
+	            return false;
+	        } catch (SQLException e) {
+	            JOptionPane.showMessageDialog(null, e.toString());
+	            return false;
+	        } finally {
+	            try {
+	                con.close();
+	            } catch (SQLException e) {
+	                JOptionPane.showMessageDialog(null, e.toString());
+	            }
+	        }
+	    }
+
+	
 	public int existeUsuario(String usuario) {
         PreparedStatement ps = null;
         ResultSet rs = null;
