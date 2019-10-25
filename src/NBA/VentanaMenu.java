@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import NBA.login.VentanaLogin;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -94,6 +97,14 @@ public class VentanaMenu extends JFrame {
 		contentPane.add(btnMercado);
 		
 		JButton btnCerrarSesion = new JButton("CERRAR SESION");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaLogin logout= new VentanaLogin();
+				logout.setVisible(true);
+				VentanaMenu.this.dispose();
+			}
+		});
+		
 		btnCerrarSesion.setBounds(38, 291, 142, 42);
 		contentPane.add(btnCerrarSesion);
 	}
