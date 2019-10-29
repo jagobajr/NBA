@@ -16,6 +16,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.UIManager;
 
 public class VentanaMenu extends JFrame {
 
@@ -56,7 +57,7 @@ public class VentanaMenu extends JFrame {
 		contentPane.add(lblMenu);
 		
 		JButton btnClasificacion = new JButton("CLASIFICACION");
-		btnClasificacion.setBackground(Color.WHITE);
+		btnClasificacion.setBackground(UIManager.getColor("Button.background"));
 		btnClasificacion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaClasificacion nuevaVentana = new VentanaClasificacion();
@@ -78,7 +79,7 @@ public class VentanaMenu extends JFrame {
 			}
 		});
 		
-		btnEquipo.setBounds(6, 147, 218, 47);
+		btnEquipo.setBounds(6, 146, 218, 47);
 		contentPane.add(btnEquipo);
 		
 		
