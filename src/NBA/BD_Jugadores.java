@@ -11,7 +11,7 @@ public class BD_Jugadores {
 
 		Connection conn = DriverManager.getConnection("jdbc:sqlite:data/NBA.db");
 		Statement stmt = conn.createStatement();
-		// conexion abierta
+		// conexion abierzta
 		// statement creado
 		ResultSet rs = stmt.executeQuery("SELECT Nombre, Posicion, Equipo, Puntos FROM Jugadores");
 
