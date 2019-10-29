@@ -107,8 +107,8 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(lblUsuario);
 		
 		txtusuario = new JTextField();
-		txtusuario.setBackground(UIManager.getColor("PopupMenu.selectionBackground"));
-		txtusuario.setBounds(6, 72, 300, 36);
+		txtusuario.setBackground(new Color(255, 255, 255));
+		txtusuario.setBounds(6, 82, 300, 36);
 		contentPane.add(txtusuario);
 		txtusuario.setColumns(10);
 		
@@ -134,6 +134,7 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(lblNoTienesUna);
 		
 		txtcontra= new JPasswordField();
+		txtcontra.setBackground(new Color(255, 255, 255));
 		txtcontra.setBounds(6, 151, 300, 40);
 		contentPane.add(txtcontra);
 	}
