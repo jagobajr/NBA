@@ -35,6 +35,6 @@ public class Usuarios {
 		return idTipo;
 	}
 	public void setIdTipo(int id) {
-		this.idTipo = idTipo;
+		this.idTipo = id;
 	}
 }

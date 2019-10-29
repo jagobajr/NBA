@@ -127,7 +127,7 @@ public class VentanaLogin extends JFrame {
 				
 		});
 		btnAqui.setBackground(UIManager.getColor("Button.background"));
-		btnAqui.setBounds(204, 278, 72, 29);
+		btnAqui.setBounds(222, 279, 72, 29);
 		contentPane.add(btnAqui);
 		
 		JLabel lblNoTienesUna = new JLabel("No tienes una cuenta? Registrate");
