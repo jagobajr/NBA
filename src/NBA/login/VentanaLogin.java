@@ -23,6 +23,7 @@ import javax.swing.JProgressBar;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JPasswordField;
+import java.awt.SystemColor;
 
 public class VentanaLogin extends JFrame {
 
@@ -125,8 +126,8 @@ public class VentanaLogin extends JFrame {
 			}
 				
 		});
-		btnAqui.setBackground(Color.WHITE);
-		btnAqui.setBounds(220, 278, 72, 29);
+		btnAqui.setBackground(UIManager.getColor("Button.background"));
+		btnAqui.setBounds(204, 278, 72, 29);
 		contentPane.add(btnAqui);
 		
 		JLabel lblNoTienesUna = new JLabel("No tienes una cuenta? Registrate");
