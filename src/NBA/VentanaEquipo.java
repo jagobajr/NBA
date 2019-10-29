@@ -145,7 +145,7 @@ public class VentanaEquipo extends JFrame {
 			}
 			
 		});
-		btnAtras.setBounds(15, 3, 43, 26);
+		btnAtras.setBounds(15, 3, 61, 26);
 		contentPane.add(btnAtras);
 	}
 	
