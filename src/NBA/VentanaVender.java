@@ -33,7 +33,6 @@ public class VentanaVender extends JFrame {
 			}
 		});
 	}
-
 	/**
 	 * Create the frame.
 	 */
@@ -52,6 +51,10 @@ public class VentanaVender extends JFrame {
 				VentanaMercado nuevaVentana = new VentanaMercado();
 				nuevaVentana.setVisible(true);
 				VentanaVender.this.dispose();
+				
+				
+				
+				
 			}
 			
 		});
