@@ -52,9 +52,6 @@ public class VentanaVender extends JFrame {
 				nuevaVentana.setVisible(true);
 				VentanaVender.this.dispose();
 				
-				
-				
-				
 			}
 			
 		});
