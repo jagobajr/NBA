@@ -9,6 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Color;
 
 public class VentanaMercado extends JFrame {
 
@@ -37,6 +40,7 @@ public class VentanaMercado extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 431, 471);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(102, 205, 170));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -88,5 +92,10 @@ public class VentanaMercado extends JFrame {
 		});
 		btnActividad.setBounds(53, 257, 316, 89);
 		contentPane.add(btnActividad);
+		
+		JLabel lblMercado = new JLabel("MERCADO");
+		lblMercado.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblMercado.setBounds(150, 29, 134, 37);
+		contentPane.add(lblMercado);
 	}
 }
