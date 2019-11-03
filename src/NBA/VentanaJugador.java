@@ -58,19 +58,20 @@ public class VentanaJugador extends JFrame {
 		contentPane.add(DatosJugador);
 		DatosJugador.setColumns(10);
 		
-		JLabel lblPosicin = new JLabel("Posición:");
-		lblPosicin.setBounds(106, 230, 61, 16);
-		contentPane.add(lblPosicin);
+		JLabel lblPosicion = new JLabel("Posicion:");
+		lblPosicion.setBounds(106, 230, 61, 16);
+		contentPane.add(lblPosicion);
 		
 		JCheckBox chckbxBase = new JCheckBox("Base");
-		chckbxBase.setBounds(108, 258, 128, 23);
+		chckbxBase.setBackground(new Color(238, 238, 238));
+		chckbxBase.setBounds(108, 258, 68, 23);
 		contentPane.add(chckbxBase);
 		
 		JCheckBox chckbxEscolta = new JCheckBox("Escolta");
-		chckbxEscolta.setBounds(108, 279, 128, 23);
+		chckbxEscolta.setBounds(108, 279, 77, 23);
 		contentPane.add(chckbxEscolta);
 		
-		JCheckBox chckbxPvot = new JCheckBox("Pívot");
+		JCheckBox chckbxPvot = new JCheckBox("Pivot:");
 		chckbxPvot.setBounds(188, 258, 128, 23);
 		contentPane.add(chckbxPvot);
 		
