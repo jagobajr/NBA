@@ -108,7 +108,8 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(lblUsuario);
 		
 		txtusuario = new JTextField();
-		txtusuario.setBackground(new Color(255, 255, 255));
+		txtusuario.setForeground(Color.GREEN);
+		txtusuario.setBackground(Color.WHITE);
 		txtusuario.setBounds(6, 82, 300, 36);
 		contentPane.add(txtusuario);
 		txtusuario.setColumns(10);
