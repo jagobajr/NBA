@@ -1,4 +1,4 @@
-package NBA;
+package JugadoresEquipos;
 
 public class Jugador {
 	
@@ -8,7 +8,7 @@ public class Jugador {
 	protected String posicion;
 	
 	
-	public Jugador(String nombre, String equipo, int puntos, String posicion) {
+	public Jugador(String nombre, String posicion, String equipo, int puntos) {
 		super();
 		Nombre = nombre;
 		Equipo = equipo;
@@ -58,8 +58,7 @@ public class Jugador {
 
 	@Override
 	public String toString() {
-		return "Jugador [Nombre=" + Nombre + ", Equipo=" + Equipo + ", Puntos=" + Puntos + ", posicion=" + posicion
-				+ "]";
+		return "Jugador [Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", Puntos=" + Puntos + ", ]";
 	}
 	
 	
