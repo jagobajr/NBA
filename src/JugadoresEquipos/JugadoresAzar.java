@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 public class JugadoresAzar extends Jugador{
 	
-	List<String> Jugador = new ArrayList<String>();
+	
 	private Connection con = null;
 	public class conexion {
 
@@ -37,9 +37,11 @@ public class JugadoresAzar extends Jugador{
 	
 
 	
-	public List<Jugador> getJugador() throws DBException{
+	
+	public ArrayList<Jugador> getjugadores() throws DBException{
 		
-	List<Jugador> jugadores= new ArrayList<Jugador>();
+	ArrayList<Jugador> jugadores= new ArrayList<Jugador>();	
+	
 	
 	try (Statement stmt=con.createStatement()){
 		ResultSet rs= stmt.executeQuery("SELECT Nombre, Posicion, Equipo, Puntos from Jugadores");
@@ -56,7 +58,14 @@ public class JugadoresAzar extends Jugador{
 	}catch (SQLException e) {
 		throw new DBException("Error obteniendo los jugadores,e");
 	}
+	return jugadores;
 	}
 	
+	public static void main(String[]args){
+		ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
+		
+		System.out.println(jugadores);
+	}
 
 }
+

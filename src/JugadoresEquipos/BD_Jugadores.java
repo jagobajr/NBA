@@ -1,4 +1,4 @@
-package NBA;
+package JugadoresEquipos;
 
 import java.sql.*;
 
@@ -24,6 +24,7 @@ public class BD_Jugadores {
 
 		System.out.println("Nombre: " + nombre + " Posicion: " + Posicion + " Equipo: " + Equipo + " Puntos: " + Puntos); 
 		}
+		
 
 		//ya no queremos usarla mas
 
