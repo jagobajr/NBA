@@ -60,7 +60,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 			
 		}
 	}catch (SQLException e) {
-		throw new DBException("Error obteniendo los jugadores,e");
+		throw new DBException("Error obteniendo los jugadores",e);
 	}
 	return jugadores;
 	}
@@ -93,8 +93,9 @@ public class JugadoresAzar extends UsuarioJugadores {
 		
 		for (int h=0; h<5; h++){
 			usuJugador.setId_jugador(arAzar[h]);
+			usuJugador.setId_usuarios(usuJugador.getId_usuarios());
 			//usuJugador.setId_usuarios(id_usuarios);
-			//falta id usuarui que hay que crearlo con la funcuion dameUltimoRegistro 
+			//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
 			// inserta registro en bd 
 			//hay crear el nueva intancia el usuJugadores
 		}

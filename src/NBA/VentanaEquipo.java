@@ -59,7 +59,7 @@ public class VentanaEquipo extends JFrame {
 		DatosPivot = new JTextField();
 		DatosPivot.setBackground(new Color(245, 245, 220));
 		DatosPivot.setText("Nombre | Puntos");
-		DatosPivot.setBounds(127, 61, 130, 26);
+		DatosPivot.setBounds(171, 103, 130, 26);
 		contentPane.add(DatosPivot);
 		DatosPivot.setColumns(10);
 		
@@ -67,56 +67,57 @@ public class VentanaEquipo extends JFrame {
 		DatosAla.setBackground(new Color(245, 245, 220));
 		DatosAla.setText("Nombre | Puntos");
 		DatosAla.setColumns(10);
-		DatosAla.setBounds(40, 144, 130, 26);
+		DatosAla.setBounds(76, 199, 130, 26);
 		contentPane.add(DatosAla);
 		
 		DatosAlero = new JTextField();
 		DatosAlero.setBackground(new Color(245, 245, 220));
 		DatosAlero.setText("Nombre | Puntos");
 		DatosAlero.setColumns(10);
-		DatosAlero.setBounds(207, 144, 130, 26);
+		DatosAlero.setBounds(238, 199, 130, 26);
 		contentPane.add(DatosAlero);
 		
 		DatosEscolta = new JTextField();
 		DatosEscolta.setBackground(new Color(245, 245, 220));
 		DatosEscolta.setText("Nombre | Puntos");
 		DatosEscolta.setColumns(10);
-		DatosEscolta.setBounds(40, 249, 130, 26);
+		DatosEscolta.setBounds(76, 311, 130, 26);
 		contentPane.add(DatosEscolta);
 		
 		DatosBase = new JTextField();
 		DatosBase.setBackground(new Color(245, 245, 220));
 		DatosBase.setText("Nombre | Puntos");
 		DatosBase.setColumns(10);
-		DatosBase.setBounds(207, 249, 130, 26);
+		DatosBase.setBounds(238, 311, 130, 26);
 		contentPane.add(DatosBase);
 		
 		JLabel lblPivot = new JLabel("Pivot");
-		lblPivot.setBounds(173, 29, 61, 16);
+		lblPivot.setBounds(199, 35, 61, 16);
 		contentPane.add(lblPivot);
 		
 		JLabel lblBase = new JLabel("Base");
-		lblBase.setBounds(254, 210, 61, 16);
+		lblBase.setBounds(281, 237, 61, 16);
 		contentPane.add(lblBase);
 		
 		JLabel lblEscolta = new JLabel("Escolta");
-		lblEscolta.setBounds(73, 210, 61, 16);
+		lblEscolta.setBounds(122, 237, 61, 16);
 		contentPane.add(lblEscolta);
 		
 		JLabel lblAlaPivot = new JLabel("Ala- Pivot");
-		lblAlaPivot.setBounds(73, 112, 61, 16);
+		lblAlaPivot.setBounds(122, 129, 84, 16);
 		contentPane.add(lblAlaPivot);
 		
 		JLabel lblAlero = new JLabel("Alero");
-		lblAlero.setBounds(254, 112, 61, 16);
+		lblAlero.setBounds(281, 129, 61, 16);
 		contentPane.add(lblAlero);
 		
 		JLabel FondoDeImagen = new JLabel();
 		FondoDeImagen.setIcon(new ImageIcon("/Users/jagoba.jr/Desktop/DEUSTO📚💎/19-20/Programacion/Imagenes para el proyecto/QUINTETO.png"));
-		FondoDeImagen.setBounds(0, 0, 368, 441);
+		FondoDeImagen.setBounds(65, 0, 322, 472);
 		contentPane.add(FondoDeImagen);
 		
 		JButton btnAtras = new JButton("Atras");
+		btnAtras.setSelectedIcon(null);
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaMenu nuevaVentana = new VentanaMenu();
@@ -125,7 +126,7 @@ public class VentanaEquipo extends JFrame {
 			}
 			
 		});
-		btnAtras.setBounds(15, 3, 69, 26);
+		btnAtras.setBounds(6, 0, 47, 88);
 		contentPane.add(btnAtras);
 	}
 	
