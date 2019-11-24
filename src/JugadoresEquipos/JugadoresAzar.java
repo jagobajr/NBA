@@ -11,7 +11,10 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+<<<<<<< HEAD
 public class JugadoresAzar extends UsuarioJugadores {
+
+
 	
 	
 	private Connection con = null;
