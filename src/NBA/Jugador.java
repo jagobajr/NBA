@@ -6,14 +6,17 @@ public class Jugador {
 	protected String Equipo;
 	protected int Puntos;
 	protected String posicion;
+	protected int Precio;
+
 	
 	
-	public Jugador(String nombre, String equipo, int puntos, String posicion) {
+	public Jugador(String nombre, String equipo, int puntos, String posicion, int precio) {
 		super();
 		Nombre = nombre;
 		Equipo = equipo;
 		Puntos = puntos;
 		this.posicion = posicion;
+		Precio = precio;
 	}
 	
 	public Jugador() {
@@ -54,6 +57,14 @@ public class Jugador {
 
 	public void setPosicion(String posicion) {
 		this.posicion = posicion;
+	}
+	
+	public int getPrecio() {
+		return Precio;
+	}
+
+	public void setPrecio(int precio) {
+		Precio = precio;
 	}
 
 	@Override

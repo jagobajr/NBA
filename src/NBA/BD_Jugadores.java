@@ -13,16 +13,17 @@ public class BD_Jugadores {
 		Statement stmt = conn.createStatement();
 		// conexion abierzta
 		// statement creado
-		ResultSet rs = stmt.executeQuery("SELECT Nombre, Posicion, Equipo, Puntos FROM Jugadores");
+		ResultSet rs = stmt.executeQuery("SELECT Nombre, Posicion, Equipo, Puntos, Precio FROM Jugadores");
 
 		while(rs.next()) {
 		String nombre = rs.getString("Nombre");
 		String Posicion = rs.getString("Posicion");
 		String Equipo = rs.getString("Equipo");
-		String Puntos = rs.getString("Puntos");
+		int Puntos = rs.getInt("Puntos");
+		int Precio = rs.getInt("Precio");
  
 
-		System.out.println("Nombre: " + nombre + " Posicion: " + Posicion + " Equipo: " + Equipo + " Puntos: " + Puntos); 
+		System.out.println("Nombre: " + nombre + " Posicion: " + Posicion + " Equipo: " + Equipo + " Puntos: " + Puntos + " Precio: " + Precio); 
 		}
 
 		//ya no queremos usarla mas
