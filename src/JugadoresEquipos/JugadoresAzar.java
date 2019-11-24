@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class JugadoresAzar extends Jugador, UsuarioJugadores(){
+public class JugadoresAzar extends Jugador implements UsuarioJugadores{
 	
 	
 	private Connection con = null;
