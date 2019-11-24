@@ -62,10 +62,36 @@ public class JugadoresAzar extends Jugador{
 	return jugadores;
 	}
 	
+	
 	public static void main(String[]args){
+		// obtener los cinco numeros al azar
+		 int[] arAzar = new int[5];
+		 int i =0;
+		 boolean bolRepetido = false;
 		ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
+		do {
+			arAzar[i] = (int) (Math.random()*jugadores.size());
+			for(int j=0; j<=i; j++) {
+				if(arAzar[i-1] == arAzar[j]) {
+					bolRepetido = true;
+					break;
+				}
+			}
+			if(!bolRepetido) {
+				i++;
+			}
+			
+			bolRepetido = false;
+		}while(i<5);
 		
-		System.out.println(jugadores);
+		// obtener los cinco jugadores 
+		
+		for (int h=0; h<5; h++){
+			
+		}
+				
+		
+		System.out.println(jugadores.size());
 	}
 
 }

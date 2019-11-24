@@ -112,6 +112,36 @@ public class SqlUsuarios extends ConexionRegistro{
         return mather.find();
 
     }
+    
+    public int dameUltimoRegistro() {
+    	Connection con = getConexion();
+    	 PreparedStatement ps = null;
+         ResultSet rs = null;
+    	 String sql = "SELECT max(id) FROM usuarios";
+
+         try {
+             ps = con.prepareStatement(sql);
+             rs = ps.executeQuery();
+
+            /* if (rs.n) {
+                 return rs.getInt(+1);
+             }*/
+
+             return 1;
+
+         } catch (SQLException e) {
+             JOptionPane.showMessageDialog(null, e.toString());
+             return 1;
+         } finally {
+             try {
+                 con.close();
+             } catch (SQLException e) {
+                 JOptionPane.showMessageDialog(null, e.toString());
+             }
+         }
+     
+    	
+    }
 
 
 
