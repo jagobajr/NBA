@@ -1,4 +1,4 @@
-package NBA;
+package JugadoresEquipos;
 
 public class Jugador {
 	
@@ -7,16 +7,14 @@ public class Jugador {
 	protected int Puntos;
 	protected String posicion;
 	protected int Precio;
-
 	
-	
-	public Jugador(String nombre, String equipo, int puntos, String posicion, int precio) {
+	public Jugador(String nombre, String posicion, String equipo, int puntos, int precio) {
 		super();
 		Nombre = nombre;
 		Equipo = equipo;
 		Puntos = puntos;
-		this.posicion = posicion;
 		Precio = precio;
+		this.posicion = posicion;
 	}
 	
 	public Jugador() {
@@ -50,6 +48,15 @@ public class Jugador {
 	public void setPuntos(int puntos) {
 		Puntos = puntos;
 	}
+	
+	public int getPrecio() {
+		return Precio;
+	}
+
+	public void setPrecio(int precio) {
+		Puntos = precio;
+	}
+
 
 	public String getPosicion() {
 		return posicion;
@@ -58,19 +65,10 @@ public class Jugador {
 	public void setPosicion(String posicion) {
 		this.posicion = posicion;
 	}
-	
-	public int getPrecio() {
-		return Precio;
-	}
-
-	public void setPrecio(int precio) {
-		Precio = precio;
-	}
 
 	@Override
 	public String toString() {
-		return "Jugador [Nombre=" + Nombre + ", Equipo=" + Equipo + ", Puntos=" + Puntos + ", posicion=" + posicion
-				+ "]";
+		return "Jugador [Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", Puntos=" + Puntos + ", ]";
 	}
 	
 	

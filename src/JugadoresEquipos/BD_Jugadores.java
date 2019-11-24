@@ -1,4 +1,4 @@
-package NBA;
+package JugadoresEquipos;
 
 import java.sql.*;
 
@@ -19,12 +19,12 @@ public class BD_Jugadores {
 		String nombre = rs.getString("Nombre");
 		String Posicion = rs.getString("Posicion");
 		String Equipo = rs.getString("Equipo");
-		int Puntos = rs.getInt("Puntos");
-		int Precio = rs.getInt("Precio");
- 
+		String Puntos = rs.getString("Puntos");
+		String Precio = rs.getString("Precio");
 
 		System.out.println("Nombre: " + nombre + " Posicion: " + Posicion + " Equipo: " + Equipo + " Puntos: " + Puntos + " Precio: " + Precio); 
 		}
+		
 
 		//ya no queremos usarla mas
 
