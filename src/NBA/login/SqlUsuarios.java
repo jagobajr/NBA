@@ -123,11 +123,11 @@ public class SqlUsuarios extends ConexionRegistro{
              ps = con.prepareStatement(sql);
              rs = ps.executeQuery();
 
-            /* if (rs.n) {
+             if (rs.first()) {
                  return rs.getInt(+1);
-             }*/
+             }
 
-             return 1;
+            
 
          } catch (SQLException e) {
              JOptionPane.showMessageDialog(null, e.toString());
@@ -138,11 +138,13 @@ public class SqlUsuarios extends ConexionRegistro{
              } catch (SQLException e) {
                  JOptionPane.showMessageDialog(null, e.toString());
              }
-         }
+         
      
     	
     }
+		return 0;
 
-
+         }
 
 }
+
