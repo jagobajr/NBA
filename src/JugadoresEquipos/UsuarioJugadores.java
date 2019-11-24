@@ -47,14 +47,6 @@ public class UsuarioJugadores {
 		this.id_jugador = id_jugador;
 	}
 
-	@Override
-	public String toString() {
-		return "UsuarioJugadores [id_usuarios=" + id_usuarios + ", id_jugador=" + id_jugador + 
-				",Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", Puntos=" + Puntos + ", ]";
-	}
-	
-	
-	
 	
 	public String getNombre() {
 		return Nombre;
@@ -97,7 +89,11 @@ public class UsuarioJugadores {
 		this.posicion = posicion;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "UsuarioJugadores [id_usuarios=" + id_usuarios + ", id_jugador=" + id_jugador + 
+				",Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", Puntos=" + Puntos + ", ]";
+	}
 	
 	
 }
