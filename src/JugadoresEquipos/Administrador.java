@@ -58,7 +58,7 @@ public class Administrador extends JFrame implements ActionListener
     JLabel lblEquipo_1;
     JLabel lblPosicion_1;
     JLabel lblAdd ;
-    JLabel labelAñadir;
+    JLabel labelAnyadir;
     Statement st=null;
     JSpinner spinner;
     ArrayList<Jugador>listaJ;
@@ -98,7 +98,7 @@ public class Administrador extends JFrame implements ActionListener
 		
 		listaJ=new ArrayList<Jugador>();
 		
-		añadirJugadoresALista();
+		anyadirJugadoresALista();
 		
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -126,7 +126,7 @@ public class Administrador extends JFrame implements ActionListener
 				if(e.getValueIsAdjusting()==false)
 				{
 					
-					añadirJugadoresALista();
+					anyadirJugadoresALista();
 					pos=lista.getSelectedIndex();
 					
 					textFieldNombre.setText(""+listaJ.get(pos).getNombre());
@@ -157,7 +157,7 @@ public class Administrador extends JFrame implements ActionListener
 				int puntosEstaJornada=0;
 				
 				
-				añadirJugadoresALista();
+				anyadirJugadoresALista();
 				
 				for(int i=1;i<listaJ.size();i++)
 				{
@@ -187,19 +187,19 @@ public class Administrador extends JFrame implements ActionListener
 		btnPuntuar.setBounds(378, 80, 89, 23);
 		getContentPane().add(btnPuntuar);
 		
-		labelAñadir = new JLabel("");
-		labelAñadir.addMouseListener(new MouseAdapter() {
+		labelAnyadir = new JLabel("");
+		labelAnyadir.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0)
 			{
 
-				labelAñadir.setIcon(new ImageIcon(Administrador.class.getResource("")));
+				labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("")));
 				Statement st=null;
 				st=BD_Jugadores.getStatement();
 				
 				
 				
-				añadirJugadoresALista();
+				anyadirJugadoresALista();
 				
 				
 				
@@ -233,9 +233,9 @@ public class Administrador extends JFrame implements ActionListener
 				
 			}
 		});
-		labelAñadir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward.png")));
-		labelAñadir.setBounds(378, 171, 39, 30);
-		getContentPane().add(labelAñadir);
+		labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward.png")));
+		labelAnyadir.setBounds(378, 171, 39, 30);
+		getContentPane().add(labelAnyadir);
 		
 		JLabel lblProximaJornada = new JLabel("2) PASAR A LA SIGUIENTE JORNADA");
 		lblProximaJornada.setBounds(383, 135, 238, 14);
@@ -388,7 +388,7 @@ public class Administrador extends JFrame implements ActionListener
 			{
 				if(textFieldNombre.getText().isEmpty()==true)
 				{
-					JOptionPane.showMessageDialog(null, "Por favor, selecciona un jugador para añadir al mercado de fichajes");
+					JOptionPane.showMessageDialog(null, "Por favor, selecciona un jugador para anyadir al mercado de fichajes");
 					return;
 				}
 				
@@ -419,7 +419,7 @@ public class Administrador extends JFrame implements ActionListener
 						 
 						 
 							st.executeUpdate( sentencia );
-							//JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" añadido correctamente en el mercado de fichajes" );
+							//JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" anyadido correctamente en el mercado de fichajes" );
 							 
 							textFieldPrecio.setVisible(false);
 							lblPrecio.setVisible(false);
@@ -710,7 +710,7 @@ public class Administrador extends JFrame implements ActionListener
 			}
 			
 			
-		JOptionPane.showMessageDialog(this, "Jugador "+textFieldNNombre.getText()+" añadido correctamente");
+		JOptionPane.showMessageDialog(this, "Jugador "+textFieldNNombre.getText()+" anyadido correctamente");
 		
 		textFieldNombre.setText("");
 		textFieldEquipo.setText("");
@@ -807,14 +807,14 @@ public class Administrador extends JFrame implements ActionListener
 
 	private int checkearId()
 	{
-		añadirJugadoresALista();
+		anyadirJugadoresALista();
 		return listaJ.size();
 	}
 	
 	private String checkearIdMercado(String nombre)
 	{
 		String id="";
-		añadirJugadoresALista();
+		anyadirJugadoresALista();
 		
 		for(int i=0;i<listaJ.size();i++)
 		{
@@ -831,7 +831,8 @@ public class Administrador extends JFrame implements ActionListener
 	}
 	
 
-	private void añadirJugadoresALista() 
+
+	private void anyadirJugadoresALista() 
 	{
 		st=BD_Jugadores.getStatement();
 		listaJ.clear();

@@ -114,6 +114,8 @@ public class VentanaMenu extends JFrame {
 		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/lebron-james-1024x768-basketball-player-artwork-hd-5k-14460.jpg"));
 		label.setBounds(-332, 0, 656, 624);
 		contentPane.add(label);
+		
+		
 	}
 
 }
