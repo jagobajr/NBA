@@ -1,6 +1,7 @@
 package NBA;
 
 import java.awt.BorderLayout;
+import JugadoresEquipos.UsuarioJugadores;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -50,71 +51,11 @@ public class VentanaEquipo extends JFrame {
 		setTitle("EQUIPO");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("/Users/jagoba.jr/Desktop/DEUSTO📚💎/19-20/Programacion/Imagenes para el proyecto/QUINTETO.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 390, 500);
+		setBounds(100, 100, 324, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		DatosPivot = new JTextField();
-		DatosPivot.setBackground(new Color(245, 245, 220));
-		DatosPivot.setText("Nombre | Puntos");
-		DatosPivot.setBounds(171, 103, 130, 26);
-		contentPane.add(DatosPivot);
-		DatosPivot.setColumns(10);
-		
-		DatosAla = new JTextField();
-		DatosAla.setBackground(new Color(245, 245, 220));
-		DatosAla.setText("Nombre | Puntos");
-		DatosAla.setColumns(10);
-		DatosAla.setBounds(76, 199, 130, 26);
-		contentPane.add(DatosAla);
-		
-		DatosAlero = new JTextField();
-		DatosAlero.setBackground(new Color(245, 245, 220));
-		DatosAlero.setText("Nombre | Puntos");
-		DatosAlero.setColumns(10);
-		DatosAlero.setBounds(238, 199, 130, 26);
-		contentPane.add(DatosAlero);
-		
-		DatosEscolta = new JTextField();
-		DatosEscolta.setBackground(new Color(245, 245, 220));
-		DatosEscolta.setText("Nombre | Puntos");
-		DatosEscolta.setColumns(10);
-		DatosEscolta.setBounds(76, 311, 130, 26);
-		contentPane.add(DatosEscolta);
-		
-		DatosBase = new JTextField();
-		DatosBase.setBackground(new Color(245, 245, 220));
-		DatosBase.setText("Nombre | Puntos");
-		DatosBase.setColumns(10);
-		DatosBase.setBounds(238, 311, 130, 26);
-		contentPane.add(DatosBase);
-		
-		JLabel lblPivot = new JLabel("Pivot");
-		lblPivot.setBounds(199, 35, 61, 16);
-		contentPane.add(lblPivot);
-		
-		JLabel lblBase = new JLabel("Base");
-		lblBase.setBounds(281, 237, 61, 16);
-		contentPane.add(lblBase);
-		
-		JLabel lblEscolta = new JLabel("Escolta");
-		lblEscolta.setBounds(122, 237, 61, 16);
-		contentPane.add(lblEscolta);
-		
-		JLabel lblAlaPivot = new JLabel("Ala- Pivot");
-		lblAlaPivot.setBounds(122, 129, 84, 16);
-		contentPane.add(lblAlaPivot);
-		
-		JLabel lblAlero = new JLabel("Alero");
-		lblAlero.setBounds(281, 129, 61, 16);
-		contentPane.add(lblAlero);
-		
-		JLabel FondoDeImagen = new JLabel();
-		FondoDeImagen.setIcon(new ImageIcon("/Users/jagoba.jr/Desktop/DEUSTO📚💎/19-20/Programacion/Imagenes para el proyecto/QUINTETO.png"));
-		FondoDeImagen.setBounds(65, 0, 322, 472);
-		contentPane.add(FondoDeImagen);
 		
 		JButton btnAtras = new JButton("Atras");
 		btnAtras.setSelectedIcon(null);
@@ -128,6 +69,66 @@ public class VentanaEquipo extends JFrame {
 		});
 		btnAtras.setBounds(6, 0, 47, 88);
 		contentPane.add(btnAtras);
+		
+		DatosPivot = new JTextField();
+		DatosPivot.setBackground(new Color(245, 245, 220));
+		DatosPivot.setText("Nombre | Puntos");
+		DatosPivot.setBounds(102, 100, 130, 26);
+		contentPane.add(DatosPivot);
+		DatosPivot.setColumns(10);
+		
+		DatosAla = new JTextField();
+		DatosAla.setBackground(new Color(245, 245, 220));
+		DatosAla.setText("Nombre | Puntos");
+		DatosAla.setColumns(10);
+		DatosAla.setBounds(13, 199, 130, 26);
+		contentPane.add(DatosAla);
+		
+		DatosAlero = new JTextField();
+		DatosAlero.setBackground(new Color(245, 245, 220));
+		DatosAlero.setText("Nombre | Puntos");
+		DatosAlero.setColumns(10);
+		DatosAlero.setBounds(179, 199, 130, 26);
+		contentPane.add(DatosAlero);
+		
+		DatosEscolta = new JTextField();
+		DatosEscolta.setBackground(new Color(245, 245, 220));
+		DatosEscolta.setText("Nombre | Puntos");
+		DatosEscolta.setColumns(10);
+		DatosEscolta.setBounds(29, 311, 130, 26);
+		contentPane.add(DatosEscolta);
+		
+		DatosBase = new JTextField();
+		DatosBase.setBackground(new Color(245, 245, 220));
+		DatosBase.setText("Nombre | Puntos");
+		DatosBase.setColumns(10);
+		DatosBase.setBounds(192, 311, 130, 26);
+		contentPane.add(DatosBase);
+		
+		JLabel lblPivot = new JLabel("Pivot");
+		lblPivot.setBounds(136, 35, 61, 16);
+		contentPane.add(lblPivot);
+		
+		JLabel lblBase = new JLabel("Base");
+		lblBase.setBounds(216, 237, 61, 16);
+		contentPane.add(lblBase);
+		
+		JLabel lblEscolta = new JLabel("Escolta");
+		lblEscolta.setBounds(58, 237, 61, 16);
+		contentPane.add(lblEscolta);
+		
+		JLabel lblAlaPivot = new JLabel("Ala- Pivot");
+		lblAlaPivot.setBounds(59, 129, 84, 16);
+		contentPane.add(lblAlaPivot);
+		
+		JLabel lblAlero = new JLabel("Alero");
+		lblAlero.setBounds(216, 129, 61, 16);
+		contentPane.add(lblAlero);
+		
+		JLabel FondoDeImagen = new JLabel();
+		FondoDeImagen.setIcon(new ImageIcon("/Users/jagoba.jr/Desktop/DEUSTO📚💎/19-20/Programacion/Imagenes para el proyecto/QUINTETO.png"));
+		FondoDeImagen.setBounds(0, -14, 322, 503);
+		contentPane.add(FondoDeImagen);
 	}
 	
 }
