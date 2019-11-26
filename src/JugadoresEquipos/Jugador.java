@@ -4,15 +4,17 @@ public class Jugador {
 	
 	protected String Nombre;
 	protected String Equipo;
-	protected int Puntos;
+	protected int PuntosJornada;
+	protected int PuntosTotales;
 	protected String posicion;
 	protected int Precio;
 	
-	public Jugador(String nombre, String posicion, String equipo, int puntos, int precio) {
+	public Jugador(String nombre, String posicion, String equipo, int puntosJornada, int puntosTotales, int precio) {
 		super();
 		Nombre = nombre;
 		Equipo = equipo;
-		Puntos = puntos;
+		PuntosJornada = puntosJornada;
+		PuntosTotales = puntosTotales;
 		Precio = precio;
 		this.posicion = posicion;
 	}
@@ -21,7 +23,8 @@ public class Jugador {
 		super();
 		Nombre = "";
 		Equipo = "";
-		Puntos = 0;
+		PuntosJornada = 0;
+		PuntosTotales = 0;
 		this.posicion = "";
 	}
 
@@ -41,12 +44,20 @@ public class Jugador {
 		Equipo = equipo;
 	}
 
-	public int getPuntos() {
-		return Puntos;
+	public int getPuntosJornada() {
+		return PuntosJornada;
 	}
 
-	public void setPuntos(int puntos) {
-		Puntos = puntos;
+	public void setPuntosJornada(int puntosJornada) {
+		PuntosJornada = puntosJornada;
+	}
+	
+	public int getPuntosTotales() {
+		return PuntosTotales;
+	}
+
+	public void setPuntosTotales(int puntosTotales) {
+		PuntosTotales = puntosTotales;
 	}
 	
 	public int getPrecio() {
@@ -54,7 +65,7 @@ public class Jugador {
 	}
 
 	public void setPrecio(int precio) {
-		Puntos = precio;
+		Precio = precio;
 	}
 
 
@@ -68,9 +79,9 @@ public class Jugador {
 
 	@Override
 	public String toString() {
-		return "Jugador [Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", Puntos=" + Puntos + ", ]";
+		return "Jugador [Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", PuntosJornada=" + PuntosJornada + ", PuntosTotales=" + PuntosTotales + " ,]";
 	}
 	
 	
-	
+
 }

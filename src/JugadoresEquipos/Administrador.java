@@ -60,8 +60,6 @@ public class Administrador extends JFrame implements ActionListener
     JLabel lblAdd ;
     JLabel labelAñadir;
     Statement st=null;
-    JLabel lblEdad;
-    JLabel lblEdad_1;
     JSpinner spinner;
     ArrayList<Jugador>listaJ;
     ArrayList mercado;
@@ -88,19 +86,19 @@ public class Administrador extends JFrame implements ActionListener
 	public Administrador() {
 		
 		
-		BasesDeDatos.crearTablaMercadoDeFichajes();
-		BasesDeDatos.crearTablaUsuarios();
+		//BasesDeDatos.crearTablaMercadoDeFichajes();
+		//BasesDeDatos.crearTablaUsuarios();
 		
 		
 		setBounds(new Rectangle(0, 0, 2147483647, 2147483647));
 		setTitle("ADMINISTRADOR DE LA COMUNIDAD ");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Administrador.class.getResource("/ud/prog3/Comunio/img/comunioIcono.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Administrador.class.getResource("")));
 		setBackground(new Color(0,128,0));
 		getContentPane().setLayout(null);
 		
-		//listaJ=new ArrayList<Jugador>();
+		listaJ=new ArrayList<Jugador>();
 		
-		//añadirJugadoresALista();
+		añadirJugadoresALista();
 		
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -110,9 +108,9 @@ public class Administrador extends JFrame implements ActionListener
 		
 		lista = new JList<DefaultListModel>();
 		
-		modelo=new DefaultListModel();
-		modeloUsuarios=new DefaultListModel();
-		modeloMercado=new DefaultListModel();
+		modelo= new DefaultListModel();
+		modeloUsuarios= new DefaultListModel();
+		modeloMercado= new DefaultListModel();
 		
 		lista.setModel(modelo);
 		
@@ -128,7 +126,6 @@ public class Administrador extends JFrame implements ActionListener
 				if(e.getValueIsAdjusting()==false)
 				{
 					
-					
 					añadirJugadoresALista();
 					pos=lista.getSelectedIndex();
 					
@@ -136,17 +133,9 @@ public class Administrador extends JFrame implements ActionListener
 					textFieldEquipo.setText(""+listaJ.get(pos).getEquipo());
 					textFieldPosicion.setText(""+listaJ.get(pos).getPosicion());
 					textFieldPuntosJornada.setText(""+listaJ.get(pos).getPuntosJornada());
-					textFieldPuntosTotales.setText(""+listaJ.get(pos).getPuntosTotales());
-					textFieldEdad.setText(""+listaJ.get(pos).getEdad());
-					
-					
-					
-					
-				
+			
 					
 					repaint();
-					
-					
 					
 				}
 				
@@ -163,10 +152,9 @@ public class Administrador extends JFrame implements ActionListener
 			{
 				
 				Statement st=null;
-				st=BasesDeDatos.getStatement();
+				//st=BasesDeDatos.getStatement();
 				
 				int puntosEstaJornada=0;
-				
 				
 				
 				añadirJugadoresALista();
@@ -176,39 +164,21 @@ public class Administrador extends JFrame implements ActionListener
 					Random puntos;
 					puntos=new Random();
 					
-					
-					
 					String sentencia="update jugadores set puntosJornada='"+puntos.nextInt(15)+"' where id='"+i+"'";
-					
-					
-				
-					
-				
-					
-
-					
 					
 					
 					try {
 						st.executeUpdate(sentencia);
-						
-						
 
 						}
 						
-					
-					
 				 catch (SQLException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					
-					
 				}
 
-				
 				JOptionPane.showMessageDialog(null, "Los puntos para esta jornada se han calculado");
-				
 				
 			}
 			
@@ -223,9 +193,9 @@ public class Administrador extends JFrame implements ActionListener
 			public void mouseClicked(MouseEvent arg0)
 			{
 
-				labelAñadir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward-CL.png")));
+				labelAñadir.setIcon(new ImageIcon(Administrador.class.getResource("")));
 				Statement st=null;
-				st=BasesDeDatos.getStatement();
+				//st=BasesDeDatos.getStatement();
 				
 				
 				
@@ -239,8 +209,8 @@ public class Administrador extends JFrame implements ActionListener
 					
 					listaJ.get(i).setPuntosTotales(puntos);
 					try {
-						st.executeUpdate("update jugadores set puntosTotales = '"+listaJ.get(i).getPuntosTotales()+"' where id = '"+i+"'");
-						st.executeUpdate("update jugadores set puntosJornada = '"+0+"' where id = '"+i+"'");
+					//	st.executeUpdate("update jugadores set puntosTotales = '"+listaJ.get(i).getPuntosTotales()+"' where id = '"+i+"'");
+					//	st.executeUpdate("update jugadores set puntosJornada = '"+0+"' where id = '"+i+"'");
 					
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
@@ -340,21 +310,20 @@ public class Administrador extends JFrame implements ActionListener
 				lblNombre_1.setVisible(true);
 				lblEquipo_1.setVisible(true);
 				lblPosicion_1.setVisible(true);
-				lblEdad_1.setVisible(true);
 				textFieldNNombre.setVisible(true);
 				TextFieldNEquipo.setVisible(true);
 				textFieldNPosicion.setVisible(true);
 				spinner.setVisible(true);
 				btnAadir.setVisible(true);
 				
-				lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Add-CL.png")));
+				lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("")));
 				
 				repaint();
 				
 			}
 			
 		});
-		lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Add.png")));
+		lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("")));
 		lblAdd.setBounds(378, 253, 39, 30);
 		getContentPane().add(lblAdd);
 		
@@ -398,10 +367,6 @@ public class Administrador extends JFrame implements ActionListener
 		btnAadir.setActionCommand("anyadir");
 		btnAadir.setVisible(false);
 		
-		lblEdad_1 = new JLabel("Edad");
-		lblEdad_1.setBounds(495, 378, 46, 14);
-		getContentPane().add(lblEdad_1);
-		lblEdad_1.setVisible(false);
 		
 		spinner = new JSpinner();
 		spinner.setModel(new SpinnerNumberModel(0, 0, 40, 1));
@@ -409,9 +374,7 @@ public class Administrador extends JFrame implements ActionListener
 		getContentPane().add(spinner);
 		spinner.setVisible(false);
 		
-		lblEdad= new JLabel("Edad");
-		lblEdad.setBounds(949, 472, 46, 14);
-		getContentPane().add(lblEdad);
+		
 		
 		textFieldEdad = new JTextField();
 		textFieldEdad.setEditable(false);
@@ -444,7 +407,7 @@ public class Administrador extends JFrame implements ActionListener
 					
 					
 					
-					st=BasesDeDatos.getStatement();
+					//st=BasesDeDatos.getStatement();
 					
 					
 					
@@ -456,7 +419,7 @@ public class Administrador extends JFrame implements ActionListener
 						 
 						 
 							st.executeUpdate( sentencia );
-							JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" añadido correctamente en el mercado de fichajes" );
+							//JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" añadido correctamente en el mercado de fichajes" );
 							 
 							textFieldPrecio.setVisible(false);
 							lblPrecio.setVisible(false);
@@ -553,15 +516,15 @@ public class Administrador extends JFrame implements ActionListener
 			public void mouseClicked(MouseEvent arg0) 
 			{
 				
-				RepartoDinero newWindow=new RepartoDinero();
-				newWindow.setVisible(true);
+				//RepartoDinero newWindow=new RepartoDinero();
+				//newWindow.setVisible(true);
 			
 				
 				
 			}
 		});
 		label.setForeground(Color.GRAY);
-		label.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/dinero.png")));
+		label.setIcon(new ImageIcon(Administrador.class.getResource("")));
 		label.setBounds(394, 634, 66, 58);
 		getContentPane().add(label);
 		
@@ -573,9 +536,9 @@ public class Administrador extends JFrame implements ActionListener
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
-				VentanaNuevaNoticia news=new VentanaNuevaNoticia();
-				news.setVisible(true);
-				
+				//VentanaNuevaNoticia news=new VentanaNuevaNoticia();
+			//	news.setVisible(true);
+			
 				
 			}
 		});

@@ -36,8 +36,12 @@ public class BD_Jugadores {
 		}catch(SQLException e) {
 		System.out.println("No se ha podido cargar la BD");
 		}
+		
+		
 
 
 		}
+	
+	
 		}
 //+ "Puntos: " + Puntos);
