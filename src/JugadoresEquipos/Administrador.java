@@ -152,7 +152,7 @@ public class Administrador extends JFrame implements ActionListener
 			{
 				
 				Statement st=null;
-				//st=BasesDeDatos.getStatement();
+				st=BD_Jugadores.getStatement();
 				
 				int puntosEstaJornada=0;
 				
@@ -195,7 +195,7 @@ public class Administrador extends JFrame implements ActionListener
 
 				labelAñadir.setIcon(new ImageIcon(Administrador.class.getResource("")));
 				Statement st=null;
-				//st=BasesDeDatos.getStatement();
+				st=BD_Jugadores.getStatement();
 				
 				
 				
@@ -209,8 +209,8 @@ public class Administrador extends JFrame implements ActionListener
 					
 					listaJ.get(i).setPuntosTotales(puntos);
 					try {
-					//	st.executeUpdate("update jugadores set puntosTotales = '"+listaJ.get(i).getPuntosTotales()+"' where id = '"+i+"'");
-					//	st.executeUpdate("update jugadores set puntosJornada = '"+0+"' where id = '"+i+"'");
+						st.executeUpdate("update jugadores set puntosTotales = '"+listaJ.get(i).getPuntosTotales()+"' where id = '"+i+"'");
+						st.executeUpdate("update jugadores set puntosJornada = '"+0+"' where id = '"+i+"'");
 					
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
@@ -506,65 +506,42 @@ public class Administrador extends JFrame implements ActionListener
 		btnEliminarMercado.addActionListener(this);
 		btnEliminarMercado.setActionCommand("eliminarMercado");
 		
-		JLabel lblRepartoDineroA = new JLabel("REPARTO DINERO A USUARIOS");
-		lblRepartoDineroA.setBounds(391, 598, 177, 14);
-		getContentPane().add(lblRepartoDineroA);
+		//JLabel lblRepartoDineroA = new JLabel("REPARTO DINERO A USUARIOS");
+		//lblRepartoDineroA.setBounds(391, 598, 177, 14);
+		//getContentPane().add(lblRepartoDineroA);
 		
-		JLabel label = new JLabel("");
-		label.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) 
-			{
+	//	JLabel label = new JLabel("");
+		//label.addMouseListener(new MouseAdapter() {
+		//	@Override
+			//public void mouseClicked(MouseEvent arg0) 
+			//{
 				
 				//RepartoDinero newWindow=new RepartoDinero();
 				//newWindow.setVisible(true);
 			
 				
 				
-			}
-		});
-		label.setForeground(Color.GRAY);
-		label.setIcon(new ImageIcon(Administrador.class.getResource("")));
-		label.setBounds(394, 634, 66, 58);
-		getContentPane().add(label);
+			//}
+		//});
+//		label.setForeground(Color.GRAY);
+	//	label.setIcon(new ImageIcon(Administrador.class.getResource("")));
+	//	label.setBounds(394, 634, 66, 58);
+	//	getContentPane().add(label);
 		
-		JLabel lblNoticia = new JLabel("Pulsa este bot\u00F3n si quieres introducir una noticia");
-		lblNoticia.setBounds(663, 652, 332, 14);
-		getContentPane().add(lblNoticia);
 		
-		JButton btnNewButton_1 = new JButton("NUEVA NOTICIA");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) 
-			{
-				//VentanaNuevaNoticia news=new VentanaNuevaNoticia();
-			//	news.setVisible(true);
-			
-				
-			}
-		});
-		btnNewButton_1.setBounds(1088, 648, 217, 23);
-		getContentPane().add(btnNewButton_1);
+	//	btnNewButton_1.setBounds(1088, 648, 217, 23);
+//		getContentPane().add(btnNewButton_1);
 		
 		lblPrecio.setVisible(false);
 		
 		cargarJugadoresEnLista();
 	
-		
-	
-		
-		
-		
-		
-		
 	}
 	
-	
 
-
-	
 	private void cargarJugadoresEnLista() 
 	{
-		 st=BasesDeDatos.getStatement();
+		 st=BD_Jugadores.getStatement();
 			String jugadores="";
 			try {
 				jugadores="select * from jugadores";
@@ -572,24 +549,22 @@ public class Administrador extends JFrame implements ActionListener
 				
 				
 				
-//				ResultSetMetaData rsmd = rs.getMetaData();
-//				int columnCount = rsmd.getColumnCount();
-				while(rs.next())
+				ResultSetMetaData rsmd = rs.getMetaData();
+  			    int columnCount = rsmd.getColumnCount();
+			 	while(rs.next())
 				{
 					jugador=new Jugador();
 					
-//					jugador.setNombre(rs.getString("nombre"));
-//					jugador.setEdad(rs.getInt("edad"));
-//					jugador.setEquipo(rs.getString("equipo"));
-//					jugador.setId(rs.getString("id"));
-//					jugador.setPuntosJornada(rs.getInt("puntosJornada"));
-//					jugador.setPuntosTotales(rs.getInt("puntosTotales"));
-//					jugador.setPosicion(rs.getString("posicion"));
+					jugador.setNombre(rs.getString("nombre"));
+					jugador.setEquipo(rs.getString("equipo"));
+					jugador.setId(rs.getString("id"));
+					jugador.setPuntosJornada(rs.getInt("puntosJornada"));
+					jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+					jugador.setPosicion(rs.getString("posicion"));
 					
 					
 					
 					jugador.setNombre(rs.getString(2));
-					jugador.setEdad(rs.getInt(5));
 					jugador.setEquipo(rs.getString(3));
 					jugador.setId(rs.getString(1));
 					jugador.setPuntosJornada(rs.getInt(6));
@@ -619,7 +594,7 @@ public class Administrador extends JFrame implements ActionListener
 
 	private void cargarUsuariosRegistrados()
 	{
-		st=BasesDeDatos.getStatement();
+		st=BD_Jugadores.getStatement();
 		usuarios=new ArrayList();
 		
 		String sentencia="select * from usuarios";
@@ -642,20 +617,10 @@ public class Administrador extends JFrame implements ActionListener
 		
 	}
 
-
-
-
-
-	
-
-
-
-
-
 	private void cargarJugadoresMercado() 
 	{
 		mercado=new ArrayList();
-		st=BasesDeDatos.getStatement();
+		st=BD_Jugadores.getStatement();
 		String sentencia="select * from mercadodefichajes";
 		
 		try {
@@ -685,7 +650,7 @@ public class Administrador extends JFrame implements ActionListener
 	
 	public int testJugadoresEnBaseDatos(ArrayList <Jugador>lista,Statement st)
 	{
-		st=BasesDeDatos.getStatement();
+		st=BD_Jugadores.getStatement();
 		lista.clear();
 		
 		try {
@@ -699,7 +664,6 @@ public class Administrador extends JFrame implements ActionListener
 				
 
 				jugador.setNombre(rs.getString(2));
-				jugador.setEdad(rs.getInt(5));
 				jugador.setEquipo(rs.getString(3));
 				jugador.setId(rs.getString(1));
 				jugador.setPuntosJornada(rs.getInt(6));
@@ -718,10 +682,6 @@ public class Administrador extends JFrame implements ActionListener
 		return lista.size();
 	}
 
-
-
-
-
 	@Override
 	public void actionPerformed(ActionEvent arg0) 
 	{
@@ -731,13 +691,13 @@ public class Administrador extends JFrame implements ActionListener
 			
 			String jugadores="select * from jugadores";
 			
-			st=BasesDeDatos.getStatement();
+			st=BD_Jugadores.getStatement();
 			String sentencia="";
 			sentencia="insert into jugadores values("+checkearId() +", '"+textFieldNNombre.getText()+"', '"+TextFieldNEquipo.getText()+"', '"+textFieldNPosicion.getText()+"', '"+(int)spinner.getValue()+"', '0', '0')";
 			 
 			try {
 				st.executeUpdate(sentencia);
-//				ResultSet rs=st.executeQuery(jugadores);
+				ResultSet rs=st.executeQuery(jugadores);
 				
 				
 				modelo.addElement(textFieldNNombre.getText());
@@ -776,7 +736,6 @@ public class Administrador extends JFrame implements ActionListener
 					String value=listUsuarios.getSelectedValue()+"";
 					eliminarUsuario(value, listUsuarios.getSelectedIndex());
 					
-					
 				}
 			}
 			
@@ -797,32 +756,20 @@ public class Administrador extends JFrame implements ActionListener
 					String valor=(String) listMercado.getSelectedValue();
 					eliminarMercado(valor, listMercado.getSelectedIndex());
 					
-					
 				}
 			}
 			
 			repaint();
 			break;
-		
-		
-		
-			
+	
 		}
 		
 	}
 
 
-
-
-
-	
-
-
-
-
 	private void eliminarMercado(String valor, int selectedIndex)
 	{
-		st=BasesDeDatos.getStatement();
+		st=BD_Jugadores.getStatement();
 		
 		String sentencia="DELETE FROM mercadodefichajes WHERE nombre = '"+valor+"'";
 		System.out.println(sentencia);
@@ -834,26 +781,12 @@ public class Administrador extends JFrame implements ActionListener
 			e.printStackTrace();
 		}
 		
-		
-		
-		
-		
 		repaint();
 	}
 
-
-
-
-
-	
-
-
-
-
-
 	private void eliminarUsuario(String value, int i)
 	{
-		st=BasesDeDatos.getStatement();
+		st=BD_Jugadores.getStatement();
 		
 		String sentencia="DELETE FROM usuarios WHERE id = '"+value+"'";
 		
@@ -863,8 +796,6 @@ public class Administrador extends JFrame implements ActionListener
 			st.executeUpdate(sentencia);
 			modeloUsuarios.remove(i);
 			
-			
-			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -873,15 +804,6 @@ public class Administrador extends JFrame implements ActionListener
 		
 		repaint();
 	}
-
-
-
-
-
-	
-
-
-
 
 	private int checkearId()
 	{
@@ -909,13 +831,9 @@ public class Administrador extends JFrame implements ActionListener
 	}
 	
 
-
-
-
-
 	private void añadirJugadoresALista() 
 	{
-		st=BasesDeDatos.getStatement();
+		st=BD_Jugadores.getStatement();
 		listaJ.clear();
 		
 		try {
@@ -929,7 +847,6 @@ public class Administrador extends JFrame implements ActionListener
 				
 
 				jugador.setNombre(rs.getString(2));
-				jugador.setEdad(rs.getInt(5));
 				jugador.setEquipo(rs.getString(3));
 				jugador.setId(rs.getString(1));
 				jugador.setPuntosJornada(rs.getInt(6));

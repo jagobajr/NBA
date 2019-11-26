@@ -2,6 +2,7 @@ package JugadoresEquipos;
 
 public class Jugador {
 	
+	protected String Id;
 	protected String Nombre;
 	protected String Equipo;
 	protected int PuntosJornada;
@@ -28,6 +29,13 @@ public class Jugador {
 		this.posicion = "";
 	}
 
+	public String getId() {
+		return Nombre;
+	}
+
+	public void setId(String id) {
+		id = id;
+	}
 	public String getNombre() {
 		return Nombre;
 	}
