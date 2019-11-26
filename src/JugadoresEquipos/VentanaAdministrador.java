@@ -3,15 +3,14 @@ package JugadoresEquipos;
 import javax.swing.JFrame;
 
 import java.awt.Color;
+import java.awt.EventQueue;
 import java.awt.Toolkit;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Random;
-
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
@@ -34,15 +33,18 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+
+
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
-public class Administrador extends JFrame implements ActionListener
-{
+public class VentanaAdministrador extends JFrame implements ActionListener{
 
 /**
  * 
  */
+	
+	
 
 	private static final long serialVersionUID = 1L;
     private JTextField textFieldNombre;
@@ -50,22 +52,22 @@ public class Administrador extends JFrame implements ActionListener
     private JTextField textFieldPosicion;
     private JTextField textFieldPuntosJornada;
     private JTextField textFieldPuntosTotales;
-    JList <DefaultListModel>lista ;
-    DefaultListModel modelo;
-    DefaultListModel modeloUsuarios;
-    DefaultListModel modeloMercado;
-    JLabel lblNombre_1;
-    JLabel lblEquipo_1;
-    JLabel lblPosicion_1;
-    JLabel lblAdd ;
-    JLabel labelAnyadir;
-    Statement st=null;
-    JSpinner spinner;
-    ArrayList<Jugador>listaJ;
-    ArrayList mercado;
-    ArrayList usuarios;
-    ArrayList puntosJornada;
-    Jugador jugador;
+    private JList <DefaultListModel>lista ;
+    private DefaultListModel modelo;
+    private DefaultListModel modeloUsuarios;
+    private DefaultListModel modeloMercado;
+    private JLabel lblNombre_1;
+    private JLabel lblEquipo_1;
+    private JLabel lblPosicion_1;
+    private JLabel lblAdd ;
+    private JLabel labelAnyadir;
+    private Statement st=null;
+    private JSpinner spinner;
+    private ArrayList<Jugador>listaJ;
+    private ArrayList mercado;
+    private ArrayList usuarios;
+    private ArrayList puntosJornada;
+    private Jugador jugador;
 
     private JTextField textFieldNNombre;
     private JTextField TextFieldNEquipo;
@@ -73,17 +75,35 @@ public class Administrador extends JFrame implements ActionListener
     private JTextField textFieldEdad;
     private JTextField textFieldPrecio;
     private JLabel lblPrecio;
-    JList listMercado;
-    JList listUsuarios;
+    private JList listMercado;
+    private JList listUsuarios;
     private JLabel lblJugadoresEnMercado;
     private JScrollPane scrollPane_2;
-    JButton btnPuntuar;
-    JButton btnAadir;
-    JButton btnEliminarMercado;
-    JButton btnEliminarUsuarios;
+    private JButton btnPuntuar;
+    private JButton btnAadir;
+    private JButton btnEliminarMercado;
+    private  JButton btnEliminarUsuarios;
 
+    /**
+	 * Launch the application.
+	 */
+    public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					 VentanaAdministrador frame = new VentanaAdministrador();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
-	public Administrador() {
+    /**
+	 * Create the frame.
+	 */
+	public VentanaAdministrador() {
 		
 		
 		//BasesDeDatos.crearTablaMercadoDeFichajes();
@@ -388,7 +408,7 @@ public class Administrador extends JFrame implements ActionListener
 			{
 				if(textFieldNombre.getText().isEmpty()==true)
 				{
-					JOptionPane.showMessageDialog(null, "Por favor, selecciona un jugador para anyadir al mercado de fichajes");
+					JOptionPane.showMessageDialog(null , "Por favor, selecciona un jugador para anyadir al mercado de fichajes");
 					return;
 				}
 				
@@ -407,7 +427,7 @@ public class Administrador extends JFrame implements ActionListener
 					
 					
 					
-					//st=BasesDeDatos.getStatement();
+					st=BD_Jugadores.getStatement();
 					
 					
 					
@@ -419,7 +439,7 @@ public class Administrador extends JFrame implements ActionListener
 						 
 						 
 							st.executeUpdate( sentencia );
-							//JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" anyadido correctamente en el mercado de fichajes" );
+							JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" anyadido correctamente en el mercado de fichajes" );
 							 
 							textFieldPrecio.setVisible(false);
 							lblPrecio.setVisible(false);
@@ -832,8 +852,7 @@ public class Administrador extends JFrame implements ActionListener
 	
 
 
-	private void anyadirJugadoresALista() 
-	{
+	private void anyadirJugadoresALista() {
 		st=BD_Jugadores.getStatement();
 		listaJ.clear();
 		
