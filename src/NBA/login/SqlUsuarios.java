@@ -9,6 +9,9 @@ import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
 
+
+
+
 public class SqlUsuarios extends ConexionRegistro{
 	
 	public boolean registrar (Usuarios usr) {
@@ -145,6 +148,11 @@ public class SqlUsuarios extends ConexionRegistro{
 		return 0;
 
          }
+    
+    
+
+     	
+    
 
 }
 
