@@ -225,7 +225,7 @@ public class VentanaRegistro extends JFrame {
 		BaseDeDatos.crearTablaPivotSalidos();
 
 	
-		//cargarJugadoresPosicion();
+		cargarJugadoresPosicion();
 	}
 	
 	public void asignarjugadores(String ID) {
