@@ -21,7 +21,7 @@ public class BaseDeDatos
 	public static Connection initBD( String nombreBD ) {
 		try {
 		    Class.forName("org.sqlite.JDBC");
-		    connection = DriverManager.getConnection("jdbc:sqlite:" + nombreBD );
+		    connection = DriverManager.getConnection("jdbc:sqlite:NBA.db" );
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30);  // poner timeout 30 msg
 		    return connection;
@@ -55,31 +55,7 @@ public class BaseDeDatos
 		}
 	}
 
-	// Crea una tabla de catalogo multimedia en una base de datos, si no existia ya.
-	 // Debe haberse inicializado la conexion correctamente.
-	 
-	public static void crearTablaUsuarios() {
-	if (statement==null) return; //para que alguien no nos llame antes de initBD
-	try {
-			statement.executeUpdate("create table usuarios " + "(id int, usuario string, contrasenya string, dinero double" +")");
-	} catch (SQLException e) {
-		// Si hay excepcion es que la tabla ya existia (lo cual es correcto)
-		// e.printStackTrace();  
-	}
-	}
-	public static void crearTablaUsuarioJugadores(){
-		
-		if(statement==null) return;
-		try{
-			
-			statement.executeUpdate("create table UsuarioJugadores " + "(idUsuario string, idJugador string" +")");
-		}catch(SQLException e){
-			
-		}
-		
-		
-		
-	}
+	
 	
 public static void crearTablaBasesSalidos(){
 		

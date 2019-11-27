@@ -19,13 +19,15 @@ public class SqlUsuarios extends ConexionRegistro{
 		PreparedStatement ps = null;
 		Connection con = getConexion();
 		
-		String sql ="INSERT INTO usuarios (usuario, password, correo) VALUES (?,?,?)";
+		String sql ="INSERT INTO usuarios (idUsuario, usuario, password, correo, dinero) VALUES (?,?,?,?,?)";
 		
 		try {
 			ps = con.prepareStatement(sql);
-			ps.setString(1, usr.getUsuario());
-			ps.setString(2, usr.getContra());
-			ps.setString(3, usr.getCorreo());
+			ps.setInt(1, usr.getId());
+			ps.setString(2, usr.getUsuario());
+			ps.setString(3, usr.getContra());
+			ps.setString(4, usr.getCorreo());
+			ps.setInt(5, usr.getDinero());
 			ps.execute();
 			return true;
 			
@@ -44,7 +46,7 @@ public class SqlUsuarios extends ConexionRegistro{
 	        ResultSet rs = null;
 	        Connection con = getConexion();
 
-			String sql ="SELECT id, usuario, password, id_tipo FROM usuarios WHERE usuario = ? LIMIT 1";
+			String sql ="SELECT idUsuario, usuario, password, id_tipo FROM usuarios WHERE usuario = ? LIMIT 1";
 
 	        try {
 	            ps = con.prepareStatement(sql);
@@ -80,7 +82,7 @@ public class SqlUsuarios extends ConexionRegistro{
         ResultSet rs = null;
         Connection con = getConexion();
 
-        String sql = "SELECT count(id) FROM usuarios WHERE usuario = ?";
+        String sql = "SELECT count(idUsuario) FROM usuarios WHERE usuario = ?";
 
         try {
             ps = con.prepareStatement(sql);
@@ -120,7 +122,7 @@ public class SqlUsuarios extends ConexionRegistro{
     	Connection con = getConexion();
     	 PreparedStatement ps = null;
          ResultSet rs = null;
-    	 String sql = "SELECT max(id) FROM usuarios";
+    	 String sql = "SELECT max(idUsuario) FROM usuarios";
 
          try {
              ps = con.prepareStatement(sql);

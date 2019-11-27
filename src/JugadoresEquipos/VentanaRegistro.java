@@ -154,7 +154,7 @@ public class VentanaRegistro extends JFrame {
 
 			                        String nuevoPass = Hash.sha1(pass);
 
-			                       mod.setId(modSql.dameUltimoRegistro());
+			                        mod.setId(modSql.dameUltimoRegistro());
 			                        mod.setUsuario(datos_usuario.getText());
 			                        mod.setContra(nuevoPass);
 			                        mod.setCorreo(correo.getText());
@@ -217,7 +217,6 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(label);
 		
 		
-		BaseDeDatos.crearTablaUsuarios();
 		BaseDeDatos.crearTablaBasesSalidos();
 		BaseDeDatos.crearTablaEscoltasSalidos();
 		BaseDeDatos.crearTablaAlerosSalidos();
@@ -225,12 +224,44 @@ public class VentanaRegistro extends JFrame {
 		BaseDeDatos.crearTablaPivotSalidos();
 
 	
-		cargarJugadoresPosicion();
 	}
+	
+	private int insertarIdUsuario() 
+	{
+		Usuarios=new ArrayList();
+		
+		st=BaseDeDatos.getStatement();
+		
+		String sentencia="select * from usuarios";
+		
+		ResultSet rs;
+		try {
+			rs = st.executeQuery(sentencia);
+			
+			while(rs.next())
+			{
+				Usuarios.add(rs.getString("idUsuario"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return Usuarios.size()+1;
+	}
+/**
+ * En el caso de que el usuario ya exista, no permite que se cree uno igual
+ * @param st
+ * @return 
+ */
+	
+	
 	
 	public void asignarjugadores(String ID) {
 		Statement st=null;
-		BaseDeDatos.crearTablaUsuarioJugadores();
 		st=BaseDeDatos.getStatement();
 		
 		int posicionBase;
@@ -714,47 +745,15 @@ public class VentanaRegistro extends JFrame {
 		
 	}
 
-	private int insertarNumIdentificador() 
-	{
-		Usuarios=new ArrayList();
-		
-		st=BaseDeDatos.getStatement();
-		
-		String sentencia="select * from usuarios";
-		
-		ResultSet rs;
-		try {
-			rs = st.executeQuery(sentencia);
-			
-			while(rs.next())
-			{
-				Usuarios.add(rs.getString("id"));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		
-		
-		return Usuarios.size()+1;
-	}
-/**
- * En el caso de que el usuario ya exista, no permite que se cree uno igual
- * @param st
- * @return 
- */
 	
-		public  void cargarJugadoresPosicion() 
-		{
+	
+		public  void cargarJugadoresPosicion() {
 		st=BaseDeDatos.getStatement();
 		String sentencia="select * from jugadores";
 		todosJugadores=new ArrayList<Jugador>();
 		
 		try {
 			ResultSet rs=st.executeQuery(sentencia);
-			
 			while(rs.next())
 			{
 				jugador=new Jugador();
@@ -780,34 +779,22 @@ public class VentanaRegistro extends JFrame {
 		}
 		
 		
-		for(int i=0;i<todosJugadores.size();i++)
-		{
-			if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("BA"))
-			{
+		for(int i=0;i<todosJugadores.size();i++){
+			if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("BA"))	{
 				base.add(todosJugadores.get(i));
-			}
-			else
-			{
-				if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("ES"))
-				{
-					escolta.add(todosJugadores.get(i));
-				}
-				else
-				{
-					if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("AL"))
-					{
-						alero.add(todosJugadores.get(i));
-					}
-					else
-					{
-						if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("AP"))
-					{
-						alapivot.add(todosJugadores.get(i));
-					}
-					else
+			}else{
+				if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("ES"))	{
+					escolta.add(todosJugadores.get(i));	
+					}else{
+					if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("AL"))	{
+						alero.add(todosJugadores.get(i));	
+						}else{
+						if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("AP")){
+						alapivot.add(todosJugadores.get(i));}
+					    else
 						pivot.add(todosJugadores.get(i));
-					}
-				}
+					    }
+				    }
 				System.out.println(todosJugadores.get(i).getPosicion());
 			}
 		}

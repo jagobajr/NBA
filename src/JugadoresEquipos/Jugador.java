@@ -92,11 +92,11 @@ public class Jugador
 				
 
 				jugador.setNombre(rs.getString(2));
-				jugador.setPrecio(rs.getInt(5));
+				jugador.setPrecio(rs.getInt(7));
 				jugador.setEquipo(rs.getString(3));
 				jugador.setId(rs.getString(1));
-				jugador.setPuntosJornada(rs.getInt(6));
-				jugador.setPuntosTotales(rs.getInt(7));
+				jugador.setPuntosJornada(rs.getInt(5));
+				jugador.setPuntosTotales(rs.getInt(6));
 				jugador.setPosicion(rs.getString(4));
 				
 				lista.add(jugador);
