@@ -29,7 +29,6 @@ import java.awt.SystemColor;
 
 public class VentanaRegistro extends JFrame {
 
-	private static final ResultSet BasesDeDatos = null;
 	private JPanel contentPane;
 	private JTextField datos_usuario;
 	private JTextField correo;
@@ -486,7 +485,7 @@ public class VentanaRegistro extends JFrame {
 	private boolean comprobarAlero(Jugador jugador2)
 	{
 		
-		st=BasesDeDatos.getStatement();
+		st=BaseDeDatos.getStatement();
 		String sentencia="select * from defensasSalidos";
 		aleroRepetidos.clear();
 		
@@ -547,9 +546,9 @@ public class VentanaRegistro extends JFrame {
 	private boolean comprobarEscolta(Jugador jugador2)
 	{
 
-		st=BasesDeDatos.getStatement();
-		String sentencia="select * from mediosSalidos";
-		mediosRepe.clear();
+		st=BaseDeDatos.getStatement();
+		String sentencia="select * from escoltasSalidos";
+		escoltaRepetidos.clear();
 		
 		try {
 			ResultSet rs=st.executeQuery(sentencia);
@@ -567,11 +566,11 @@ public class VentanaRegistro extends JFrame {
 				jugador.setNombre(rs.getString("nombre"));
 				jugador.setEquipo(rs.getString("equipo"));
 				jugador.setPosicion(rs.getString("posicion"));
-				jugador.setEdad(rs.getInt("edad"));
 				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
 				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
-				
-				mediosRepe.add(jugador);
+				jugador.setPrecio(rs.getInt("precio"));
+
+				escoltaRepetidos.add(jugador);
 					
 			} 
 			}
@@ -582,9 +581,9 @@ public class VentanaRegistro extends JFrame {
 				e.printStackTrace();
 			}
 		
-				for(int i=0;i<mediosRepe.size();i++)
+				for(int i=0;i<escoltaRepetidos.size();i++)
 				{
-					if(jugador2.getId().equalsIgnoreCase(mediosRepe.get(i).getId()))
+					if(jugador2.getId().equalsIgnoreCase(escoltaRepetidos.get(i).getId()))
 					{
 				
 						return false;
@@ -609,9 +608,9 @@ public class VentanaRegistro extends JFrame {
 	private boolean comprobarBase(Jugador jugador2) {
 		
 		
-		st=BasesDeDatos.getStatement();
-		String sentencia="select * from porterosSalidos";
-		porterosRepe.clear();
+		st=BaseDeDatos.getStatement();
+		String sentencia="select * from basesSalidos";
+		baseRepetidos.clear();
 		
 		try {
 			ResultSet rs=st.executeQuery(sentencia);
@@ -632,7 +631,7 @@ public class VentanaRegistro extends JFrame {
 				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
 				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
 				
-				porterosRepe.add(jugador);
+				baseRepetidos.add(jugador);
 					
 			} 
 			}
@@ -642,9 +641,9 @@ public class VentanaRegistro extends JFrame {
 				e.printStackTrace();
 			}
 		
-				for(int i=0;i<porterosRepe.size();i++)
+				for(int i=0;i<baseRepetidos.size();i++)
 				{
-					if(jugador2.getId().equalsIgnoreCase(porterosRepe.get(i).getId()))
+					if(jugador2.getId().equalsIgnoreCase(baseRepetidos.get(i).getId()))
 					{
 				
 						return false;
@@ -662,9 +661,9 @@ public class VentanaRegistro extends JFrame {
 	
 	private boolean comprobarPivot(Jugador jugador2)
 	{
-		st=BasesDeDatos.getStatement();
-		String sentencia="select * from delanterosSalidos";
-		alapivotRepetidos.clear();
+		st=BaseDeDatos.getStatement();
+		String sentencia="select * from pivotSalidos";
+		pivotRepetidos.clear();
 		
 		try {
 			ResultSet rs=st.executeQuery(sentencia);
@@ -682,11 +681,11 @@ public class VentanaRegistro extends JFrame {
 				jugador.setNombre(rs.getString("nombre"));
 				jugador.setEquipo(rs.getString("equipo"));
 				jugador.setPosicion(rs.getString("posicion"));
-				jugador.setEdad(rs.getInt("edad"));
 				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
 				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
-				
-				alapivotRepetidos.add(jugador);
+				jugador.setPrecio(rs.getInt("precio"));
+
+				pivotRepetidos.add(jugador);
 					
 			} 
 			}
@@ -697,9 +696,9 @@ public class VentanaRegistro extends JFrame {
 				e.printStackTrace();
 			}
 		
-				for(int i=0;i<alapivotRepetidos.size();i++)
+				for(int i=0;i<pivotRepetidos.size();i++)
 				{
-					if(jugador2.getId().equalsIgnoreCase(alapivotRepetidos.get(i).getId()))
+					if(jugador2.getId().equalsIgnoreCase(pivotRepetidos.get(i).getId()))
 					{
 				
 						return false;
@@ -715,9 +714,110 @@ public class VentanaRegistro extends JFrame {
 		
 	}
 
-
-
+	private int insertarNumIdentificador() 
+	{
+		Usuarios=new ArrayList();
+		
+		st=BaseDeDatos.getStatement();
+		
+		String sentencia="select * from usuarios";
+		
+		ResultSet rs;
+		try {
+			rs = st.executeQuery(sentencia);
+			
+			while(rs.next())
+			{
+				Usuarios.add(rs.getString("id"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return Usuarios.size()+1;
 	}
+/**
+ * En el caso de que el usuario ya exista, no permite que se cree uno igual
+ * @param st
+ * @return 
+ */
+	
+		public  void cargarJugadoresPosicion() 
+		{
+		st=BaseDeDatos.getStatement();
+		String sentencia="select * from jugadores";
+		todosJugadores=new ArrayList<Jugador>();
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			
+			while(rs.next())
+			{
+				jugador=new Jugador();
+				
+				jugador.setId(rs.getString("id"));
+				jugador.setNombre(rs.getString("nombre"));
+				jugador.setEquipo(rs.getString("equipo"));
+				jugador.setPosicion(rs.getString("posicion"));
+				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
+				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+				jugador.setPrecio(rs.getInt("precio"));
+
+				todosJugadores.add(jugador);
+				
+				
+				
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		for(int i=0;i<todosJugadores.size();i++)
+		{
+			if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("BA"))
+			{
+				base.add(todosJugadores.get(i));
+			}
+			else
+			{
+				if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("ES"))
+				{
+					escolta.add(todosJugadores.get(i));
+				}
+				else
+				{
+					if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("AL"))
+					{
+						alero.add(todosJugadores.get(i));
+					}
+					else
+					{
+						if(todosJugadores.get(i).getPosicion().equalsIgnoreCase("AP"))
+					{
+						alapivot.add(todosJugadores.get(i));
+					}
+					else
+						pivot.add(todosJugadores.get(i));
+					}
+				}
+				System.out.println(todosJugadores.get(i).getPosicion());
+			}
+		}
+		
+		
+	}
+
+		
+
+	
 
 	
 		
