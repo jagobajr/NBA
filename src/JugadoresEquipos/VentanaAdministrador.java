@@ -106,8 +106,8 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	public VentanaAdministrador() {
 		
 		
-		//BasesDeDatos.crearTablaMercadoDeFichajes();
-		//BasesDeDatos.crearTablaUsuarios();
+		BaseDeDatos.crearTablaMercadoDeFichajes();
+		BaseDeDatos.crearTablaUsuarios();
 		
 		
 		setBounds(new Rectangle(0, 0, 2147483647, 2147483647));
