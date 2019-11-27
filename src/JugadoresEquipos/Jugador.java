@@ -1,95 +1,116 @@
 package JugadoresEquipos;
 
-public class Jugador {
-	
-	protected String Id;
-	protected String Nombre;
-	protected String Equipo;
-	protected int PuntosJornada;
-	protected int PuntosTotales;
-	protected String posicion;
-	protected int Precio;
-	
-	public Jugador(String nombre, String posicion, String equipo, int puntosJornada, int puntosTotales, int precio) {
-		super();
-		Nombre = nombre;
-		Equipo = equipo;
-		PuntosJornada = puntosJornada;
-		PuntosTotales = puntosTotales;
-		Precio = precio;
-		this.posicion = posicion;
-	}
-	
-	public Jugador() {
-		super();
-		Nombre = "";
-		Equipo = "";
-		PuntosJornada = 0;
-		PuntosTotales = 0;
-		this.posicion = "";
-	}
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
+
+
+public class Jugador 
+{
+	private String nombre;
+	private String id;
 	public String getId() {
-		return Nombre;
+		return id;
 	}
-
 	public void setId(String id) {
-		id = id;
-	}
-	public String getNombre() {
-		return Nombre;
+		this.id = id;
 	}
 
-	public void setNombre(String nombre) {
-		Nombre = nombre;
-	}
-
-	public String getEquipo() {
-		return Equipo;
-	}
-
-	public void setEquipo(String equipo) {
-		Equipo = equipo;
-	}
-
-	public int getPuntosJornada() {
-		return PuntosJornada;
-	}
-
-	public void setPuntosJornada(int puntosJornada) {
-		PuntosJornada = puntosJornada;
-	}
+	private String equipo;
+	private int precio;
+	private int puntosJornada;
+	private int puntosTotales;
+	private String posicion;
 	
-	public int getPuntosTotales() {
-		return PuntosTotales;
+	public Jugador()
+	{
+		nombre="";
+		equipo="";
+		precio=0;
+		puntosJornada=0;
+		puntosTotales=0;
+		posicion="";
+		
 	}
-
-	public void setPuntosTotales(int puntosTotales) {
-		PuntosTotales = puntosTotales;
-	}
-	
-	public int getPrecio() {
-		return Precio;
-	}
-
-	public void setPrecio(int precio) {
-		Precio = precio;
-	}
-
-
 	public String getPosicion() {
 		return posicion;
 	}
-
 	public void setPosicion(String posicion) {
 		this.posicion = posicion;
 	}
-
-	@Override
-	public String toString() {
-		return "Jugador [Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", PuntosJornada=" + PuntosJornada + ", PuntosTotales=" + PuntosTotales + " ,]";
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getEquipo() {
+		return equipo;
+	}
+	public void setEquipo(String equipo) {
+		this.equipo = equipo;
+	}
+	public int getPrecio() {
+		return precio;
+	}
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+	public int getPuntosJornada() {
+		return puntosJornada;
+	}
+	public void setPuntosJornada(int puntosJornada) {
+		this.puntosJornada = puntosJornada;
+	}
+	public int getPuntosTotales() {
+		return puntosTotales;
+	}
+	public void setPuntosTotales(int puntosTotales) {
+		this.puntosTotales = puntosTotales;
 	}
 	
 	
+	
+	
+	public int testJugadoresEnBaseDatos(ArrayList <Jugador>lista,Statement st)
+	{
+		
+		BaseDeDatos.initBD("NBA");
+		st=BaseDeDatos.getStatement();
+		lista.clear();
+		
+		try {
+			ResultSet rs=st.executeQuery("select * from jugadores");
+			
+			Jugador jugador=new Jugador();
+			while(rs.next())
+			{
+				
+				jugador=new Jugador();
+				
+
+				jugador.setNombre(rs.getString(2));
+				jugador.setPrecio(rs.getInt(5));
+				jugador.setEquipo(rs.getString(3));
+				jugador.setId(rs.getString(1));
+				jugador.setPuntosJornada(rs.getInt(6));
+				jugador.setPuntosTotales(rs.getInt(7));
+				jugador.setPosicion(rs.getString(4));
+				
+				lista.add(jugador);
+				
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return lista.size();
+	}
+
+
 
 }

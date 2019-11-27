@@ -112,7 +112,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		
 		setBounds(new Rectangle(0, 0, 2147483647, 2147483647));
 		setTitle("ADMINISTRADOR DE LA COMUNIDAD ");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Administrador.class.getResource("")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAdministrador.class.getResource("")));
 		setBackground(new Color(0,128,0));
 		getContentPane().setLayout(null);
 		
@@ -213,7 +213,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent arg0)
 			{
 
-				labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("")));
+				labelAnyadir.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("")));
 				Statement st=null;
 				st=BD_Jugadores.getStatement();
 				
@@ -253,7 +253,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				
 			}
 		});
-		labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward.png")));
+		labelAnyadir.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward.png")));
 		labelAnyadir.setBounds(378, 171, 39, 30);
 		getContentPane().add(labelAnyadir);
 		
@@ -336,14 +336,14 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				spinner.setVisible(true);
 				btnAadir.setVisible(true);
 				
-				lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("")));
+				lblAdd.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("")));
 				
 				repaint();
 				
 			}
 			
 		});
-		lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("")));
+		lblAdd.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("")));
 		lblAdd.setBounds(378, 253, 39, 30);
 		getContentPane().add(lblAdd);
 		
@@ -857,7 +857,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		listaJ.clear();
 		
 		try {
-			ResultSet rs=st.executeQuery("select * from jugadores");
+			ResultSet rs=st.executeQuery("select * from NBA");
 			
 			Jugador jugador=new Jugador();
 			while(rs.next())
