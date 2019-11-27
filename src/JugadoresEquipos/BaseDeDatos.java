@@ -81,48 +81,48 @@ public class BaseDeDatos
 		
 	}
 	
-public static void crearTablaPorterosSalidos(){
+public static void crearTablaBasesSalidos(){
 		
 		if(statement==null) return;
 		try{
 			
-			statement.executeUpdate("create table porterosSalidos " + "(id string, nombre string, equipo string, posicion string, edad int, puntosJornada int, puntosTotales int" +")");
+			statement.executeUpdate("create table basesSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 		}catch(SQLException e){
 			
 		}
 		
 		
 	}
-public static void crearTablaDefensasSalidos(){
+public static void crearTablaEscoltasSalidos(){
 		
 		if(statement==null) return;
 		try{
 			
-			statement.executeUpdate("create table defensasSalidos " + "(id string, nombre string, equipo string, posicion string, edad int, puntosJornada int, puntosTotales int" +")");
+			statement.executeUpdate("create table escoltasSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 		}catch(SQLException e){
 			
 		}
 		
 		
 	}
-public static void crearTablaMediosSalidos(){
+public static void crearTablaAlerosSalidos(){
 	
 	if(statement==null) return;
 	try{
 		
-		statement.executeUpdate("create table mediosSalidos " + "(id string, nombre string, equipo string, posicion string, edad int, puntosJornada int, puntosTotales int" +")");
+		statement.executeUpdate("create table alerosSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
 		
 	}
 	
 	
 }
-public static void crearTablaDelanterosSalidos(){
+public static void crearTablaAlapivotSalidos(){
 	
 	if(statement==null) return;
 	try{
 		
-		statement.executeUpdate("create table delanterosSalidos " + "(id string, nombre string, equipo string, posicion string, edad int, puntosJornada int, puntosTotales int" +")");
+		statement.executeUpdate("create table alapivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
 		
 	}
@@ -130,7 +130,18 @@ public static void crearTablaDelanterosSalidos(){
 	
 }
 	
+public static void crearTablaPivotSalidos(){
 	
+	if(statement==null) return;
+	try{
+		
+		statement.executeUpdate("create table ººººººººººpivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+	}catch(SQLException e){
+		
+	}
+	
+	
+}
 	
 	
 
@@ -138,7 +149,7 @@ public static void crearTablaDelanterosSalidos(){
 	{
 		if (statement==null) return;//para que alguien no nos llame antes de initBD
 		try {
-				statement.executeUpdate("create table jugadores " + "(id string, nombre string, equipo string, posicion string, edad int, puntosJornada int, puntosTotales int" +")");
+				statement.executeUpdate("create table jugadores " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 		} catch (SQLException e) {
 			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();  

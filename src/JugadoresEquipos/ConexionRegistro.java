@@ -1,4 +1,4 @@
-package NBA.login;
+package JugadoresEquipos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-package NBA.login;
+package JugadoresEquipos;
 
 public class Usuarios {
 	private int id;
