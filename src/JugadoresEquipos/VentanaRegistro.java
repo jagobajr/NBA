@@ -17,6 +17,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JSpinner;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ import java.awt.SystemColor;
 
 public class VentanaRegistro extends JFrame {
 
+	private static final ResultSet BasesDeDatos = null;
 	private JPanel contentPane;
 	private JTextField datos_usuario;
 	private JTextField correo;
@@ -48,6 +50,9 @@ public class VentanaRegistro extends JFrame {
 	ArrayList <Jugador>pivotRepetidos;
     Jugador jugador;
     Random random;
+    
+	static Statement st=null;
+
 
 	/**
 	 * Launch the application.
@@ -241,16 +246,16 @@ public class VentanaRegistro extends JFrame {
 		do
 		{
 			posicionBase=rnd.nextInt(base.size()-1);
-		}while(chequearPortero(base.get(posicionBase))==false);
+		}while(comprobarBase(base.get(posicionBase))==false);
 		
 		
-		if(chequearPortero(base.get(posicionBase))==true)
+		if(comprobarBase(base.get(posicionBase))==true)
 			{
 				System.out.println("Base: "+base.get(posicionBase).getNombre());
 				
 				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+base.get(posicionBase).getId()+"')";
 				
-				String sentencia="insert into porterosSalidos values"
+				String sentencia="insert into basesSalidos values"
 						+ "('"+base.get(posicionBase).getId()
 						+"', '"+base.get(posicionBase).getNombre()
 						+"', '"+base.get(posicionBase).getEquipo()
@@ -274,13 +279,8 @@ public class VentanaRegistro extends JFrame {
 				}
 			
 		
-			
 		
-		
-		for(int i=0;i<4;i++)
-		{
 			posicionEscolta=rnd.nextInt(escolta.size()-1);
-			posicionEscolta=rnd.nextInt(alero.size()-1);
 			
 			System.out.println("medios: "+escolta.get(posicionEscolta).getNombre());
 			
@@ -289,11 +289,11 @@ public class VentanaRegistro extends JFrame {
 				
 				posicionEscolta=rnd.nextInt(escolta.size()-1);
 				
-			}while(chequearMedios(escolta.get(posicionEscolta))==false);
+			}while(comprobarEscolta(escolta.get(posicionEscolta))==false);
 			
-			if(chequearMedios(escolta.get(posicionEscolta))==true)
+			if(comprobarEscolta(escolta.get(posicionEscolta))==true)
 			{
-				String sentencia="insert into mediosSalidos values"
+				String sentencia="insert into escoltasSalidos values"
 						+ "('"+escolta.get(posicionEscolta).getId()
 						+"', '"+escolta.get(posicionEscolta).getNombre()
 						+"', '"+escolta.get(posicionEscolta).getEquipo()
@@ -302,7 +302,7 @@ public class VentanaRegistro extends JFrame {
 						+"', '"+escolta.get(posicionEscolta).getPuntosTotales()
 						+"', '"+escolta.get(posicionEscolta).getPrecio()
 						+"')";	
-				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+medios.get(posMedio).getId()+"')";
+				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+escolta.get(posicionEscolta).getId()+"')";
 				System.out.println(sentencia);
 				System.out.println(sentencia2);
 				
@@ -320,20 +320,20 @@ public class VentanaRegistro extends JFrame {
 				
 			
 			
-			
-			System.out.println("defensas: "+alero.get(posicionAlero).getNombre());
+			posicionAlero=rnd.nextInt(alero.size()-1);
+			System.out.println("alero: "+alero.get(posicionAlero).getNombre());
 			
 			
 			do{
 			
 				posicionAlero=rnd.nextInt(alero.size()-1);
 			
-			}while(chequearDefensas(alero.get(posicionAlero))==false);
+			}while(comprobarAlero(alero.get(posicionAlero))==false);
 			
-			if(chequearDefensas(alero.get(posicionAlero))==true)
+			if(comprobarAlero(alero.get(posicionAlero))==true)
 			{
 
-				String sentencia="insert into defensasSalidos values"
+				String sentencia="insert into alerosSalidos values"
 						+ "('"+alero.get(posicionAlero).getId()
 						+"', '"+alero.get(posicionAlero).getNombre()
 						+"', '"+alero.get(posicionAlero).getEquipo()
@@ -343,7 +343,7 @@ public class VentanaRegistro extends JFrame {
 						+"', '"+alero.get(posicionAlero).getPrecio()
 						+"')";	
 				System.out.println(sentencia);
-				String sentencia3="insert into usuarioJugadores values ('"+ID+"', '"+defensas.get(posDefensa).getId()+"')";
+				String sentencia3="insert into usuarioJugadores values ('"+ID+"', '"+alero.get(posicionAlero).getId()+"')";
 				System.out.println(sentencia3);
 				
 				try {
@@ -355,33 +355,32 @@ public class VentanaRegistro extends JFrame {
 				}
 				
 			}
-		}
-		for(int i=0;i<2;i++)
-		{
-			posDelantero=rnd.nextInt(delanteros.size()-1);
-			System.out.println("delanteros: "+delanteros.get(posDelantero).getNombre());
+		
+		
+			posicionAlapivot=rnd.nextInt(alapivot.size()-1);
+			System.out.println("delanteros: "+alapivot.get(posicionAlapivot).getNombre());
 			
 			do
 			{
-				posDelantero=rnd.nextInt(delanteros.size()-1);
-			}while(chequearDelantero(delanteros.get(posDelantero))==false);
+				posicionAlapivot=rnd.nextInt(alapivot.size()-1);
+			}while(comprobarAlapivot(alapivot.get(posicionAlapivot))==false);
 			
 		
 			
-			if(chequearDelantero(delanteros.get(posDelantero))==true)
+			if(comprobarAlapivot(alapivot.get(posicionAlapivot))==true)
 			{
 
-				String sentencia="insert into delanterosSalidos values"
-						+ "('"+delanteros.get(posDelantero).getId()
-						+"', '"+delanteros.get(posDelantero).getNombre()
-						+"', '"+delanteros.get(posDelantero).getEquipo()
-						+"', '"+delanteros.get(posDelantero).getPosicion()
-						+"', '"+delanteros.get(posDelantero).getEdad()
-						+"', '"+delanteros.get(posDelantero).getPuntosJornada()
-						+"', '"+delanteros.get(posDelantero).getPuntosTotales()
+				String sentencia="insert into alapivotSalidos values"
+						+ "('"+alapivot.get(posicionAlapivot).getId()
+						+"', '"+alapivot.get(posicionAlapivot).getNombre()
+						+"', '"+alapivot.get(posicionAlapivot).getEquipo()
+						+"', '"+alapivot.get(posicionAlapivot).getPosicion()
+						+"', '"+alapivot.get(posicionAlapivot).getPuntosJornada()
+						+"', '"+alapivot.get(posicionAlapivot).getPuntosTotales()
+						+"', '"+alapivot.get(posicionAlapivot).getPrecio()
 						+"')";	
 				System.out.println(sentencia);
-				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+delanteros.get(posDelantero).getId()+"')";
+				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+alapivot.get(posicionAlapivot).getId()+"')";
 				try {
 					st.executeUpdate(sentencia);
 					st.executeUpdate(sentencia2);
@@ -391,8 +390,335 @@ public class VentanaRegistro extends JFrame {
 				}
 				
 			}
+			
+			do
+			{
+				posicionPivot=rnd.nextInt(pivot.size()-1);
+			}while(comprobarPivot(pivot.get(posicionPivot))==false);
+			
+		
+			
+			if(comprobarPivot(pivot.get(posicionPivot))==true)
+			{
+
+				String sentencia="insert into pivotSalidos values"
+						+ "('"+pivot.get(posicionPivot).getId()
+						+"', '"+pivot.get(posicionPivot).getNombre()
+						+"', '"+pivot.get(posicionPivot).getEquipo()
+						+"', '"+pivot.get(posicionPivot).getPosicion()
+						+"', '"+pivot.get(posicionPivot).getPuntosJornada()
+						+"', '"+pivot.get(posicionPivot).getPuntosTotales()
+						+"', '"+pivot.get(posicionPivot).getPrecio()
+						+"')";	
+				System.out.println(sentencia);
+				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+pivot.get(posicionPivot).getId()+"')";
+				try {
+					st.executeUpdate(sentencia);
+					st.executeUpdate(sentencia2);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 			}
+		}	
 					
+	
+	private boolean comprobarAlapivot(Jugador jugador2)
+	{
+		String sentencia="select * from alapivotSalidos";
+		alapivotRepetidos.clear();
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			if(rs.first()==false)
+			{
+				return true;
+			}
+			else
+			{
+				while(rs.next())
+					{
+				jugador=new Jugador();
+				
+				jugador.setId(rs.getString("id"));
+				jugador.setNombre(rs.getString("nombre"));
+				jugador.setEquipo(rs.getString("equipo"));
+				jugador.setPosicion(rs.getString("posicion"));
+				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
+				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+				jugador.setPrecio(rs.getInt("precio"));
+
+				alapivotRepetidos.add(jugador);
+					
+			} 
+			}
 		}
+
+			catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+				for(int i=0;i<alapivotRepetidos.size();i++)
+				{
+					if(jugador2.getId().equalsIgnoreCase(alapivotRepetidos.get(i).getId()))
+					{
+				
+						return false;
+						
+					}
+				}
+				
+				
+			
+			
+			return true;
+		
+		
+
+
+
+
+	}
+
+
+	private boolean comprobarAlero(Jugador jugador2)
+	{
+		
+		st=BasesDeDatos.getStatement();
+		String sentencia="select * from defensasSalidos";
+		aleroRepetidos.clear();
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			if(rs.isFirst()==false)
+			{
+				return true;
+			}
+			else
+			{
+				while(rs.next())
+					{
+				jugador=new Jugador();
+				
+				jugador.setId(rs.getString("id"));
+				jugador.setNombre(rs.getString("nombre"));
+				jugador.setEquipo(rs.getString("equipo"));
+				jugador.setPosicion(rs.getString("posicion"));
+				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
+				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+				jugador.setPrecio(rs.getInt("precio"));
+				
+				aleroRepetidos.add(jugador);
+					
+			} 
+			}
+		}
+
+			catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+				for(int i=0;i<aleroRepetidos.size();i++)
+				{
+					if(jugador2.getId().equalsIgnoreCase(aleroRepetidos.get(i).getId()))
+					{
+				
+						return false;
+						
+					}
+				}
+				
+				
+			
+			
+			return true;
+		
+		
+
+
+
+
+	}
+
+
+	private boolean comprobarEscolta(Jugador jugador2)
+	{
+
+		st=BasesDeDatos.getStatement();
+		String sentencia="select * from mediosSalidos";
+		mediosRepe.clear();
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			if(rs.isFirst()==false)
+			{
+				return true;
+			}
+			else
+			{
+				while(rs.next())
+					{
+				jugador=new Jugador();
+				
+				jugador.setId(rs.getString("id"));
+				jugador.setNombre(rs.getString("nombre"));
+				jugador.setEquipo(rs.getString("equipo"));
+				jugador.setPosicion(rs.getString("posicion"));
+				jugador.setEdad(rs.getInt("edad"));
+				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
+				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+				
+				mediosRepe.add(jugador);
+					
+			} 
+			}
+		}
+
+			catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+				for(int i=0;i<mediosRepe.size();i++)
+				{
+					if(jugador2.getId().equalsIgnoreCase(mediosRepe.get(i).getId()))
+					{
+				
+						return false;
+						
+					}
+				}
+				
+				
+			
+			
+			return true;
+		
+		
+
+
+
+
+
+
+	}
+
+	private boolean comprobarBase(Jugador jugador2) {
+		
+		
+		st=BasesDeDatos.getStatement();
+		String sentencia="select * from porterosSalidos";
+		porterosRepe.clear();
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			if(rs.isFirst()==false)
+			{
+				return true;
+			}
+			else
+			{
+				while(rs.next())
+					{
+				jugador=new Jugador();
+				
+				jugador.setId(rs.getString("id"));
+				jugador.setNombre(rs.getString("nombre"));
+				jugador.setEquipo(rs.getString("equipo"));
+				jugador.setPosicion(rs.getString("posicion"));
+				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
+				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+				
+				porterosRepe.add(jugador);
+					
+			} 
+			}
+		}
+			catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+				for(int i=0;i<porterosRepe.size();i++)
+				{
+					if(jugador2.getId().equalsIgnoreCase(porterosRepe.get(i).getId()))
+					{
+				
+						return false;
+						
+					}
+				}
+				
+				
+			
+			
+			return true;
+		
+		
+	}
+	
+	private boolean comprobarPivot(Jugador jugador2)
+	{
+		st=BasesDeDatos.getStatement();
+		String sentencia="select * from delanterosSalidos";
+		alapivotRepetidos.clear();
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			if(rs.first()==false)
+			{
+				return true;
+			}
+			else
+			{
+				while(rs.next())
+					{
+				jugador=new Jugador();
+				
+				jugador.setId(rs.getString("id"));
+				jugador.setNombre(rs.getString("nombre"));
+				jugador.setEquipo(rs.getString("equipo"));
+				jugador.setPosicion(rs.getString("posicion"));
+				jugador.setEdad(rs.getInt("edad"));
+				jugador.setPuntosJornada(rs.getInt("puntosJornada"));
+				jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+				
+				alapivotRepetidos.add(jugador);
+					
+			} 
+			}
+		}
+
+			catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+				for(int i=0;i<alapivotRepetidos.size();i++)
+				{
+					if(jugador2.getId().equalsIgnoreCase(alapivotRepetidos.get(i).getId()))
+					{
+				
+						return false;
+						
+					}
+				}
+				
+				
+			
+			
+			return true;
+		
+		
+	}
+
+
+
+	}
+
+	
 		
 }
