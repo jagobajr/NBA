@@ -77,7 +77,7 @@ public class Jugador
 	public int testJugadoresEnBaseDatos(ArrayList <Jugador>lista,Statement st)
 	{
 		
-		BaseDeDatos.initBD("NBA");
+		BaseDeDatos.initBD();
 		st=BaseDeDatos.getStatement();
 		lista.clear();
 		
@@ -101,16 +101,18 @@ public class Jugador
 				
 				lista.add(jugador);
 				
-				
+				BaseDeDatos.close();
+
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return lista.size();
 	}
-
+	public static void main(String[] args) {
+		System.out.println();
+	}
 
 
 }

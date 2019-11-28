@@ -18,16 +18,16 @@ public class BaseDeDatos
 	// @param nombreBD	Nombre de fichero de la base de datos
 	// @return	Conexion con la base de datos indicada. Si hay algun error, se devuelve null
 	 
-	public static Connection initBD( String nombreBD ) {
+	public static Connection initBD() {
 		try {
 		    Class.forName("org.sqlite.JDBC");
-		    connection = DriverManager.getConnection("jdbc:sqlite:" + nombreBD );
+		    connection = DriverManager.getConnection("jdbc:sqlite:data/NBA.db" );
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30);  // poner timeout 30 msg
 		    return connection;
 		} catch (ClassNotFoundException | SQLException e) {
-			JOptionPane.showMessageDialog( null, "Error de conexion!! No se ha podido conectar con " + nombreBD , "ERROR", JOptionPane.ERROR_MESSAGE );
-			System.out.println( "Error de conexion!! No se ha podido conectar con " + nombreBD );
+			JOptionPane.showMessageDialog( null, "Error de conexion!! No se ha podido conectar con ", "ERROR", JOptionPane.ERROR_MESSAGE );
+			System.out.println( "Error de conexion!! No se ha podido conectar con " );
 			return null;
 		}
 	}
@@ -135,7 +135,7 @@ public static void crearTablaPivotSalidos(){
 	if(statement==null) return;
 	try{
 		
-		statement.executeUpdate("create table ººººººººººpivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+		statement.executeUpdate("create table ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
 		
 	}

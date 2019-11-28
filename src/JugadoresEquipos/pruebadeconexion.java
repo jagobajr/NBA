@@ -1,7 +1,5 @@
 package JugadoresEquipos;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,14 +9,14 @@ import JugadoresEquipos.BaseDeDatos;
 public class pruebadeconexion {
 	
 	
-
-	public static void main(String[] args) {
-		BaseDeDatos.initBD("jdbc:sqlite:data/NBA.db");
-		Statement stmt=BaseDeDatos.getStatement();
-
-		try {
+	
+	public static void main(String[] args) throws SQLException {
 		
-			ResultSet rs = stmt.executeQuery("SELECT * FROM Jugadores");
+		
+
+		try(Statement st= BaseDeDatos.initBD().createStatement();) {
+		
+			ResultSet rs = st.executeQuery("SELECT * FROM Jugadores");
 
 			while(rs.next()) {
 			String nombre = rs.getString("Nombre");
