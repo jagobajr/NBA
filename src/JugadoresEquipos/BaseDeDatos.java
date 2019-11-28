@@ -15,8 +15,7 @@ public class BaseDeDatos
 
 	// Inicializa una BD SQLITE y devuelve una conexion con ella. Debe llamarse a este 
 	// metodo antes que ningun otro, y debe devolver no null para poder seguir trabajando con la BD.
-	// @param nombreBD	Nombre de fichero de la base de datos
-	// @return	Conexion con la base de datos indicada. Si hay algun error, se devuelve null
+	
 	 
 	public static Connection initBD() {
 		try {
