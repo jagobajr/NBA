@@ -6,17 +6,17 @@ public class UsuarioJugadores {
 	protected int id_jugador;
 	protected String Nombre;
 	protected String Equipo;
-	protected int Puntos;
+	protected int PuntosTotales;
 	protected String posicion;
 	protected int Precio;
 	
-	public UsuarioJugadores(int id_usuarios, int id_jugador,String nombre, String posicion, String equipo, int puntos, int precio) {
+	public UsuarioJugadores(int id_usuarios, int id_jugador,String nombre, String posicion, String equipo, int puntosTotales, int precio) {
 		super();
 		this.id_usuarios = id_usuarios;
 		this.id_jugador = id_jugador;
 		Nombre = nombre;
 		Equipo = equipo;
-		Puntos = puntos;
+		PuntosTotales = puntosTotales;
 		Precio = precio;
 		this.posicion = posicion;
 	}
@@ -27,7 +27,7 @@ public class UsuarioJugadores {
 		this.id_jugador=0;
 		Nombre = "";
 		Equipo = "";
-		Puntos = 0;
+		PuntosTotales = 0;
 		this.posicion = "";
 	}
 
@@ -64,12 +64,12 @@ public class UsuarioJugadores {
 		Equipo = equipo;
 	}
 
-	public int getPuntos() {
-		return Puntos;
+	public int getPuntosTotales() {
+		return PuntosTotales;
 	}
 
-	public void setPuntos(int puntos) {
-		Puntos = puntos;
+	public void setPuntosTotales(int puntosTotales) {
+		PuntosTotales = puntosTotales;
 	}
 	
 	public int getPrecio() {
@@ -77,7 +77,7 @@ public class UsuarioJugadores {
 	}
 
 	public void setPrecio(int precio) {
-		Puntos = precio;
+		PuntosTotales = precio;
 	}
 
 
@@ -92,7 +92,7 @@ public class UsuarioJugadores {
 	@Override
 	public String toString() {
 		return "UsuarioJugadores [id_usuarios=" + id_usuarios + ", id_jugador=" + id_jugador + 
-				",Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", Puntos=" + Puntos + ", ]";
+				",Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", Puntos=" + PuntosTotales + ", ]";
 	}
 	
 	

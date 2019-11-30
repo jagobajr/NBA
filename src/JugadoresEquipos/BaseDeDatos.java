@@ -55,50 +55,63 @@ public class BaseDeDatos
 		}
 	}
 
-	
-	
-public static void crearTablaBasesSalidos(){
+    public static void crearTablaUsuarioJugadores(){
 		
 		if(statement==null) return;
 		try{
 			
-			statement.executeUpdate("create table basesSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+			statement.executeUpdate("create table UsuarioJugadores " + "(idUsuario string, idJugador string" +")");
+		}catch(SQLException e){
+			
+		}
+		
+		
+		
+	}
+	
+	
+    public static void crearTablaBasesSalidos(){
+		
+		if(statement==null) return;
+		try{
+			
+			statement.executeUpdate("create table basesSalidos " + "(id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 		}catch(SQLException e){
 			
 		}
 		
 		
 	}
-public static void crearTablaEscoltasSalidos(){
+    public static void crearTablaEscoltasSalidos(){
 		
 		if(statement==null) return;
 		try{
 			
-			statement.executeUpdate("create table escoltasSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+			statement.executeUpdate("create table escoltasSalidos " + "(id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 		}catch(SQLException e){
 			
 		}
 		
 		
 	}
-public static void crearTablaAlerosSalidos(){
-	
+    public static void crearTablaAlerosSalidos(){
+ 	
 	if(statement==null) return;
 	try{
 		
-		statement.executeUpdate("create table alerosSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+		statement.executeUpdate("create table alerosSalidos " + "(id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
 		
 	}
 	
 	
 }
-public static void crearTablaAlapivotSalidos(){
+    public static void crearTablaAlapivotSalidos(){
 	
 	if(statement==null) return;
 	try{
 		
-		statement.executeUpdate("create table alapivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+		statement.executeUpdate("create table alapivotSalidos " + "(id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
 		
 	}
@@ -106,12 +119,12 @@ public static void crearTablaAlapivotSalidos(){
 	
 }
 	
-public static void crearTablaPivotSalidos(){
+    public static void crearTablaPivotSalidos(){
 	
 	if(statement==null) return;
 	try{
 		
-		statement.executeUpdate("create table ººººººººººpivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+		statement.executeUpdate("create table pivotSalidos  (id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int)");
 	}catch(SQLException e){
 		
 	}
@@ -121,16 +134,6 @@ public static void crearTablaPivotSalidos(){
 	
 	
 
-	public static void crearTablaJugadores() 
-	{
-		if (statement==null) return;//para que alguien no nos llame antes de initBD
-		try {
-				statement.executeUpdate("create table jugadores " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
-		} catch (SQLException e) {
-			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
-			// e.printStackTrace();  
-		}
-		}
 	
 //	public static void crearTablaPuntosJornada(){
 //		
@@ -144,7 +147,7 @@ public static void crearTablaPivotSalidos(){
 //		
 //		
 //	}
-public static void crearTablaMercadoDeFichajes(){
+    public static void crearTablaMercadoDeFichajes(){
 		
 		if(statement==null) return;
 		try{
@@ -156,7 +159,7 @@ public static void crearTablaMercadoDeFichajes(){
 		
 		
 	}
-public static void crearTablaClasificacion(){
+    public static void crearTablaClasificacion(){
 	if(statement==null) return;
 	
 	try{
@@ -171,14 +174,4 @@ public static void crearTablaClasificacion(){
 }
 
 	
-		
-	
-
-	
-	
-
-	
-	
-	
-		
 	}

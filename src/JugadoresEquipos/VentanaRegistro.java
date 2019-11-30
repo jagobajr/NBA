@@ -17,11 +17,15 @@ import javax.swing.ImageIcon;
 import javax.swing.JSpinner;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JPasswordField;
@@ -227,42 +231,13 @@ public class VentanaRegistro extends JFrame {
 	
 	}
 	
-	private int insertarIdUsuario() 
-	{
-		Usuarios=new ArrayList();
-		
-		st=BaseDeDatos.getStatement();
-		
-		String sentencia="select * from usuarios";
-		
-		ResultSet rs;
-		try {
-			rs = st.executeQuery(sentencia);
-			
-			while(rs.next())
-			{
-				Usuarios.add(rs.getString("idUsuario"));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
-		
-		
-		return Usuarios.size()+1;
-	}
-/**
- * En el caso de que el usuario ya exista, no permite que se cree uno igual
- * @param st
- * @return 
- */
 	
 	
 	
-	public void asignarjugadores(String ID) {
+	
+	public void asignarjugadores(int IdUsuario)  {
 		Statement st=null;
+		BaseDeDatos.crearTablaUsuarioJugadores();
 		st=BaseDeDatos.getStatement();
 		
 		int posicionBase;
@@ -284,7 +259,7 @@ public class VentanaRegistro extends JFrame {
 			{
 				System.out.println("Base: "+base.get(posicionBase).getNombre());
 				
-				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+base.get(posicionBase).getId()+"')";
+				String sentencia2="insert into usuarioJugadores values ('"+IdUsuario+"', '"+base.get(posicionBase).getId()+"')";
 				
 				String sentencia="insert into basesSalidos values"
 						+ "('"+base.get(posicionBase).getId()
@@ -333,7 +308,7 @@ public class VentanaRegistro extends JFrame {
 						+"', '"+escolta.get(posicionEscolta).getPuntosTotales()
 						+"', '"+escolta.get(posicionEscolta).getPrecio()
 						+"')";	
-				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+escolta.get(posicionEscolta).getId()+"')";
+				String sentencia2="insert into usuarioJugadores values ('"+IdUsuario+"', '"+escolta.get(posicionEscolta).getId()+"')";
 				System.out.println(sentencia);
 				System.out.println(sentencia2);
 				
@@ -374,7 +349,7 @@ public class VentanaRegistro extends JFrame {
 						+"', '"+alero.get(posicionAlero).getPrecio()
 						+"')";	
 				System.out.println(sentencia);
-				String sentencia3="insert into usuarioJugadores values ('"+ID+"', '"+alero.get(posicionAlero).getId()+"')";
+				String sentencia3="insert into usuarioJugadores values ('"+IdUsuario+"', '"+alero.get(posicionAlero).getId()+"')";
 				System.out.println(sentencia3);
 				
 				try {
@@ -411,7 +386,7 @@ public class VentanaRegistro extends JFrame {
 						+"', '"+alapivot.get(posicionAlapivot).getPrecio()
 						+"')";	
 				System.out.println(sentencia);
-				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+alapivot.get(posicionAlapivot).getId()+"')";
+				String sentencia2="insert into usuarioJugadores values ('"+IdUsuario+"', '"+alapivot.get(posicionAlapivot).getId()+"')";
 				try {
 					st.executeUpdate(sentencia);
 					st.executeUpdate(sentencia2);
@@ -442,7 +417,7 @@ public class VentanaRegistro extends JFrame {
 						+"', '"+pivot.get(posicionPivot).getPrecio()
 						+"')";	
 				System.out.println(sentencia);
-				String sentencia2="insert into usuarioJugadores values ('"+ID+"', '"+pivot.get(posicionPivot).getId()+"')";
+				String sentencia2="insert into usuarioJugadores values ('"+IdUsuario+"', '"+pivot.get(posicionPivot).getId()+"')";
 				try {
 					st.executeUpdate(sentencia);
 					st.executeUpdate(sentencia2);
