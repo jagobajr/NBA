@@ -18,16 +18,20 @@ public class BaseDeDatos
 	// @param nombreBD	Nombre de fichero de la base de datos
 	// @return	Conexion con la base de datos indicada. Si hay algun error, se devuelve null
 	 
-	public static Connection initBD( String nombreBD ) {
+	public static Connection initBD() {
 		try {
 		    Class.forName("org.sqlite.JDBC");
+<<<<<<< HEAD
 		    connection = DriverManager.getConnection("jdbc:sqlite:NBA.db" );
+=======
+		    connection = DriverManager.getConnection("jdbc:sqlite:data/NBA.db" );
+>>>>>>> branch 'master' of https://github.com/jagobajr/NBA.git
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30);  // poner timeout 30 msg
 		    return connection;
 		} catch (ClassNotFoundException | SQLException e) {
-			JOptionPane.showMessageDialog( null, "Error de conexion!! No se ha podido conectar con " + nombreBD , "ERROR", JOptionPane.ERROR_MESSAGE );
-			System.out.println( "Error de conexion!! No se ha podido conectar con " + nombreBD );
+			JOptionPane.showMessageDialog( null, "Error de conexion!! No se ha podido conectar con ", "ERROR", JOptionPane.ERROR_MESSAGE );
+			System.out.println( "Error de conexion!! No se ha podido conectar con " );
 			return null;
 		}
 	}
@@ -124,7 +128,11 @@ public class BaseDeDatos
 	if(statement==null) return;
 	try{
 		
+<<<<<<< HEAD
 		statement.executeUpdate("create table pivotSalidos  (id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int)");
+=======
+		statement.executeUpdate("create table ����������pivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+>>>>>>> branch 'master' of https://github.com/jagobajr/NBA.git
 	}catch(SQLException e){
 		
 	}
