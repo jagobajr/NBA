@@ -609,7 +609,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 
 	private void cargarUsuariosRegistrados()
 	{
-		st=usuarios.getStatement();
+		st=BaseDeDatos.getStatement();
 		usuarios=new ArrayList();
 		
 		String sentencia="select * from usuarios";
