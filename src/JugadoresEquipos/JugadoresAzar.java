@@ -32,7 +32,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 		        {
 		            System.err.println(e);
 		        } catch (ClassNotFoundException ex) {
-		            Logger.getLogger(plantilla_conexion.class.getName()).log(Level.SEVERE, null, ex);
+		            Logger.getLogger(initBD.class.getName()).log(Level.SEVERE, null, ex);
 		        }
 		      return con;  
 		    } 
@@ -41,7 +41,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 
 	
 	
-	public ArrayList<Jugador> getjugadores() throws DBException{
+	public ArrayList<Jugador> getjugadores() throws Exception{
 		
 	ArrayList<Jugador> jugadores= new ArrayList<Jugador>();	
 	
@@ -54,13 +54,13 @@ public class JugadoresAzar extends UsuarioJugadores {
 			Jugador.setNombre(rs.getString("Nombre"));
 			Jugador.setPosicion(rs.getString("Posicion"));
 			Jugador.setEquipo(rs.getString("Equipo"));
-			Jugador.setPuntos(rs.getInt("Puntos"));
+			Jugador.setPuntosJornada(rs.getInt("Puntos"));
 			Jugador.setPrecio(rs.getInt("Precio"));
 			jugadores.add(Jugador);
 			
 		}
 	}catch (SQLException e) {
-		throw new DBException("Error obteniendo los jugadores",e);
+		throw new Exception("Error obteniendo los jugadores",e);
 	}
 	return jugadores;
 	}

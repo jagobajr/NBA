@@ -59,9 +59,9 @@ public class BaseDeDatos
 	public static void crearTablaUsuarios() {
 	if (statement==null) return;//para que alguien no nos llame antes de initBD
 	try {
-			statement.executeUpdate("create table usuarios " + "(numIdentificador int, id string, contraseña string, dinero double" +")");
+			statement.executeUpdate("create table usuarios " + "(numIdentificador int, id string, contraseï¿½a string, dinero double" +")");
 	} catch (SQLException e) {
-		// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+		// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 		// e.printStackTrace();  
 	}
 	}
