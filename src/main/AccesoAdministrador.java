@@ -124,16 +124,8 @@ public class AccesoAdministrador extends JFrame implements ActionListener
 				};
 				miHilo=new Thread(r);
 				miHilo.start();
-				
-					
-				
-				
-				
-				
-				
-				
+			
 				break;
-				
 			}
 			else
 			{
