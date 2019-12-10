@@ -21,11 +21,10 @@ public class BaseDeDatos
 	public static Connection initBD() {
 		try {
 		    Class.forName("org.sqlite.JDBC");
-<<<<<<< HEAD
+
 		    connection = DriverManager.getConnection("jdbc:sqlite:NBA.db" );
-=======
+
 		    connection = DriverManager.getConnection("jdbc:sqlite:data/NBA.db" );
->>>>>>> branch 'master' of https://github.com/jagobajr/NBA.git
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30);  // poner timeout 30 msg
 		    return connection;
