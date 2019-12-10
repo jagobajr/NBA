@@ -105,7 +105,6 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		
 		BaseDeDatos.initUsuario();
 		BaseDeDatos.crearTablaMercadoDeFichajes();
-		BaseDeDatos.crearTablaUsuarios();
 		
 		
 		setBounds(new Rectangle(0, 0, 2147483647, 2147483647));
@@ -636,7 +635,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	private void cargarJugadoresMercado() 
 	{
 		mercado=new ArrayList();
-		st=BD_Jugadores.getStatement();
+		st=BaseDeDatos.getStatement();
 		String sentencia="select * from mercadodefichajes";
 		
 		try {
@@ -666,7 +665,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	
 	public int testJugadoresEnBaseDatos(ArrayList <Jugador>lista,Statement st)
 	{
-		st=BD_Jugadores.getStatement();
+		st=BaseDeDatos.getStatement();
 		lista.clear();
 		
 		try {
@@ -707,7 +706,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			
 			String jugadores="select * from jugadores";
 			
-			st=BD_Jugadores.getStatement();
+			st=BaseDeDatos.getStatement();
 			String sentencia="";
 			sentencia="insert into jugadores values("+checkearId() +", '"+textFieldNNombre.getText()+"', '"+TextFieldNEquipo.getText()+"', '"+textFieldNPosicion.getText()+"', '"+(int)spinner.getValue()+"', '0', '0')";
 			 
@@ -785,7 +784,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 
 	private void eliminarMercado(String valor, int selectedIndex)
 	{
-		st=BD_Jugadores.getStatement();
+		st=BaseDeDatos.getStatement();
 		
 		String sentencia="DELETE FROM mercadodefichajes WHERE nombre = '"+valor+"'";
 		System.out.println(sentencia);
@@ -802,7 +801,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 
 	private void eliminarUsuario(String value, int i)
 	{
-		st=BD_Jugadores.getStatement();
+		st=BaseDeDatos.getStatement();
 		
 		String sentencia="DELETE FROM usuarios WHERE id = '"+value+"'";
 		
