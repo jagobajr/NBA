@@ -8,7 +8,7 @@ import JugadoresEquipos.BaseDeDatos;
 
 public class pruebadeconexion {
 	
-	
+	//commit
 	
 	public static void main(String[] args) throws SQLException {
 		
