@@ -1,12 +1,14 @@
-package NBA;
+package ventanas;
 
 import java.awt.BorderLayout;
-import JugadoresEquipos.UsuarioJugadores;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import main.UsuarioJugadores;
+
 import java.awt.Toolkit;
 import java.awt.Dialog.ModalExclusionType;
 import java.awt.event.ActionEvent;

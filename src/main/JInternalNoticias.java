@@ -1,4 +1,4 @@
-package JugadoresEquipos;
+package main;
 
 import java.awt.EventQueue;
 

@@ -1,4 +1,4 @@
-package JugadoresEquipos;
+package main;
 
 public class Usuarios {
 	private int id;

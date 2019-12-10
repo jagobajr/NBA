@@ -1,4 +1,4 @@
-package JugadoresEquipos;
+package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import NBA.VentanaMenu;
+import ventanas.VentanaMenu;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;

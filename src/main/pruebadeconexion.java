@@ -1,10 +1,10 @@
-package JugadoresEquipos;
+package main;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import JugadoresEquipos.BaseDeDatos;
+import main.BaseDeDatos;
 
 public class pruebadeconexion {
 	

@@ -1,4 +1,4 @@
-package JugadoresEquipos;
+package main;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
