@@ -1,4 +1,4 @@
-package NBA.login;
+package JugadoresEquipos;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -24,6 +24,7 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 
 public class VentanaLogin extends JFrame {
 
@@ -51,9 +52,10 @@ public class VentanaLogin extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaLogin() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("/Users/jagoba.jr/Downloads/thumb-1920-467394.jpg"));
 		setTitle("LOG IN");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 376, 405);
+		setBounds(100, 100, 380, 422);
 		contentPane = new JPanel();
 		contentPane.setBackground(UIManager.getColor("PasswordField.selectionBackground"));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -128,16 +130,23 @@ public class VentanaLogin extends JFrame {
 				
 		});
 		btnAqui.setBackground(UIManager.getColor("Button.background"));
-		btnAqui.setBounds(222, 279, 72, 29);
+		btnAqui.setBounds(219, 296, 72, 29);
 		contentPane.add(btnAqui);
 		
-		JLabel lblNoTienesUna = new JLabel("No tienes una cuenta? Registrate");
-		lblNoTienesUna.setBounds(15, 282, 207, 20);
+		JLabel lblNoTienesUna = new JLabel("No tienes una cuenta? \nRegistrate");
+		lblNoTienesUna.setBackground(new Color(255, 255, 255));
+		lblNoTienesUna.setForeground(new Color(255, 255, 255));
+		lblNoTienesUna.setBounds(6, 299, 227, 20);
 		contentPane.add(lblNoTienesUna);
 		
 		txtcontra= new JPasswordField();
 		txtcontra.setBackground(new Color(255, 255, 255));
 		txtcontra.setBounds(6, 151, 300, 40);
 		contentPane.add(txtcontra);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/thumb-1920-467394.jpg"));
+		label.setBounds(0, 0, 380, 406);
+		contentPane.add(label);
 	}
 }

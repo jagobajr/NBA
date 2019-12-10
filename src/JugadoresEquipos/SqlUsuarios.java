@@ -1,13 +1,17 @@
-package NBA.login;
+package JugadoresEquipos;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
+
+
+
 
 public class SqlUsuarios extends ConexionRegistro{
 	
@@ -16,13 +20,14 @@ public class SqlUsuarios extends ConexionRegistro{
 		PreparedStatement ps = null;
 		Connection con = getConexion();
 		
-		String sql ="INSERT INTO usuarios (usuario, password, correo) VALUES (?,?,?)";
+		String sql ="INSERT INTO usuarios ( usuario, password, correo, dinero) VALUES (?,?,?,?)";
 		
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, usr.getUsuario());
 			ps.setString(2, usr.getContra());
 			ps.setString(3, usr.getCorreo());
+			ps.setInt(4, usr.getDinero());
 			ps.execute();
 			return true;
 			
@@ -41,7 +46,7 @@ public class SqlUsuarios extends ConexionRegistro{
 	        ResultSet rs = null;
 	        Connection con = getConexion();
 
-			String sql ="SELECT id, usuario, password, id_tipo FROM usuarios WHERE usuario = ? LIMIT 1";
+			String sql ="SELECT idUsuario, usuario, password FROM usuarios WHERE usuario = ? LIMIT 1";
 
 	        try {
 	            ps = con.prepareStatement(sql);
@@ -50,8 +55,6 @@ public class SqlUsuarios extends ConexionRegistro{
 
 	            if (rs.next()) {
 	                if (usr.getContra().equals(rs.getString(3))) {
-	                    usr.setId(rs.getInt(1));
-	                    usr.setIdTipo(rs.getInt(4));
 	                    return true;
 	                } else {
 	                    return false;
@@ -77,7 +80,7 @@ public class SqlUsuarios extends ConexionRegistro{
         ResultSet rs = null;
         Connection con = getConexion();
 
-        String sql = "SELECT count(id) FROM usuarios WHERE usuario = ?";
+        String sql = "SELECT count(idUsuario) FROM usuarios WHERE usuario = ?";
 
         try {
             ps = con.prepareStatement(sql);
@@ -117,7 +120,7 @@ public class SqlUsuarios extends ConexionRegistro{
     	Connection con = getConexion();
     	 PreparedStatement ps = null;
          ResultSet rs = null;
-    	 String sql = "SELECT max(id) FROM usuarios";
+    	 String sql = "SELECT max(idUsuario) FROM usuarios";
 
          try {
              ps = con.prepareStatement(sql);
@@ -145,6 +148,11 @@ public class SqlUsuarios extends ConexionRegistro{
 		return 0;
 
          }
+    
+    
+
+     	
+    
 
 }
 

@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class VentanaActividad extends JFrame {
 
@@ -35,7 +37,7 @@ public class VentanaActividad extends JFrame {
 	 */
 	public VentanaActividad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 519);
+		setBounds(100, 100, 324, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -66,6 +68,11 @@ public class VentanaActividad extends JFrame {
 		});
 		btnMenu.setBounds(5, 28, 95, 22);
 		contentPane.add(btnMenu);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/128139.jpg"));
+		label.setBounds(-829, 0, 1153, 720);
+		contentPane.add(label);
 	}
 
 }

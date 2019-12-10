@@ -17,6 +17,8 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 import java.awt.Label;
 import java.awt.Panel;
+import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class VentanaComprar extends JFrame {
 
@@ -44,7 +46,7 @@ public class VentanaComprar extends JFrame {
 	public VentanaComprar() {
 		setTitle("COMPRAR");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 414, 500);
+		setBounds(100, 100, 324, 500);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.ORANGE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -53,13 +55,13 @@ public class VentanaComprar extends JFrame {
 		
 		JLabel lblNombrePuntosPrecio = new JLabel("Nombre  Puntos  Precio  Finaliza en  Media");
 		lblNombrePuntosPrecio.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNombrePuntosPrecio.setBounds(20, 67, 344, 14);
+		lblNombrePuntosPrecio.setBounds(20, 67, 285, 14);
 		contentPane.add(lblNombrePuntosPrecio);
 		
 		JPanel panelJugador = new JPanel();
 		panelJugador.setBackground(new Color(245, 255, 250));
 		panelJugador.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panelJugador.setBounds(10, 92, 364, 73);
+		panelJugador.setBounds(10, 92, 295, 73);
 		contentPane.add(panelJugador);
 		panelJugador.setLayout(null);
 		
@@ -68,6 +70,8 @@ public class VentanaComprar extends JFrame {
 		panelJugador.add(lblImagen);
 		
 		Label labelNomJugador = new Label("Nombre Jugador\r\n");
+		labelNomJugador.setFont(new Font(".AppleSystemUIFont", Font.PLAIN, 12));
+		labelNomJugador.setForeground(Color.BLACK);
 		labelNomJugador.setBounds(52, 10, 92, 27);
 		panelJugador.add(labelNomJugador);
 		
@@ -87,7 +91,7 @@ public class VentanaComprar extends JFrame {
 		panel_jug2.setBackground(new Color(245, 255, 250));
 		panel_jug2.setLayout(null);
 		panel_jug2.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_jug2.setBounds(10, 166, 364, 73);
+		panel_jug2.setBounds(10, 166, 295, 73);
 		contentPane.add(panel_jug2);
 		
 		JLabel label_4 = new JLabel("Imagen");
@@ -114,7 +118,7 @@ public class VentanaComprar extends JFrame {
 		panel_jug3.setBackground(new Color(245, 255, 250));
 		panel_jug3.setLayout(null);
 		panel_jug3.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_jug3.setBounds(10, 241, 364, 73);
+		panel_jug3.setBounds(10, 241, 295, 73);
 		contentPane.add(panel_jug3);
 		
 		JLabel label_9 = new JLabel("Imagen");
@@ -141,7 +145,7 @@ public class VentanaComprar extends JFrame {
 		panel_jug4.setBackground(new Color(245, 255, 250));
 		panel_jug4.setLayout(null);
 		panel_jug4.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_jug4.setBounds(10, 316, 364, 73);
+		panel_jug4.setBounds(10, 316, 295, 73);
 		contentPane.add(panel_jug4);
 		
 		JLabel label_14 = new JLabel("Imagen");
@@ -166,7 +170,7 @@ public class VentanaComprar extends JFrame {
 		
 		Panel panel_jug5 = new Panel();
 		panel_jug5.setBackground(new Color(230, 230, 250));
-		panel_jug5.setBounds(10, 391, 364, 60);
+		panel_jug5.setBounds(10, 395, 295, 60);
 		contentPane.add(panel_jug5);
 		panel_jug5.setLayout(null);
 		
@@ -211,7 +215,7 @@ public class VentanaComprar extends JFrame {
 			}
 			
 		});
-		btnAtras.setBounds(10, 0, 115, 22);
+		btnAtras.setBounds(10, 6, 115, 22);
 		contentPane.add(btnAtras);
 		
 		JButton btnMenu = new JButton("Menu");
@@ -225,6 +229,11 @@ public class VentanaComprar extends JFrame {
 		});
 		btnMenu.setBounds(10, 29, 115, 22);
 		contentPane.add(btnMenu);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/thumb2-damian-lillard-nba-white-uniform-portland-trail-blazers-basketball-stars.jpg.png"));
+		label.setBounds(-186, -73, 510, 628);
+		contentPane.add(label);
 	}
 }
  

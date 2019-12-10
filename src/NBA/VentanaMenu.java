@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import NBA.login.VentanaLogin;
+import JugadoresEquipos.VentanaLogin;
 
 import java.awt.Color;
 import javax.swing.JLabel;
@@ -17,6 +17,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
+import javax.swing.ImageIcon;
 
 public class VentanaMenu extends JFrame {
 
@@ -43,7 +44,7 @@ public class VentanaMenu extends JFrame {
 	public VentanaMenu() {
 		setBackground(new Color(105, 105, 105));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 231, 405);
+		setBounds(100, 100, 324, 500);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(128, 128, 128));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -52,8 +53,8 @@ public class VentanaMenu extends JFrame {
 		
 		JLabel lblMenu = new JLabel("MENU");
 		lblMenu.setFont(new Font("Gurmukhi MN", Font.BOLD, 16));
-		lblMenu.setForeground(new Color(248, 248, 255));
-		lblMenu.setBounds(82, 24, 142, 47);
+		lblMenu.setForeground(Color.BLACK);
+		lblMenu.setBounds(41, 45, 142, 47);
 		contentPane.add(lblMenu);
 		
 		JButton btnClasificacion = new JButton("CLASIFICACION");
@@ -67,7 +68,7 @@ public class VentanaMenu extends JFrame {
 			}
 		});
 		btnClasificacion.setForeground(Color.BLACK);
-		btnClasificacion.setBounds(6, 95, 218, 57);
+		btnClasificacion.setBounds(41, 190, 218, 57);
 		contentPane.add(btnClasificacion);
 		
 		JButton btnEquipo = new JButton("PLANTILLA");
@@ -79,7 +80,7 @@ public class VentanaMenu extends JFrame {
 			}
 		});
 		
-		btnEquipo.setBounds(6, 146, 218, 47);
+		btnEquipo.setBounds(41, 259, 218, 47);
 		contentPane.add(btnEquipo);
 		
 		
@@ -94,7 +95,7 @@ public class VentanaMenu extends JFrame {
 			}
 				
 		});
-		btnMercado.setBounds(6, 189, 218, 57);
+		btnMercado.setBounds(41, 318, 218, 57);
 		contentPane.add(btnMercado);
 		
 		JButton btnCerrarSesion = new JButton("CERRAR SESION");
@@ -106,8 +107,15 @@ public class VentanaMenu extends JFrame {
 			}
 		});
 		
-		btnCerrarSesion.setBounds(38, 291, 142, 42);
+		btnCerrarSesion.setBounds(6, 415, 142, 42);
 		contentPane.add(btnCerrarSesion);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/lebron-james-1024x768-basketball-player-artwork-hd-5k-14460.jpg"));
+		label.setBounds(-332, 0, 656, 624);
+		contentPane.add(label);
+		
+		
 	}
 
 }

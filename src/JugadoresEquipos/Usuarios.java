@@ -1,10 +1,11 @@
-package NBA.login;
+package JugadoresEquipos;
 
 public class Usuarios {
 	private int id;
 	private String usuario;
 	private String contra;
 	private String correo;
+	private int dinero;
 	private int idTipo;
 	
 	public int getId() {
@@ -30,6 +31,13 @@ public class Usuarios {
 	}
 	public void setCorreo(String correo) {
 		this.correo = correo;
+	}
+	
+	public int getDinero() {
+		return dinero;
+	}
+	public void setDinero(int dinero) {
+		this.dinero = dinero;
 	}
 	public int getIdTipo() {
 		return idTipo;
