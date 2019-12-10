@@ -44,6 +44,24 @@ public class BaseDeDatos
 	public static Statement getStatement() {
 		return statement;
 	}
+	public static Connection initUsuario() {
+		try {
+		    Class.forName("org.sqlite.JDBC");
+
+		    connection = DriverManager.getConnection("jdbc:sqlite:usuarios.db" );
+			statement = connection.createStatement();
+			statement.setQueryTimeout(30);  // poner timeout 30 msg
+		    return connection;
+		} catch (ClassNotFoundException | SQLException e) {
+			JOptionPane.showMessageDialog( null, "Error de conexion!! No se ha podido conectar con ", "ERROR", JOptionPane.ERROR_MESSAGE );
+			System.out.println( "Error de conexion!! No se ha podido conectar con " );
+			return null;
+		}
+	}
+	
+	// Devuelve la conexion si ha sido establecida previamente (#initBD()).
+	 // @return	Conexion con la BD, null si no se ha establecido correctamente.
+	 
 	
 	//Cierra la conexion con la Base de Datos
 	 

@@ -54,6 +54,7 @@ public class VentanaComprar extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNombrePuntosPrecio = new JLabel("Nombre  Puntos  Precio  Finaliza en  Media");
+		lblNombrePuntosPrecio.setForeground(new Color(240, 248, 255));
 		lblNombrePuntosPrecio.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNombrePuntosPrecio.setBounds(20, 67, 285, 14);
 		contentPane.add(lblNombrePuntosPrecio);
@@ -231,8 +232,8 @@ public class VentanaComprar extends JFrame {
 		contentPane.add(btnMenu);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("Imagenes/thumb2-damian-lillard-nba-white-uniform-portland-trail-blazers-basketball-stars.jpg.png"));
-		label.setBounds(-186, -73, 510, 628);
+		label.setIcon(new ImageIcon("Imagenes/128139.jpg"));
+		label.setBounds(-29, -23, 462, 552);
 		contentPane.add(label);
 	}
 }

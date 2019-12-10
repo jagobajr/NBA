@@ -73,7 +73,7 @@ public class VentanaEquipo extends JFrame {
 		DatosPivot = new JTextField();
 		DatosPivot.setBackground(new Color(245, 245, 220));
 		DatosPivot.setText("Nombre | Puntos");
-		DatosPivot.setBounds(102, 100, 130, 26);
+		DatosPivot.setBounds(102, 87, 130, 26);
 		contentPane.add(DatosPivot);
 		DatosPivot.setColumns(10);
 		
@@ -81,53 +81,53 @@ public class VentanaEquipo extends JFrame {
 		DatosAla.setBackground(new Color(245, 245, 220));
 		DatosAla.setText("Nombre | Puntos");
 		DatosAla.setColumns(10);
-		DatosAla.setBounds(13, 199, 130, 26);
+		DatosAla.setBounds(6, 213, 130, 26);
 		contentPane.add(DatosAla);
 		
 		DatosAlero = new JTextField();
 		DatosAlero.setBackground(new Color(245, 245, 220));
 		DatosAlero.setText("Nombre | Puntos");
 		DatosAlero.setColumns(10);
-		DatosAlero.setBounds(179, 199, 130, 26);
+		DatosAlero.setBounds(192, 213, 130, 26);
 		contentPane.add(DatosAlero);
 		
 		DatosEscolta = new JTextField();
 		DatosEscolta.setBackground(new Color(245, 245, 220));
 		DatosEscolta.setText("Nombre | Puntos");
 		DatosEscolta.setColumns(10);
-		DatosEscolta.setBounds(29, 311, 130, 26);
+		DatosEscolta.setBounds(24, 352, 130, 26);
 		contentPane.add(DatosEscolta);
 		
 		DatosBase = new JTextField();
 		DatosBase.setBackground(new Color(245, 245, 220));
 		DatosBase.setText("Nombre | Puntos");
 		DatosBase.setColumns(10);
-		DatosBase.setBounds(192, 311, 130, 26);
+		DatosBase.setBounds(192, 352, 130, 26);
 		contentPane.add(DatosBase);
 		
 		JLabel lblPivot = new JLabel("Pivot");
-		lblPivot.setBounds(136, 35, 61, 16);
+		lblPivot.setBounds(202, 35, 61, 16);
 		contentPane.add(lblPivot);
 		
 		JLabel lblBase = new JLabel("Base");
-		lblBase.setBounds(216, 237, 61, 16);
+		lblBase.setBounds(171, 297, 61, 16);
 		contentPane.add(lblBase);
 		
 		JLabel lblEscolta = new JLabel("Escolta");
-		lblEscolta.setBounds(58, 237, 61, 16);
+		lblEscolta.setBounds(90, 297, 61, 16);
 		contentPane.add(lblEscolta);
 		
 		JLabel lblAlaPivot = new JLabel("Ala- Pivot");
-		lblAlaPivot.setBounds(59, 129, 84, 16);
+		lblAlaPivot.setBounds(90, 160, 84, 16);
 		contentPane.add(lblAlaPivot);
 		
 		JLabel lblAlero = new JLabel("Alero");
-		lblAlero.setBounds(216, 129, 61, 16);
+		lblAlero.setBounds(166, 160, 61, 16);
 		contentPane.add(lblAlero);
 		
 		JLabel FondoDeImagen = new JLabel();
 		FondoDeImagen.setIcon(new ImageIcon("Imagenes/file-JOpim3qYcQ.png"));
-		FondoDeImagen.setBounds(0, -14, 322, 503);
+		FondoDeImagen.setBounds(-50, 0, 395, 525);
 		contentPane.add(FondoDeImagen);
 	}
 	

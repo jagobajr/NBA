@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import java.awt.Color;
 import javax.swing.JScrollPane;
 import javax.swing.border.CompoundBorder;
+import javax.swing.ImageIcon;
 
 public class VentanaVender extends JFrame {
 
@@ -222,8 +223,13 @@ public class VentanaVender extends JFrame {
 		JLabel lblNewLabel = new JLabel("                                                                 VENDER");
 		lblNewLabel.setBounds(0, 61, 438, 20);
 		lblNewLabel.setLabelFor(lblNewLabel);
-		lblNewLabel.setForeground(Color.BLACK);
+		lblNewLabel.setForeground(new Color(230, 230, 250));
 		lblNewLabel.setBackground(Color.BLACK);
 		contentPane.add(lblNewLabel);
+		
+		JLabel label_3 = new JLabel("");
+		label_3.setIcon(new ImageIcon("Imagenes/2-24410_kyrie-andrew-irving-fondos-de-pantalla-nba-2018.jpg"));
+		label_3.setBounds(-21, -93, 521, 645);
+		contentPane.add(label_3);
 	}
 }

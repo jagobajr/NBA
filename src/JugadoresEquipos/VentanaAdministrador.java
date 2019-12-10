@@ -84,9 +84,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
     private JButton btnEliminarMercado;
     private  JButton btnEliminarUsuarios;
 
-    /**
-	 * Launch the application.
-	 */
+   
     public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -105,7 +103,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	 */
 	public VentanaAdministrador() {
 		
-		
+		BaseDeDatos.initUsuario();
 		BaseDeDatos.crearTablaMercadoDeFichajes();
 		BaseDeDatos.crearTablaUsuarios();
 		
@@ -118,7 +116,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		
 		listaJ=new ArrayList<Jugador>();
 		
-		anyadirJugadoresALista();
+		//anyadirJugadoresALista();
 		
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -172,7 +170,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			{
 				
 				Statement st=null;
-				st=BD_Jugadores.getStatement();
+				st=BaseDeDatos.getStatement();
 				
 				int puntosEstaJornada=0;
 				
@@ -213,10 +211,9 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			public void mouseClicked(MouseEvent arg0)
 			{
 
-				labelAnyadir.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("")));
-				Statement st=null;
-				st=BD_Jugadores.getStatement();
 				
+				Statement st=null;
+				st=BaseDeDatos.getStatement();				
 				
 				
 				anyadirJugadoresALista();
@@ -253,7 +250,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				
 			}
 		});
-		labelAnyadir.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward.png")));
+		
 		labelAnyadir.setBounds(378, 171, 39, 30);
 		getContentPane().add(labelAnyadir);
 		
@@ -427,8 +424,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 					
 					
 					
-					st=BD_Jugadores.getStatement();
-					
+						st=BaseDeDatos.getStatement();					
 					
 					
 					
@@ -561,7 +557,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 
 	private void cargarJugadoresEnLista() 
 	{
-		 st=BD_Jugadores.getStatement();
+			st=BaseDeDatos.getStatement();			
 			String jugadores="";
 			try {
 				jugadores="select * from jugadores";
@@ -614,7 +610,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 
 	private void cargarUsuariosRegistrados()
 	{
-		st=BD_Jugadores.getStatement();
+		st=usuarios.getStatement();
 		usuarios=new ArrayList();
 		
 		String sentencia="select * from usuarios";
@@ -626,7 +622,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			while(rs.next())
 			{
 				modeloUsuarios.addElement(rs.getString("id"));
-				usuarios.add(rs.getInt("numIdentificador"));
+				
 			}
 			
 		} catch (SQLException e) {
@@ -853,11 +849,12 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 
 
 	private void anyadirJugadoresALista() {
-		st=BD_Jugadores.getStatement();
-		listaJ.clear();
 		
+		listaJ.clear();
+		BaseDeDatos.initUsuario();
 		try {
-			ResultSet rs=st.executeQuery("select * from NBA");
+			st=BaseDeDatos.getStatement();
+			ResultSet rs=st.executeQuery("select * from usuarios");
 			
 			Jugador jugador=new Jugador();
 			while(rs.next())
@@ -882,5 +879,5 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			e.printStackTrace();
 		}
 		
-	}
+	} 
 }

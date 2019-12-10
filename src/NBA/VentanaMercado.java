@@ -8,10 +8,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import JugadoresEquipos.JInternalNoticias;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class VentanaMercado extends JFrame {
 
@@ -81,10 +85,10 @@ public class VentanaMercado extends JFrame {
 		btnVender.setBounds(53, 175, 316, 89);
 		contentPane.add(btnVender);
 		
-		JButton btnActividad = new JButton("ACTIVIDAD");
+		JButton btnActividad = new JButton("NOTICIAS");
 		btnActividad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaActividad nuevaVentana = new VentanaActividad();
+				JInternalNoticias nuevaVentana = new JInternalNoticias();
 				nuevaVentana.setVisible(true);
 				VentanaMercado.this.dispose();
 			}
@@ -97,5 +101,10 @@ public class VentanaMercado extends JFrame {
 		lblMercado.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblMercado.setBounds(150, 29, 134, 37);
 		contentPane.add(lblMercado);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("Imagenes/screen-4.jpg"));
+		label.setBounds(0, 0, 446, 523);
+		contentPane.add(label);
 	}
 }

@@ -144,9 +144,23 @@ public class VentanaLogin extends JFrame {
 		txtcontra.setBounds(6, 151, 300, 40);
 		contentPane.add(txtcontra);
 		
+		
+		
+		JButton btnAdmin = new JButton("ADMIN");
+		btnAdmin.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent arg0) {
+				AccesoAdministrador nuevaVentana = new AccesoAdministrador();
+				nuevaVentana.setVisible(true);
+				VentanaLogin.this.dispose();
+			}});
+		btnAdmin.setBounds(6, 331, 83, 29);
+		contentPane.add(btnAdmin);
+		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("Imagenes/thumb-1920-467394.jpg"));
 		label.setBounds(0, 0, 380, 406);
 		contentPane.add(label);
-	}
-}
+		
+		
+	
+}}

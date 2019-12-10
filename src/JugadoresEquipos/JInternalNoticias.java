@@ -39,19 +39,13 @@ public class JInternalNoticias extends JFrame implements ActionListener
 	ArrayList<Noticia> listaNoticias;
 	Noticia noticia;
 	ObjectInputStream ois;
-	final String RUTA="src\\data\\noticias.dat";
+	final String RUTA="src\\data\\noticia.dat";
 	File fichero;
 
-	/**
-	 * Launch the application.
-	 */
-
-
-	/**
-	 * Create the frame.
-	 */
+	
+	
 	public JInternalNoticias() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(JInternalNoticias.class.getResource("/ud/prog3/Comunio/img/comunioIcono.jpg")));
+		
 		getContentPane().setBackground(new Color(0, 128, 0));
 		setForeground(new Color(0, 128, 0));
 	
