@@ -17,6 +17,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JSpinner;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -70,23 +72,31 @@ public class VentanaRegistro extends JFrame {
 			log = Logger.getLogger( "prueba-logger");
 			}catch (Exception e) {
 			}
-		log.log ( Level.INFO, "Inicio Registro " + (new Date()));
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					VentanaRegistro frame = new VentanaRegistro();
 					frame.setVisible(true);
+					
+					log.log ( Level.INFO, "Inicio Registro " + (new Date()));
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
+		
 	}
+	
+	
 
 	/**
 	 * Create the frame.
 	 */
 	public VentanaRegistro() {
+		
+		
+	
 		
 		escolta=new ArrayList<Jugador>();
 		alero=new ArrayList<Jugador>();
@@ -103,8 +113,13 @@ public class VentanaRegistro extends JFrame {
 		jugador=new Jugador();
 		
 		
+		
+		
 		setTitle("REGISTRO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		while(getDefaultCloseOperation() == EXIT_ON_CLOSE) {
+			log.log (Level.INFO, "Fin del programa");
+		}
 		setBounds(100, 100, 380, 422);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(175, 238, 238));
@@ -246,6 +261,9 @@ public class VentanaRegistro extends JFrame {
 	
 	
 	
+	
+
+
 	public void asignarjugadores(int IdUsuario)  {
 		Statement st=null;
 		BaseDeDatos.crearTablaUsuarioJugadores();
@@ -441,8 +459,7 @@ public class VentanaRegistro extends JFrame {
 		}	
 					
 	
-	private boolean comprobarAlapivot(Jugador jugador2)
-	{
+	private boolean comprobarAlapivot(Jugador jugador2)	{
 		String sentencia="select * from alapivotSalidos";
 		alapivotRepetidos.clear();
 		
