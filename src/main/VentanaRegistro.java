@@ -117,9 +117,6 @@ public class VentanaRegistro extends JFrame {
 		
 		setTitle("REGISTRO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		while(getDefaultCloseOperation() == EXIT_ON_CLOSE) {
-			log.log (Level.INFO, "Fin del programa");
-		}
 		setBounds(100, 100, 380, 422);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(175, 238, 238));
