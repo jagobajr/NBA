@@ -235,7 +235,7 @@ public class VentanaClasificacion extends JFrame {
 		contentPane.add(btnAtras);
 		
 		label_10 = new JLabel("");
-		label_10.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/graffiti-usa-nba-basketball-lebron-james-kobe-bryant-kevin-durant-team-usa-dream-team-wallpaper-508379.jpg"));
+		label_10.setIcon(new ImageIcon("Imagenes/graffiti-usa-nba-basketball-lebron-james-kobe-bryant-kevin-durant-team-usa-dream-team-wallpaper-508379.jpg"));
 		label_10.setBounds(-267, 0, 749, 478);
 		contentPane.add(label_10);
 	}

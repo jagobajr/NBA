@@ -126,7 +126,7 @@ public class VentanaEquipo extends JFrame {
 		contentPane.add(lblAlero);
 		
 		JLabel FondoDeImagen = new JLabel();
-		FondoDeImagen.setIcon(new ImageIcon("/Users/jagoba.jr/Desktop/DEUSTO📚💎/19-20/Programacion/Imagenes para el proyecto/QUINTETO.png"));
+		FondoDeImagen.setIcon(new ImageIcon("Imagenes/file-JOpim3qYcQ.png"));
 		FondoDeImagen.setBounds(0, -14, 322, 503);
 		contentPane.add(FondoDeImagen);
 	}

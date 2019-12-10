@@ -217,7 +217,7 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(lblConfirmar);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/thumb-1920-467394.jpg"));
+		label.setIcon(new ImageIcon("Imagenes/thumb-1920-467394.jpg"));
 		label.setBounds(-336, 0, 716, 400);
 		contentPane.add(label);
 		

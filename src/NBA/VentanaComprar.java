@@ -231,7 +231,7 @@ public class VentanaComprar extends JFrame {
 		contentPane.add(btnMenu);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/thumb2-damian-lillard-nba-white-uniform-portland-trail-blazers-basketball-stars.jpg.png"));
+		label.setIcon(new ImageIcon("Imagenes/thumb2-damian-lillard-nba-white-uniform-portland-trail-blazers-basketball-stars.jpg.png"));
 		label.setBounds(-186, -73, 510, 628);
 		contentPane.add(label);
 	}

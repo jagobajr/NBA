@@ -52,7 +52,7 @@ public class VentanaLogin extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaLogin() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("/Users/jagoba.jr/Downloads/thumb-1920-467394.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("/Imagenes/thumb-1920-467394.jpg"));
 		setTitle("LOG IN");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 380, 422);
@@ -145,7 +145,7 @@ public class VentanaLogin extends JFrame {
 		contentPane.add(txtcontra);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/thumb-1920-467394.jpg"));
+		label.setIcon(new ImageIcon("Imagenes/thumb-1920-467394.jpg"));
 		label.setBounds(0, 0, 380, 406);
 		contentPane.add(label);
 	}

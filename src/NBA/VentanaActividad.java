@@ -70,7 +70,7 @@ public class VentanaActividad extends JFrame {
 		contentPane.add(btnMenu);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/128139.jpg"));
+		label.setIcon(new ImageIcon("Imagenes/128139.jpg"));
 		label.setBounds(-829, 0, 1153, 720);
 		contentPane.add(label);
 	}
