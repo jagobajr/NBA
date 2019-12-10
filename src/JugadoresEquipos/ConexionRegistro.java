@@ -15,7 +15,7 @@ public class ConexionRegistro {
         
         try{
             Class.forName("org.sqlite.JDBC");
-            con = (Connection) DriverManager.getConnection("jdbc:sqlite:usuarios.db");
+            con = (Connection) DriverManager.getConnection("jdbc:sqlite:BaseDeDatos.db");
             
         } catch(SQLException e)
         {
