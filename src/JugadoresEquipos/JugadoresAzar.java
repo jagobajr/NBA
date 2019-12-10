@@ -93,6 +93,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 		
 		for (int h=0; h<5; h++){
 			usuJugador.setId_jugador(arAzar[h]);
+			usuJugador.setId_usuarios
 			//usuJugador.setId_usuarios(id_usuarios);
 			//falta id usuarui que hay que crearlo con la funcuion dameUltimoRegistro 
 			// inserta registro en bd 

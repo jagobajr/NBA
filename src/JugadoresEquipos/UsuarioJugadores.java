@@ -2,7 +2,7 @@ package JugadoresEquipos;
 
 public class UsuarioJugadores {
 
-	protected int id_usuarios;
+	protected static int id_usuarios;
 	protected int id_jugador;
 	protected String Nombre;
 	protected String Equipo;
