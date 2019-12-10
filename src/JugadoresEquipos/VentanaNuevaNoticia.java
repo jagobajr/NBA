@@ -38,7 +38,7 @@ public class VentanaNuevaNoticia extends JFrame implements ActionListener
 	{
 		getContentPane().setBackground(new Color(0, 128, 0));
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaNuevaNoticia.class.getResource("/ud/prog3/Comunio/img/comunioIcono.jpg")));
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaNuevaNoticia.class.getResource())); falta foto;
 	
 		setBounds(300,300,300,300);
 		getContentPane().setLayout(null);

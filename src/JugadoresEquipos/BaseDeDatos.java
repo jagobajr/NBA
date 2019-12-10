@@ -56,6 +56,17 @@ public class BaseDeDatos
 		}
 	}
 
+	public static void crearTablaUsuarios() {
+	if (statement==null) return;//para que alguien no nos llame antes de initBD
+	try {
+			statement.executeUpdate("create table usuarios " + "(numIdentificador int, id string, contraseña string, dinero double" +")");
+	} catch (SQLException e) {
+		// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+		// e.printStackTrace();  
+	}
+	}
+	
+	
     public static void crearTablaUsuarioJugadores(){
 		
 		if(statement==null) return;
@@ -125,8 +136,7 @@ public class BaseDeDatos
 	if(statement==null) return;
 	try{
 		
-		statement.executeUpdate("create table pivotSalidos  (id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int)");
-		statement.executeUpdate("create table ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
+		statement.executeUpdate("create table pivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
 		
 	}
