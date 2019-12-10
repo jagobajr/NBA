@@ -53,6 +53,11 @@ public class BD_Jugadores {
 
 		}
 
+	public static Statement getStatement() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 	
 	

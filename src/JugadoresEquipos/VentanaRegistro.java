@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import NBA.VentanaMenu;
+import ud.prog3.Comunio.BasesDeDatos;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -221,7 +222,8 @@ public class VentanaRegistro extends JFrame {
 		label.setBounds(-336, 0, 716, 400);
 		contentPane.add(label);
 		
-		
+		BaseDeDatos.initBD("UsuariosBD");
+		BaseDeDatos.crearTablaUsuarios();
 		BaseDeDatos.crearTablaBasesSalidos();
 		BaseDeDatos.crearTablaEscoltasSalidos();
 		BaseDeDatos.crearTablaAlerosSalidos();
