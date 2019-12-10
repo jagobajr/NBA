@@ -125,11 +125,8 @@ public class BaseDeDatos
 	if(statement==null) return;
 	try{
 		
-<<<<<<< HEAD
 		statement.executeUpdate("create table pivotSalidos  (id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int)");
-=======
 		statement.executeUpdate("create table ����������pivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
->>>>>>> branch 'master' of https://github.com/jagobajr/NBA.git
 	}catch(SQLException e){
 		
 	}
