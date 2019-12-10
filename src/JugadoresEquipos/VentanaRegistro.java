@@ -222,7 +222,7 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(label);
 		
 		//BaseDeDatos.initBD("UsuariosBD");
-		BaseDeDatos.crearTablaUsuarios();
+		//BaseDeDatos.crearTablaUsuarios();
 		BaseDeDatos.crearTablaBasesSalidos();
 		BaseDeDatos.crearTablaEscoltasSalidos();
 		BaseDeDatos.crearTablaAlerosSalidos();

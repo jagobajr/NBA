@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
 
 
 
-public class SqlUsuarios extends ConexionRegistro{
+public class SqlUsuarios extends BaseDeDatos{
 	
 	public boolean registrar (Usuarios usr) {
 		
 		PreparedStatement ps = null;
-		Connection con = getConexion();
+		Connection con = initBD();
 		
 		String sql ="INSERT INTO usuarios ( usuario, password, correo, dinero) VALUES (?,?,?,?)";
 		
@@ -44,7 +44,7 @@ public class SqlUsuarios extends ConexionRegistro{
 	  public boolean login(Usuarios usr) {
 	        PreparedStatement ps = null;
 	        ResultSet rs = null;
-	        Connection con = getConexion();
+	        Connection con = initBD();
 
 			String sql ="SELECT idUsuario, usuario, password FROM usuarios WHERE usuario = ? LIMIT 1";
 
@@ -78,7 +78,7 @@ public class SqlUsuarios extends ConexionRegistro{
 	public int existeUsuario(String usuario) {
         PreparedStatement ps = null;
         ResultSet rs = null;
-        Connection con = getConexion();
+        Connection con = initBD();
 
         String sql = "SELECT count(idUsuario) FROM usuarios WHERE usuario = ?";
 
@@ -117,7 +117,7 @@ public class SqlUsuarios extends ConexionRegistro{
     }
     
     public int dameUltimoRegistro() {
-    	Connection con = getConexion();
+    	Connection con = initBD();
     	 PreparedStatement ps = null;
          ResultSet rs = null;
     	 String sql = "SELECT max(idUsuario) FROM usuarios";

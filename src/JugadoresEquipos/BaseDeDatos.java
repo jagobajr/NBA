@@ -22,7 +22,7 @@ public class BaseDeDatos
 		try {
 		    Class.forName("org.sqlite.JDBC");
 
-		    connection = DriverManager.getConnection("jdbc:sqlite:NBA.db" );
+		    connection = DriverManager.getConnection("jdbc:sqlite:BaseDeDatos.db" );
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30);  // poner timeout 30 msg
 		    return connection;
@@ -74,15 +74,15 @@ public class BaseDeDatos
 		}
 	}
 
-	public static void crearTablaUsuarios() {
-	if (statement==null) return;//para que alguien no nos llame antes de initBD
-	try {
-			statement.executeUpdate("create table usuarios " + "(numIdentificador int, id string, contrase�a string, dinero double" +")");
-	} catch (SQLException e) {
+	//public static void crearTablaUsuarios() {
+	//if (statement==null) return;//para que alguien no nos llame antes de initBD
+	//try {
+//			statement.executeUpdate("create table usuarios " + "(numIdentificador int, id string, contrase�a string, dinero double" +")");
+	//} catch (SQLException e) {
 		// Si hay excepci�n es que la tabla ya exist�a (lo cual es correcto)
 		// e.printStackTrace();  
-	}
-	}
+//	}
+	//}
 	
 	
     public static void crearTablaUsuarioJugadores(){
