@@ -93,11 +93,11 @@ public class JugadoresAzar extends UsuarioJugadores {
 		
 		for (int h=0; h<5; h++){
 			usuJugador.setId_jugador(arAzar[h]);
-<<<<<<< HEAD
-			usuJugador.setId_usuarios
-=======
+
+			//usuJugador.setId_usuarios
+
 			usuJugador.setId_usuarios(usuJugador.getId_usuarios());
->>>>>>> branch 'master' of https://github.com/jagobajr/NBA.git
+ // of https://github.com/jagobajr/NBA.git
 			//usuJugador.setId_usuarios(id_usuarios);
 			//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
 			// inserta registro en bd 
