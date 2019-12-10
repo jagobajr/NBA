@@ -23,8 +23,6 @@ public class BaseDeDatos
 		    Class.forName("org.sqlite.JDBC");
 
 		    connection = DriverManager.getConnection("jdbc:sqlite:NBA.db" );
-
-		    connection = DriverManager.getConnection("jdbc:sqlite:data/NBA.db" );
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30);  // poner timeout 30 msg
 		    return connection;
