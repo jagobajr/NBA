@@ -32,9 +32,8 @@ public class VentanaLogin extends JFrame {
 	private JTextField txtusuario;
 	private JPasswordField txtcontra;
 
-	/**
-	 * Launch the application.
-	 */
+	
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -48,9 +47,8 @@ public class VentanaLogin extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	
+	
 	public VentanaLogin() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("/Imagenes/thumb-1920-467394.jpg"));
 		setTitle("LOG IN");

@@ -1,7 +1,6 @@
 package main;
 
 
-import java.awt.List;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -32,7 +31,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 		        {
 		            System.err.println(e);
 		        } catch (ClassNotFoundException ex) {
-		            Logger.getLogger(initBD.class.getName()).log(Level.SEVERE, null, ex);
+		            Logger.getLogger(BaseDeDatos.class.getName()).log(Level.SEVERE, null, ex);
 		        }
 		      return con;  
 		    } 

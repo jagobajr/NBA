@@ -22,9 +22,8 @@ import javax.swing.ImageIcon;
 public class VentanaMenu extends JFrame {
 
 	private JPanel contentPane;
-	/**
-	 * Launch the application.
-	 */
+	
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,9 +37,8 @@ public class VentanaMenu extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	
+	
 	public VentanaMenu() {
 		setBackground(new Color(105, 105, 105));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -111,7 +109,7 @@ public class VentanaMenu extends JFrame {
 		contentPane.add(btnCerrarSesion);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/Users/jagoba.jr/Downloads/lebron-james-1024x768-basketball-player-artwork-hd-5k-14460.jpg"));
+		label.setIcon(new ImageIcon("Imagenes/lebron-james-1024x768-basketball-player-artwork-hd-5k-14460.jpg"));
 		label.setBounds(-332, 0, 656, 624);
 		contentPane.add(label);
 		

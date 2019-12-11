@@ -1,5 +1,4 @@
-package ud.prog.NBA;
-
+package test;
 import static org.junit.Assert.*;
 
 import java.sql.Statement;
@@ -9,9 +8,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import JugadoresEquipos.Jugador;
+import main.Jugador;
 
-public class testJugadoresEnBaseDatos {
+public class jugadoresBaseDatosTest {
 
 	private ArrayList<Jugador> listaJugadores;
 	Statement st;
