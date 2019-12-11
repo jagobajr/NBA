@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import main.BaseDeDatos;
 import main.Jugador;
 
 public class jugadoresBaseDatosTest {
@@ -40,7 +41,7 @@ public class jugadoresBaseDatosTest {
 	public void test() 
 	{
 		
-		assertEquals(num, 74);
+		assertEquals(num, 97);
 		
 	}
 
