@@ -204,7 +204,7 @@ public class VentanaRegistro extends JFrame {
 			                }
 
 				}else {
-					JOptionPane.showMessageDialog(null,"Las contrase�as no coinciden");
+					JOptionPane.showMessageDialog(null,"Las contraseñas no coinciden");
 				}
 				
 				
