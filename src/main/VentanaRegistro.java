@@ -27,6 +27,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
@@ -35,6 +36,7 @@ import javax.swing.JPasswordField;
 import java.awt.SystemColor;
 
 public class VentanaRegistro extends JFrame {
+
 	
 	static Logger log;
 	
@@ -68,10 +70,13 @@ public class VentanaRegistro extends JFrame {
 	 */
 	public static void main(String[] args) {
 		
+		
 		try {
 			log = Logger.getLogger( "prueba-logger");
-			}catch (Exception e) {
+			log.addHandler(new FileHandler( "nba.xml" ));
+			}catch (Exception e) {	
 			}
+		log.log ( Level.INFO, "Inicio Registro " + (new Date()));
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -79,7 +84,6 @@ public class VentanaRegistro extends JFrame {
 					VentanaRegistro frame = new VentanaRegistro();
 					frame.setVisible(true);
 					
-					log.log ( Level.INFO, "Inicio Registro " + (new Date()));
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
