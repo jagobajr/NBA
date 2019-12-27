@@ -14,13 +14,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
-import javax.swing.JSpinner;
 import java.awt.Color;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -33,7 +28,6 @@ import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JPasswordField;
-import java.awt.SystemColor;
 
 public class VentanaRegistro extends JFrame {
 
@@ -69,7 +63,6 @@ public class VentanaRegistro extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		
 		
 		try {
 			log = Logger.getLogger( "prueba-logger");
