@@ -75,39 +75,39 @@ public class SqlUsuarios extends BaseDeDatos{
 	    }
 
 	
-	public int existeUsuario(String usuario) {
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        Connection con = initBD();
+	  public int existeUsuario(String usuario) {
+	        PreparedStatement ps = null;
+	        ResultSet rs = null;
+	        Connection con = initBD();
 
-        String sql = "SELECT count(idUsuario) FROM usuarios WHERE usuario = ?";
+	        String sql = "SELECT count(idUsuario) FROM usuarios WHERE usuario = ?";
 
-        try {
-            ps = con.prepareStatement(sql);
-            ps.setString(1, usuario);
-            rs = ps.executeQuery();
+	        try {
+	            ps = con.prepareStatement(sql);
+	            ps.setString(1, usuario);
+	            rs = ps.executeQuery();
 
-            if (rs.next()) {
-                return rs.getInt(1);
-            }
+	            if (rs.next()) {
+	                return rs.getInt(1);
+	            }
 
-            return 1;
+	            return 1;
 
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.toString());
-            return 1;
-        } finally {
-            try {
-                con.close();
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e.toString());
-            }
-        }
-    }
+	        } catch (SQLException e) {
+	            JOptionPane.showMessageDialog(null, e.toString());
+	            return 1;
+	        } finally {
+	            try {
+	                con.close();
+	            } catch (SQLException e) {
+	                JOptionPane.showMessageDialog(null, e.toString());
+	            }
+	        }
+	    }
 
     public boolean esEmail(String correo) {
 
-        // Patr�n para validar el email
+        // Patron para validar el email
         Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 
         Matcher mather = pattern.matcher(correo);
@@ -116,38 +116,6 @@ public class SqlUsuarios extends BaseDeDatos{
 
     }
     
-    public int dameUltimoRegistro() {
-    	Connection con = initBD();
-    	 PreparedStatement ps = null;
-         ResultSet rs = null;
-    	 String sql = "SELECT max(idUsuario) FROM usuarios";
-
-         try {
-             ps = con.prepareStatement(sql);
-             rs = ps.executeQuery();
-
-             if (rs.first()) {
-                 return rs.getInt(+1);
-             }
-
-            
-
-         } catch (SQLException e) {
-             JOptionPane.showMessageDialog(null, e.toString());
-             return 1;
-         } finally {
-             try {
-                 con.close();
-             } catch (SQLException e) {
-                 JOptionPane.showMessageDialog(null, e.toString());
-             }
-         
-     
-    	
-    }
-		return 0;
-
-         }
     
     
 

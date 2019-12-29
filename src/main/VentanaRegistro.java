@@ -177,7 +177,7 @@ public class VentanaRegistro extends JFrame {
 
 			                        String nuevoPass = Hash.sha1(pass);
 
-			                        mod.setId(modSql.dameUltimoRegistro());
+			                       
 			                        mod.setUsuario(datos_usuario.getText());
 			                        mod.setContra(nuevoPass);
 			                        mod.setCorreo(correo.getText());
@@ -197,7 +197,7 @@ public class VentanaRegistro extends JFrame {
 			                        JOptionPane.showMessageDialog(null, "El email es incorrecto");
 			                    }
 			                } else {
-			                    JOptionPane.showMessageDialog(null, "El usuario ya existe");
+			                   JOptionPane.showMessageDialog(null, "El usuario ya existe");
 			                }
 
 				}else {
@@ -241,7 +241,7 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(label);
 		
 		//BaseDeDatos.initBD("UsuariosBD");
-		//BaseDeDatos.crearTablaUsuarios();
+		
 		BaseDeDatos.crearTablaBasesSalidos();
 		BaseDeDatos.crearTablaEscoltasSalidos();
 		BaseDeDatos.crearTablaAlerosSalidos();
