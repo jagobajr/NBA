@@ -68,7 +68,8 @@ public class VentanaRegistro extends JFrame {
 		try {
 			log = Logger.getLogger( "logger");
 			log.addHandler(new FileHandler( "nba.xml",true ));
-			}catch (Exception e) {	
+			}catch (Exception ex) {	
+				log.log ( Level.INFO, "Inicio Registro " + (new Date()), ex);
 			}
 		log.log ( Level.INFO, "Inicio Registro " + (new Date()));
 		
@@ -198,17 +199,23 @@ public class VentanaRegistro extends JFrame {
 			                            limpiar();
 			                        } else {
 			                            JOptionPane.showMessageDialog(null, "Error al Guardar");
+				                        log.log ( Level.INFO, "Error al guardar " + (new Date()));
 			                            limpiar();
 			                        }
 			                    } else {
 			                        JOptionPane.showMessageDialog(null, "El email es incorrecto");
+			                        log.log ( Level.INFO, "El mail es incorrecto " + (new Date()));
 			                    }
 			                } else {
 			                   JOptionPane.showMessageDialog(null, "El usuario ya existe");
+		                        log.log ( Level.INFO, "El usuario ya existe" + (new Date()));
+
 			                }
 
 				}else {
 					JOptionPane.showMessageDialog(null,"Las contraseñas no coinciden");
+                    log.log ( Level.INFO, "Las contraseñas no coinciden " + (new Date()));
+
 				}
 				
 				
