@@ -1,4 +1,4 @@
-package ventanas;
+package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -21,14 +21,11 @@ import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import ud.prog3.Comunio.BasesDeDatos;
-
 import java.awt.Color;
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.Font;
 
-import javax.swing.AbstractButton;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 
@@ -247,78 +244,8 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 		label.setIcon(new ImageIcon("Imagenes/128139.jpg"));
 		label.setBounds(-29, -23, 462, 552);
 		contentPane.add(label);
-		
 	}
 	
-
-	public void actionPerformed(ActionEvent arg0) 
-	{
-		switch(arg0.getActionCommand())
-		{
-		case "pujar":
-			
-			try
-			{
-				
-				Statement st=null;
-			AbstractButton textField;
-			int p1=Integer.parseInt(textField.getText());
-			AbstractButton textField_1;
-			int p2=Integer.parseInt(textField_1.getText());
-			
-			if(p2<cargarDineroUsuario((String)label.getText()))
-			{
-				
-			
-			
-			if(p1>p2)
-			{
-				JOptionPane.showMessageDialog(null, "El jugador NO ha aceptado la oferta, es demasiado baja");
-			}
-			if(p1<=p2)
-			{
-				JOptionPane.showMessageDialog(null, "el usuario "+label.getText()+" ha fichado a "+modelo.getElementAt(list.getSelectedIndex()));
-			
-			 st = BaseDeDatos.getStatement();
-			
-			String sentencia="insert into usuariojugadores values('"+label.getText()+"', '"+mercadoId.get(list.getSelectedIndex())+"')";
-			String sentencia2="delete from mercadodefichajes where idJugador = '"+mercadoId.get(list.getSelectedIndex())+"'";
-			
-			int dinero=cargarDineroUsuario((String)label.getText());
-			int dinero2=dinero-p2;
-			
-			String sentencia3="update usuarios set dinero ='"+dinero2+"' where id ='"+label.getText()+"'";
-			
-
-			
-				st.executeUpdate(sentencia);
-				st.executeUpdate(sentencia2);
-				st.executeUpdate(sentencia3);
-				dispose();
-				
-			}
-			}
-			
-			else
-			{
-				JOptionPane.showMessageDialog(null,"el usuario no tiene tanto dinero para fichar");
-				
-			}
-			}
-				
-			 catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			catch(NumberFormatException n)
-			{
-				JOptionPane.showMessageDialog(null, "inserta numeros lógicos por favor, puede que haya introducido una cantidad muy elevada, o puede que haya introducido texto,en vez de cifras");
-			}
-			
-			}
-			
-			
-		
-		}
+	
 }
  
