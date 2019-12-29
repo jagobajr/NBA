@@ -75,6 +75,10 @@ public class VentanaVender extends JFrame {
 		lblNewLabel_1.setBounds(211, 48, 141, 14);
 		panelJugador.add(lblNewLabel_1);
 		
+		JButton btnVender = new JButton("Vender");
+		btnVender.setBounds(222, 10, 89, 23);
+		panelJugador.add(btnVender);
+		
 		JPanel panel_jug2 = new JPanel();
 		panel_jug2.setBackground(new Color(245, 255, 250));
 		panel_jug2.setLayout(null);
@@ -101,6 +105,10 @@ public class VentanaVender extends JFrame {
 		JLabel label = new JLabel("Puntos de cada semana\r\n");
 		label.setBounds(212, 41, 141, 14);
 		panel_jug2.add(label);
+		
+		JButton button = new JButton("Vender");
+		button.setBounds(224, 7, 89, 23);
+		panel_jug2.add(button);
 		
 		JPanel panel_jug3 = new JPanel();
 		panel_jug3.setBackground(new Color(245, 255, 250));
@@ -129,6 +137,10 @@ public class VentanaVender extends JFrame {
 		label_1.setBounds(212, 41, 141, 14);
 		panel_jug3.add(label_1);
 		
+		JButton button_1 = new JButton("Vender");
+		button_1.setBounds(223, 14, 89, 23);
+		panel_jug3.add(button_1);
+		
 		JPanel panel_jug4 = new JPanel();
 		panel_jug4.setBackground(new Color(245, 255, 250));
 		panel_jug4.setLayout(null);
@@ -155,6 +167,10 @@ public class VentanaVender extends JFrame {
 		JLabel label_2 = new JLabel("Puntos de cada semana\r\n");
 		label_2.setBounds(214, 41, 141, 14);
 		panel_jug4.add(label_2);
+		
+		JButton button_2 = new JButton("Vender");
+		button_2.setBounds(227, 14, 89, 23);
+		panel_jug4.add(button_2);
 		
 		Panel panel_jug5 = new Panel();
 		panel_jug5.setBackground(new Color(230, 230, 250));
@@ -232,4 +248,6 @@ public class VentanaVender extends JFrame {
 		label_3.setBounds(-21, -93, 521, 645);
 		contentPane.add(label_3);
 	}
+	
+	
 }
