@@ -43,37 +43,49 @@ public class AccesoAdministrador extends JFrame implements ActionListener
 		getContentPane().setLayout(null);
 		
 		textFieldId = new JTextField();
-		textFieldId.setBounds(190, 60, 86, 20);
+		textFieldId.setBounds(254, 60, 86, 20);
 		getContentPane().add(textFieldId);
 		textFieldId.setColumns(10);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(190, 137, 86, 20);
+		passwordField.setBounds(254, 118, 86, 20);
 		getContentPane().add(passwordField);
 		
 		lblIntroduceElId = new JLabel("Introduce el ID administrador");
-		lblIntroduceElId.setBounds(22, 63, 158, 14);
+		lblIntroduceElId.setBounds(22, 63, 183, 14);
 		getContentPane().add(lblIntroduceElId);
 		
-		lblContrasea = new JLabel("Contraseña");
-		lblContrasea.setBounds(59, 140, 91, 14);
+		lblContrasea = new JLabel("Password");
+		lblContrasea.setBounds(22, 121, 91, 14);
 		getContentPane().add(lblContrasea);
 		
 		progressBar = new JProgressBar();
-		progressBar.setBounds(59, 221, 146, 14);
+		progressBar.setBounds(205, 191, 146, 14);
 		getContentPane().add(progressBar);
 		
 		btnAcceder = new JButton("ACCEDER");
-		btnAcceder.setBounds(323, 89, 101, 23);
+		btnAcceder.setBounds(430, 59, 101, 23);
 		getContentPane().add(btnAcceder);
 		btnAcceder.addActionListener(this);
 		btnAcceder.setActionCommand("acceder");
 		
 		btnCancelar = new JButton("CANCELAR");
-		btnCancelar.setBounds(323, 175, 101, 23);
+		btnCancelar.setBounds(430, 117, 101, 23);
 		getContentPane().add(btnCancelar);
 		btnCancelar.addActionListener(this);
 		btnCancelar.setActionCommand("Cancelar");
+		
+		JButton btnAtras = new JButton("Atras");
+		btnAtras.setBounds(15, 16, 91, 29);
+		getContentPane().add(btnAtras);
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaLogin nuevaVentana = new VentanaLogin();
+				nuevaVentana.setVisible(true);
+				AccesoAdministrador.this.dispose();
+			}
+				
+		});
 	}
 
 
@@ -129,7 +141,7 @@ public class AccesoAdministrador extends JFrame implements ActionListener
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(this, "El id o contrase�a introducidos son incorrectos");
+				JOptionPane.showMessageDialog(this, "El id o password introducidos son incorrectos");
 				break;
 			}
 			

@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -65,11 +66,13 @@ public class VentanaRegistro extends JFrame {
 	public static void main(String[] args) {
 		
 		try {
-			log = Logger.getLogger( "prueba-logger");
-			log.addHandler(new FileHandler( "nba.xml" ));
+			log = Logger.getLogger( "logger");
+			log.addHandler(new FileHandler( "nba.xml",true ));
 			}catch (Exception e) {	
 			}
 		log.log ( Level.INFO, "Inicio Registro " + (new Date()));
+		
+		
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -84,7 +87,9 @@ public class VentanaRegistro extends JFrame {
 		});
 		
 	}
-	
+	public void windowClosed(WindowEvent e) {
+	    System.out.println("Yooooo");
+	}
 	
 
 	/**
@@ -92,8 +97,8 @@ public class VentanaRegistro extends JFrame {
 	 */
 	public VentanaRegistro() {
 		
+       
 		
-	
 		
 		escolta=new ArrayList<Jugador>();
 		alero=new ArrayList<Jugador>();
@@ -115,6 +120,8 @@ public class VentanaRegistro extends JFrame {
 		setTitle("REGISTRO");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 380, 422);
+		
+		
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(175, 238, 238));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
