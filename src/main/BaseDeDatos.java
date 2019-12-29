@@ -78,16 +78,16 @@ public class BaseDeDatos
 		}
 	}
 
-	//public static void crearTablaUsuarios() {
-	//if (statement==null) return;//para que alguien no nos llame antes de initBD
-	//try {
-//			statement.executeUpdate("create table usuarios " + "(numIdentificador int, id string, contrase�a string, dinero double" +")");
-	//} catch (SQLException e) {
+	/*public static void crearTablaUsuarios() {
+	if (statement==null) return;//para que alguien no nos llame antes de initBD
+	try {
+		statement.executeUpdate("create table usuarios " + "(numIdentificador int, id string, contrase�a string, dinero double" +")");
+	} catch (SQLException e) {
 		// Si hay excepci�n es que la tabla ya exist�a (lo cual es correcto)
 		// e.printStackTrace();  
-//	}
-	//}
-	
+	}
+	}
+	*/
 	
     public static void crearTablaUsuarioJugadores(){
 		

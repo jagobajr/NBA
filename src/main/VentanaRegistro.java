@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -55,6 +56,8 @@ public class VentanaRegistro extends JFrame {
     
 	static Statement st=null;
 
+	
+	
 
 	/**
 	 * Launch the application.
@@ -62,7 +65,6 @@ public class VentanaRegistro extends JFrame {
 	public static void main(String[] args) {
 		
 		LogController.log ( Level.INFO, "Inicio Registro " + (new Date()),null);
-		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -76,18 +78,24 @@ public class VentanaRegistro extends JFrame {
 		});
 		
 	}
-	public void windowClosed(WindowEvent e) {
-	    System.out.println("Yooooo");
-	}
 	
+	private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
 
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
+	
 	/**
 	 * Create the frame.
 	 */
 	public VentanaRegistro() {
 		
-       
-		
+		ConfigureCloseWindow();
 		
 		escolta=new ArrayList<Jugador>();
 		alero=new ArrayList<Jugador>();
@@ -303,7 +311,8 @@ public class VentanaRegistro extends JFrame {
 					st.executeUpdate(sentencia);
 					st.executeUpdate(sentencia2);
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
+					LogController.log( Level.WARNING, "Error al asignar base " , e );
+
 					e.printStackTrace();
 				}
 				
@@ -341,7 +350,7 @@ public class VentanaRegistro extends JFrame {
 					st.executeUpdate(sentencia);
 					st.executeUpdate(sentencia2);
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
+					LogController.log( Level.WARNING, "Error al asignar escolta " , e );
 					e.printStackTrace();
 				}
 				
@@ -381,7 +390,7 @@ public class VentanaRegistro extends JFrame {
 					st.executeUpdate(sentencia);
 					st.executeUpdate(sentencia3);
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
+					LogController.log( Level.WARNING, "Error al asignar alero " , e );
 					e.printStackTrace();
 				}
 				
@@ -416,7 +425,7 @@ public class VentanaRegistro extends JFrame {
 					st.executeUpdate(sentencia);
 					st.executeUpdate(sentencia2);
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
+					LogController.log( Level.WARNING, "Error al asignar ala pivot " , e );
 					e.printStackTrace();
 				}
 				
@@ -447,7 +456,7 @@ public class VentanaRegistro extends JFrame {
 					st.executeUpdate(sentencia);
 					st.executeUpdate(sentencia2);
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
+					LogController.log( Level.WARNING, "Error al asignar pivot " , e );
 					e.printStackTrace();
 				}
 				
@@ -802,10 +811,7 @@ public class VentanaRegistro extends JFrame {
 		
 	}
 
-		
 
-	
 
-	
 		
 }

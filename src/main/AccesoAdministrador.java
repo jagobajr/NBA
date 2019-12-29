@@ -10,15 +10,20 @@ import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 import javax.swing.JButton;
 
+import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Date;
+import java.util.logging.Level;
 
 
 
 
 
-public class AccesoAdministrador extends JFrame implements ActionListener
-{
+public class AccesoAdministrador extends JFrame implements ActionListener{
+	
 	private JTextField textFieldId;
 	private JPasswordField passwordField;
 	JLabel lblIntroduceElId;
@@ -32,11 +37,40 @@ public class AccesoAdministrador extends JFrame implements ActionListener
 	boolean hilo=true;
 	
 	
+    public static void main(String[] args) {
+		
+		LogController.log ( Level.INFO, "Inicio de acceso de Admin " + (new Date()),null);
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AccesoAdministrador frame = new AccesoAdministrador();
+					frame.setVisible(true);
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+	}
+    
+    private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
+	
+	
 	
 	
 	public AccesoAdministrador() {
 		
-		
+		ConfigureCloseWindow();
 		setBounds(400,400,600,300);
 		setTitle("LOG IN Administrador");
 		getContentPane().setLayout(null);

@@ -16,6 +16,10 @@ import javax.swing.JOptionPane;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Date;
+import java.util.logging.Level;
 
 import javax.swing.JTextField;
 import javax.swing.UIManager;
@@ -35,6 +39,7 @@ public class VentanaLogin extends JFrame {
 	
 	
 	public static void main(String[] args) {
+		LogController.log ( Level.INFO, "Inicio Login " + (new Date()),null);
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -46,10 +51,23 @@ public class VentanaLogin extends JFrame {
 			}
 		});
 	}
+	
+	private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
 
 	
 	
 	public VentanaLogin() {
+		
+		ConfigureCloseWindow();
 		setIconImage(Toolkit.getDefaultToolkit().getImage("/Imagenes/thumb-1920-467394.jpg"));
 		setTitle("LOG IN");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
