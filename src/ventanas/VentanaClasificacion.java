@@ -6,11 +6,18 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import main.LogController;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Date;
+import java.util.logging.Level;
 
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -41,6 +48,8 @@ public class VentanaClasificacion extends JFrame {
 	private JTextField puntos_10;
 	private JLabel label_10;
 
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -56,11 +65,24 @@ public class VentanaClasificacion extends JFrame {
 			}
 		});
 	}
+	
+	private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
 
 	/**
 	 * Create the frame.
 	 */
 	public VentanaClasificacion() {
+		
+		ConfigureCloseWindow();
 		setTitle("CLASIFICACION");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 324, 500);

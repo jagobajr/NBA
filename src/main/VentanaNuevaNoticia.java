@@ -13,13 +13,18 @@ import javax.swing.JScrollPane;
 
 
 import java.awt.Color;
+import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.Date;
+import java.util.logging.Level;
 
 public class VentanaNuevaNoticia extends JFrame implements ActionListener
 {
@@ -34,8 +39,34 @@ public class VentanaNuevaNoticia extends JFrame implements ActionListener
 	ObjectOutputStream oos;
 	Noticia noticia;
 	
-	public VentanaNuevaNoticia() 
-	{
+	public static void main(String[] args) {
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					VentanaNuevaNoticia frame = new VentanaNuevaNoticia();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
+	
+	public VentanaNuevaNoticia() {
+		
+		ConfigureCloseWindow();
 		getContentPane().setBackground(new Color(0, 128, 0));
 		setResizable(false);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaNuevaNoticia.class.getResource())); falta foto;

@@ -6,11 +6,18 @@ import java.awt.Label;
 import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Date;
+import java.util.logging.Level;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+
+import main.LogController;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.Color;
@@ -37,10 +44,23 @@ public class VentanaVender extends JFrame {
 			}
 		});
 	}
+	
+	private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
 	/**
 	 * Create the frame.
 	 */
 	public VentanaVender() {
+		
+		ConfigureCloseWindow();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 460, 523);
 		contentPane = new JPanel();

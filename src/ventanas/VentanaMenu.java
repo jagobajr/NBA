@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import main.LogController;
 import main.VentanaLogin;
 
 import java.awt.Color;
@@ -15,6 +16,10 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Date;
+import java.util.logging.Level;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
 import javax.swing.ImageIcon;
@@ -37,9 +42,20 @@ public class VentanaMenu extends JFrame {
 		});
 	}
 
-	
+	private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
 	
 	public VentanaMenu() {
+		
+		ConfigureCloseWindow();
 		setBackground(new Color(105, 105, 105));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 324, 500);

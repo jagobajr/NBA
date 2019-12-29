@@ -9,10 +9,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JSplitPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.beans.Statement;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
+import java.util.logging.Level;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -21,6 +25,9 @@ import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+
+import main.BaseDeDatos;
+import main.LogController;
 
 import java.awt.Color;
 import java.awt.Label;
@@ -50,11 +57,24 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 			}
 		});
 	}
+	
+	private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
 
 	/**
 	 * Create the frame.
 	 */
 	public VentanaComprar() {
+		
+		ConfigureCloseWindow();
 		setTitle("COMPRAR");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 324, 500);

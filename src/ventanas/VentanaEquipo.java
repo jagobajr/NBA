@@ -7,12 +7,17 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import main.LogController;
 import main.UsuarioJugadores;
 
 import java.awt.Toolkit;
 import java.awt.Dialog.ModalExclusionType;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Date;
+import java.util.logging.Level;
 
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -45,11 +50,24 @@ public class VentanaEquipo extends JFrame {
 			}
 		});
 	}
+	
+	private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+
+	        }
+	    });
+		}
 
 	/**
 	 * Create the frame.
 	 */
 	public VentanaEquipo() {
+		
+		ConfigureCloseWindow();
 		setTitle("EQUIPO");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("/Users/jagoba.jr/Desktop/DEUSTO📚💎/19-20/Programacion/Imagenes para el proyecto/QUINTETO.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

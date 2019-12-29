@@ -10,7 +10,7 @@ public class LogController {
 	private static Logger log=Logger.getLogger("LOG");
 	
 	
-	static void log( Level level, String msg, Throwable ex ) {
+	public static void log( Level level, String msg, Throwable ex ) {
 			log = Logger.getLogger(LogController.class.getName() );  
 			log.setLevel( Level.ALL );  // 
 			try {
