@@ -73,6 +73,7 @@ public class BaseDeDatos
 			statement.close();
 			connection.close();
 		} catch (SQLException e) {
+			LogController.log( Level.SEVERE, "Error en conexión de base de datos " , e );
 			e.printStackTrace();
 		}
 	}
@@ -95,10 +96,8 @@ public class BaseDeDatos
 			
 			statement.executeUpdate("create table UsuarioJugadores " + "(idUsuario string, idJugador string" +")");
 		}catch(SQLException e){
-			
+			LogController.log( Level.SEVERE, "Error al crear tabla " , e );
 		}
-		
-		
 		
 	}
 	
@@ -110,7 +109,7 @@ public class BaseDeDatos
 			
 			statement.executeUpdate("create table basesSalidos " + "(id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 		}catch(SQLException e){
-			
+			LogController.log( Level.SEVERE, "Error al crear tabla bases salidos " , e );
 		}
 		
 		
@@ -122,7 +121,7 @@ public class BaseDeDatos
 			
 			statement.executeUpdate("create table escoltasSalidos " + "(id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 		}catch(SQLException e){
-			
+			LogController.log( Level.SEVERE, "Error al crear tabla escoltas salidos" , e );
 		}
 		
 		
@@ -134,6 +133,7 @@ public class BaseDeDatos
 		
 		statement.executeUpdate("create table alerosSalidos " + "(id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
+		LogController.log( Level.SEVERE, "Error al crear tabla aleros salidos" , e );
 		
 	}
 	
@@ -146,6 +146,7 @@ public class BaseDeDatos
 		
 		statement.executeUpdate("create table alapivotSalidos " + "(id int, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
+		LogController.log( Level.SEVERE, "Error al crear tabla ala-pivots salidos" , e );
 		
 	}
 	
@@ -159,6 +160,7 @@ public class BaseDeDatos
 		
 		statement.executeUpdate("create table pivotSalidos " + "(id string, nombre string, equipo string, posicion string, precio int, puntosJornada int, puntosTotales int" +")");
 	}catch(SQLException e){
+		LogController.log( Level.SEVERE, "Error al crear tabla pivots salidos" , e );
 		
 	}
 	
