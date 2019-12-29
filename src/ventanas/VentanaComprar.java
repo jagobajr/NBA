@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.beans.Statement;
 import java.io.Serializable;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
@@ -20,8 +21,6 @@ import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
-import ud.prog3.Comunio.BasesDeDatos;
 
 import java.awt.Color;
 import java.awt.Label;
@@ -250,6 +249,34 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 		
 	}
 	
+	private void cargarMercadoDeFichajes() 
+	{
+		Statement st=null;
+		DefaultListModel modelo;
+		st=BaseDeDatos.getStatement();
+		modelo.clear();
+		precios.clear();
+		mercadoId.clear();
+		
+		String sentencia="select * from mercadodefichajes";
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			
+			while(rs.next())
+			{
+				modelo.addElement(rs.getString("nombre"));
+				precios.add(rs.getInt("precio"));
+				mercadoId.add(rs.getString("idJugador"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		repaint();
+		
+	}
+
 
 	public void actionPerformed(ActionEvent arg0) 
 	{
@@ -320,5 +347,11 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 			
 		
 		}
+
+	@Override
+	public void valueChanged(ListSelectionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 }
  
