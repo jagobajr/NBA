@@ -23,17 +23,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
-import java.util.logging.FileHandler;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 
 public class VentanaRegistro extends JFrame {
 
-	
-	static Logger log;
 	
 
 	private JPanel contentPane;
@@ -65,15 +61,7 @@ public class VentanaRegistro extends JFrame {
 	 */
 	public static void main(String[] args) {
 		
-		try {
-			log = Logger.getLogger( "logger");
-			log.addHandler(new FileHandler( "nba.xml",true ));
-			}catch (Exception ex) {	
-				log.log ( Level.INFO, "Inicio Registro " + (new Date()), ex);
-			}
-		log.log ( Level.INFO, "Inicio Registro " + (new Date()));
-		
-		
+		LogController.log ( Level.INFO, "Inicio Registro " + (new Date()),null);
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -199,22 +187,22 @@ public class VentanaRegistro extends JFrame {
 			                            limpiar();
 			                        } else {
 			                            JOptionPane.showMessageDialog(null, "Error al Guardar");
-				                        log.log ( Level.INFO, "Error al guardar " + (new Date()));
+				                        LogController.log ( Level.INFO, "Error al guardar " + (new Date()),null);
 			                            limpiar();
 			                        }
 			                    } else {
 			                        JOptionPane.showMessageDialog(null, "El email es incorrecto");
-			                        log.log ( Level.INFO, "El mail es incorrecto " + (new Date()));
+			                        LogController.log ( Level.INFO, "El mail es incorrecto " + (new Date()),null);
 			                    }
 			                } else {
 			                   JOptionPane.showMessageDialog(null, "El usuario ya existe");
-		                        log.log ( Level.INFO, "El usuario ya existe" + (new Date()));
+			                   LogController.log ( Level.INFO, "El usuario ya existe" + (new Date()),null);
 
 			                }
 
 				}else {
 					JOptionPane.showMessageDialog(null,"Las contraseñas no coinciden");
-                    log.log ( Level.INFO, "Las contraseñas no coinciden " + (new Date()));
+					 LogController.log ( Level.INFO, "Las contraseñas no coinciden " + (new Date()),null);
 
 				}
 				

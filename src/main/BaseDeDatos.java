@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
 
 import javax.swing.JOptionPane;
 
@@ -25,6 +26,7 @@ public class BaseDeDatos
 		    connection = DriverManager.getConnection("jdbc:sqlite:BaseDeDatos.db" );
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30);  // poner timeout 30 msg
+			LogController.log(Level.INFO, "Conectada base de datos ", null );
 		    return connection;
 		} catch (ClassNotFoundException | SQLException e) {
 			JOptionPane.showMessageDialog( null, "Error de conexion!! No se ha podido conectar con ", "ERROR", JOptionPane.ERROR_MESSAGE );

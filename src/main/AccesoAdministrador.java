@@ -10,7 +10,6 @@ import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 import javax.swing.JButton;
 
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
