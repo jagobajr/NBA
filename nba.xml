@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-29T13:27:20</date>
+  <millis>1577622440569</millis>
+  <sequence>0</sequence>
+  <logger>prueba-logger</logger>
+  <level>INFO</level>
+  <class>main.VentanaRegistro</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Inicio Registro Sun Dec 29 13:27:20 CET 2019</message>
+</record>
+</log>
