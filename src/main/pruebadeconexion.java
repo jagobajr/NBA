@@ -36,6 +36,28 @@ public class pruebadeconexion {
 			}catch(SQLException e) {
 			System.out.println("No se ha podido cargar la BD");
 			}
+		
+		try(Statement st= BaseDeDatos.initBD().createStatement();) {
+			
+			ResultSet rs = st.executeQuery("SELECT * FROM Usuarios");
+
+			while(rs.next()) {
+			String nombre = rs.getString("Usuario");
+			String password = rs.getString("Password");
+			String correo = rs.getString("Correo");
+			String dinero = rs.getString("Dinero");
+
+			System.out.println("Usuario: " + nombre + " Password: " + password + " Correo: " + correo + " Dinero: " + dinero ); 
+			}
+			
+
+			//ya no queremos usarla mas
+
+			BaseDeDatos.close();
+
+			}catch(SQLException e) {
+			System.out.println("No se ha podido cargar la BD");
+			}
 	}
 
 }

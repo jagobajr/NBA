@@ -181,7 +181,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 					Random puntos;
 					puntos=new Random();
 					
-					String sentencia="update jugadores set puntosJornada='"+puntos.nextInt(15)+"' where id='"+i+"'";
+					String sentencia="update Jugadores set puntosJornada='"+puntos.nextInt(15)+"' where id='"+i+"'";
 					
 					
 					try {
@@ -225,8 +225,8 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 					
 					listaJ.get(i).setPuntosTotales(puntos);
 					try {
-						st.executeUpdate("update jugadores set puntosTotales = '"+listaJ.get(i).getPuntosTotales()+"' where id = '"+i+"'");
-						st.executeUpdate("update jugadores set puntosJornada = '"+0+"' where id = '"+i+"'");
+						st.executeUpdate("update Jugadores set puntosTotales = '"+listaJ.get(i).getPuntosTotales()+"' where id = '"+i+"'");
+						st.executeUpdate("update Jugadores set puntosJornada = '"+0+"' where id = '"+i+"'");
 					
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
@@ -559,7 +559,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			st=BaseDeDatos.getStatement();			
 			String jugadores="";
 			try {
-				jugadores="select * from jugadores";
+				jugadores="select * from Jugadores";
 				ResultSet rs=st.executeQuery(jugadores);
 				
 				
@@ -612,7 +612,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		st=BaseDeDatos.getStatement();
 		usuarios=new ArrayList();
 		
-		String sentencia="select * from usuarios";
+		String sentencia="select * from Usuarios";
 		
 		try
 		{
@@ -669,7 +669,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		lista.clear();
 		
 		try {
-			ResultSet rs=st.executeQuery("select * from jugadores");
+			ResultSet rs=st.executeQuery("select * from Jugadores");
 			
 			Jugador jugador=new Jugador();
 			while(rs.next())
@@ -704,11 +704,11 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		{
 		case "anyadir":
 			
-			String jugadores="select * from jugadores";
+			String jugadores="select * from Jugadores";
 			
 			st=BaseDeDatos.getStatement();
 			String sentencia="";
-			sentencia="insert into jugadores values("+checkearId() +", '"+textFieldNNombre.getText()+"', '"+TextFieldNEquipo.getText()+"', '"+textFieldNPosicion.getText()+"', '"+(int)spinner.getValue()+"', '0', '0')";
+			sentencia="insert into Jugadores values("+checkearId() +", '"+textFieldNNombre.getText()+"', '"+TextFieldNEquipo.getText()+"', '"+textFieldNPosicion.getText()+"', '"+(int)spinner.getValue()+"', '0', '0')";
 			 
 			try {
 				st.executeUpdate(sentencia);
@@ -803,7 +803,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	{
 		st=BaseDeDatos.getStatement();
 		
-		String sentencia="DELETE FROM usuarios WHERE id = '"+value+"'";
+		String sentencia="DELETE FROM Usuarios WHERE id = '"+value+"'";
 		
 		System.out.println(sentencia);
 		try {
@@ -853,7 +853,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		BaseDeDatos.initUsuario();
 		try {
 			st=BaseDeDatos.getStatement();
-			ResultSet rs=st.executeQuery("select * from usuarios");
+			ResultSet rs=st.executeQuery("select * from Usuarios");
 			
 			Jugador jugador=new Jugador();
 			while(rs.next())
