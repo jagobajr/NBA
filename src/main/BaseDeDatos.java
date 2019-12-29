@@ -56,6 +56,7 @@ public class BaseDeDatos
 		    return connection;
 		} catch (ClassNotFoundException | SQLException e) {
 			JOptionPane.showMessageDialog( null, "Error de conexion!! No se ha podido conectar con ", "ERROR", JOptionPane.ERROR_MESSAGE );
+			LogController.log( Level.SEVERE, "Error en conexión de base de datos ", e );
 			System.out.println( "Error de conexion!! No se ha podido conectar con " );
 			return null;
 		}
