@@ -10,7 +10,18 @@ public class Usuarios {
 	
 	
 	
+	
 	public Usuarios(int id, String usuario, String contra, String correo, int dinero, int idTipo) {
+		super();
+		this.id = id;
+		this.usuario = usuario;
+		this.contra = contra;
+		this.correo = correo;
+		this.dinero = dinero;
+		this.idTipo = idTipo;
+	}
+	
+	public Usuarios() {
 		super();
 		this.id = id;
 		this.usuario = usuario;
