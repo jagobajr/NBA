@@ -39,7 +39,7 @@ public class VentanaLogin extends JFrame {
 	
 	
 	public static void main(String[] args) {
-		LogController.log ( Level.INFO, "Inicio Login " + (new Date()),null);
+		LogController.log ( Level.INFO, "Inicio aplicacion " + (new Date()),null);
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

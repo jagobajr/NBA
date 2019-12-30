@@ -1,4 +1,4 @@
-package ventanas;
+package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -26,8 +26,8 @@ import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import main.BaseDeDatos;
-import main.LogController;
+import ventanas.VentanaMenu;
+import ventanas.VentanaMercado;
 
 import java.awt.Color;
 import java.awt.Label;
@@ -271,7 +271,7 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 	
 	private void cargarMercadoDeFichajes() 
 	{
-		Statement st=null;
+		java.sql.Statement st=null;
 		DefaultListModel modelo;
 		st=BaseDeDatos.getStatement();
 		modelo.clear();
