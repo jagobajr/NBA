@@ -144,13 +144,15 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				{
 					
 					anyadirJugadoresALista();
+					//cargarJugadoresEnLista();
 					pos=lista.getSelectedIndex();
-					
+
 					textFieldNombre.setText(""+listaJ.get(pos).getNombre());
 					textFieldEquipo.setText(""+listaJ.get(pos).getEquipo());
 					textFieldPosicion.setText(""+listaJ.get(pos).getPosicion());
 					textFieldPuntosJornada.setText(""+listaJ.get(pos).getPuntosJornada());
-			
+					textFieldPuntosTotales.setText(""+listaJ.get(pos).getPuntosTotales());
+					textFieldEdad.setText(""+listaJ.get(pos).getPrecio());
 					
 					repaint();
 					
@@ -283,11 +285,11 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		getContentPane().add(lblPuntosTotales);
 		
 		textFieldNombre = new JTextField();
-		
 		textFieldNombre.setEditable(false);
 		textFieldNombre.setBounds(378, 515, 141, 20);
 		getContentPane().add(textFieldNombre);
 		textFieldNombre.setColumns(10);
+		
 		
 		textFieldEquipo = new JTextField();
 		textFieldEquipo.setEditable(false);
@@ -346,49 +348,45 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		lblNombre_1 = new JLabel("Nombre ");
 		lblNombre_1.setBounds(495, 247, 61, 14);
 		getContentPane().add(lblNombre_1);
-		lblNombre_1.setVisible(false);
+		lblNombre_1.setVisible(true);
 		
 		lblEquipo_1 = new JLabel("Equipo");
 		lblEquipo_1.setBounds(495, 290, 61, 14);
 		getContentPane().add(lblEquipo_1);
-		lblEquipo_1.setVisible(false);
+		lblEquipo_1.setVisible(true);
 		
 		lblPosicion_1 = new JLabel("Posicion");
 		lblPosicion_1.setBounds(495, 333, 61, 14);
 		getContentPane().add(lblPosicion_1);
-		lblPosicion_1.setVisible(false);
+		lblPosicion_1.setVisible(true);
 		
 		textFieldNNombre = new JTextField();
 		textFieldNNombre.setBounds(590, 243, 177, 23);
 		getContentPane().add(textFieldNNombre);
 		textFieldNNombre.setColumns(10);
-		textFieldNNombre.setVisible(false);
+		textFieldNNombre.setVisible(true);
 		
 		TextFieldNEquipo = new JTextField();
 		TextFieldNEquipo.setColumns(10);
 		TextFieldNEquipo.setBounds(590, 281, 177, 23);
 		getContentPane().add(TextFieldNEquipo);
-		TextFieldNEquipo.setVisible(false);
+		TextFieldNEquipo.setVisible(true);
 		
 		textFieldNPosicion = new JTextField();
 		textFieldNPosicion.setColumns(10);
 		textFieldNPosicion.setBounds(590, 324, 177, 23);
 		getContentPane().add(textFieldNPosicion);
-		textFieldNPosicion.setVisible(false);
+		textFieldNPosicion.setVisible(true);
 		
 		btnAadir = new JButton("A\u00D1ADIR");
 		btnAadir.setBounds(590, 205, 160, 30);
 		getContentPane().add(btnAadir);
 		btnAadir.addActionListener(this);
 		btnAadir.setActionCommand("anyadir");
-		btnAadir.setVisible(false);
+		btnAadir.setVisible(true);
 		
 		
-		spinner = new JSpinner();
-		spinner.setModel(new SpinnerNumberModel(0, 0, 40, 1));
-		spinner.setBounds(590, 375, 46, 20);
-		getContentPane().add(spinner);
-		spinner.setVisible(false);
+		
 		
 		
 		
@@ -436,8 +434,8 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 							st.executeUpdate( sentencia );
 							JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" anyadido correctamente en el mercado de fichajes" );
 							 
-							textFieldPrecio.setVisible(false);
-							lblPrecio.setVisible(false);
+							textFieldPrecio.setVisible(true);
+							lblPrecio.setVisible(true);
 							textFieldPrecio.setText("");
 							textFieldNombre.setText("");
 							
@@ -521,33 +519,34 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		btnEliminarMercado.addActionListener(this);
 		btnEliminarMercado.setActionCommand("eliminarMercado");
 		
-		//JLabel lblRepartoDineroA = new JLabel("REPARTO DINERO A USUARIOS");
-		//lblRepartoDineroA.setBounds(391, 598, 177, 14);
-		//getContentPane().add(lblRepartoDineroA);
+		JLabel lblRepartoDineroA = new JLabel("REPARTO DINERO A USUARIOS");
+		lblRepartoDineroA.setBounds(391, 598, 177, 14);
+		getContentPane().add(lblRepartoDineroA);
 		
-	//	JLabel label = new JLabel("");
-		//label.addMouseListener(new MouseAdapter() {
-		//	@Override
-			//public void mouseClicked(MouseEvent arg0) 
-			//{
+		JLabel label = new JLabel("");
+		label.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) 
+			{
 				
-				//RepartoDinero newWindow=new RepartoDinero();
-				//newWindow.setVisible(true);
+				RepartoDinero newWindow=new RepartoDinero();
+				newWindow.setVisible(true);
 			
 				
 				
-			//}
-		//});
-//		label.setForeground(Color.GRAY);
-	//	label.setIcon(new ImageIcon(Administrador.class.getResource("")));
-	//	label.setBounds(394, 634, 66, 58);
-	//	getContentPane().add(label);
+			}
+		});
+		label.setForeground(Color.GRAY);
+		label.setIcon(new ImageIcon(Administrador.class.getResource("")));
+		label.setBounds(394, 634, 66, 58);
+		getContentPane().add(label);
 		
 		
-	//	btnNewButton_1.setBounds(1088, 648, 217, 23);
-//		getContentPane().add(btnNewButton_1);
+		JButton btnNewButton_1= new JButton();
+		btnNewButton_1.setBounds(1088, 648, 217, 23);
+		getContentPane().add(btnNewButton_1);
 		
-		lblPrecio.setVisible(false);
+		lblPrecio.setVisible(true);
 		
 		cargarJugadoresEnLista();
 	
@@ -557,40 +556,43 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	private void cargarJugadoresEnLista() 
 	{
 			st=BaseDeDatos.getStatement();			
-			String jugadores="";
+			String jugadores;
 			try {
-				jugadores="select * from Jugadores";
+				jugadores="select * from jugadores";
 				ResultSet rs=st.executeQuery(jugadores);
 				
 				
 				
-				ResultSetMetaData rsmd = rs.getMetaData();
-  			    int columnCount = rsmd.getColumnCount();
-			 	while(rs.next())
+				//ResultSetMetaData rsmd = rs.getMetaData();
+				//int columnCount = rsmd.getColumnCount();
+				while(rs.next())
 				{
 					jugador=new Jugador();
 					
-					jugador.setNombre(rs.getString("nombre"));
-					jugador.setEquipo(rs.getString("equipo"));
-					jugador.setId(rs.getString("id"));
-					jugador.setPuntosJornada(rs.getInt("puntosJornada"));
-					jugador.setPuntosTotales(rs.getInt("puntosTotales"));
-					jugador.setPosicion(rs.getString("posicion"));
+					//jugador.setNombre(rs.getString("nombre"));
+					//jugador.setPrecio(rs.getInt("precio"));
+					//jugador.setEquipo(rs.getString("equipo"));
+					//jugador.setId(rs.getString("id"));
+					//jugador.setPuntosJornada(rs.getInt("puntosJornada"));
+					//jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+					//jugador.setPosicion(rs.getString("posicion"));
 					
 					
 					
 					jugador.setNombre(rs.getString(2));
-					jugador.setEquipo(rs.getString(3));
+					jugador.setPrecio(rs.getInt(7));
+					jugador.setEquipo(rs.getString(4));
 					jugador.setId(rs.getString(1));
-					jugador.setPuntosJornada(rs.getInt(6));
-					jugador.setPuntosTotales(rs.getInt(7));
-					jugador.setPosicion(rs.getString(4));
+					jugador.setPuntosJornada(rs.getInt(5));
+					jugador.setPuntosTotales(rs.getInt(6));
+					jugador.setPosicion(rs.getString(3));
 					
 					
 					
-				modelo.addElement(rs.getString("nombre")+"  ");
+				//modelo.addElement(rs.getString("nombre"));
 				
 				listaJ.add(jugador);
+				
 					
 				}
 			} catch (SQLException e) {
@@ -612,7 +614,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		st=BaseDeDatos.getStatement();
 		usuarios=new ArrayList();
 		
-		String sentencia="select * from Usuarios";
+		String sentencia="select * from usuarios";
 		
 		try
 		{
@@ -620,7 +622,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			
 			while(rs.next())
 			{
-				modeloUsuarios.addElement(rs.getString("id"));
+				modeloUsuarios.addElement(rs.getString("IdUsuario"));
 				
 			}
 			
@@ -644,7 +646,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			while(rs.next())
 			{
 				modeloMercado.addElement(rs.getString("nombre"));
-				mercado.add(rs.getString("idJugador") +" ");
+				mercado.add(rs.getString("IdJugador") +" ");
 				
 			}
 			
@@ -704,11 +706,11 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		{
 		case "anyadir":
 			
-			String jugadores="select * from Jugadores";
+			String jugadores="select * from jugadores";
 			
 			st=BaseDeDatos.getStatement();
-			String sentencia="";
-			sentencia="insert into Jugadores values("+checkearId() +", '"+textFieldNNombre.getText()+"', '"+TextFieldNEquipo.getText()+"', '"+textFieldNPosicion.getText()+"', '"+(int)spinner.getValue()+"', '0', '0')";
+			String sentencia;
+			sentencia="insert into jugadores values("+checkearId() +", '"+textFieldNNombre.getText()+"', '"+TextFieldNEquipo.getText()+"', '"+textFieldNPosicion.getText()+"', '"+(int)spinner.getValue()+"', '0', '0')";
 			 
 			try {
 				st.executeUpdate(sentencia);
@@ -803,7 +805,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	{
 		st=BaseDeDatos.getStatement();
 		
-		String sentencia="DELETE FROM Usuarios WHERE id = '"+value+"'";
+		String sentencia="DELETE FROM usuarios WHERE id = '"+value+"'";
 		
 		System.out.println(sentencia);
 		try {
@@ -853,7 +855,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		BaseDeDatos.initUsuario();
 		try {
 			st=BaseDeDatos.getStatement();
-			ResultSet rs=st.executeQuery("select * from Usuarios");
+			ResultSet rs=st.executeQuery("select * from jugadores");
 			
 			Jugador jugador=new Jugador();
 			while(rs.next())
@@ -863,11 +865,12 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				
 
 				jugador.setNombre(rs.getString(2));
-				jugador.setEquipo(rs.getString(3));
+				jugador.setPrecio(rs.getInt(7));
+				jugador.setEquipo(rs.getString(4));
 				jugador.setId(rs.getString(1));
-				jugador.setPuntosJornada(rs.getInt(6));
-				jugador.setPuntosTotales(rs.getInt(7));
-				jugador.setPosicion(rs.getString(4));
+				jugador.setPuntosJornada(rs.getInt(5));
+				jugador.setPuntosTotales(rs.getInt(6));
+				jugador.setPosicion(rs.getString(3));
 				
 				listaJ.add(jugador);
 				

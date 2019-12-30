@@ -1,11 +1,18 @@
 package main;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+
+
 
 public class BaseDeDatos 
 {
@@ -56,7 +63,7 @@ public class BaseDeDatos
 		    return connection;
 		} catch (ClassNotFoundException | SQLException e) {
 			JOptionPane.showMessageDialog( null, "Error de conexion!! No se ha podido conectar con ", "ERROR", JOptionPane.ERROR_MESSAGE );
-			LogController.log( Level.SEVERE, "Error en conexión de base de datos ", e );
+			LogController.log( Level.SEVERE, "Error en conexiï¿½n de base de datos ", e );
 			System.out.println( "Error de conexion!! No se ha podido conectar con " );
 			return null;
 		}
@@ -73,21 +80,13 @@ public class BaseDeDatos
 			statement.close();
 			connection.close();
 		} catch (SQLException e) {
-			LogController.log( Level.SEVERE, "Error en conexión de base de datos " , e );
+			LogController.log( Level.SEVERE, "Error en conexiï¿½n de base de datos " , e );
 			e.printStackTrace();
 		}
 	}
 
-	/*public static void crearTablaUsuarios() {
-	if (statement==null) return;//para que alguien no nos llame antes de initBD
-	try {
-		statement.executeUpdate("create table usuarios " + "(numIdentificador int, id string, contraseï¿½a string, dinero double" +")");
-	} catch (SQLException e) {
-		// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
-		// e.printStackTrace();  
-	}
-	}
-	*/
+
+	
 	
     public static void crearTablaUsuarioJugadores(){
 		
@@ -201,12 +200,14 @@ public class BaseDeDatos
 		statement.executeUpdate("create table clasificacion"+ "(Posicion string,idJugador string, PuntosJornada string,  PuntosTotales string"+")");
 	}catch(SQLException e){
 		
-		
-		
 	}
 	
 	
 }
+   
+			
+			
+
 
 	
 	}
