@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-12-26T16:55:05.435211Z</date>
+  <millis>1577379305435</millis>
+  <nanos>211000</nanos>
+  <sequence>0</sequence>
+  <logger>prueba-logger</logger>
+  <level>INFO</level>
+  <class>main.VentanaRegistro</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Inicio Registro Thu Dec 26 17:55:05 CET 2019</message>
+</record>
+</log>
