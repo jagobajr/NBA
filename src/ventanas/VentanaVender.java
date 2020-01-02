@@ -8,6 +8,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.beans.Statement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -16,19 +20,31 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
+import main.BaseDeDatos;
 import main.LogController;
+import main.Usuarios;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JList;
+
 import java.awt.Color;
 import javax.swing.JScrollPane;
 import javax.swing.border.CompoundBorder;
+import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 
 public class VentanaVender extends JFrame {
 
 	private JPanel contentPane;
-
+	ArrayList precios;
+	ArrayList mercadoId;
+	Statement st=null;
+	ArrayList<Usuarios> dineroUsuarios;
+	Usuarios usuario;
+	DefaultListModel modelo;
+	JList list;
+	JLabel label;
 	/**
 	 * Launch the application.
 	 */
@@ -91,7 +107,7 @@ public class VentanaVender extends JFrame {
 		label_Puntos.setBounds(359, 10, 42, 58);
 		panelJugador.add(label_Puntos);
 		
-		JLabel lblNewLabel_1 = new JLabel("Puntos de cada semana\r\n");
+		JLabel lblNewLabel_1 = new JLabel("Introducir cantidad\r\n");
 		lblNewLabel_1.setBounds(211, 48, 141, 14);
 		panelJugador.add(lblNewLabel_1);
 		
@@ -122,9 +138,9 @@ public class VentanaVender extends JFrame {
 		label_8.setBounds(359, 10, 42, 58);
 		panel_jug2.add(label_8);
 		
-		JLabel label = new JLabel("Puntos de cada semana\r\n");
-		label.setBounds(212, 41, 141, 14);
-		panel_jug2.add(label);
+		JLabel lblIntroducirCantidad = new JLabel("Introducir cantidad");
+		lblIntroducirCantidad.setBounds(212, 41, 141, 14);
+		panel_jug2.add(lblIntroducirCantidad);
 		
 		JButton button = new JButton("Vender");
 		button.setBounds(224, 7, 89, 23);
@@ -153,9 +169,9 @@ public class VentanaVender extends JFrame {
 		label_13.setBounds(359, 10, 42, 53);
 		panel_jug3.add(label_13);
 		
-		JLabel label_1 = new JLabel("Puntos de cada semana\r\n");
-		label_1.setBounds(212, 41, 141, 14);
-		panel_jug3.add(label_1);
+		JLabel lblIntroducirCantidad_1 = new JLabel("Introducir cantidad\r\n");
+		lblIntroducirCantidad_1.setBounds(212, 41, 141, 14);
+		panel_jug3.add(lblIntroducirCantidad_1);
 		
 		JButton button_1 = new JButton("Vender");
 		button_1.setBounds(223, 14, 89, 23);
@@ -184,9 +200,9 @@ public class VentanaVender extends JFrame {
 		label_18.setBounds(359, 10, 42, 53);
 		panel_jug4.add(label_18);
 		
-		JLabel label_2 = new JLabel("Puntos de cada semana\r\n");
-		label_2.setBounds(214, 41, 141, 14);
-		panel_jug4.add(label_2);
+		JLabel lblIntroducirCantidad_2 = new JLabel("Introducir cantidad");
+		lblIntroducirCantidad_2.setBounds(214, 41, 141, 14);
+		panel_jug4.add(lblIntroducirCantidad_2);
 		
 		JButton button_2 = new JButton("Vender");
 		button_2.setBounds(227, 14, 89, 23);
@@ -268,6 +284,91 @@ public class VentanaVender extends JFrame {
 		label_3.setBounds(-21, -93, 521, 645);
 		contentPane.add(label_3);
 	}
+
+	private int cargarDineroUsuario(String idUsuario)
+	{
+		
+		ArrayList<Usuarios> dineroUsuarios;
+		Usuarios usuario;
+		
 	
+		String sentencia="select * from usuarios";
+		
+		java.sql.Statement st=null;
+		int dinero=0;
+		st=BaseDeDatos.getStatement();
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			
+			while(rs.next())
+			{
+				usuario=new Usuarios();
+				
+				usuario.setId(rs.getString("id"));
+				usuario.setDinero(rs.getInt("dinero"));
+				
+				dineroUsuarios.add(usuario);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for(int i=0;i<dineroUsuarios.size();i++)
+		{
+			
+			if(idUsuario.equalsIgnoreCase(dineroUsuarios.get(i).getId()))
+			{
+				dinero=dineroUsuarios.get(i).getDinero();
+			}
+		}
+		return dinero;
+	}
 	
+	private int cargarPlantilla() {
+		
+		st=(Statement) BaseDeDatos.getStatement();
+		modelo.clear();
+		precios.clear();
+		mercadoId.clear();
+		
+		String sentencia="select * from mercadodefichajes";
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			
+			while(rs.next())
+			{
+				modelo.addElement(rs.getString("nombre"));
+				precios.add(rs.getInt("precio"));
+				mercadoId.add(rs.getString("idJugador"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		repaint();
+		
+	}
+		
+}
+	
+	public void actionPerformed(ActionEvent arg0) 
+	{
+		switch(arg0.getActionCommand())
+		{
+		case "pujar":
+			
+			try
+			{
+				
+				int p1=Integer.parseInt(txtIntroducirCantidad.getText());
+				int p2=Integer.parseInt(textField_2.getText());
+				int p3=Integer.parseInt(textField_3.getText());
+				int p4=Integer.parseInt(textField_4.getText());
+			
+			}
+	
+}
 }

@@ -15,17 +15,20 @@ import java.beans.Statement;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+//import ud.prog3.Comunio.BasesDeDatos;
 import ventanas.VentanaMenu;
 import ventanas.VentanaMercado;
 
@@ -38,10 +41,22 @@ import javax.swing.AbstractButton;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 
-public class VentanaComprar extends JFrame implements ListSelectionListener,ActionListener, Serializable {
+public class VentanaComprar extends JFrame  {
 
 	private JPanel contentPane;
-
+	private JTextField txtIntroducirCantidad;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	ArrayList precios;
+	ArrayList mercadoId;
+	Statement st=null;
+	ArrayList<Usuarios> dineroUsuarios;
+	Usuarios usuario;
+	DefaultListModel modelo;
+	JList list;
+	JLabel label;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -119,6 +134,16 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 		label_Puntos.setBounds(312, 36, 42, 27);
 		panelJugador.add(label_Puntos);
 		
+		JButton btnPujar = new JButton("Pujar");
+		btnPujar.setBounds(196, 14, 89, 23);
+		panelJugador.add(btnPujar);
+		
+		txtIntroducirCantidad = new JTextField();
+		txtIntroducirCantidad.setText("Introducir cantidad");
+		txtIntroducirCantidad.setBounds(180, 41, 102, 20);
+		panelJugador.add(txtIntroducirCantidad);
+		txtIntroducirCantidad.setColumns(10);
+		
 		JPanel panel_jug2 = new JPanel();
 		panel_jug2.setBackground(new Color(245, 255, 250));
 		panel_jug2.setLayout(null);
@@ -145,6 +170,16 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 		Label label_8 = new Label("Puntos\r\n");
 		label_8.setBounds(312, 36, 42, 27);
 		panel_jug2.add(label_8);
+		
+		JButton button = new JButton("Pujar");
+		button.setBounds(196, 14, 89, 23);
+		panel_jug2.add(button);
+		
+		textField_2 = new JTextField();
+		textField_2.setText("Introducir cantidad");
+		textField_2.setColumns(10);
+		textField_2.setBounds(183, 41, 102, 20);
+		panel_jug2.add(textField_2);
 		
 		JPanel panel_jug3 = new JPanel();
 		panel_jug3.setBackground(new Color(245, 255, 250));
@@ -173,6 +208,16 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 		label_13.setBounds(312, 36, 42, 27);
 		panel_jug3.add(label_13);
 		
+		JButton button_1 = new JButton("Pujar");
+		button_1.setBounds(196, 14, 89, 23);
+		panel_jug3.add(button_1);
+		
+		textField_3 = new JTextField();
+		textField_3.setText("Introducir cantidad");
+		textField_3.setColumns(10);
+		textField_3.setBounds(183, 41, 102, 20);
+		panel_jug3.add(textField_3);
+		
 		JPanel panel_jug4 = new JPanel();
 		panel_jug4.setBackground(new Color(245, 255, 250));
 		panel_jug4.setLayout(null);
@@ -199,6 +244,16 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 		Label label_18 = new Label("Puntos\r\n");
 		label_18.setBounds(312, 36, 42, 27);
 		panel_jug4.add(label_18);
+		
+		JButton button_2 = new JButton("Pujar");
+		button_2.setBounds(196, 10, 89, 23);
+		panel_jug4.add(button_2);
+		
+		textField_4 = new JTextField();
+		textField_4.setText("Introducir cantidad");
+		textField_4.setColumns(10);
+		textField_4.setBounds(183, 41, 102, 20);
+		panel_jug4.add(textField_4);
 		
 		Panel panel_jug5 = new Panel();
 		panel_jug5.setBackground(new Color(230, 230, 250));
@@ -269,34 +324,77 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 		
 	}
 	
-	private void cargarMercadoDeFichajes() 
+	private int cargarDineroUsuario(String idUsuario)
 	{
-		java.sql.Statement st=null;
-		DefaultListModel modelo;
-		st=BaseDeDatos.getStatement();
-		modelo.clear();
-		precios.clear();
-		mercadoId.clear();
 		
-		String sentencia="select * from mercadodefichajes";
+		ArrayList<Usuarios> dineroUsuarios;
+		Usuarios usuario;
+		
+	
+		String sentencia="select * from usuarios";
+		
+		java.sql.Statement st=null;
+		int dinero=0;
+		st=BaseDeDatos.getStatement();
 		
 		try {
 			ResultSet rs=st.executeQuery(sentencia);
 			
 			while(rs.next())
 			{
-				modelo.addElement(rs.getString("nombre"));
-				precios.add(rs.getInt("precio"));
-				mercadoId.add(rs.getString("idJugador"));
+				usuario=new Usuarios();
+				
+				usuario.setId(rs.getString("id"));
+				usuario.setDinero(rs.getInt("dinero"));
+				
+				dineroUsuarios.add(usuario);
+				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		repaint();
+		for(int i=0;i<dineroUsuarios.size();i++)
+		{
+			
+			if(idUsuario.equalsIgnoreCase(dineroUsuarios.get(i).getId()))
+			{
+				dinero=dineroUsuarios.get(i).getDinero();
+			}
+		}
+		return dinero;
 		
 	}
+		
+		private void cargarMercadoDeFichajes() 
+		{
+			st=(Statement) BaseDeDatos.getStatement();
+			modelo.clear();
+			precios.clear();
+			mercadoId.clear();
+			
+			String sentencia="select * from mercadodefichajes";
+			
+			try {
+				ResultSet rs=st.executeQuery(sentencia);
+				
+				while(rs.next())
+				{
+					modelo.addElement(rs.getString("nombre"));
+					precios.add(rs.getInt("precio"));
+					mercadoId.add(rs.getString("idJugador"));
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			repaint();
+			
+		}
 
+		
+		
+	
 
 	public void actionPerformed(ActionEvent arg0) 
 	{
@@ -307,13 +405,15 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 			try
 			{
 				
-				Statement st=null;
-			AbstractButton textField;
-			int p1=Integer.parseInt(textField.getText());
-			AbstractButton textField_1;
-			int p2=Integer.parseInt(textField_1.getText());
+				
+				
+				int p1=Integer.parseInt(txtIntroducirCantidad.getText());
+				int p2=Integer.parseInt(textField_2.getText());
+				int p3=Integer.parseInt(textField_3.getText());
+				int p4=Integer.parseInt(textField_4.getText());
 			
-			if(p2<cargarDineroUsuario((String)label.getText()))
+		
+			if(p2<cargarDinero((String)label.getText()))
 			{
 				
 			
@@ -326,7 +426,7 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 			{
 				JOptionPane.showMessageDialog(null, "el usuario "+label.getText()+" ha fichado a "+modelo.getElementAt(list.getSelectedIndex()));
 			
-			 st = BaseDeDatos.getStatement();
+			 st = (Statement) BaseDeDatos.getStatement();
 			
 			String sentencia="insert into usuariojugadores values('"+label.getText()+"', '"+mercadoId.get(list.getSelectedIndex())+"')";
 			String sentencia2="delete from mercadodefichajes where idJugador = '"+mercadoId.get(list.getSelectedIndex())+"'";
@@ -367,11 +467,5 @@ public class VentanaComprar extends JFrame implements ListSelectionListener,Acti
 			
 		
 		}
-
-	@Override
-	public void valueChanged(ListSelectionEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
 }
  
