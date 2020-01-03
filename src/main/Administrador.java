@@ -41,44 +41,44 @@ public class Administrador extends JFrame implements ActionListener
 /**
  * 
  */
-private static final long serialVersionUID = 1L;
-private JTextField textFieldNombre;
-private JTextField textFieldEquipo;
-private JTextField textFieldPosicion;
-private JTextField textFieldPuntosJornada;
-private JTextField textFieldPuntosTotales;
-JList <DefaultListModel>lista ;
-DefaultListModel modelo;
-DefaultListModel modeloUsuarios;
-DefaultListModel modeloMercado;
-JLabel lblNombre_1;
-JLabel lblEquipo_1;
-JLabel lblPosicion_1;
-JLabel lblAdd ;
-JLabel labelAnyadir;
-Statement st=null;
-JLabel lblEdad;
-JLabel lblEdad_1;
-JSpinner spinner;
-ArrayList<Jugador>listaJ;
-ArrayList mercado;
-ArrayList usuarios;
-ArrayList puntosJornada;
-Jugador jugador;
-private JTextField textFieldNNombre;
-private JTextField TextFieldNEquipo;
-private JTextField textFieldNPosicion;
-private JTextField textFieldEdad;
-private JTextField textFieldPrecio;
-private JLabel lblPrecio;
-JList listMercado;
-JList listUsuarios;
-private JLabel lblJugadoresEnMercado;
-private JScrollPane scrollPane_2;
-JButton btnPuntuar;
-JButton btnAadir;
-JButton btnEliminarMercado;
-JButton btnEliminarUsuarios;
+    private static final long serialVersionUID = 1L;
+    private JTextField textFieldNombre;
+    private JTextField textFieldEquipo;
+    private JTextField textFieldPosicion;
+    private JTextField textFieldPuntosJornada;
+    private JTextField textFieldPuntosTotales;
+    JList <DefaultListModel>lista ;
+    DefaultListModel modelo;
+    DefaultListModel modeloUsuarios;
+    DefaultListModel modeloMercado;
+    JLabel lblNombre_1;
+    JLabel lblEquipo_1;
+    JLabel lblPosicion_1;
+    JLabel lblAdd ;
+    JLabel labelAnyadir;
+    Statement st=null;
+    JLabel lblEdad;
+    JLabel lblEdad_1;
+    JSpinner spinner;
+    ArrayList<Jugador>listaJ;
+    ArrayList mercado;
+    ArrayList usuarios;
+    ArrayList puntosJornada;
+    Jugador jugador;
+    private JTextField textFieldNNombre;
+    private JTextField TextFieldNEquipo;
+    private JTextField textFieldNPosicion;
+    private JTextField textFieldEdad;
+    private JTextField textFieldPrecio;
+    private JLabel lblPrecio;
+    JList listMercado;
+    JList listUsuarios;
+    private JLabel lblJugadoresEnMercado;
+    private JScrollPane scrollPane_2;
+    JButton btnPuntuar;
+    JButton btnAadir;
+    JButton btnEliminarMercado;
+    JButton btnEliminarUsuarios;
 
 
 	public Administrador() {
@@ -96,7 +96,7 @@ JButton btnEliminarUsuarios;
 		
 		listaJ=new ArrayList<Jugador>();
 		
-		//a�adirJugadoresALista();
+		//anyadirJugadoresALista();
 		
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -125,7 +125,7 @@ JButton btnEliminarUsuarios;
 				{
 					
 					
-					a�adirJugadoresALista();
+					anyadirJugadoresALista();
 					pos=lista.getSelectedIndex();
 					
 					textFieldNombre.setText(""+listaJ.get(pos).getNombre());
@@ -133,7 +133,6 @@ JButton btnEliminarUsuarios;
 					textFieldPosicion.setText(""+listaJ.get(pos).getPosicion());
 					textFieldPuntosJornada.setText(""+listaJ.get(pos).getPuntosJornada());
 					textFieldPuntosTotales.setText(""+listaJ.get(pos).getPuntosTotales());
-					textFieldEdad.setText(""+listaJ.get(pos).getEdad());
 					
 					
 					
@@ -159,7 +158,7 @@ JButton btnEliminarUsuarios;
 			{
 				
 				Statement st=null;
-				st=BasesDeDatos.getStatement();
+				st=BaseDeDatos.getStatement();
 				
 				int puntosEstaJornada=0;
 				
@@ -213,19 +212,19 @@ JButton btnEliminarUsuarios;
 		btnPuntuar.setBounds(378, 80, 89, 23);
 		getContentPane().add(btnPuntuar);
 		
-		labelA�adir = new JLabel("");
-		labelA�adir.addMouseListener(new MouseAdapter() {
+		labelAnyadir = new JLabel("");
+		labelAnyadir.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0)
 			{
 
-				labelA�adir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward-CL.png")));
+				labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward-CL.png")));
 				Statement st=null;
-				st=BasesDeDatos.getStatement();
+				st=BaseDeDatos.getStatement();
 				
 				
 				
-				a�adirJugadoresALista();
+				anyadirJugadoresALista();
 				
 				
 				
@@ -259,9 +258,9 @@ JButton btnEliminarUsuarios;
 				
 			}
 		});
-		labelA�adir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward.png")));
-		labelA�adir.setBounds(378, 171, 39, 30);
-		getContentPane().add(labelA�adir);
+		labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward.png")));
+		labelAnyadir.setBounds(378, 171, 39, 30);
+		getContentPane().add(labelAnyadir);
 		
 		JLabel lblProximaJornada = new JLabel("2) PASAR A LA SIGUIENTE JORNADA");
 		lblProximaJornada.setBounds(383, 135, 238, 14);
@@ -421,7 +420,7 @@ JButton btnEliminarUsuarios;
 			{
 				if(textFieldNombre.getText().isEmpty()==true)
 				{
-					JOptionPane.showMessageDialog(null, "Por favor, selecciona un jugador para a�adir al mercado de fichajes");
+					JOptionPane.showMessageDialog(null, "Por favor, selecciona un jugador para anyadir al mercado de fichajes");
 					return;
 				}
 				
@@ -440,7 +439,7 @@ JButton btnEliminarUsuarios;
 					
 					
 					
-					st=BasesDeDatos.getStatement();
+					st=BaseDeDatos.getStatement();
 					
 					
 					
@@ -452,7 +451,7 @@ JButton btnEliminarUsuarios;
 						 
 						 
 							st.executeUpdate( sentencia );
-							JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" a�adido correctamente en el mercado de fichajes" );
+							JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" anyadido correctamente en el mercado de fichajes" );
 							 
 							textFieldPrecio.setVisible(false);
 							lblPrecio.setVisible(false);
@@ -597,7 +596,7 @@ JButton btnEliminarUsuarios;
 	
 	private void cargarJugadoresEnLista() 
 	{
-		 st=BasesDeDatos.getStatement();
+		 st=BaseDeDatos.getStatement();
 			String jugadores="";
 			try {
 				jugadores="select * from jugadores";
@@ -622,7 +621,6 @@ JButton btnEliminarUsuarios;
 					
 					
 					jugador.setNombre(rs.getString(2));
-					jugador.setEdad(rs.getInt(5));
 					jugador.setEquipo(rs.getString(3));
 					jugador.setId(rs.getString(1));
 					jugador.setPuntosJornada(rs.getInt(6));
@@ -652,7 +650,7 @@ JButton btnEliminarUsuarios;
 
 	private void cargarUsuariosRegistrados()
 	{
-		st=BasesDeDatos.getStatement();
+		st=BaseDeDatos.getStatement();
 		usuarios=new ArrayList();
 		
 		String sentencia="select * from usuarios";
@@ -688,7 +686,7 @@ JButton btnEliminarUsuarios;
 	private void cargarJugadoresMercado() 
 	{
 		mercado=new ArrayList();
-		st=BasesDeDatos.getStatement();
+		st=BaseDeDatos.getStatement();
 		String sentencia="select * from mercadodefichajes";
 		
 		try {
@@ -718,7 +716,7 @@ JButton btnEliminarUsuarios;
 	
 	public int testJugadoresEnBaseDatos(ArrayList <Jugador>lista,Statement st)
 	{
-		st=BasesDeDatos.getStatement();
+		st=BaseDeDatos.getStatement();
 		lista.clear();
 		
 		try {
@@ -732,11 +730,10 @@ JButton btnEliminarUsuarios;
 				
 
 				jugador.setNombre(rs.getString(2));
-				jugador.setEdad(rs.getInt(5));
 				jugador.setEquipo(rs.getString(3));
 				jugador.setId(rs.getString(1));
-				jugador.setPuntosJornada(rs.getInt(6));
-				jugador.setPuntosTotales(rs.getInt(7));
+				jugador.setPuntosJornada(rs.getInt(5));
+				jugador.setPuntosTotales(rs.getInt(6));
 				jugador.setPosicion(rs.getString(4));
 				
 				lista.add(jugador);
@@ -764,7 +761,7 @@ JButton btnEliminarUsuarios;
 			
 			String jugadores="select * from jugadores";
 			
-			st=BasesDeDatos.getStatement();
+			st=BaseDeDatos.getStatement();
 			String sentencia="";
 			sentencia="insert into jugadores values("+checkearId() +", '"+textFieldNNombre.getText()+"', '"+TextFieldNEquipo.getText()+"', '"+textFieldNPosicion.getText()+"', '"+(int)spinner.getValue()+"', '0', '0')";
 			 
@@ -783,7 +780,7 @@ JButton btnEliminarUsuarios;
 			}
 			
 			
-		JOptionPane.showMessageDialog(this, "Jugador "+textFieldNNombre.getText()+" a�adido correctamente");
+		JOptionPane.showMessageDialog(this, "Jugador "+textFieldNNombre.getText()+" anyadido correctamente");
 		
 		textFieldNombre.setText("");
 		textFieldEquipo.setText("");
@@ -855,7 +852,7 @@ JButton btnEliminarUsuarios;
 
 	private void eliminarMercado(String valor, int selectedIndex)
 	{
-		st=BasesDeDatos.getStatement();
+		st=BaseDeDatos.getStatement();
 		
 		String sentencia="DELETE FROM mercadodefichajes WHERE nombre = '"+valor+"'";
 		System.out.println(sentencia);
@@ -886,7 +883,7 @@ JButton btnEliminarUsuarios;
 
 	private void eliminarUsuario(String value, int i)
 	{
-		st=BasesDeDatos.getStatement();
+		st=BaseDeDatos.getStatement();
 		
 		String sentencia="DELETE FROM usuarios WHERE id = '"+value+"'";
 		
@@ -918,14 +915,14 @@ JButton btnEliminarUsuarios;
 
 	private int checkearId()
 	{
-		a�adirJugadoresALista();
+		anyadirJugadoresALista();
 		return listaJ.size();
 	}
 	
 	private String checkearIdMercado(String nombre)
 	{
 		String id="";
-		a�adirJugadoresALista();
+		anyadirJugadoresALista();
 		
 		for(int i=0;i<listaJ.size();i++)
 		{
@@ -946,9 +943,9 @@ JButton btnEliminarUsuarios;
 
 
 
-	private void a�adirJugadoresALista() 
+	private void anyadirJugadoresALista() 
 	{
-		st=BasesDeDatos.getStatement();
+		st=BaseDeDatos.getStatement();
 		listaJ.clear();
 		
 		try {
@@ -962,11 +959,10 @@ JButton btnEliminarUsuarios;
 				
 
 				jugador.setNombre(rs.getString(2));
-				jugador.setEdad(rs.getInt(5));
 				jugador.setEquipo(rs.getString(3));
 				jugador.setId(rs.getString(1));
-				jugador.setPuntosJornada(rs.getInt(6));
-				jugador.setPuntosTotales(rs.getInt(7));
+				jugador.setPuntosJornada(rs.getInt(5));
+				jugador.setPuntosTotales(rs.getInt(6));
 				jugador.setPosicion(rs.getString(4));
 				
 				listaJ.add(jugador);
