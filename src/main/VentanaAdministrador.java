@@ -140,7 +140,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				int pos=0;
-				if(e.getValueIsAdjusting()==false)
+				if(e.getValueIsAdjusting()==true)
 				{
 					
 					anyadirJugadoresALista();
@@ -682,11 +682,12 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				
 
 				jugador.setNombre(rs.getString(2));
-				jugador.setEquipo(rs.getString(3));
+				jugador.setPrecio(rs.getInt(7));
+				jugador.setEquipo(rs.getString(4));
 				jugador.setId(rs.getString(1));
-				jugador.setPuntosJornada(rs.getInt(6));
-				jugador.setPuntosTotales(rs.getInt(7));
-				jugador.setPosicion(rs.getString(4));
+				jugador.setPuntosJornada(rs.getInt(5));
+				jugador.setPuntosTotales(rs.getInt(6));
+				jugador.setPosicion(rs.getString(3));
 				
 				lista.add(jugador);
 				
@@ -862,7 +863,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			while(rs.next())
 			{
 				
-				//jugador=new Jugador();
+				jugador=new Jugador();
 				
 
 				jugador.setNombre(rs.getString(2));
