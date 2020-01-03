@@ -31,7 +31,6 @@ import javax.swing.event.ListSelectionListener;
 import main.Administrador;
 import main.BaseDeDatos;
 import main.Jugador;
-import main.RepartoDinero;
 import main.VentanaNuevaNoticia;
 
 
@@ -172,38 +171,23 @@ public class Administrador extends JFrame implements ActionListener
 					puntos=new Random();
 					
 					
-					
 					String sentencia="update jugadores set puntosJornada='"+puntos.nextInt(15)+"' where id='"+i+"'";
-					
-					
-				
-					
-				
-					
-
-					
 					
 					
 					try {
 						st.executeUpdate(sentencia);
 						
-						
 
 						}
-						
-					
 					
 				 catch (SQLException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 					
-					
 				}
-
 				
 				JOptionPane.showMessageDialog(null, "Los puntos para esta jornada se han calculado");
-				
 				
 			}
 			
@@ -218,7 +202,7 @@ public class Administrador extends JFrame implements ActionListener
 			public void mouseClicked(MouseEvent arg0)
 			{
 
-				labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward-CL.png")));
+				labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("")));
 				Statement st=null;
 				st=BaseDeDatos.getStatement();
 				
@@ -258,7 +242,7 @@ public class Administrador extends JFrame implements ActionListener
 				
 			}
 		});
-		labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Fast Forward.png")));
+		labelAnyadir.setIcon(new ImageIcon(Administrador.class.getResource("")));
 		labelAnyadir.setBounds(378, 171, 39, 30);
 		getContentPane().add(labelAnyadir);
 		
@@ -437,18 +421,11 @@ public class Administrador extends JFrame implements ActionListener
 					else
 					{
 					
-					
-					
 					st=BaseDeDatos.getStatement();
-					
-					
-					
-					
 					
 					String sentencia="insert into mercadoDeFichajes values('"+checkearIdMercado(textFieldNombre.getText())+"' ,'"+textFieldNombre.getText()+"', '"+textFieldPrecio.getText()+"', '"+textFieldPuntosTotales.getText()+"')";
 					
 					 try {
-						 
 						 
 							st.executeUpdate( sentencia );
 							JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" anyadido correctamente en el mercado de fichajes" );
@@ -460,7 +437,6 @@ public class Administrador extends JFrame implements ActionListener
 							
 							modeloMercado.clear();
 							cargarJugadoresMercado();
-						
 							
 							
 						} catch (SQLException e1) {
@@ -648,8 +624,7 @@ public class Administrador extends JFrame implements ActionListener
 
 
 
-	private void cargarUsuariosRegistrados()
-	{
+	private void cargarUsuariosRegistrados(){
 		st=BaseDeDatos.getStatement();
 		usuarios=new ArrayList();
 		
@@ -672,13 +647,6 @@ public class Administrador extends JFrame implements ActionListener
 		
 		
 	}
-
-
-
-
-
-	
-
 
 
 
@@ -938,9 +906,6 @@ public class Administrador extends JFrame implements ActionListener
 		
 	}
 	
-
-
-
 
 
 	private void anyadirJugadoresALista() 

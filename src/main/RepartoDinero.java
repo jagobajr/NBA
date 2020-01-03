@@ -11,8 +11,8 @@ package main;
     import java.awt.Font;
 	import java.awt.event.ActionEvent;
 	import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.ResultSet;
+    import java.sql.Connection;
+    import java.sql.ResultSet;
 	import java.sql.SQLException;
 	import java.sql.Statement;
 	import java.util.ArrayList;
@@ -63,7 +63,7 @@ import java.sql.ResultSet;
 			setIconImage(Toolkit.getDefaultToolkit().getImage(RepartoDinero.class.getResource("")));
 			getContentPane().setLayout(null);
 			
-			lblReparteElCapital = new JLabel("REPARTE EL CAPITAL ");
+			lblReparteElCapital = new JLabel("REPARTO DE PRESUPUESTO ");
 			lblReparteElCapital.setFont(new Font("Traditional Arabic", Font.BOLD | Font.ITALIC, 18));
 			lblReparteElCapital.setBounds(23, 22, 240, 14);
 			getContentPane().add(lblReparteElCapital);
@@ -72,7 +72,7 @@ import java.sql.ResultSet;
 			scrollPane.setBounds(23, 55, 135, 306);
 			getContentPane().add(scrollPane);
 			
-			list = new JList();
+			list = new JList<DefaultListModel>();
 			modelo=new DefaultListModel();
 			list.setModel(modelo);
 			list.addListSelectionListener(this);
@@ -102,58 +102,35 @@ import java.sql.ResultSet;
 			getContentPane().add(btnGuardar);
 			btnGuardar.addActionListener(this);
 			btnGuardar.setActionCommand("guardar");
-			
-			usuarios=new ArrayList();
-			//añadirUsuariosALista();
+			cargarUsuariosRegistrados();
 			
 			
 		}
 		
-		public static ArrayList<Usuarios> getAllCustomer() throws ClassNotFoundException, SQLException {
-		    Connection conn=BaseDeDatos.getConnection();
-		    Statement stm;
-		    stm = conn.createStatement();
-		    String sql = "Select * From Usuarios";
-		    ResultSet rst;
-		    rst = stm.executeQuery(sql);
-		    ArrayList<Usuarios> listaUsuarios = new ArrayList<>();
-		    while (rst.next()) {
-		        Usuarios usuario = new Usuarios(rst.getInt("idUsuario"), rst.getString("Usuario"),rst.getString(null), rst.getString("Correo"), rst.getInt("Dinero"), rst.getInt(null));
-		        listaUsuarios.add(usuario);
-		    }
-		    return listaUsuarios;
-		}
-
 		
-
-		/*private void añadirUsuariosALista() {
+		private void cargarUsuariosRegistrados(){
 			st=BaseDeDatos.getStatement();
-			modelo.clear();
-			usuarios.clear();
+			usuarios=new ArrayList();
 			
 			String sentencia="select * from Usuarios";
 			
-			ResultSet rs;
-			try {
-				rs = st.executeQuery(sentencia);
+			try
+			{
+				ResultSet rs=st.executeQuery(sentencia);
+				
 				while(rs.next())
 				{
 					modelo.addElement(rs.getString("id"));
-					usuarios.add(rs.getInt("dinero"));
-					
+					usuarios.add(rs.getInt("numIdentificador"));
 				}
+				
 			} catch (SQLException e) {
-				LogController.log ( Level.WARNING, "Error al añadir usuarios a la lista " + (new Date()),e);
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
 			
-			repaint();
 		}
-
-		/**
-		 * 
-		 */
 		private static final long serialVersionUID = 1L;
 		
 
