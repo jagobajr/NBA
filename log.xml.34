@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-03T11:24:38.745124Z</date>
+  <millis>1578050678745</millis>
+  <nanos>124000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Fin de programa Fri Jan 03 12:24:38 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-03T11:27:31.391172Z</date>
+  <millis>1578050851391</millis>
+  <nanos>172000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:27:31.436043Z</date>
+  <millis>1578050851436</millis>
+  <nanos>43000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>

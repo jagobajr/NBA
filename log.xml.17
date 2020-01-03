@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-03T11:20:37.826765Z</date>
+  <millis>1578050437826</millis>
+  <nanos>765000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:20:52.117096Z</date>
+  <millis>1578050452117</millis>
+  <nanos>96000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:21:01.044262Z</date>
+  <millis>1578050461044</millis>
+  <nanos>262000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:21:07.324297Z</date>
+  <millis>1578050467324</millis>
+  <nanos>297000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:21:18.328607Z</date>
+  <millis>1578050478328</millis>
+  <nanos>607000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:21:23.055635Z</date>
+  <millis>1578050483055</millis>
+  <nanos>635000</nanos>
+  <sequence>6</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:21:25.155937Z</date>
+  <millis>1578050485155</millis>
+  <nanos>937000</nanos>
+  <sequence>7</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>

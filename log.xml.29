@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-03T11:23:40.704165Z</date>
+  <millis>1578050620704</millis>
+  <nanos>165000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:23:54.563692Z</date>
+  <millis>1578050634563</millis>
+  <nanos>692000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+<record>
+  <date>2020-01-03T11:24:07.970349Z</date>
+  <millis>1578050647970</millis>
+  <nanos>349000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
