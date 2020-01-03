@@ -103,7 +103,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	 */
 	public VentanaAdministrador() {
 		
-		BaseDeDatos.initUsuario();
+		BaseDeDatos.initBD();
 		BaseDeDatos.crearTablaMercadoDeFichajes();
 		
 		
@@ -115,7 +115,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		
 		listaJ=new ArrayList<Jugador>();
 		
-		//anyadirJugadoresALista();
+		anyadirJugadoresALista();
 		
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -177,13 +177,15 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				
 				
 				anyadirJugadoresALista();
+				//cargarJugadoresEnLista();
+				
 				
 				for(int i=1;i<listaJ.size();i++)
 				{
 					Random puntos;
 					puntos=new Random();
 					
-					String sentencia="update Jugadores set puntosJornada='"+puntos.nextInt(15)+"' where id='"+i+"'";
+					String sentencia="update jugadores set puntosJornada='"+puntos.nextInt(15)+"' where id='"+i+"'";
 					
 					
 					try {
@@ -464,7 +466,6 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		textFieldPrecio.setBounds(803, 565, 177, 23);
 		getContentPane().add(textFieldPrecio);
 		textFieldPrecio.setColumns(10);
-		textFieldPrecio.setVisible(false);
 		
 		lblPrecio = new JLabel("Precio");
 		lblPrecio.setBounds(715, 565, 66, 23);
@@ -567,7 +568,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				//int columnCount = rsmd.getColumnCount();
 				while(rs.next())
 				{
-					jugador=new Jugador();
+					Jugador jugador=new Jugador();
 					
 					//jugador.setNombre(rs.getString("nombre"));
 					//jugador.setPrecio(rs.getInt("precio"));
@@ -580,19 +581,19 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 					
 					
 					jugador.setNombre(rs.getString(2));
-					jugador.setPrecio(rs.getInt(7));
-					jugador.setEquipo(rs.getString(4));
+					jugador.setPrecio(rs.getInt(5));
+					jugador.setEquipo(rs.getString(3));
 					jugador.setId(rs.getString(1));
-					jugador.setPuntosJornada(rs.getInt(5));
-					jugador.setPuntosTotales(rs.getInt(6));
-					jugador.setPosicion(rs.getString(3));
+					jugador.setPuntosJornada(rs.getInt(6));
+					jugador.setPuntosTotales(rs.getInt(7));
+					jugador.setPosicion(rs.getString(4));
 					
 					
 					
 				//modelo.addElement(rs.getString("nombre"));
 				
 				listaJ.add(jugador);
-				
+				modelo.addElement(rs.getString("nombre"));
 					
 				}
 			} catch (SQLException e) {
@@ -606,7 +607,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	}
 
 
-
+	
 
 
 	private void cargarUsuariosRegistrados()
@@ -622,7 +623,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			
 			while(rs.next())
 			{
-				modeloUsuarios.addElement(rs.getString("IdUsuario"));
+				modeloUsuarios.addElement(rs.getString("usuario"));
 				
 			}
 			
@@ -805,7 +806,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	{
 		st=BaseDeDatos.getStatement();
 		
-		String sentencia="DELETE FROM usuarios WHERE id = '"+value+"'";
+		String sentencia="DELETE FROM usuarios WHERE usuario = '"+value+"'";
 		
 		System.out.println(sentencia);
 		try {
@@ -852,7 +853,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	private void anyadirJugadoresALista() {
 		
 		listaJ.clear();
-		BaseDeDatos.initUsuario();
+		BaseDeDatos.initBD();
 		try {
 			st=BaseDeDatos.getStatement();
 			ResultSet rs=st.executeQuery("select * from jugadores");
@@ -861,7 +862,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			while(rs.next())
 			{
 				
-				jugador=new Jugador();
+				//jugador=new Jugador();
 				
 
 				jugador.setNombre(rs.getString(2));
@@ -881,5 +882,6 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			e.printStackTrace();
 		}
 		
-	} 
+	}
+
 }
