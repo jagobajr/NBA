@@ -1,21 +1,21 @@
 package main;
 
 public class Usuarios {
-	private int id;
+	private String idUsuario;
 	private String usuario;
-	private String contra;
+	private String password;
 	private String correo;
 	private int dinero;
-	private int idTipo;
+	private String idTipo;
 	
 	
 	
 	
-	public Usuarios(int id, String usuario, String contra, String correo, int dinero, int idTipo) {
+	public Usuarios(String idUsuario, String usuario, String password, String correo, int dinero, String idTipo) {
 		super();
-		this.id = id;
+		this.idUsuario = idUsuario;
 		this.usuario = usuario;
-		this.contra = contra;
+		this.password = password;
 		this.correo = correo;
 		this.dinero = dinero;
 		this.idTipo = idTipo;
@@ -23,18 +23,18 @@ public class Usuarios {
 	
 	public Usuarios() {
 		super();
-		this.id = id;
+		this.idUsuario = idUsuario;
 		this.usuario = usuario;
-		this.contra = contra;
+		this.password = password;
 		this.correo = correo;
 		this.dinero = dinero;
 		this.idTipo = idTipo;
 	}
-	public int getId() {
-		return id;
+	public String getIdUsuario() {
+		return idUsuario;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setIdUsuario(String idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 	public String getUsuario() {
 		return usuario;
@@ -42,11 +42,11 @@ public class Usuarios {
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
-	public String getContra() {
-		return contra;
+	public String getPassword() {
+		return password;
 	}
-	public void setContra(String contra) {
-		this.contra = contra;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getCorreo() {
 		return correo;
@@ -61,10 +61,10 @@ public class Usuarios {
 	public void setDinero(int dinero) {
 		this.dinero = dinero;
 	}
-	public int getIdTipo() {
+	public String getIdTipo() {
 		return idTipo;
 	}
-	public void setIdTipo(int id) {
-		this.idTipo = id;
+	public void setIdTipo(String idUsuario) {
+		this.idTipo = idUsuario;
 	}
 }

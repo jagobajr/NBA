@@ -1,14 +1,14 @@
-package ventanas;
+package main;
 
 import java.awt.BorderLayout;
+import ventanas.VentanaMenu;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import main.LogController;
-import main.UsuarioJugadores;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 import java.awt.Toolkit;
 import java.awt.Dialog.ModalExclusionType;
@@ -16,10 +16,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 
 import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -34,6 +40,14 @@ public class VentanaEquipo extends JFrame {
 	private JTextField DatosAlero;
 	private JTextField DatosEscolta;
 	private JTextField DatosBase;
+	Statement st=null;
+	private ArrayList<Usuarios>lista ;
+	private DefaultListModel modelo;
+	private DefaultListModel modeloUsuarios;
+    private DefaultListModel modeloMercado;
+	private ArrayList<Jugador>listaJ;
+    private ArrayList usuarios;
+
 
 	/**
 	 * Launch the application..
@@ -46,10 +60,48 @@ public class VentanaEquipo extends JFrame {
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
+				}}});
+		
+		 int[] arAzar = new int[5];
+		 int i =0;
+		 boolean bolRepetido = false;
+		 // obtener 5 numeros al azar
+		ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
+		do {
+			arAzar[i] = (int) (Math.random()*jugadores.size());
+			for(int j=0; j<=i; j++) {
+				if(arAzar[i-1] == arAzar[j]) {
+					bolRepetido = true;
+					break;
 				}
 			}
-		});
+			if(!bolRepetido) {
+				i++;
+			}
+			
+			bolRepetido = false;
+		}while(i<5);
+		
+		// obtener los cinco jugadores 
+		
+			UsuarioJugadores usuJugador = new UsuarioJugadores();
+		
+		for (int h=0; h<5; h++){
+			usuJugador.setId_jugador(arAzar[h]);
+
+			//usuJugador.setId_usuarios
+
+			usuJugador.setId_usuarios(usuJugador.getId_usuarios());
+			//usuJugador.setId_usuarios(id_usuarios);
+			//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
+			// inserta registro en bd 
+			//hay crear el nueva intancia el usuJugadores
+		}
+				
+		
+		System.out.println(jugadores.size());
 	}
+	
 	
 	private  void ConfigureCloseWindow(){
 	    this.addWindowListener( new WindowAdapter() {
@@ -66,6 +118,8 @@ public class VentanaEquipo extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaEquipo() {
+		
+		
 		
 		ConfigureCloseWindow();
 		setTitle("EQUIPO");
@@ -92,35 +146,30 @@ public class VentanaEquipo extends JFrame {
 		
 		DatosPivot = new JTextField();
 		DatosPivot.setBackground(new Color(245, 245, 220));
-		DatosPivot.setText("Nombre | Puntos");
 		DatosPivot.setBounds(102, 87, 130, 26);
 		contentPane.add(DatosPivot);
 		DatosPivot.setColumns(10);
 		
 		DatosAla = new JTextField();
 		DatosAla.setBackground(new Color(245, 245, 220));
-		DatosAla.setText("Nombre | Puntos");
 		DatosAla.setColumns(10);
 		DatosAla.setBounds(6, 213, 130, 26);
 		contentPane.add(DatosAla);
 		
 		DatosAlero = new JTextField();
 		DatosAlero.setBackground(new Color(245, 245, 220));
-		DatosAlero.setText("Nombre | Puntos");
 		DatosAlero.setColumns(10);
 		DatosAlero.setBounds(192, 213, 130, 26);
 		contentPane.add(DatosAlero);
 		
 		DatosEscolta = new JTextField();
 		DatosEscolta.setBackground(new Color(245, 245, 220));
-		DatosEscolta.setText("Nombre | Puntos");
 		DatosEscolta.setColumns(10);
 		DatosEscolta.setBounds(24, 352, 130, 26);
 		contentPane.add(DatosEscolta);
 		
 		DatosBase = new JTextField();
 		DatosBase.setBackground(new Color(245, 245, 220));
-		DatosBase.setText("Nombre | Puntos");
 		DatosBase.setColumns(10);
 		DatosBase.setBounds(192, 352, 130, 26);
 		contentPane.add(DatosBase);
@@ -149,6 +198,107 @@ public class VentanaEquipo extends JFrame {
 		FondoDeImagen.setIcon(new ImageIcon("Imagenes/file-JOpim3qYcQ.png"));
 		FondoDeImagen.setBounds(-50, 0, 395, 525);
 		contentPane.add(FondoDeImagen);
+		
+		BaseDeDatos.initBD();
+		BaseDeDatos.getStatement();
+		
+		anyadirJugadoresALista();
+		listaJ=new ArrayList<Jugador>();
+		lista=new ArrayList<Usuarios>();
+		JList<DefaultListModel> listo=new JList<DefaultListModel>();
+		
+		listo.addListSelectionListener(new ListSelectionListener()
+		{
+
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				int pos=0;
+				if(e.getValueIsAdjusting()==true)
+				{
+					
+					anyadirJugadoresALista();
+					//cargarJugadoresEnLista();
+					pos=listo.getSelectedIndex();
+
+					DatosAla.setText(""+listaJ.get(pos).getNombre());
+					DatosPivot.setText(""+listaJ.get(pos).getNombre());
+					DatosAlero.setText(""+listaJ.get(pos).getNombre());
+					DatosEscolta.setText(""+listaJ.get(pos).getNombre());
+					DatosBase.setText(""+listaJ.get(pos).getNombre());
+					
+					
+					repaint();}}});
+		
+		
 	}
+private void anyadirJugadoresALista() {
+		
+		listaJ.clear();
+		BaseDeDatos.initBD();
+		try {
+			st=BaseDeDatos.getStatement();
+			ResultSet rs=st.executeQuery("select * from jugadores");
+			
+			Jugador jugador=new Jugador();
+			while(rs.next())
+			{
+				
+				jugador=new Jugador();
+				
+
+				jugador.setNombre(rs.getString(2));
+				jugador.setPrecio(rs.getInt(7));
+				jugador.setEquipo(rs.getString(4));
+				jugador.setId(rs.getString(1));
+				jugador.setPuntosJornada(rs.getInt(5));
+				jugador.setPuntosTotales(rs.getInt(6));
+				jugador.setPosicion(rs.getString(3));
+				
+				listaJ.add(jugador);
+				
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+private void anyadirUsuariosaLista() {
+	
+	lista.clear();
+	BaseDeDatos.initBD();
+	try {
+		st=BaseDeDatos.getStatement();
+		ResultSet rs=st.executeQuery("select * from usuarios");
+		
+		Usuarios usuario=new Usuarios();
+		while(rs.next())
+		{
+			
+			usuario=new Usuarios();
+			
+
+			usuario.setUsuario(rs.getString(3));
+			usuario.setPassword(rs.getString(4));
+			usuario.setDinero(rs.getInt(6));
+			usuario.setCorreo(rs.getString(5));
+			usuario.setIdTipo(rs.getString(2));
+			usuario.setIdUsuario(rs.getString(1));
+			
+			
+			lista.add(usuario);
+			
+			
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+}
+
+
+	
 	
 }

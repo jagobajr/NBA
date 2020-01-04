@@ -183,7 +183,7 @@ public class VentanaRegistro extends JFrame {
 
 			                       
 			                        mod.setUsuario(datos_usuario.getText());
-			                        mod.setContra(nuevoPass);
+			                        mod.setPassword(nuevoPass);
 			                        mod.setCorreo(correo.getText());
 			                        mod.setDinero(200000000);
 
