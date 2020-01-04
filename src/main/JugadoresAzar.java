@@ -9,13 +9,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import main.VentanaAdministrador;
-import main.BaseDeDatos;
 
 
 public class JugadoresAzar extends UsuarioJugadores {
-	
-	
 
 
 	
@@ -45,7 +41,6 @@ public class JugadoresAzar extends UsuarioJugadores {
 	
 	
 	public ArrayList<Jugador> getjugadores() throws Exception{
-		
 		
 	ArrayList<Jugador> jugadores= new ArrayList<Jugador>();	
 	

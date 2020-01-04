@@ -1,25 +1,21 @@
 package main;
 
 public class Usuarios {
-	private String idUsuario;
 	private String id;
 	private String usuario;
-	private String password;
+	private String contra;
 	private String correo;
 	private int dinero;
-	private String idTipo;
+	private int idTipo;
 	
 	
 	
 	
-
-	public Usuarios(String idUsuario, String usuario, String password, String correo, int dinero, String idTipo) {
-
-
+	public Usuarios(String id, String usuario, String contra, String correo, int dinero, int idTipo) {
 		super();
-		this.idUsuario = idUsuario;
+		this.id = id;
 		this.usuario = usuario;
-		this.password = password;
+		this.contra = contra;
 		this.correo = correo;
 		this.dinero = dinero;
 		this.idTipo = idTipo;
@@ -27,29 +23,18 @@ public class Usuarios {
 	
 	public Usuarios() {
 		super();
-		this.idUsuario = idUsuario;
+		this.id = id;
 		this.usuario = usuario;
-		this.password = password;
+		this.contra = contra;
 		this.correo = correo;
 		this.dinero = dinero;
 		this.idTipo = idTipo;
 	}
-
-	public String getIdUsuario() {
-		return idUsuario;
-		}
-
 	public String getId() {
 		return id;
-
-	}
-
-	public void setIdUsuario(String idUsuario) {
-		this.idUsuario = idUsuario;
 	}
 	public void setId(String id) {
 		this.id = id;
-
 	}
 	public String getUsuario() {
 		return usuario;
@@ -57,11 +42,11 @@ public class Usuarios {
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
-	public String getPassword() {
-		return password;
+	public String getContra() {
+		return contra;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setContra(String contra) {
+		this.contra = contra;
 	}
 	public String getCorreo() {
 		return correo;
@@ -76,10 +61,10 @@ public class Usuarios {
 	public void setDinero(int dinero) {
 		this.dinero = dinero;
 	}
-	public String getIdTipo() {
+	public int getIdTipo() {
 		return idTipo;
 	}
-	public void setIdTipo(String idUsuario) {
-		this.idTipo = idUsuario;
+	public void setIdTipo(int id) {
+		this.idTipo = id;
 	}
 }

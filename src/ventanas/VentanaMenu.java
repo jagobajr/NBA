@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import main.LogController;
-import main.VentanaEquipo;
 import main.VentanaLogin;
 
 import java.awt.Color;

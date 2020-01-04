@@ -25,7 +25,7 @@ public class SqlUsuarios extends BaseDeDatos{
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, usr.getUsuario());
-			ps.setString(2, usr.getPassword());
+			ps.setString(2, usr.getContra());
 			ps.setString(3, usr.getCorreo());
 			ps.setInt(4, usr.getDinero());
 			ps.execute();
@@ -54,7 +54,7 @@ public class SqlUsuarios extends BaseDeDatos{
 	            rs = ps.executeQuery();
 
 	            if (rs.next()) {
-	                if (usr.getPassword().equals(rs.getString(3))) {
+	                if (usr.getContra().equals(rs.getString(3))) {
 	                    return true;
 	                } else {
 	                    return false;
