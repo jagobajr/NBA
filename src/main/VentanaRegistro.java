@@ -181,7 +181,6 @@ public class VentanaRegistro extends JFrame {
 
 			                        String nuevoPass = Hash.sha1(pass);
 
-			                        mod.setId(modSql.dameUltimoRegistro());
 			                        mod.setUsuario(datos_usuario.getText());
 			                        mod.setContra(nuevoPass);
 			                        mod.setCorreo(correo.getText());
@@ -195,16 +194,16 @@ public class VentanaRegistro extends JFrame {
 			                            limpiar();
 			                        } else {
 			                            JOptionPane.showMessageDialog(null, "Error al Guardar");
-				                        LogController.log ( Level.INFO, "Error al guardar " + (new Date()),null);
+				                        LogController.log ( Level.WARNING, "Error al guardar " + (new Date()),null);
 			                            limpiar();
 			                        }
 			                    } else {
 			                        JOptionPane.showMessageDialog(null, "El email es incorrecto");
-			                        LogController.log ( Level.INFO, "El mail es incorrecto " + (new Date()),null);
+			                        LogController.log ( Level.WARNING, "El mail es incorrecto " + (new Date()),null);
 			                    }
 			                } else {
 			                   JOptionPane.showMessageDialog(null, "El usuario ya existe");
-			                   LogController.log ( Level.INFO, "El usuario ya existe" + (new Date()),null);
+			                   LogController.log ( Level.WARNING, "El usuario ya existe" + (new Date()),null);
 
 			                }
 
