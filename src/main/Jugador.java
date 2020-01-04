@@ -11,13 +11,6 @@ public class Jugador
 {
 	private String nombre;
 	private String id;
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	private String equipo;
 	private int precio;
 	private int puntosJornada;
@@ -32,6 +25,12 @@ public class Jugador
 		puntosJornada=0;
 		puntosTotales=0;
 		posicion="";
+	}
+	public String getId() {
+			return id;
+	}
+	public void setId(String id) {
+			this.id = id;
 		
 	}
 	public String getPosicion() {

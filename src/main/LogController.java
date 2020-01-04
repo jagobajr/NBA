@@ -10,19 +10,27 @@ public class LogController {
 	private static Logger log=Logger.getLogger("LOG");
 	
 	
-	public static void log( Level level, String msg, Throwable ex ) {
+	public static void log( Level level, String msg, Throwable ex ) throws SecurityException { 
+       FileHandler  loghandler = null;
 			log = Logger.getLogger(LogController.class.getName() );  
 			log.setLevel( Level.ALL );  // 
 			try {
-				log.addHandler( new FileHandler( "log.xml", true ) );  
+				loghandler = new FileHandler( "log.xml", true );
+				log.addHandler(loghandler );  
 			} catch (Exception e) {
 				log.log( Level.SEVERE, "No se pudo crear fichero de log", e );
 			}
 		
-		if (ex==null)
+		if (ex==null) {
 			log.log( level, msg );
-		else
+		}else {
 			log.log( level, msg, ex );
+		}
+		
+		if (loghandler != null) {
+			loghandler.close();
+		}
+		
 	}
 	
 
