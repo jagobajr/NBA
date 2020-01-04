@@ -344,7 +344,7 @@ public class VentanaComprar extends JFrame  {
 			{
 				usuario=new Usuarios();
 				
-				usuario.setId(rs.getString("id"));
+				usuario.setIdUsuario(rs.getString("id"));
 				usuario.setDinero(rs.getInt("dinero"));
 				
 				dineroUsuarios.add(usuario);
@@ -357,7 +357,7 @@ public class VentanaComprar extends JFrame  {
 		for(int i=0;i<dineroUsuarios.size();i++)
 		{
 			
-			if(idUsuario.equalsIgnoreCase(dineroUsuarios.get(i).getId()))
+			if(idUsuario.equalsIgnoreCase(dineroUsuarios.get(i).getIdUsuario()))
 			{
 				dinero=dineroUsuarios.get(i).getDinero();
 			}
@@ -459,7 +459,7 @@ public class VentanaComprar extends JFrame  {
 			}
 			catch(NumberFormatException n)
 			{
-				JOptionPane.showMessageDialog(null, "inserta numeros lógicos por favor, puede que haya introducido una cantidad muy elevada, o puede que haya introducido texto,en vez de cifras");
+				JOptionPane.showMessageDialog(null, "inserta numeros lï¿½gicos por favor, puede que haya introducido una cantidad muy elevada, o puede que haya introducido texto,en vez de cifras");
 			}
 			
 			}

@@ -281,7 +281,7 @@ private void anyadirUsuariosaLista() {
 			
 
 			usuario.setUsuario(rs.getString(3));
-			usuario.setPassword(rs.getString(4));
+			usuario.setContra(rs.getString(4));
 			usuario.setDinero(rs.getInt(6));
 			usuario.setCorreo(rs.getString(5));
 			usuario.setIdTipo(rs.getString(2));

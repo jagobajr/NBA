@@ -1,4 +1,4 @@
-package ventanas;
+package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -19,11 +19,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
-
-import main.BaseDeDatos;
-import main.LogController;
-import main.Usuarios;
-
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -272,7 +267,7 @@ public class VentanaVender extends JFrame {
 		});
 		contentPane.add(btnMenu);
 		
-		JLabel lblNewLabel = new JLabel("                                                                 VENDER");
+		JLabel lblNewLabel = new JLabel("                                                         VENDER");
 		lblNewLabel.setBounds(0, 61, 438, 20);
 		lblNewLabel.setLabelFor(lblNewLabel);
 		lblNewLabel.setForeground(new Color(230, 230, 250));
@@ -289,6 +284,7 @@ public class VentanaVender extends JFrame {
 	{
 		
 		ArrayList<Usuarios> dineroUsuarios;
+		dineroUsuarios= new ArrayList<Usuarios>();
 		Usuarios usuario;
 		
 	
@@ -305,7 +301,7 @@ public class VentanaVender extends JFrame {
 			{
 				usuario=new Usuarios();
 				
-				usuario.setId(rs.getString("id"));
+				usuario.setIdUsuario(rs.getString("id"));
 				usuario.setDinero(rs.getInt("dinero"));
 				
 				dineroUsuarios.add(usuario);
@@ -318,7 +314,7 @@ public class VentanaVender extends JFrame {
 		for(int i=0;i<dineroUsuarios.size();i++)
 		{
 			
-			if(idUsuario.equalsIgnoreCase(dineroUsuarios.get(i).getId()))
+			if(idUsuario.equalsIgnoreCase(dineroUsuarios.get(i).getIdUsuario()))
 			{
 				dinero=dineroUsuarios.get(i).getDinero();
 			}
@@ -326,7 +322,7 @@ public class VentanaVender extends JFrame {
 		return dinero;
 	}
 	
-	private int cargarPlantilla() {
+	private void cargarPlantilla() {
 		
 		st=(Statement) BaseDeDatos.getStatement();
 		modelo.clear();
@@ -336,7 +332,7 @@ public class VentanaVender extends JFrame {
 		String sentencia="select * from mercadodefichajes";
 		
 		try {
-			ResultSet rs=st.executeQuery(sentencia);
+			ResultSet rs=((java.sql.Statement) st).executeQuery(sentencia);
 			
 			while(rs.next())
 			{
@@ -352,7 +348,7 @@ public class VentanaVender extends JFrame {
 		
 	}
 		
-}
+
 	
 	public void actionPerformed(ActionEvent arg0) 
 	{
@@ -368,7 +364,8 @@ public class VentanaVender extends JFrame {
 				int p3=Integer.parseInt(textField_3.getText());
 				int p4=Integer.parseInt(textField_4.getText());
 			
-			}
+			}catch {
 	
 }
 }
+}}

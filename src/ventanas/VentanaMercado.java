@@ -16,6 +16,7 @@ import javax.swing.border.EmptyBorder;
 import main.JInternalNoticias;
 import main.LogController;
 import main.VentanaComprar;
+import main.VentanaVender;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
