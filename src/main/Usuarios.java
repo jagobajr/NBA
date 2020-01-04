@@ -2,6 +2,7 @@ package main;
 
 public class Usuarios {
 	private String idUsuario;
+	private String id;
 	private String usuario;
 	private String password;
 	private String correo;
@@ -11,7 +12,10 @@ public class Usuarios {
 	
 	
 	
+
 	public Usuarios(String idUsuario, String usuario, String password, String correo, int dinero, String idTipo) {
+
+
 		super();
 		this.idUsuario = idUsuario;
 		this.usuario = usuario;
@@ -30,11 +34,22 @@ public class Usuarios {
 		this.dinero = dinero;
 		this.idTipo = idTipo;
 	}
+
 	public String getIdUsuario() {
 		return idUsuario;
+		}
+
+	public String getId() {
+		return id;
+
 	}
+
 	public void setIdUsuario(String idUsuario) {
 		this.idUsuario = idUsuario;
+	}
+	public void setId(String id) {
+		this.id = id;
+
 	}
 	public String getUsuario() {
 		return usuario;

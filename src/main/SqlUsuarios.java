@@ -116,11 +116,38 @@ public class SqlUsuarios extends BaseDeDatos{
 
     }
     
-    
+    public int dameUltimoRegistro() {
+    	Connection con = initBD();
+    	 PreparedStatement ps = null;
+         ResultSet rs = null;
+    	 String sql = "SELECT max(idUsuario) FROM usuarios";
+
+         try {
+             ps = con.prepareStatement(sql);
+             rs = ps.executeQuery();
+
+             if (rs.first()) {
+                 return rs.getInt(+1);
+             }
+
+
+
+         } catch (SQLException e) {
+             JOptionPane.showMessageDialog(null, e.toString());
+             return 1;
+         } finally {
+             try {
+                 con.close();
+             } catch (SQLException e) {
+                 JOptionPane.showMessageDialog(null, e.toString());
+             }
+
     
 
-     	
+         }
+         return 0;
+    
+    }    
     
 
-}
-
+    }

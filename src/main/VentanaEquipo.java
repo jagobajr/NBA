@@ -100,7 +100,7 @@ public class VentanaEquipo extends JFrame {
 		}
 				
 		
-		System.out.println(jugadores.size());
+		System.out.println(listaJ.size());
 	}
 	
 	
