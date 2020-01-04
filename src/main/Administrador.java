@@ -8,11 +8,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
+import java.util.logging.Level;
 
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
@@ -78,6 +82,18 @@ public class Administrador extends JFrame implements ActionListener
     JButton btnAadir;
     JButton btnEliminarMercado;
     JButton btnEliminarUsuarios;
+    
+    
+    private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de la sesion de administrador " + (new Date()),null);
+
+	        }
+	    });
+		}
 
 
 	public Administrador() {
@@ -89,7 +105,7 @@ public class Administrador extends JFrame implements ActionListener
 		
 		setBounds(new Rectangle(0, 0, 2147483647, 2147483647));
 		setTitle("ADMINISTRADOR DE LA COMUNIDAD ");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Administrador.class.getResource("/ud/prog3/Comunio/img/comunioIcono.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Administrador.class.getResource(""))); //añadir foto
 		setBackground(new Color(0,128,0));
 		getContentPane().setLayout(null);
 		
@@ -181,7 +197,7 @@ public class Administrador extends JFrame implements ActionListener
 						}
 					
 				 catch (SQLException e) {
-						// TODO Auto-generated catch block
+						LogController.log ( Level.WARNING, "Error al puntuar " + (new Date()),e);
 						e.printStackTrace();
 					}
 					
@@ -222,7 +238,7 @@ public class Administrador extends JFrame implements ActionListener
 						st.executeUpdate("update jugadores set puntosJornada = '"+0+"' where id = '"+i+"'");
 					
 					} catch (SQLException e) {
-						// TODO Auto-generated catch block
+						LogController.log ( Level.WARNING, "Error al actualizar los puntos de los jugadores " + (new Date()),e);
 						e.printStackTrace();
 					}
 					
@@ -326,14 +342,14 @@ public class Administrador extends JFrame implements ActionListener
 				spinner.setVisible(true);
 				btnAadir.setVisible(true);
 				
-				lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Add-CL.png")));
+				lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("")));//añadir una foto
 				
 				repaint();
 				
 			}
 			
 		});
-		lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("/ud/prog3/Comunio/img/Button Add.png")));
+		lblAdd.setIcon(new ImageIcon(Administrador.class.getResource(""))); //añadir una foto
 		lblAdd.setBounds(378, 253, 39, 30);
 		getContentPane().add(lblAdd);
 		
@@ -440,7 +456,7 @@ public class Administrador extends JFrame implements ActionListener
 							
 							
 						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
+							LogController.log ( Level.WARNING, "Error al añadir el jugador al mercado de fichajes " + (new Date()),e1);
 							e1.printStackTrace();
 						}
 				}
@@ -611,7 +627,7 @@ public class Administrador extends JFrame implements ActionListener
 					
 				}
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				LogController.log ( Level.WARNING, "Error al cargar los jugadores en la lista " + (new Date()),e);
 				e.printStackTrace();
 			}
 			
@@ -641,7 +657,7 @@ public class Administrador extends JFrame implements ActionListener
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al cargar los usuarios en la lista " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
@@ -668,7 +684,7 @@ public class Administrador extends JFrame implements ActionListener
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al cargar los jugadores en el mercado " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
@@ -811,13 +827,6 @@ public class Administrador extends JFrame implements ActionListener
 
 
 
-
-
-	
-
-
-
-
 	private void eliminarMercado(String valor, int selectedIndex)
 	{
 		st=BaseDeDatos.getStatement();
@@ -828,7 +837,7 @@ public class Administrador extends JFrame implements ActionListener
 			st.executeUpdate(sentencia);
 			modeloMercado.remove(selectedIndex);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al eliminar  jugadores del mercado " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
@@ -838,15 +847,6 @@ public class Administrador extends JFrame implements ActionListener
 		
 		repaint();
 	}
-
-
-
-
-
-	
-
-
-
 
 
 	private void eliminarUsuario(String value, int i)
@@ -864,19 +864,13 @@ public class Administrador extends JFrame implements ActionListener
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al eliminar usuarios de la lista la lista " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
 		
 		repaint();
 	}
-
-
-
-
-
-	
 
 
 
@@ -935,7 +929,7 @@ public class Administrador extends JFrame implements ActionListener
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al añadir  jugadores a la lista " + (new Date()),e);
 			e.printStackTrace();
 		}
 		

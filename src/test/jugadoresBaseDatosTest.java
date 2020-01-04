@@ -19,8 +19,7 @@ public class jugadoresBaseDatosTest {
 	int num;
 	
 	@Before
-	public void setUp() throws Exception
-	{
+	public void setUp() throws Exception{
 		listaJugadores=new ArrayList<Jugador>();
 		st=null;
 		j=new Jugador();
