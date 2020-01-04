@@ -45,7 +45,7 @@ public class VentanaEquipo extends JFrame {
 	private DefaultListModel modelo;
 	private DefaultListModel modeloUsuarios;
     private DefaultListModel modeloMercado;
-	private ArrayList<Jugador>listaJ;
+	private static ArrayList<Jugador>listaJ;
     private ArrayList usuarios;
 
 
@@ -53,6 +53,7 @@ public class VentanaEquipo extends JFrame {
 	 * Launch the application..
 	 */
 	public static void main(String[] args) {
+		anyadirJugadoresALista();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -66,9 +67,9 @@ public class VentanaEquipo extends JFrame {
 		 int i =0;
 		 boolean bolRepetido = false;
 		 // obtener 5 numeros al azar
-		ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
+		//ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
 		do {
-			arAzar[i] = (int) (Math.random()*jugadores.size());
+			arAzar[i] = (int) (Math.random()*listaJ.size());
 			for(int j=0; j<=i; j++) {
 				if(arAzar[i-1] == arAzar[j]) {
 					bolRepetido = true;
@@ -92,7 +93,7 @@ public class VentanaEquipo extends JFrame {
 			//usuJugador.setId_usuarios
 
 			usuJugador.setId_usuarios(usuJugador.getId_usuarios());
-			//usuJugador.setId_usuarios(id_usuarios);
+			usuJugador.setId_usuarios(usuJugador.id_usuarios);
 			//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
 			// inserta registro en bd 
 			//hay crear el nueva intancia el usuJugadores
