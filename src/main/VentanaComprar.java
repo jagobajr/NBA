@@ -28,7 +28,6 @@ import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-//import ud.prog3.Comunio.BasesDeDatos;
 import ventanas.VentanaMenu;
 import ventanas.VentanaMercado;
 
@@ -40,6 +39,7 @@ import java.awt.Font;
 import javax.swing.AbstractButton;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
+
 
 public class VentanaComprar extends JFrame  {
 
@@ -327,7 +327,7 @@ public class VentanaComprar extends JFrame  {
 	private int cargarDineroUsuario(String idUsuario)
 	{
 		
-		ArrayList<Usuarios> dineroUsuarios;
+		ArrayList<Usuarios> dineroUsuarios = null;
 		Usuarios usuario;
 		
 	
@@ -376,7 +376,7 @@ public class VentanaComprar extends JFrame  {
 			String sentencia="select * from mercadodefichajes";
 			
 			try {
-				ResultSet rs=st.executeQuery(sentencia);
+				ResultSet rs=((java.sql.Statement) st).executeQuery(sentencia);
 				
 				while(rs.next())
 				{
@@ -413,7 +413,7 @@ public class VentanaComprar extends JFrame  {
 				int p4=Integer.parseInt(textField_4.getText());
 			
 		
-			if(p2<cargarDinero((String)label.getText()))
+			if(p2<cargarDineroUsuario((String)label.getText()))
 			{
 				
 			
@@ -438,9 +438,9 @@ public class VentanaComprar extends JFrame  {
 			
 
 			
-				st.executeUpdate(sentencia);
-				st.executeUpdate(sentencia2);
-				st.executeUpdate(sentencia3);
+				((java.sql.Statement) st).executeUpdate(sentencia);
+				((java.sql.Statement) st).executeUpdate(sentencia2);
+				((java.sql.Statement) st).executeUpdate(sentencia3);
 				dispose();
 				
 			}

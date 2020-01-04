@@ -1,7 +1,7 @@
 package main;
 
 public class Usuarios {
-	private int id;
+	private String id;
 	private String usuario;
 	private String contra;
 	private String correo;
@@ -11,7 +11,7 @@ public class Usuarios {
 	
 	
 	
-	public Usuarios(int id, String usuario, String contra, String correo, int dinero, int idTipo) {
+	public Usuarios(String id, String usuario, String contra, String correo, int dinero, int idTipo) {
 		super();
 		this.id = id;
 		this.usuario = usuario;
@@ -30,10 +30,10 @@ public class Usuarios {
 		this.dinero = dinero;
 		this.idTipo = idTipo;
 	}
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getUsuario() {
