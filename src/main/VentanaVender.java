@@ -22,12 +22,14 @@ import javax.swing.border.LineBorder;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 
 import java.awt.Color;
 import javax.swing.JScrollPane;
 import javax.swing.border.CompoundBorder;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
+import javax.swing.JTextField;
 
 public class VentanaVender extends JFrame {
 
@@ -40,6 +42,10 @@ public class VentanaVender extends JFrame {
 	DefaultListModel modelo;
 	JList list;
 	JLabel label;
+	private JTextField textvender;
+	private JTextField textvender1;
+	private JTextField textvender2;
+	private JTextField textvender3;
 	/**
 	 * Launch the application.
 	 */
@@ -102,13 +108,43 @@ public class VentanaVender extends JFrame {
 		label_Puntos.setBounds(359, 10, 42, 58);
 		panelJugador.add(label_Puntos);
 		
-		JLabel lblNewLabel_1 = new JLabel("Introducir cantidad\r\n");
-		lblNewLabel_1.setBounds(211, 48, 141, 14);
-		panelJugador.add(lblNewLabel_1);
-		
 		JButton btnVender = new JButton("Vender");
 		btnVender.setBounds(222, 10, 89, 23);
 		panelJugador.add(btnVender);
+		
+		textvender = new JTextField();
+		textvender.setText("Introducir cantidad");
+		textvender.setBounds(216, 41, 111, 20);
+		panelJugador.add(textvender);
+		textvender.setColumns(10);
+		btnVender.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//JOptionPane.showMessageDialog(null, "puesto en venta");
+				
+			
+				
+				if(esNumerico(textvender.toString())) {
+					int valorVenta= Integer.valueOf(textvender.toString());
+					if(valorVenta>0) {
+						
+					}else {
+						JOptionPane.showMessageDialog(null, "El valor debe ser mayor que 0");
+					}
+				}else {
+					JOptionPane.showMessageDialog(null, "El valor debe ser un numero");
+				}
+		
+				
+				
+			}
+			
+			
+			
+		});
+	
+	
+		
+		
 		
 		JPanel panel_jug2 = new JPanel();
 		panel_jug2.setBackground(new Color(245, 255, 250));
@@ -133,13 +169,15 @@ public class VentanaVender extends JFrame {
 		label_8.setBounds(359, 10, 42, 58);
 		panel_jug2.add(label_8);
 		
-		JLabel lblIntroducirCantidad = new JLabel("Introducir cantidad");
-		lblIntroducirCantidad.setBounds(212, 41, 141, 14);
-		panel_jug2.add(lblIntroducirCantidad);
-		
 		JButton button = new JButton("Vender");
 		button.setBounds(224, 7, 89, 23);
 		panel_jug2.add(button);
+		
+		textvender1 = new JTextField();
+		textvender1.setText("Introducir cantidad");
+		textvender1.setColumns(10);
+		textvender1.setBounds(212, 41, 111, 20);
+		panel_jug2.add(textvender1);
 		
 		JPanel panel_jug3 = new JPanel();
 		panel_jug3.setBackground(new Color(245, 255, 250));
@@ -164,13 +202,15 @@ public class VentanaVender extends JFrame {
 		label_13.setBounds(359, 10, 42, 53);
 		panel_jug3.add(label_13);
 		
-		JLabel lblIntroducirCantidad_1 = new JLabel("Introducir cantidad\r\n");
-		lblIntroducirCantidad_1.setBounds(212, 41, 141, 14);
-		panel_jug3.add(lblIntroducirCantidad_1);
-		
 		JButton button_1 = new JButton("Vender");
 		button_1.setBounds(223, 14, 89, 23);
 		panel_jug3.add(button_1);
+		
+		textvender2 = new JTextField();
+		textvender2.setText("Introducir cantidad");
+		textvender2.setColumns(10);
+		textvender2.setBounds(213, 41, 111, 20);
+		panel_jug3.add(textvender2);
 		
 		JPanel panel_jug4 = new JPanel();
 		panel_jug4.setBackground(new Color(245, 255, 250));
@@ -195,13 +235,16 @@ public class VentanaVender extends JFrame {
 		label_18.setBounds(359, 10, 42, 53);
 		panel_jug4.add(label_18);
 		
-		JLabel lblIntroducirCantidad_2 = new JLabel("Introducir cantidad");
-		lblIntroducirCantidad_2.setBounds(214, 41, 141, 14);
-		panel_jug4.add(lblIntroducirCantidad_2);
-		
 		JButton button_2 = new JButton("Vender");
 		button_2.setBounds(227, 14, 89, 23);
 		panel_jug4.add(button_2);
+		
+		textvender3 = new JTextField();
+		textvender3.setText("Introducir cantidad");
+		textvender3.setColumns(10);
+		textvender3.setBounds(216, 41, 111, 20);
+		panel_jug4.add(textvender3);
+		
 		
 		Panel panel_jug5 = new Panel();
 		panel_jug5.setBackground(new Color(230, 230, 250));
@@ -329,7 +372,7 @@ public class VentanaVender extends JFrame {
 		precios.clear();
 		mercadoId.clear();
 		
-		String sentencia="select * from mercadodefichajes";
+		String sentencia="select * from usuarios";
 		
 		try {
 			ResultSet rs=((java.sql.Statement) st).executeQuery(sentencia);
@@ -347,25 +390,15 @@ public class VentanaVender extends JFrame {
 		repaint();
 		
 	}
-		
-
 	
-	public void actionPerformed(ActionEvent arg0) 
-	{
-		switch(arg0.getActionCommand())
-		{
-		case "pujar":
-			
-			try
-			{
-				
-				int p1=Integer.parseInt(txtIntroducirCantidad.getText());
-				int p2=Integer.parseInt(textField_2.getText());
-				int p3=Integer.parseInt(textField_3.getText());
-				int p4=Integer.parseInt(textField_4.getText());
-			
-			}catch {
-	
+	public static boolean esNumerico(String valor){     
+	    try{
+	        if(valor!= null){
+	            Integer.parseInt(valor);
+	        }
+	    }catch(NumberFormatException nfe){
+	         return false; 
+	    }
+	    return false;
+	}
 }
-}
-}}
