@@ -143,7 +143,7 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al añadir jugadores a la lista " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
@@ -176,13 +176,13 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 				dispose();
 			
 			}
-			catch(NumberFormatException n)
-			{
+			catch(NumberFormatException n){
+				LogController.log ( Level.WARNING, "Solo son validos los numeros " + (new Date()),n);
 				JOptionPane.showMessageDialog(null, "introduce numeros de verdad, por favor");
 				
 			}
 			catch (SQLException e) {
-				// TODO Auto-generated catch block
+				LogController.log ( Level.WARNING, "Error al actualizar el dinero " + (new Date()),e);
 				e.printStackTrace();
 			}
 		}

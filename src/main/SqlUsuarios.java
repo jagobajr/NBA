@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import java.sql.SQLException;
+import java.util.Date;
+import java.util.logging.Level;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -32,7 +34,7 @@ public class SqlUsuarios extends BaseDeDatos{
 			return true;
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.SEVERE, "Inicio de acceso de Admin " + (new Date()),e);
 			e.printStackTrace();
 			return false;
 		}
@@ -63,6 +65,7 @@ public class SqlUsuarios extends BaseDeDatos{
 
 	            return false;
 	        } catch (SQLException e) {
+	    		LogController.log ( Level.SEVERE, "Error al cargar los usuarios de la base de datos " + (new Date()),null);
 	            JOptionPane.showMessageDialog(null, e.toString());
 	            return false;
 	        } finally {

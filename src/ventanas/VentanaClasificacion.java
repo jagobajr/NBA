@@ -218,7 +218,7 @@ public class VentanaClasificacion extends JFrame {
 
 
 		        } catch (SQLException ex) {
-		            System.err.println(ex.toString());
+		    		LogController.log ( Level.SEVERE, "Error al crear la tabla " + (new Date()),ex);
 		        }
 		    
 

@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -107,7 +108,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 				st.executeUpdate(sentencia);
 				
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				LogController.log ( Level.SEVERE, "Error al repartir los jugadores " + (new Date()),e);
 				e.printStackTrace();
 			}
 			
@@ -141,7 +142,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al obtener el ultimo usuario " + (new Date()),e);
 			e.printStackTrace();
 			
 		}
