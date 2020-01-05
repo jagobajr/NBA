@@ -5,8 +5,11 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
 
+import main.BaseDeDatos;
 import main.LogController;
 
 import java.awt.Color;
@@ -16,6 +19,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -26,7 +34,7 @@ import javax.swing.ImageIcon;
 public class VentanaClasificacion extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txt_nombre;
+	/*private JTextField txt_nombre1;
 	private JTextField puntos_1;
 	private JTextField txt_nombre2;
 	private JTextField txt_nombre3;
@@ -46,8 +54,9 @@ public class VentanaClasificacion extends JFrame {
 	private JTextField puntos_8;
 	private JTextField puntos_9;
 	private JTextField puntos_10;
-	private JLabel label_10;
-
+*/	private JLabel label_10;
+    private JTable tabla;
+ 
 	
 	
 	/**
@@ -82,6 +91,9 @@ public class VentanaClasificacion extends JFrame {
 	 */
 	public VentanaClasificacion() {
 		
+        getComponents();
+
+		
 		ConfigureCloseWindow();
 		setTitle("CLASIFICACION");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -108,11 +120,11 @@ public class VentanaClasificacion extends JFrame {
 		label.setBounds(15, 88, 61, 16);
 		contentPane.add(label);
 		
-		txt_nombre = new JTextField();
-		txt_nombre.setBounds(58, 83, 130, 26);
-		contentPane.add(txt_nombre);
-		txt_nombre.setColumns(10);
-		
+		/*txt_nombre1 = new JTextField();
+		txt_nombre1.setBounds(58, 83, 130, 26);
+		contentPane.add(txt_nombre1);
+		txt_nombre1.setColumns(10);
+		*/
 		JLabel label_1 = new JLabel("2");
 		label_1.setBounds(15, 116, 61, 16);
 		contentPane.add(label_1);
@@ -149,7 +161,49 @@ public class VentanaClasificacion extends JFrame {
 		label_9.setBounds(15, 340, 61, 16);
 		contentPane.add(label_9);
 		
-		puntos_1 = new JTextField();
+        tabla = new javax.swing.JTable();
+
+		
+		         try {
+		            DefaultTableModel modelo = new DefaultTableModel();
+		            tabla.setModel(modelo);
+
+		            PreparedStatement ps = null;
+		            ResultSet rs = null;
+		            BaseDeDatos conn = new BaseDeDatos();
+		            Connection con = conn.getConnection();
+
+		            String sql = "SELECT  usuario, puntos FROM usuarios order by puntos asc";
+		            ps = con.prepareStatement(sql);
+		            rs = ps.executeQuery();
+
+		            ResultSetMetaData rsMd = (ResultSetMetaData) rs.getMetaData();
+		            int cantidadColumnas = rsMd.getColumnCount();
+
+		            modelo.addColumn("Usuario");
+		            modelo.addColumn("Puntos");
+		           
+		            
+		            int[] anchos = {200, 50};
+		            for (int i = 0; i < tabla.getColumnCount(); i++) {
+		                tabla.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
+		            }
+
+		            while (rs.next()) {
+		                Object[] filas = new Object[cantidadColumnas];
+		                for (int i = 0; i < cantidadColumnas; i++) {
+		                    filas[i] = rs.getObject(i + 1);
+		                }
+		                modelo.addRow(filas);
+		            }
+
+		        } catch (SQLException ex) {
+		            System.err.println(ex.toString());
+		        }
+		    
+
+		
+	/*	puntos_1 = new JTextField();
 		puntos_1.setColumns(10);
 		puntos_1.setBounds(191, 83, 51, 26);
 		contentPane.add(puntos_1);
@@ -243,7 +297,7 @@ public class VentanaClasificacion extends JFrame {
 		puntos_10.setColumns(10);
 		puntos_10.setBounds(191, 335, 51, 26);
 		contentPane.add(puntos_10);
-		
+	*/	
 		JButton btnAtras = new JButton("Atras");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -256,9 +310,26 @@ public class VentanaClasificacion extends JFrame {
 		btnAtras.setBounds(6, 7, 94, 29);
 		contentPane.add(btnAtras);
 		
+		private void initComponents() {
+
+	        tabla = new javax.swing.JTable();
+
+	        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+	        tabla.setModel(new javax.swing.table.DefaultTableModel(
+	            new Object [][] {
+
+	            }, new String [] {
+	                    "Código", "Nombre", "Precio", "Cantidad"
+	            });
+
+		}
+		
 		label_10 = new JLabel("");
 		label_10.setIcon(new ImageIcon("Imagenes/graffiti-usa-nba-basketball-lebron-james-kobe-bryant-kevin-durant-team-usa-dream-team-wallpaper-508379.jpg"));
 		label_10.setBounds(-267, 0, 749, 478);
 		contentPane.add(label_10);
+		
+		
 	}
 }

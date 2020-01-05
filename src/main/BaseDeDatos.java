@@ -1,6 +1,7 @@
 package main;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -45,7 +46,7 @@ public class BaseDeDatos
 	// Devuelve la conexion si ha sido establecida previamente (#initBD()).
 	 // @return	Conexion con la BD, null si no se ha establecido correctamente.
 	 
-	public static Connection getConnection() {
+	public Connection getConnection() {
 		return connection;
 	}
 	
@@ -86,7 +87,25 @@ public class BaseDeDatos
 	}
 
 
-	
+	public static void tablaClasificacion(Usuarios usr) {
+		PreparedStatement ps = null;
+        ResultSet rs = null;
+        Connection con = initBD();
+
+		String sql =("SELECT Nombre,PuntosTotales from jugadores order by puntosTotales asc");
+		System.out.println(sql);
+		
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, usr.getUsuario());
+			ps.setInt(6, usr.getPuntos());
+			ps.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
     public static void crearTablaUsuarioJugadores(){
 		
