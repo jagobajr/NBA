@@ -46,7 +46,7 @@ public class BaseDeDatos
 	// Devuelve la conexion si ha sido establecida previamente (#initBD()).
 	 // @return	Conexion con la BD, null si no se ha establecido correctamente.
 	 
-	public Connection getConnection() {
+	public static Connection getConnection() {
 		return connection;
 	}
 	

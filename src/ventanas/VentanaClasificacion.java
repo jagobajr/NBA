@@ -55,7 +55,7 @@ public class VentanaClasificacion extends JFrame {
 	private JTextField puntos_9;
 	private JTextField puntos_10;
 */	private JLabel label_10;
-    private JTable tabla;
+    private JTable table;
  
 	
 	
@@ -91,7 +91,6 @@ public class VentanaClasificacion extends JFrame {
 	 */
 	public VentanaClasificacion() {
 		
-        getComponents();
 
 		
 		ConfigureCloseWindow();
@@ -161,41 +160,85 @@ public class VentanaClasificacion extends JFrame {
 		label_9.setBounds(15, 340, 61, 16);
 		contentPane.add(label_9);
 		
-        tabla = new javax.swing.JTable();
+		
+       // table = new javax.swing.JTable();
+        table = new JTable();
+        table.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        table.setToolTipText("");
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"Usuario", "Puntos"
+			}
+		) {
+			Class[] columnTypes = new Class[] {
+				String.class, Integer.class
+			};
+			public Class getColumnClass(int columnIndex) {
+				return columnTypes[columnIndex];
+			}
+		});
+		
+		table.setBounds(65, 80, 209, 287);
+		contentPane.add(table);
 
 		
 		         try {
-		            DefaultTableModel modelo = new DefaultTableModel();
-		            tabla.setModel(modelo);
+		            DefaultTableModel modelo = new DefaultTableModel() {
+		            	 @Override
+		            	    public boolean isCellEditable(int row, int column) {
+		            	       //all cells false
+		            	       return false;
+		            	    }
+		            	};
+		            
+		            table.setModel(modelo);
 
 		            PreparedStatement ps = null;
 		            ResultSet rs = null;
-		            BaseDeDatos conn = new BaseDeDatos();
-		            Connection con = conn.getConnection();
+		            Connection con = BaseDeDatos.initBD();
 
-		            String sql = "SELECT  usuario, puntos FROM usuarios order by puntos asc";
+		            String sql = "SELECT Usuario, Puntos FROM usuarios order by puntos desc";
 		            ps = con.prepareStatement(sql);
 		            rs = ps.executeQuery();
 
 		            ResultSetMetaData rsMd = (ResultSetMetaData) rs.getMetaData();
-		            int cantidadColumnas = rsMd.getColumnCount();
+		            int cantidadColumnas = 2;
 
 		            modelo.addColumn("Usuario");
 		            modelo.addColumn("Puntos");
-		           
 		            
-		            int[] anchos = {200, 50};
-		            for (int i = 0; i < tabla.getColumnCount(); i++) {
-		                tabla.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
-		            }
+		           /* int[] anchos = {50, 200, 50, 50};
+		            for (int i = 0; i < table.getColumnCount(); i++) {
+		                table.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
 
+		            }
+*/
 		            while (rs.next()) {
 		                Object[] filas = new Object[cantidadColumnas];
 		                for (int i = 0; i < cantidadColumnas; i++) {
 		                    filas[i] = rs.getObject(i + 1);
+		                    
+
 		                }
+			          
+
 		                modelo.addRow(filas);
+		                
 		            }
+		            table.setRowHeight(0, 28);
+		            table.setRowHeight(1, 28);
+		            table.setRowHeight(2, 28);
+		            table.setRowHeight(3, 28);
+		            table.setRowHeight(4, 28);
+		            table.setRowHeight(5, 28);
+		            table.setRowHeight(6, 28);
+		            table.setRowHeight(7, 28);
+		            table.setRowHeight(8, 28);
+		            table.setRowHeight(9, 28);
+		            
+
 
 		        } catch (SQLException ex) {
 		            System.err.println(ex.toString());
@@ -310,25 +353,18 @@ public class VentanaClasificacion extends JFrame {
 		btnAtras.setBounds(6, 7, 94, 29);
 		contentPane.add(btnAtras);
 		
-		private void initComponents() {
-
-	        tabla = new javax.swing.JTable();
-
-	        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-	        tabla.setModel(new javax.swing.table.DefaultTableModel(
-	            new Object [][] {
-
-	            }, new String [] {
-	                    "Código", "Nombre", "Precio", "Cantidad"
-	            });
-
-		}
 		
 		label_10 = new JLabel("");
 		label_10.setIcon(new ImageIcon("Imagenes/graffiti-usa-nba-basketball-lebron-james-kobe-bryant-kevin-durant-team-usa-dream-team-wallpaper-508379.jpg"));
 		label_10.setBounds(-267, 0, 749, 478);
 		contentPane.add(label_10);
+		
+		JLabel label_12 = new JLabel("");
+		label_12.setIcon(new ImageIcon("Imagenes/graffiti-usa-nba-basketball-lebron-james-kobe-bryant-kevin-durant-team-usa-dream-team-wallpaper-508379.jpg"));
+		label_12.setBounds(65, 82, 209, 287);
+		contentPane.add(label_12);
+		
+		
 		
 		
 	}
