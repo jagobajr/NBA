@@ -1,6 +1,5 @@
 package main;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -93,9 +92,26 @@ public class JugadoresAzar extends UsuarioJugadores {
 		for (int h=0; h<5; h++){
 			usuJugador.setId_jugador(arAzar[h]);
 
+			int idJug = usuJugador.getId_jugador();
 			//usuJugador.setId_usuarios
 
-			usuJugador.setId_usuarios(usuJugador.getId_usuarios());
+			//usuJugador.setId_usuarios(dameUltimoUsuario());
+			
+			Statement st = BaseDeDatos.getStatement();
+			
+			String sentencia="INSERT INTO usuJugador values(";
+			sentencia = sentencia + idJug + ","+ dameUltimoUsuario()+")";
+			
+			System.out.println(sentencia);
+			try {
+				st.executeUpdate(sentencia);
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
  // of https://github.com/jagobajr/NBA.git
 			//usuJugador.setId_usuarios(id_usuarios);
 			//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
@@ -106,6 +122,34 @@ public class JugadoresAzar extends UsuarioJugadores {
 		
 		System.out.println(jugadores.size());
 	}
-
+	
+	
+	public static int dameUltimoUsuario() {
+		BaseDeDatos.initBD();
+		try {
+			Statement st = BaseDeDatos.getStatement();
+			ResultSet rs=st.executeQuery("select max(id_usuario) from usuarios");
+			
+			
+			if(rs.getRow()>0) {
+				return rs.getInt(1);
+			}else {
+				return 1;
+			}
+			
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
+		
+		
+		return 1;
+		
+	}/* fin funcion*/
+		
 }
-
+		
