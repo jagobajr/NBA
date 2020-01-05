@@ -14,6 +14,7 @@ import java.util.Random;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JLabel;
 
@@ -34,9 +35,12 @@ import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import ventanas.VentanaMenu;
+import ventanas.VentanaMercado;
 
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.border.EmptyBorder;
 
 public class VentanaAdministrador extends JFrame implements ActionListener{
 
@@ -47,6 +51,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 	
 
 	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
     private JTextField textFieldNombre;
     private JTextField textFieldEquipo;
     private JTextField textFieldPosicion;
@@ -106,12 +111,20 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		BaseDeDatos.initBD();
 		BaseDeDatos.crearTablaMercadoDeFichajes();
 		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 324, 500);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(128, 128, 128));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
 		
 		setBounds(new Rectangle(0, 0, 2147483647, 2147483647));
 		setTitle("ADMINISTRADOR DE LA COMUNIDAD ");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAdministrador.class.getResource("")));
 		setBackground(new Color(0,128,0));
-		getContentPane().setLayout(null);
+		contentPane.setLayout(null);
 		
 		listaJ=new ArrayList<Jugador>();
 		
@@ -120,7 +133,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(36, 11, 316, 631);
-		getContentPane().add(scrollPane);
+		contentPane.add(scrollPane);
 		
 		
 		lista = new JList<DefaultListModel>();
@@ -163,7 +176,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		});
 		JLabel lblEstosSonLos = new JLabel("Estos son los jugadores que hay");
 		lblEstosSonLos.setBounds(378, 13, 217, 14);
-		getContentPane().add(lblEstosSonLos);
+		contentPane.add(lblEstosSonLos);
 		
 		btnPuntuar = new JButton("PUNTUAR");
 		btnPuntuar.addActionListener(new ActionListener() {
@@ -206,7 +219,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		});
 		
 		btnPuntuar.setBounds(378, 80, 89, 23);
-		getContentPane().add(btnPuntuar);
+		contentPane.add(btnPuntuar);
 		
 		labelAnyadir = new JLabel("");
 		labelAnyadir.addMouseListener(new MouseAdapter() {
@@ -254,42 +267,42 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			}
 		});
 		
-		labelAnyadir.setBounds(378, 171, 39, 30);
-		getContentPane().add(labelAnyadir);
+		labelAnyadir.setBounds(378, 171, 60, 30);
+		contentPane.add(labelAnyadir);
 		
 		JLabel lblProximaJornada = new JLabel("2) PASAR A LA SIGUIENTE JORNADA");
 		lblProximaJornada.setBounds(383, 135, 238, 14);
-		getContentPane().add(lblProximaJornada);
+		contentPane.add(lblProximaJornada);
 		
 		JLabel lblEstosSonLos_1 = new JLabel("Estos son los datos del jugador que has seleccionado");
 		lblEstosSonLos_1.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		lblEstosSonLos_1.setBounds(394, 424, 406, 14);
-		getContentPane().add(lblEstosSonLos_1);
+		contentPane.add(lblEstosSonLos_1);
 		
 		JLabel lblNombre = new JLabel("Nombre");
 		lblNombre.setBounds(394, 472, 60, 14);
-		getContentPane().add(lblNombre);
+		contentPane.add(lblNombre);
 		
 		JLabel lblEquipo = new JLabel("Equipo");
 		lblEquipo.setBounds(614, 472, 46, 14);
-		getContentPane().add(lblEquipo);
+		contentPane.add(lblEquipo);
 		
 		JLabel lblPosicion = new JLabel("Posicion");
 		lblPosicion.setBounds(800, 472, 60, 14);
-		getContentPane().add(lblPosicion);
+		contentPane.add(lblPosicion);
 		
 		JLabel lblPuntosDeEsta = new JLabel("Puntos de esta Jornada");
 		lblPuntosDeEsta.setBounds(1047, 472, 149, 14);
-		getContentPane().add(lblPuntosDeEsta);
+		contentPane.add(lblPuntosDeEsta);
 		
 		JLabel lblPuntosTotales = new JLabel("Puntos Totales");
 		lblPuntosTotales.setBounds(1225, 472, 95, 14);
-		getContentPane().add(lblPuntosTotales);
+		contentPane.add(lblPuntosTotales);
 		
 		textFieldNombre = new JTextField();
 		textFieldNombre.setEditable(false);
 		textFieldNombre.setBounds(378, 515, 141, 20);
-		getContentPane().add(textFieldNombre);
+		contentPane.add(textFieldNombre);
 		textFieldNombre.setColumns(10);
 		
 		
@@ -297,30 +310,30 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		textFieldEquipo.setEditable(false);
 		textFieldEquipo.setColumns(10);
 		textFieldEquipo.setBounds(545, 515, 190, 20);
-		getContentPane().add(textFieldEquipo);
+		contentPane.add(textFieldEquipo);
 		
 		textFieldPosicion = new JTextField();
 		textFieldPosicion.setEditable(false);
 		textFieldPosicion.setColumns(10);
 		textFieldPosicion.setBounds(774, 515, 103, 20);
-		getContentPane().add(textFieldPosicion);
+		contentPane.add(textFieldPosicion);
 		
 		textFieldPuntosJornada = new JTextField();
 		textFieldPuntosJornada.setEditable(false);
 		textFieldPuntosJornada.setColumns(10);
 		textFieldPuntosJornada.setBounds(1083, 515, 86, 20);
-		getContentPane().add(textFieldPuntosJornada);
+		contentPane.add(textFieldPuntosJornada);
 		
 		textFieldPuntosTotales = new JTextField();
 		textFieldPuntosTotales.setEditable(false);
 		textFieldPuntosTotales.setColumns(10);
 		textFieldPuntosTotales.setBounds(1219, 515, 86, 20);
-		getContentPane().add(textFieldPuntosTotales);
+		contentPane.add(textFieldPuntosTotales);
 		
 		JLabel lblquieresAadirUn = new JLabel("\u00BFQuieres a\u00F1adir un jugador?");
 		lblquieresAadirUn.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		lblquieresAadirUn.setBounds(378, 212, 239, 14);
-		getContentPane().add(lblquieresAadirUn);
+		contentPane.add(lblquieresAadirUn);
 		
 		lblAdd = new JLabel("");
 		lblAdd.addMouseListener(new MouseAdapter() {
@@ -345,44 +358,44 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		});
 		lblAdd.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("")));
 		lblAdd.setBounds(378, 253, 39, 30);
-		getContentPane().add(lblAdd);
+		contentPane.add(lblAdd);
 		
 		lblNombre_1 = new JLabel("Nombre ");
 		lblNombre_1.setBounds(495, 247, 61, 14);
-		getContentPane().add(lblNombre_1);
+		contentPane.add(lblNombre_1);
 		lblNombre_1.setVisible(true);
 		
 		lblEquipo_1 = new JLabel("Equipo");
 		lblEquipo_1.setBounds(495, 290, 61, 14);
-		getContentPane().add(lblEquipo_1);
+		contentPane.add(lblEquipo_1);
 		lblEquipo_1.setVisible(true);
 		
 		lblPosicion_1 = new JLabel("Posicion");
 		lblPosicion_1.setBounds(495, 333, 61, 14);
-		getContentPane().add(lblPosicion_1);
+		contentPane.add(lblPosicion_1);
 		lblPosicion_1.setVisible(true);
 		
 		textFieldNNombre = new JTextField();
 		textFieldNNombre.setBounds(590, 243, 177, 23);
-		getContentPane().add(textFieldNNombre);
+		contentPane.add(textFieldNNombre);
 		textFieldNNombre.setColumns(10);
 		textFieldNNombre.setVisible(true);
 		
 		TextFieldNEquipo = new JTextField();
 		TextFieldNEquipo.setColumns(10);
 		TextFieldNEquipo.setBounds(590, 281, 177, 23);
-		getContentPane().add(TextFieldNEquipo);
+		contentPane.add(TextFieldNEquipo);
 		TextFieldNEquipo.setVisible(true);
 		
 		textFieldNPosicion = new JTextField();
 		textFieldNPosicion.setColumns(10);
 		textFieldNPosicion.setBounds(590, 324, 177, 23);
-		getContentPane().add(textFieldNPosicion);
+		contentPane.add(textFieldNPosicion);
 		textFieldNPosicion.setVisible(true);
 		
 		btnAadir = new JButton("A\u00D1ADIR");
 		btnAadir.setBounds(590, 205, 160, 30);
-		getContentPane().add(btnAadir);
+		contentPane.add(btnAadir);
 		btnAadir.addActionListener(this);
 		btnAadir.setActionCommand("anyadir");
 		btnAadir.setVisible(true);
@@ -396,7 +409,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		textFieldEdad.setEditable(false);
 		textFieldEdad.setColumns(10);
 		textFieldEdad.setBounds(912, 515, 103, 20);
-		getContentPane().add(textFieldEdad);
+		contentPane.add(textFieldEdad);
 		
 		JButton btnNewButton = new JButton("A\u00D1ADIR A MERCADO DE FICHAJES");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -460,24 +473,24 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			
 		});
 		btnNewButton.setBounds(1025, 565, 280, 23);
-		getContentPane().add(btnNewButton);
+		contentPane.add(btnNewButton);
 		
 		textFieldPrecio = new JTextField();
 		textFieldPrecio.setBounds(803, 565, 177, 23);
-		getContentPane().add(textFieldPrecio);
+		contentPane.add(textFieldPrecio);
 		textFieldPrecio.setColumns(10);
 		
 		lblPrecio = new JLabel("Precio");
 		lblPrecio.setBounds(715, 565, 66, 23);
-		getContentPane().add(lblPrecio);
+		contentPane.add(lblPrecio);
 		
 		JLabel lblPulsaEsteBoton = new JLabel("1) PULSA ESTE BOTON PARA PUNTUAR A LOS JUGADORES");
 		lblPulsaEsteBoton.setBounds(378, 48, 323, 14);
-		getContentPane().add(lblPulsaEsteBoton);
+		contentPane.add(lblPulsaEsteBoton);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setBounds(784, 65, 149, 286);
-		getContentPane().add(scrollPane_1);
+		contentPane.add(scrollPane_1);
 		
 		listUsuarios = new JList();
 		
@@ -492,11 +505,11 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		
 		JLabel lblListaDeUsuarios = new JLabel("Lista de USUARIOS REGISTRADOS");
 		lblListaDeUsuarios.setBounds(784, 27, 215, 14);
-		getContentPane().add(lblListaDeUsuarios);
+		contentPane.add(lblListaDeUsuarios);
 		
 		scrollPane_2 = new JScrollPane();
 		scrollPane_2.setBounds(1067, 65, 177, 286);
-		getContentPane().add(scrollPane_2);
+		contentPane.add(scrollPane_2);
 		
 		listMercado = new JList();
 		scrollPane_2.setViewportView(listMercado);
@@ -506,46 +519,36 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		
 		lblJugadoresEnMercado = new JLabel("Jugadores en MERCADO ");
 		lblJugadoresEnMercado.setBounds(1089, 27, 190, 14);
-		getContentPane().add(lblJugadoresEnMercado);
+		contentPane.add(lblJugadoresEnMercado);
 		
 		btnEliminarUsuarios = new JButton("ELIMINAR ");
 		btnEliminarUsuarios.setBounds(943, 93, 95, 23);
-		getContentPane().add(btnEliminarUsuarios);
+		contentPane.add(btnEliminarUsuarios);
 		btnEliminarUsuarios.addActionListener(this);
 		btnEliminarUsuarios.setActionCommand("eliminarUsuarios");
 		
 		btnEliminarMercado = new JButton("ELIMINAR ");
 		btnEliminarMercado.setBounds(1265, 93, 95, 23);
-		getContentPane().add(btnEliminarMercado);
+		contentPane.add(btnEliminarMercado);
 		btnEliminarMercado.addActionListener(this);
 		btnEliminarMercado.setActionCommand("eliminarMercado");
 		
 		JLabel lblRepartoDineroA = new JLabel("REPARTO DINERO A USUARIOS");
-		lblRepartoDineroA.setBounds(391, 598, 177, 14);
-		getContentPane().add(lblRepartoDineroA);
+		lblRepartoDineroA.setBounds(383, 599, 230, 14);
+		contentPane.add(lblRepartoDineroA);
 		
-		JLabel label = new JLabel("");
-		label.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) 
-			{
-				
-				RepartoDinero newWindow=new RepartoDinero();
-				newWindow.setVisible(true);
-			
-				
-				
+		
+		JButton btnNewButton_1= new JButton("Reparto de dinero");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				RepartoDinero nuevaVentana = new RepartoDinero();
+				nuevaVentana.setVisible(true);
+				VentanaAdministrador.this.dispose();
 			}
+				
 		});
-		label.setForeground(Color.GRAY);
-		label.setIcon(new ImageIcon(Administrador.class.getResource("")));
-		label.setBounds(394, 634, 66, 58);
-		getContentPane().add(label);
-		
-		
-		JButton btnNewButton_1= new JButton();
-		btnNewButton_1.setBounds(1088, 648, 217, 23);
-		getContentPane().add(btnNewButton_1);
+		btnNewButton_1.setBounds(364, 625, 217, 23);
+		contentPane.add(btnNewButton_1);
 		
 		lblPrecio.setVisible(true);
 		
