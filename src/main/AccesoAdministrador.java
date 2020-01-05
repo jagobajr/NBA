@@ -39,7 +39,6 @@ public class AccesoAdministrador extends JFrame implements ActionListener{
 	
     public static void main(String[] args) {
 		
-		LogController.log ( Level.INFO, "Inicio de acceso de Admin " + (new Date()),null);
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -156,11 +155,13 @@ public class AccesoAdministrador extends JFrame implements ActionListener{
 								dispose();
 								VentanaAdministrador admin=new VentanaAdministrador();
 								admin.setVisible(true);
-								
+								LogController.log ( Level.INFO, "Inicio de acceso de Admin " + (new Date()),null);
+
 							}}
 							
-						} catch (InterruptedException e) 
-						{
+						} catch (InterruptedException e) {
+							LogController.log ( Level.SEVERE, "Error al iniciar la sesion de administrador " + (new Date()),e);
+
 							e.getStackTrace();
 						}
 						

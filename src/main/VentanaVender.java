@@ -355,7 +355,7 @@ public class VentanaVender extends JFrame {
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al cargar el dinero " + (new Date()),e);
 			e.printStackTrace();
 		}
 		for(int i=0;i<dineroUsuarios.size();i++)
@@ -388,7 +388,7 @@ public class VentanaVender extends JFrame {
 				mercadoId.add(rs.getString("idJugador"));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al cargar plantilla " + (new Date()),e);
 			e.printStackTrace();
 		}
 		repaint();
@@ -401,6 +401,7 @@ public class VentanaVender extends JFrame {
 	            Integer.parseInt(valor);
 	        }
 	    }catch(NumberFormatException nfe){
+			LogController.log ( Level.WARNING, "El valor introducido no es un numero" + (new Date()),nfe);
 	         return false; 
 	    }
 	    return false;

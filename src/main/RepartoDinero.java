@@ -32,9 +32,7 @@ import javax.swing.JButton;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-public class RepartoDinero extends JFrame implements ActionListener, ListSelectionListener
-	
-{
+public class RepartoDinero extends JFrame implements ActionListener, ListSelectionListener{
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -124,10 +122,8 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 		usuarios=new ArrayList();
 		anyadirUsuariosALista();
 		
-		
 	}
 
-	
 
 	private void anyadirUsuariosALista() {
 		BaseDeDatos.initBD();
@@ -162,8 +158,7 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 	
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) 
-	{
+	public void actionPerformed(ActionEvent arg0) {
 		switch(arg0.getActionCommand())
 		{
 		case "guardar":
@@ -195,8 +190,7 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 	}
 
 	@Override
-	public void valueChanged(ListSelectionEvent arg0) 
-	{
+	public void valueChanged(ListSelectionEvent arg0) {
 		
 		if(arg0.getValueIsAdjusting()==true)
 		{
@@ -207,14 +201,10 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 		
 	}
 
-	private int buscarDineroUsuario(int index) 
-	{
-		
+	private int buscarDineroUsuario(int index) {
 		int dinero=0;
 		
 		
-	
-	
 		dinero=(int)usuarios.get(index);
 		
 	

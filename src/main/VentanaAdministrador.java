@@ -10,7 +10,10 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
+import java.util.logging.Level;
+
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
@@ -29,6 +32,8 @@ import javax.swing.ImageIcon;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.Font;
 
 import javax.swing.JTextField;
@@ -102,6 +107,17 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			}
 		});
 	}
+    
+    private  void ConfigureCloseWindow(){
+	    this.addWindowListener( new WindowAdapter() {
+
+	        @Override
+	        public void windowClosing(WindowEvent e) {
+				LogController.log ( Level.INFO, "Fin de sesion de administrador " + (new Date()),null);
+
+	        }
+	    });
+		}
 
     /**
 	 * Create the frame.
@@ -200,9 +216,10 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 					
 					String sentencia="update jugadores set puntosJornada='"+puntos.nextInt(15)+"' where id='"+i+"'";
 					
-					
 					try {
 						st.executeUpdate(sentencia);
+						LogController.log ( Level.INFO, "Puntos de jornada actualizados " + (new Date()),null);
+
 
 						}
 						
@@ -246,20 +263,13 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 						st.executeUpdate("update Jugadores set puntosJornada = '"+0+"' where id = '"+i+"'");
 					
 					} catch (SQLException e) {
-						// TODO Auto-generated catch block
+						LogController.log ( Level.WARNING, "Error al actualizar los puntos " + (new Date()),e);
 						e.printStackTrace();
 					}
 					
 					
 				}
-				
-					
-					
-					
-					
-					
-				
-				
+			
 				JOptionPane.showMessageDialog(null, "Los puntos de esta jornada ya se han actualizado en los puntos totales de cada jugador");
 				
 				dispose();
@@ -445,7 +455,6 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 					
 					 try {
 						 
-						 
 							st.executeUpdate( sentencia );
 							JOptionPane.showMessageDialog(null, textFieldNombre.getText()+" anyadido correctamente en el mercado de fichajes" );
 							 
@@ -456,11 +465,12 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 							
 							modeloMercado.clear();
 							cargarJugadoresMercado();
-						
+							LogController.log ( Level.INFO, "Jugador añadido al mercado de fichajes " + (new Date()),null);
+
 							
 							
 						} catch (SQLException e1) {
-							// TODO Auto-generated catch block
+							LogController.log ( Level.WARNING, "Error al añadir jugador a la base de datos " + (new Date()),e1);
 							e1.printStackTrace();
 						}
 				}
@@ -627,11 +637,12 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			while(rs.next())
 			{
 				modeloUsuarios.addElement(rs.getString("usuario"));
-				
+				LogController.log ( Level.INFO, "Usuarios cargados " + (new Date()),null);
+
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al cargar los jugadores " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
@@ -798,8 +809,10 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		try {
 			st.executeUpdate(sentencia);
 			modeloMercado.remove(selectedIndex);
+			LogController.log ( Level.INFO, "Jugador eleminado del mercado de fichajes " + (new Date()),null);
+
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al eliminar un jugador del mercado de fichajes " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
@@ -817,9 +830,11 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			
 			st.executeUpdate(sentencia);
 			modeloUsuarios.remove(i);
+			LogController.log ( Level.INFO, "Usuario eliminado " + (new Date()),null);
+
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			LogController.log ( Level.WARNING, "Error al eliminar usuario " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
