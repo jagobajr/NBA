@@ -90,8 +90,8 @@ public class VentanaMenu extends JFrame {
 		JButton btnEquipo = new JButton("PLANTILLA");
 		btnEquipo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//VentanaEquipo ventanaQuinteto= new VentanaEquipo();
-				VentanaAlineacion ventanaQuinteto= new VentanaAlineacion();
+				VentanaEquipo ventanaQuinteto= new VentanaEquipo();
+				//VentanaAlineacion ventanaQuinteto= new VentanaAlineacion();
 				ventanaQuinteto.setVisible(true);
 				VentanaMenu.this.dispose();
 			}
