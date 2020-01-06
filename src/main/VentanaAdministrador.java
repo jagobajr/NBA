@@ -465,12 +465,12 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 							
 							modeloMercado.clear();
 							cargarJugadoresMercado();
-							LogController.log ( Level.INFO, "Jugador añadido al mercado de fichajes " + (new Date()),null);
+							LogController.log ( Level.INFO, "Jugador aï¿½adido al mercado de fichajes " + (new Date()),null);
 
 							
 							
 						} catch (SQLException e1) {
-							LogController.log ( Level.WARNING, "Error al añadir jugador a la base de datos " + (new Date()),e1);
+							LogController.log ( Level.WARNING, "Error al aï¿½adir jugador a la base de datos " + (new Date()),e1);
 							e1.printStackTrace();
 						}
 				}
@@ -543,10 +543,6 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		btnEliminarMercado.addActionListener(this);
 		btnEliminarMercado.setActionCommand("eliminarMercado");
 		
-		JLabel lblRepartoDineroA = new JLabel("REPARTO DINERO A USUARIOS");
-		lblRepartoDineroA.setBounds(383, 599, 230, 14);
-		contentPane.add(lblRepartoDineroA);
-		
 		
 		JButton btnNewButton_1= new JButton("Reparto de dinero");
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -557,8 +553,20 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 			}
 				
 		});
-		btnNewButton_1.setBounds(364, 625, 217, 23);
+		btnNewButton_1.setBounds(364, 578, 217, 23);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btnAadirUnaNueva = new JButton("AÃ‘ADIR UNA NUEVA NOTICIA");
+		btnAadirUnaNueva.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaNuevaNoticia nuevaVentana = new VentanaNuevaNoticia();
+				nuevaVentana.setVisible(true);
+				VentanaAdministrador.this.dispose();
+			}
+				
+		});
+		btnAadirUnaNueva.setBounds(364, 613, 217, 29);
+		contentPane.add(btnAadirUnaNueva);
 		
 		lblPrecio.setVisible(true);
 		
@@ -902,5 +910,4 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		}
 		
 	}
-
 }

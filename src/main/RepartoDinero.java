@@ -119,6 +119,18 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 		btnGuardar.addActionListener(this);
 		btnGuardar.setActionCommand("guardar");
 		
+		btnAtras = new JButton("ATRAS");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaAdministrador nuevaVentana = new VentanaAdministrador();
+				nuevaVentana.setVisible(true);
+				RepartoDinero.this.dispose();
+			}
+				
+		});
+		btnAtras.setBounds(350, 293, 117, 29);
+		getContentPane().add(btnAtras);
+		
 		usuarios=new ArrayList();
 		anyadirUsuariosALista();
 		
@@ -143,7 +155,7 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 				
 			}
 		} catch (SQLException e) {
-			LogController.log ( Level.WARNING, "Error al añadir jugadores a la lista " + (new Date()),e);
+			LogController.log ( Level.WARNING, "Error al aï¿½adir jugadores a la lista " + (new Date()),e);
 			e.printStackTrace();
 		}
 		
@@ -155,6 +167,7 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private JButton btnAtras;
 	
 
 	@Override

@@ -8,6 +8,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import ventanas.VentanaMenu;
+import ventanas.VentanaMercado;
+
 import java.awt.Color;
 
 import javax.swing.JButton;
@@ -41,6 +44,7 @@ public class JInternalNoticias extends JFrame implements ActionListener
 	ObjectInputStream ois;
 	final String RUTA="src\\data\\noticia.dat";
 	File fichero;
+	private JButton btnAtras;
 
 	
 	
@@ -78,6 +82,18 @@ public class JInternalNoticias extends JFrame implements ActionListener
 		btnCancelar.addActionListener(this);
 		btnCancelar.setActionCommand("cancelar");
 		textArea.setEditable(false);
+		
+		btnAtras = new JButton("ATRAS");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaMercado nuevaVentana = new VentanaMercado();
+				nuevaVentana.setVisible(true);
+				JInternalNoticias.this.dispose();
+			}
+				
+		});
+		btnAtras.setBounds(266, 320, 117, 29);
+		getContentPane().add(btnAtras);
 		
 		cargarNoticias();
 		

@@ -2,66 +2,39 @@ package main;
 
 public class UsuarioJugadores {
 
-	protected static int id_usuarios;
-	protected int id_jugador;
-	protected String Nombre;
-	protected String Equipo;
-	protected int PuntosTotales;
-	protected String posicion;
-	protected int Precio;
+	private String id_usuarios;
+	private String id_jugador;
+	private int PuntosTotales;
 	
-	public UsuarioJugadores(int id_usuarios, int id_jugador,String nombre, String posicion, String equipo, int puntosTotales, int precio) {
+	
+	public UsuarioJugadores(String id_usuarios, String id_jugador, int puntosTotales) {
 		super();
 		this.id_usuarios = id_usuarios;
 		this.id_jugador = id_jugador;
-		Nombre = nombre;
-		Equipo = equipo;
 		PuntosTotales = puntosTotales;
-		Precio = precio;
-		this.posicion = posicion;
 	}
 	
 	public UsuarioJugadores() {
 		super();
-		this.id_usuarios=0;
-		this.id_jugador=0;
-		Nombre = "";
-		Equipo = "";
+		this.id_usuarios="";
+		this.id_jugador="";
 		PuntosTotales = 0;
-		this.posicion = "";
 	}
 
-	public int getId_usuarios() {
+	public String getId_usuarios() {
 		return id_usuarios;
 	}
 
-	public void setId_usuarios(int id_usuarios) {
+	public void setId_usuarios(String id_usuarios) {
 		this.id_usuarios = id_usuarios;
 	}
 
-	public int getId_jugador() {
+	public String getId_jugador() {
 		return id_jugador;
 	}
 
-	public void setId_jugador(int id_jugador) {
+	public void setId_jugador(String id_jugador) {
 		this.id_jugador = id_jugador;
-	}
-
-	
-	public String getNombre() {
-		return Nombre;
-	}
-
-	public void setNombre(String nombre) {
-		Nombre = nombre;
-	}
-
-	public String getEquipo() {
-		return Equipo;
-	}
-
-	public void setEquipo(String equipo) {
-		Equipo = equipo;
 	}
 
 	public int getPuntosTotales() {
@@ -72,27 +45,15 @@ public class UsuarioJugadores {
 		PuntosTotales = puntosTotales;
 	}
 	
-	public int getPrecio() {
-		return Precio;
-	}
-
-	public void setPrecio(int precio) {
-		PuntosTotales = precio;
-	}
+	
 
 
-	public String getPosicion() {
-		return posicion;
-	}
-
-	public void setPosicion(String posicion) {
-		this.posicion = posicion;
-	}
+	
 
 	@Override
 	public String toString() {
 		return "UsuarioJugadores [id_usuarios=" + id_usuarios + ", id_jugador=" + id_jugador + 
-				",Nombre=" + Nombre + ", posicion=" + posicion + ", Equipo=" + Equipo + ", Puntos=" + PuntosTotales + ", ]";
+				", Puntos=" + PuntosTotales + ", ]";
 	}
 	
 	

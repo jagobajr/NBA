@@ -8,7 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import main.LogController;
+import main.VentanaEquipo;
 import main.VentanaLogin;
+import main.VentanaAlineacion;
 
 import java.awt.Color;
 import javax.swing.JLabel;
@@ -88,7 +90,8 @@ public class VentanaMenu extends JFrame {
 		JButton btnEquipo = new JButton("PLANTILLA");
 		btnEquipo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaEquipo ventanaQuinteto= new VentanaEquipo();
+				//VentanaEquipo ventanaQuinteto= new VentanaEquipo();
+				VentanaAlineacion ventanaQuinteto= new VentanaAlineacion();
 				ventanaQuinteto.setVisible(true);
 				VentanaMenu.this.dispose();
 			}

@@ -7,8 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import main.LogController;
-import main.UsuarioJugadores;
+import ud.prog3.Comunio.Jugador;
+import ud.prog3.Comunio.UsuarioJugador;
 
 import java.awt.Toolkit;
 import java.awt.Dialog.ModalExclusionType;
@@ -16,6 +16,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -34,6 +35,8 @@ public class VentanaEquipo extends JFrame {
 	private JTextField DatosAlero;
 	private JTextField DatosEscolta;
 	private JTextField DatosBase;
+	ArrayList<Jugador>listaJugadores;
+	ArrayList<UsuarioJugador>listaUsuarios;
 
 	/**
 	 * Launch the application..

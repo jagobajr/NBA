@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+
 import java.awt.Toolkit;
 import java.awt.Dialog.ModalExclusionType;
 import java.awt.event.ActionEvent;
@@ -41,19 +42,26 @@ public class VentanaEquipo extends JFrame {
 	private JTextField DatosEscolta;
 	private JTextField DatosBase;
 	Statement st=null;
-	private ArrayList<Usuarios>lista ;
-	private DefaultListModel modelo;
+	//private ArrayList<Usuarios>lista ;
+	//private DefaultListModel modelo;
 	private DefaultListModel modeloUsuarios;
     private DefaultListModel modeloMercado;
 	private static ArrayList<Jugador>listaJ;
     private ArrayList usuarios;
+    ArrayList<Jugador>listaJugadores;
+	ArrayList<UsuarioJugadores>listaUsuarios;
+	JList <DefaultListModel>lista ;
+	DefaultListModel modelo;
+	static String idjornada;
+	static String puntosjornada2;
+
 
 
 	/**
 	 * Launch the application..
 	 */
 	public static void main(String[] args) {
-		anyadirJugadoresALista();
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -120,7 +128,7 @@ public class VentanaEquipo extends JFrame {
 	 */
 	public VentanaEquipo() {
 		
-		
+		anyadirJugadoresALista();
 		
 		ConfigureCloseWindow();
 		setTitle("EQUIPO");

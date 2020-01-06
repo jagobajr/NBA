@@ -6,6 +6,9 @@ import java.awt.Toolkit;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
+
+import ventanas.VentanaMercado;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
@@ -87,10 +90,24 @@ public class VentanaNuevaNoticia extends JFrame implements ActionListener
 		getContentPane().add(lblIntroduceLaNoticia);
 		
 		btnGuardar = new JButton("GUARDAR");
-		btnGuardar.setBounds(91, 216, 128, 23);
+		btnGuardar.setBounds(10, 216, 128, 23);
 		getContentPane().add(btnGuardar);
 		btnGuardar.addActionListener(this);
 		btnGuardar.setActionCommand("guardar");
+		
+		btnAtras = new JButton("ATRAS");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaAdministrador nuevaVentana = new VentanaAdministrador();
+				nuevaVentana.setVisible(true);
+				VentanaNuevaNoticia.this.dispose();
+			}
+				
+		});
+		btnAtras.setBounds(147, 213, 117, 29);
+		getContentPane().add(btnAtras);
+		
+		
 	
 	
 	
@@ -103,6 +120,7 @@ public class VentanaNuevaNoticia extends JFrame implements ActionListener
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private JButton btnAtras;
 
 
 	@Override
@@ -220,5 +238,4 @@ public class VentanaNuevaNoticia extends JFrame implements ActionListener
 		
 		
 	}
-
 }
