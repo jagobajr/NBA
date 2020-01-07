@@ -357,105 +357,57 @@ public static int dameUltimoUsuario() {
 }
 
 private void mostarMiEquipo() {
-	// obtener los cinco numeros al azar
-	 int[] arAzar = new int[5];
-	 int i =0;
-	 boolean bolRepetido = false;
-	ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
-	do {
-		arAzar[i] = (int) (Math.random()*jugadores.size());
-		for(int j=0; j<=i; j++) {
-			if(arAzar[i] == arAzar[j]) {
-				bolRepetido = true;
-				break;
-			}
-		}
-		if(!bolRepetido) {
-			i++;
-		}
-		
-		bolRepetido = false;
-	}while(i<5);
 	
-	// obtener los cinco jugadores 
-	
-		UsuarioJugadores usuJugador = new UsuarioJugadores();
-	
-	for (int h=0; h<5; h++){
-		usuJugador.setId_jugador(arAzar[h]);
-
-		int idJug = usuJugador.getId_jugador();
-		//usuJugador.setId_usuarios
-
-		usuJugador.setId_usuarios(dameUltimoUsuario());
 		
-		Statement st = BaseDeDatos.getStatement();
+		Usuarios mod = new Usuarios();
 		
-		String sentencia="INSERT INTO usuJugador values(";
-		sentencia = sentencia + idJug + ","+ dameUltimoUsuario()+")";
+		String idUsu =mod.getIdUsuario();
 		
-		//System.out.println(sentencia);
+		BaseDeDatos.initBD();
+		
 		try {
-			st.executeUpdate(sentencia);
+			
+			int icon=0;
+			
+			st=BaseDeDatos.getStatement();
+			ResultSet rs=st.executeQuery("select nombre  from jugadores, usuJugadores where jugadores.id = usuJugadores.id and usuJugadores.idUsuario='" + idUsu + "'");
+			
+			while(rs.next()) {
+				
+				switch (icon) {
+				
+				case 0:
+					DatosPivot.setText(rs.getString(1)); 
+					break;
+					
+				case 1:
+					DatosAla.setText(rs.getString(1)); 
+					break;
+					
+				case 2:
+					DatosAlero.setText(rs.getString(1)); 
+					break;
+					
+				case 3:
+					DatosEscolta.setText(rs.getString(1)); 
+					break;
+					
+				case 4:
+					DatosBase.setText(rs.getString(1));
+					break;
+					
+				}
+				
+				icon++;
+				}
+			
+			
 			
 		} catch (SQLException e) {
-			LogController.log ( Level.SEVERE, "Error al repartir los jugadores " + (new Date()),e);
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		
-		
-		
-	Usuarios mod = new Usuarios();
-	
-	String idUsu =mod.getIdUsuario();
-	
-	BaseDeDatos.initBD();
-	
-	try {
-		
-		int icon=0;
-		
-		st=BaseDeDatos.getStatement();
-		ResultSet rs=st.executeQuery("select nombre  from jugadores, usuJugadores where jugadores.id = usuJugadores.id and usuJugadores.idUsuario='" + idUsu + "'");
-		
-		while(rs.next()) {
-			
-			switch (icon) {
-			
-			case 0:
-				DatosPivot.setText(rs.getString(1)); 
-				break;
-				
-			case 1:
-				DatosAla.setText(rs.getString(1)); 
-				break;
-				
-			case 2:
-				DatosAlero.setText(rs.getString(1)); 
-				break;
-				
-			case 3:
-				DatosEscolta.setText(rs.getString(1)); 
-				break;
-				
-			case 4:
-				DatosBase.setText(rs.getString(1));
-				break;
-				
-			}
-			
-			icon++;
-			}
-		
-		
-		
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	
-}
 
 	
 	
