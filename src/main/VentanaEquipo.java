@@ -1,6 +1,5 @@
 package main;
 
-import java.awt.BorderLayout;
 import ventanas.VentanaMenu;
 import java.awt.EventQueue;
 
@@ -12,7 +11,6 @@ import javax.swing.event.ListSelectionListener;
 
 
 import java.awt.Toolkit;
-import java.awt.Dialog.ModalExclusionType;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -33,7 +31,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import java.awt.Color;
 
-public class VentanaEquipo extends JFrame {
+public class VentanaEquipo extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JTextField DatosPivot;
@@ -42,16 +40,16 @@ public class VentanaEquipo extends JFrame {
 	private JTextField DatosEscolta;
 	private JTextField DatosBase;
 	Statement st=null;
-	//private ArrayList<Usuarios>lista ;
-	//private DefaultListModel modelo;
+	private ArrayList<Usuarios>lista ;
+	private DefaultListModel modelo;
 	private DefaultListModel modeloUsuarios;
     private DefaultListModel modeloMercado;
 	private static ArrayList<Jugador>listaJ;
-    private ArrayList usuarios;
+    private ArrayList usuario;
     ArrayList<Jugador>listaJugadores;
 	ArrayList<UsuarioJugadores>listaUsuarios;
-	JList <DefaultListModel>lista ;
-	DefaultListModel modelo;
+	//JList <DefaultListModel>lista ;
+	//DefaultListModel modelo;
 	static String idjornada;
 	static String puntosjornada2;
 
@@ -61,54 +59,16 @@ public class VentanaEquipo extends JFrame {
 	 * Launch the application..
 	 */
 	public static void main(String[] args) {
-		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaEquipo frame = new VentanaEquipo();
+					 VentanaEquipo frame = new VentanaEquipo();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
-				}}});
-		
-		 int[] arAzar = new int[5];
-		 int i =0;
-		 boolean bolRepetido = false;
-		 // obtener 5 numeros al azar
-		//ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
-		do {
-			arAzar[i] = (int) (Math.random()*listaJ.size());
-			for(int j=0; j<=i; j++) {
-				if(arAzar[i-1] == arAzar[j]) {
-					bolRepetido = true;
-					break;
 				}
 			}
-			if(!bolRepetido) {
-				i++;
-			}
-			
-			bolRepetido = false;
-		}while(i<5);
-		
-		// obtener los cinco jugadores 
-		
-			UsuarioJugadores usuJugador = new UsuarioJugadores();
-		
-		for (int h=0; h<5; h++){
-			usuJugador.setId_jugador(arAzar[h]);
-
-			//usuJugador.setId_usuarios
-
-			usuJugador.setId_usuarios(usuJugador.getId_usuarios());
-			usuJugador.setId_usuarios(usuJugador.id_usuarios);
-			//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
-			// inserta registro en bd 
-			//hay crear el nueva intancia el usuJugadores
-		}
-				
-		
-		System.out.println(listaJ.size());
+		});
 	}
 	
 	
@@ -127,12 +87,12 @@ public class VentanaEquipo extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaEquipo() {
+		BaseDeDatos.initBD();
 		
-		anyadirJugadoresALista();
 		
 		ConfigureCloseWindow();
 		setTitle("EQUIPO");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("/Users/jagoba.jr/Desktop/DEUSTO📚💎/19-20/Programacion/Imagenes para el proyecto/QUINTETO.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("/Imagenes/QUINTETO.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 324, 500);
 		contentPane = new JPanel();
@@ -187,6 +147,10 @@ public class VentanaEquipo extends JFrame {
 		lblPivot.setBounds(202, 35, 61, 16);
 		contentPane.add(lblPivot);
 		
+		JLabel lblAlero = new JLabel("Alero");
+		lblAlero.setBounds(166, 160, 61, 16);
+		contentPane.add(lblAlero);
+		
 		JLabel lblBase = new JLabel("Base");
 		lblBase.setBounds(171, 297, 61, 16);
 		contentPane.add(lblBase);
@@ -199,30 +163,26 @@ public class VentanaEquipo extends JFrame {
 		lblAlaPivot.setBounds(90, 160, 84, 16);
 		contentPane.add(lblAlaPivot);
 		
-		JLabel lblAlero = new JLabel("Alero");
-		lblAlero.setBounds(166, 160, 61, 16);
-		contentPane.add(lblAlero);
+		JLabel fondodeimagen = new JLabel("");
+		fondodeimagen.setIcon(new ImageIcon("Imagenes/cancha.jpg"));
+		fondodeimagen.setBounds(16, 24, 306, 396);
+		contentPane.add(fondodeimagen);
 		
-		JLabel FondoDeImagen = new JLabel();
-		FondoDeImagen.setIcon(new ImageIcon("Imagenes/file-JOpim3qYcQ.png"));
-		FondoDeImagen.setBounds(-50, 0, 395, 525);
-		contentPane.add(FondoDeImagen);
 		
-		BaseDeDatos.initBD();
-		BaseDeDatos.getStatement();
-		
-		anyadirJugadoresALista();
+
 		listaJ=new ArrayList<Jugador>();
 		lista=new ArrayList<Usuarios>();
-		JList<DefaultListModel> listo=new JList<DefaultListModel>();
 		
+		//JList<DefaultListModel> listo=new JList<DefaultListModel>();
+		
+		/*
 		listo.addListSelectionListener(new ListSelectionListener()
 		{
 
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				int pos=0;
-				if(e.getValueIsAdjusting()==true)
+				if(e.getValueIsAdjusting()==false)
 				{
 					
 					anyadirJugadoresALista();
@@ -238,11 +198,13 @@ public class VentanaEquipo extends JFrame {
 					
 					repaint();}}});
 		
-		
+		*/
+		mostarMiEquipo();
 	}
+	
 private void anyadirJugadoresALista() {
-		
-		listaJ.clear();
+
+	listaJ.clear();
 		BaseDeDatos.initBD();
 		try {
 			st=BaseDeDatos.getStatement();
@@ -274,7 +236,7 @@ private void anyadirJugadoresALista() {
 		
 	}
 private void anyadirUsuariosaLista() {
-	
+	 
 	lista.clear();
 	BaseDeDatos.initBD();
 	try {
@@ -306,8 +268,203 @@ private void anyadirUsuariosaLista() {
 	}
 	
 }
+/*
+private  void jugadoresAzar() {
+	// obtener los cinco numeros al azar
+			 int[] arAzar = new int[5];
+			 int i =0;
+			 boolean bolRepetido = false;
+			ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
+			do {
+				arAzar[i] = (int) (Math.random()*jugadores.size());
+				for(int j=0; j<=i; j++) {
+					if(arAzar[i-1] == arAzar[j]) {
+						bolRepetido = true;
+						break;
+					}
+				}
+				if(!bolRepetido) {
+					i++;
+				}
+				
+				bolRepetido = false;
+			}while(i<5);
+			
+			// obtener los cinco jugadores 
+			
+				UsuarioJugadores usuJugador = new UsuarioJugadores();
+			
+			for (int h=0; h<5; h++){
+				usuJugador.setId_jugador(arAzar[h]);
 
+				int idJug = usuJugador.getId_jugador();
+				//usuJugador.setId_usuarios
+
+				//usuJugador.setId_usuarios(dameUltimoUsuario());
+				
+				Statement st = BaseDeDatos.getStatement();
+				
+				String sentencia="INSERT INTO usuJugador values(";
+				sentencia = sentencia + idJug + ","+ dameUltimoUsuario()+")";
+				
+				System.out.println(sentencia);
+				try {
+					st.executeUpdate(sentencia);
+					
+				} catch (SQLException e) {
+					LogController.log ( Level.SEVERE, "Error al repartir los jugadores " + (new Date()),e);
+					e.printStackTrace();
+				}
+				
+				
+	
+				//usuJugador.setId_usuarios(id_usuarios);
+				//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
+				// inserta registro en bd 
+				//hay crear el nueva intancia el usuJugadores
+			}
+					
+			
+			System.out.println(jugadores.size());
+		
+}
+*/
+public static int dameUltimoUsuario() {
+	BaseDeDatos.initBD();
+	try {
+		Statement st = BaseDeDatos.getStatement();
+		ResultSet rs=st.executeQuery("select max(id_usuario) from usuarios");
+		
+		
+		if(rs.getRow()>0) {
+			return rs.getInt(1);
+		}else {
+			return 1;
+		}
+		
+		
+		
+		
+	} catch (SQLException e) {
+		LogController.log ( Level.WARNING, "Error al obtener el ultimo usuario " + (new Date()),e);
+		e.printStackTrace();
+		
+	}
+	
+	
+	return 1;
+	
+}
+
+private void mostarMiEquipo() {
+	// obtener los cinco numeros al azar
+	 int[] arAzar = new int[5];
+	 int i =0;
+	 boolean bolRepetido = false;
+	ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
+	do {
+		arAzar[i] = (int) (Math.random()*jugadores.size());
+		for(int j=0; j<=i; j++) {
+			if(arAzar[i] == arAzar[j]) {
+				bolRepetido = true;
+				break;
+			}
+		}
+		if(!bolRepetido) {
+			i++;
+		}
+		
+		bolRepetido = false;
+	}while(i<5);
+	
+	// obtener los cinco jugadores 
+	
+		UsuarioJugadores usuJugador = new UsuarioJugadores();
+	
+	for (int h=0; h<5; h++){
+		usuJugador.setId_jugador(arAzar[h]);
+
+		int idJug = usuJugador.getId_jugador();
+		//usuJugador.setId_usuarios
+
+		usuJugador.setId_usuarios(dameUltimoUsuario());
+		
+		Statement st = BaseDeDatos.getStatement();
+		
+		String sentencia="INSERT INTO usuJugador values(";
+		sentencia = sentencia + idJug + ","+ dameUltimoUsuario()+")";
+		
+		//System.out.println(sentencia);
+		try {
+			st.executeUpdate(sentencia);
+			
+		} catch (SQLException e) {
+			LogController.log ( Level.SEVERE, "Error al repartir los jugadores " + (new Date()),e);
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	Usuarios mod = new Usuarios();
+	
+	String idUsu =mod.getIdUsuario();
+	
+	BaseDeDatos.initBD();
+	
+	try {
+		
+		int icon=0;
+		
+		st=BaseDeDatos.getStatement();
+		ResultSet rs=st.executeQuery("select nombre  from jugadores, usuJugadores where jugadores.id = usuJugadores.id and usuJugadores.idUsuario='" + idUsu + "'");
+		
+		while(rs.next()) {
+			
+			switch (icon) {
+			
+			case 0:
+				DatosPivot.setText(rs.getString(1)); 
+				break;
+				
+			case 1:
+				DatosAla.setText(rs.getString(1)); 
+				break;
+				
+			case 2:
+				DatosAlero.setText(rs.getString(1)); 
+				break;
+				
+			case 3:
+				DatosEscolta.setText(rs.getString(1)); 
+				break;
+				
+			case 4:
+				DatosBase.setText(rs.getString(1));
+				break;
+				
+			}
+			
+			icon++;
+			}
+		
+		
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+}
 
 	
 	
+}
+
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}
 }

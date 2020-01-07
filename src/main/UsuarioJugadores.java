@@ -2,12 +2,12 @@ package main;
 
 public class UsuarioJugadores {
 
-	private String id_usuarios;
-	private String id_jugador;
+	private int id_usuarios;
+	private int id_jugador;
 	private int PuntosTotales;
 	
 	
-	public UsuarioJugadores(String id_usuarios, String id_jugador, int puntosTotales) {
+	public UsuarioJugadores(int id_usuarios, int id_jugador, int puntosTotales) {
 		super();
 		this.id_usuarios = id_usuarios;
 		this.id_jugador = id_jugador;
@@ -16,24 +16,24 @@ public class UsuarioJugadores {
 	
 	public UsuarioJugadores() {
 		super();
-		this.id_usuarios="";
-		this.id_jugador="";
+		this.id_usuarios=0;
+		this.id_jugador=0;
 		PuntosTotales = 0;
 	}
 
-	public String getId_usuarios() {
+	public int getId_usuarios() {
 		return id_usuarios;
 	}
 
-	public void setId_usuarios(String id_usuarios) {
+	public void setId_usuarios(int id_usuarios) {
 		this.id_usuarios = id_usuarios;
 	}
 
-	public String getId_jugador() {
+	public int getId_jugador() {
 		return id_jugador;
 	}
 
-	public void setId_jugador(String id_jugador) {
+	public void setId_jugador(int id_jugador) {
 		this.id_jugador = id_jugador;
 	}
 
