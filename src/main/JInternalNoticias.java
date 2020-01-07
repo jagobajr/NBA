@@ -42,7 +42,7 @@ public class JInternalNoticias extends JFrame implements ActionListener
 	ArrayList<Noticia> listaNoticias;
 	Noticia noticia;
 	ObjectInputStream ois;
-	final String RUTA="src\\data\\noticia.dat";
+	//final String RUTA="src\\data\\noticia.dat";
 	File fichero;
 	private JButton btnAtras;
 
