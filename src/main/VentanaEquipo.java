@@ -92,7 +92,7 @@ public class VentanaEquipo extends JFrame implements ActionListener {
 		
 		ConfigureCloseWindow();
 		setTitle("EQUIPO");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("/Imagenes/QUINTETO.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("/Imagenes/128139.jpg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 324, 500);
 		contentPane = new JPanel();
@@ -164,6 +164,7 @@ public class VentanaEquipo extends JFrame implements ActionListener {
 		contentPane.add(lblAlaPivot);
 		
 		JLabel fondodeimagen = new JLabel("");
+		fondodeimagen.setVisible(true);
 		fondodeimagen.setIcon(new ImageIcon("Imagenes/cancha.jpg"));
 		fondodeimagen.setBounds(16, 24, 306, 396);
 		contentPane.add(fondodeimagen);
