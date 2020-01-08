@@ -40,6 +40,7 @@ import javax.swing.AbstractButton;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 
+import java.sql.*;
 
 public class VentanaComprar extends JFrame  {
 
@@ -366,31 +367,33 @@ public class VentanaComprar extends JFrame  {
 		
 	}
 		
-		private void cargarMercadoDeFichajes() 
-		{
-			st=(Statement) BaseDeDatos.getStatement();
-			modelo.clear();
-			precios.clear();
-			mercadoId.clear();
+	private void cargarJugadoresMercado2() 
+	{
+		  ArrayList mercado =new ArrayList();
+		  DefaultListModel modeloMercado = null;
+		  java.sql.Statement st=null;
+		st= BaseDeDatos.getStatement();
+		String sentencia="select * from mercadodefichajes";
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
 			
-			String sentencia="select * from mercadodefichajes";
-			
-			try {
-				ResultSet rs=((java.sql.Statement) st).executeQuery(sentencia);
+			while(rs.next())
+			{
+				modeloMercado.addElement(rs.getString("nombre"));
+				mercado.add(rs.getString("idJugador") +" ");
 				
-				while(rs.next())
-				{
-					modelo.addElement(rs.getString("nombre"));
-					precios.add(rs.getInt("precio"));
-					mercadoId.add(rs.getString("idJugador"));
-				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
-			repaint();
 			
+		} catch (SQLException e) {
+			LogController.log ( Level.WARNING, "Error al cargar los jugadores en el mercado " + (new Date()),e);
+			e.printStackTrace();
 		}
+		
+		
+		
+		
+	}
 
 		
 		
@@ -467,5 +470,34 @@ public class VentanaComprar extends JFrame  {
 			
 		
 		}
+
+	private void cargarJugadoresMercado() 
+	{
+		  ArrayList mercado =new ArrayList();
+		  DefaultListModel modeloMercado;
+		  
+		st= BaseDeDatos.getStatement();
+		String sentencia="select * from mercadodefichajes";
+		
+		try {
+			ResultSet rs=st.executeQuery(sentencia);
+			
+			while(rs.next())
+			{
+				modeloMercado.addElement(rs.getString("nombre"));
+				mercado.add(rs.getString("idJugador") +" ");
+				
+			}
+			
+		} catch (SQLException e) {
+			LogController.log ( Level.WARNING, "Error al cargar los jugadores en el mercado " + (new Date()),e);
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+
 }
  
