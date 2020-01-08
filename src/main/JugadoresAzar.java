@@ -1,6 +1,7 @@
 package main;
 
 import java.sql.Connection;
+import main.BaseDeDatos;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,31 +16,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 
 
 	
-	
-	private Connection con = null;
-	public class conexion {
-
-		
-		    
-		 public Connection getConexion() {
-		        
-		        try{
-		            Class.forName("org.sqlite.JDBC");
-		            con = (Connection) DriverManager.getConnection("jdbc:sqlite:data/NBA.db");
-		            
-		        } catch(SQLException e)
-		        {
-		            System.err.println(e);
-		        } catch (ClassNotFoundException ex) {
-		            Logger.getLogger(BaseDeDatos.class.getName()).log(Level.SEVERE, null, ex);
-		        }
-		      return con;  
-		    } 
-	}
-	
-
-	
-	
+	/*
 	public ArrayList<Jugador> getjugadores() throws Exception{
 		
 	ArrayList<Jugador> jugadores= new ArrayList<Jugador>();	
@@ -63,9 +40,10 @@ public class JugadoresAzar extends UsuarioJugadores {
 	}
 	return jugadores;
 	}
-	
+	*/
 	
 	public static void main(String[]args){
+		
 		// obtener los cinco numeros al azar
 		 int[] arAzar = new int[5];
 		 int i =0;
@@ -74,7 +52,7 @@ public class JugadoresAzar extends UsuarioJugadores {
 		do {
 			arAzar[i] = (int) (Math.random()*jugadores.size());
 			for(int j=0; j<=i; j++) {
-				if(arAzar[i-1] == arAzar[j]) {
+				if(arAzar[i] == arAzar[j]) {
 					bolRepetido = true;
 					break;
 				}
@@ -96,11 +74,11 @@ public class JugadoresAzar extends UsuarioJugadores {
 			int idJug = usuJugador.getId_jugador();
 			//usuJugador.setId_usuarios
 
-			//usuJugador.setId_usuarios(dameUltimoUsuario());
+			usuJugador.setId_usuarios(dameUltimoUsuario());
 			
 			Statement st = BaseDeDatos.getStatement();
 			
-			String sentencia="INSERT INTO usuJugador values(";
+			String sentencia="INSERT INTO usujugadores values(";
 			sentencia = sentencia + idJug + ","+ dameUltimoUsuario()+")";
 			
 			System.out.println(sentencia);
@@ -113,7 +91,6 @@ public class JugadoresAzar extends UsuarioJugadores {
 			}
 			
 			
- // of https://github.com/jagobajr/NBA.git
 			//usuJugador.setId_usuarios(id_usuarios);
 			//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
 			// inserta registro en bd 

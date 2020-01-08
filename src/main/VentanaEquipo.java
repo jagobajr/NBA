@@ -2,6 +2,7 @@ package main;
 
 import ventanas.VentanaMenu;
 import java.awt.EventQueue;
+import main.azar;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -200,6 +201,7 @@ public class VentanaEquipo extends JFrame implements ActionListener {
 					repaint();}}});
 		
 		*/
+		azar();
 		mostarMiEquipo();
 	}
 	
@@ -269,68 +271,9 @@ private void anyadirUsuariosaLista() {
 	}
 	
 }
-/*
-private  void jugadoresAzar() {
-	// obtener los cinco numeros al azar
-			 int[] arAzar = new int[5];
-			 int i =0;
-			 boolean bolRepetido = false;
-			ArrayList<Jugador> jugadores= new ArrayList<Jugador>();
-			do {
-				arAzar[i] = (int) (Math.random()*jugadores.size());
-				for(int j=0; j<=i; j++) {
-					if(arAzar[i-1] == arAzar[j]) {
-						bolRepetido = true;
-						break;
-					}
-				}
-				if(!bolRepetido) {
-					i++;
-				}
-				
-				bolRepetido = false;
-			}while(i<5);
-			
-			// obtener los cinco jugadores 
-			
-				UsuarioJugadores usuJugador = new UsuarioJugadores();
-			
-			for (int h=0; h<5; h++){
-				usuJugador.setId_jugador(arAzar[h]);
 
-				int idJug = usuJugador.getId_jugador();
-				//usuJugador.setId_usuarios
 
-				//usuJugador.setId_usuarios(dameUltimoUsuario());
-				
-				Statement st = BaseDeDatos.getStatement();
-				
-				String sentencia="INSERT INTO usuJugador values(";
-				sentencia = sentencia + idJug + ","+ dameUltimoUsuario()+")";
-				
-				System.out.println(sentencia);
-				try {
-					st.executeUpdate(sentencia);
-					
-				} catch (SQLException e) {
-					LogController.log ( Level.SEVERE, "Error al repartir los jugadores " + (new Date()),e);
-					e.printStackTrace();
-				}
-				
-				
-	
-				//usuJugador.setId_usuarios(id_usuarios);
-				//falta id usuario que hay que crearlo con la funcion dameUltimoRegistro 
-				// inserta registro en bd 
-				//hay crear el nueva intancia el usuJugadores
-			}
-					
-			
-			System.out.println(jugadores.size());
-		
-}
-*/
-public static int dameUltimoUsuario() {
+private int dameUltimoUsuario() {
 	BaseDeDatos.initBD();
 	try {
 		Statement st = BaseDeDatos.getStatement();
@@ -363,6 +306,7 @@ private void mostarMiEquipo() {
 		Usuarios mod = new Usuarios();
 		
 		String idUsu =mod.getIdUsuario();
+		azar();
 		
 		BaseDeDatos.initBD();
 		
@@ -412,6 +356,57 @@ private void mostarMiEquipo() {
 
 	
 	
+}
+
+private void azar() {
+	
+	anyadirJugadoresALista();
+	// obtener los cinco numeros al azar
+			 int[] arAzar = new int[5];
+			 int i =0;
+			 boolean bolRepetido = false;
+			
+			do {
+				arAzar[i] = (int) (Math.random()*listaJ.size());
+				for(int j=0; j<=i; j++) {
+					if(arAzar[i] == arAzar[j]) {
+						bolRepetido = true;
+						break;
+					}
+				}
+				if(!bolRepetido) {
+					i++;
+				}
+				
+				bolRepetido = false;
+			}while(i<5);
+			
+			// obtener los cinco jugadores 
+			
+				UsuarioJugadores usuJugador = new UsuarioJugadores();
+			
+			for (int h=0; h<5; h++){
+				usuJugador.setId_jugador(arAzar[h]);
+
+				int idJug = usuJugador.getId_jugador();
+				
+
+				usuJugador.setId_usuarios(dameUltimoUsuario());
+				
+				Statement st = BaseDeDatos.getStatement();
+				
+				String sentencia="INSERT INTO usujugadores values(";
+				sentencia = sentencia + idJug + ","+ dameUltimoUsuario()+")";
+				
+				System.out.println(sentencia);
+				try {
+					st.executeUpdate(sentencia);
+					
+				} catch (SQLException e) {
+					LogController.log ( Level.SEVERE, "Error al repartir los jugadores " + (new Date()),e);
+					e.printStackTrace();
+				}
+			}
 }
 
 
