@@ -471,33 +471,10 @@ public class VentanaComprar extends JFrame  {
 		
 		}
 
-	private void cargarJugadoresMercado() 
-	{
-		  ArrayList mercado =new ArrayList();
-		  DefaultListModel modeloMercado;
-		  
-		st= BaseDeDatos.getStatement();
-		String sentencia="select * from mercadodefichajes";
-		
-		try {
-			ResultSet rs=st.executeQuery(sentencia);
-			
-			while(rs.next())
-			{
-				modeloMercado.addElement(rs.getString("nombre"));
-				mercado.add(rs.getString("idJugador") +" ");
-				
-			}
-			
-		} catch (SQLException e) {
-			LogController.log ( Level.WARNING, "Error al cargar los jugadores en el mercado " + (new Date()),e);
-			e.printStackTrace();
-		}
-		
-		
+
 		
 		
 	}
 
-}
+
  
