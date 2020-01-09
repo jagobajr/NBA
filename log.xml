@@ -8866,3 +8866,63 @@
   <message>Fin de programa Thu Jan 09 18:40:51 CET 2020</message>
 </record>
 </log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:08:36</date>
+  <millis>1578596916939</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio aplicacion Thu Jan 09 20:08:36 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:09:03</date>
+  <millis>1578596943731</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Thu Jan 09 20:09:03 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:09:13</date>
+  <millis>1578596953090</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio aplicacion Thu Jan 09 20:09:13 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:09:35</date>
+  <millis>1578596975717</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Thu Jan 09 20:09:35 CET 2020</message>
+</record>
+</log>

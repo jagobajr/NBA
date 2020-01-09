@@ -30,12 +30,17 @@ import javax.swing.JPasswordField;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
 
+import main.variablesGlobales;
+import main.Usuarios;
+
 public class VentanaLogin extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtusuario;
 	private JPasswordField txtcontra;
 
+	//public variablesGlobales varId;
+public static int idUsuario;
 	
 	
 	public static void main(String[] args) {
@@ -84,7 +89,7 @@ public class VentanaLogin extends JFrame {
 				 
 				SqlUsuarios modSql = new SqlUsuarios();
 			    Usuarios mod = new Usuarios();
-			        
+			    variablesGlobales vg = new variablesGlobales();
 			    String pass = new String(txtcontra.getPassword());
 			        
 			    if (!txtusuario.getText().equals("") && !pass.equals("")) {
@@ -92,6 +97,9 @@ public class VentanaLogin extends JFrame {
 			        String nuevoPass = Hash.sha1(pass);
 			            
 			        mod.setUsuario(txtusuario.getText());
+			        
+			       // mod.setIdUsuario(txtusuario.getText());
+			        vg.setIdUsu(Integer.parseInt(txtusuario.getText()));
 			        mod.setContra(nuevoPass);
 			            
 			        if (modSql.login(mod)) {
@@ -179,4 +187,10 @@ public class VentanaLogin extends JFrame {
 		
 		
 	
-}}
+}
+
+	/*public static int getUsuarioId() {
+        return idUsuario;
+    }*/
+
+}

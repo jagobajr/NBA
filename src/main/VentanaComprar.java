@@ -31,6 +31,9 @@ import javax.swing.event.ListSelectionListener;
 import ventanas.VentanaMenu;
 import ventanas.VentanaMercado;
 
+
+import main.Usuarios;
+
 import java.awt.Color;
 import java.awt.Label;
 import java.awt.Panel;
@@ -501,8 +504,12 @@ public class VentanaComprar extends JFrame  {
 		BaseDeDatos.initBD();
 		
 		String sentSQL = "";
-		
 	
+		
+	 variablesGlobales idVg;
+		
+		int a = idVg.getIdUsu();
+		
 				
 		if(esNumerico(txtIntroducirCantidad.toString())) {
 			int valorCompra= Integer.valueOf(txtIntroducirCantidad.toString());
@@ -510,7 +517,7 @@ public class VentanaComprar extends JFrame  {
 			if(valorCompra > Integer.parseInt(txtPre1.getText())){
 				//String sentencia="select * from mercadoDeFichajes";
 				try {
-					sentSQL = "insert into usuJugadores (" + idUsuario + "," +txtId_1.getText()+ ")" ;
+					sentSQL = "insert into usuJugadores (" + a + "," +txtId_1.getText()+ ")" ;
 					
 					int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
 					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
@@ -600,7 +607,7 @@ public void comprarJugadoresBoton3(String idUsuario) {
 	
 	String sentSQL = "";
 	
-	
+
 			
 	if(esNumerico(txtIntroducirCantidad3.toString())) {
 		int valorCompra= Integer.valueOf(txtIntroducirCantidad3.toString());
