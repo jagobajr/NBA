@@ -10,7 +10,6 @@ import javax.swing.border.EmptyBorder;
 import main.LogController;
 import main.VentanaEquipo;
 import main.VentanaLogin;
-import main.VentanaAlineacion;
 
 import java.awt.Color;
 import javax.swing.JLabel;

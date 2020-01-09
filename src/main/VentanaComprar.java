@@ -49,14 +49,15 @@ public class VentanaComprar extends JFrame  {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
-	ArrayList precios;
-	ArrayList mercadoId;
+	private ArrayList precios;
+	private ArrayList mercadoId;
 	Statement st=null;
-	ArrayList<Usuarios> dineroUsuarios;
-	Usuarios usuario;
-	DefaultListModel modelo;
-	JList list;
-	JLabel label;
+	private ArrayList<Usuarios> dineroUsuarios;
+	private Usuarios usuario;
+	private DefaultListModel modelo;
+	private JList list;
+	private JLabel label;
+	private JList <DefaultListModel>lista ;
 	
 	/**
 	 * Launch the application.
@@ -345,8 +346,8 @@ public class VentanaComprar extends JFrame  {
 			{
 				usuario=new Usuarios();
 				
-				usuario.setIdUsuario(rs.getString("id"));
-				usuario.setDinero(rs.getInt("dinero"));
+				usuario.setIdUsuario(rs.getString("idUsuario"));
+				usuario.setDinero(rs.getInt("Dinero"));
 				
 				dineroUsuarios.add(usuario);
 				
@@ -373,7 +374,7 @@ public class VentanaComprar extends JFrame  {
 		  DefaultListModel modeloMercado = null;
 		  java.sql.Statement st=null;
 		st= BaseDeDatos.getStatement();
-		String sentencia="select * from mercadodefichajes";
+		String sentencia="select * from mercadoDeFichajes";
 		
 		try {
 			ResultSet rs=st.executeQuery(sentencia);
@@ -416,7 +417,7 @@ public class VentanaComprar extends JFrame  {
 				int p4=Integer.parseInt(textField_4.getText());
 			
 		
-			if(p2<cargarDineroUsuario((String)label.getText()))
+			if(p1<cargarDineroUsuario((String)label.getText()))
 			{
 				
 			
@@ -431,7 +432,7 @@ public class VentanaComprar extends JFrame  {
 			
 			 st = (Statement) BaseDeDatos.getStatement();
 			
-			String sentencia="insert into usuariojugadores values('"+label.getText()+"', '"+mercadoId.get(list.getSelectedIndex())+"')";
+			String sentencia="insert into usujugadores values('"+label.getText()+"', '"+mercadoId.get(list.getSelectedIndex())+"')";
 			String sentencia2="delete from mercadodefichajes where idJugador = '"+mercadoId.get(list.getSelectedIndex())+"'";
 			
 			int dinero=cargarDineroUsuario((String)label.getText());

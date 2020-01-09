@@ -31,28 +31,27 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import java.awt.Color;
+import javax.swing.JScrollPane;
 
 public class VentanaEquipo extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField DatosPivot;
-	private JTextField DatosAla;
-	private JTextField DatosAlero;
-	private JTextField DatosEscolta;
-	private JTextField DatosBase;
 	Statement st=null;
 	private ArrayList<Usuarios>lista ;
-	private DefaultListModel modelo;
-	private DefaultListModel modeloUsuarios;
-    private DefaultListModel modeloMercado;
-	private static ArrayList<Jugador>listaJ;
-    private ArrayList usuario;
+	
+	private static ArrayList<UsuarioJugadores>listaJ;
+   // private ArrayList usuario;
     ArrayList<Jugador>listaJugadores;
 	ArrayList<UsuarioJugadores>listaUsuarios;
-	//JList <DefaultListModel>lista ;
-	//DefaultListModel modelo;
+	
 	static String idjornada;
 	static String puntosjornada2;
+	private DefaultListModel modeloequipo;
+	private UsuarioJugadores usujugadores;
 
 
 
@@ -89,11 +88,10 @@ public class VentanaEquipo extends JFrame implements ActionListener {
 	 */
 	public VentanaEquipo() {
 		BaseDeDatos.initBD();
-		
-		
 		ConfigureCloseWindow();
+		
 		setTitle("EQUIPO");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("/Imagenes/128139.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(""));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 324, 500);
 		contentPane = new JPanel();
@@ -114,65 +112,31 @@ public class VentanaEquipo extends JFrame implements ActionListener {
 		btnAtras.setBounds(6, 0, 47, 88);
 		contentPane.add(btnAtras);
 		
-		DatosPivot = new JTextField();
-		DatosPivot.setBackground(new Color(245, 245, 220));
-		DatosPivot.setBounds(102, 87, 130, 26);
-		contentPane.add(DatosPivot);
-		DatosPivot.setColumns(10);
-		
-		DatosAla = new JTextField();
-		DatosAla.setBackground(new Color(245, 245, 220));
-		DatosAla.setColumns(10);
-		DatosAla.setBounds(6, 213, 130, 26);
-		contentPane.add(DatosAla);
-		
-		DatosAlero = new JTextField();
-		DatosAlero.setBackground(new Color(245, 245, 220));
-		DatosAlero.setColumns(10);
-		DatosAlero.setBounds(192, 213, 130, 26);
-		contentPane.add(DatosAlero);
-		
-		DatosEscolta = new JTextField();
-		DatosEscolta.setBackground(new Color(245, 245, 220));
-		DatosEscolta.setColumns(10);
-		DatosEscolta.setBounds(24, 352, 130, 26);
-		contentPane.add(DatosEscolta);
-		
-		DatosBase = new JTextField();
-		DatosBase.setBackground(new Color(245, 245, 220));
-		DatosBase.setColumns(10);
-		DatosBase.setBounds(192, 352, 130, 26);
-		contentPane.add(DatosBase);
-		
-		JLabel lblPivot = new JLabel("Pivot");
-		lblPivot.setBounds(202, 35, 61, 16);
-		contentPane.add(lblPivot);
-		
-		JLabel lblAlero = new JLabel("Alero");
-		lblAlero.setBounds(166, 160, 61, 16);
+		JLabel lblAlero = new JLabel("Suplentes");
+		lblAlero.setBounds(116, 252, 61, 16);
 		contentPane.add(lblAlero);
 		
-		JLabel lblBase = new JLabel("Base");
-		lblBase.setBounds(171, 297, 61, 16);
-		contentPane.add(lblBase);
-		
-		JLabel lblEscolta = new JLabel("Escolta");
-		lblEscolta.setBounds(90, 297, 61, 16);
-		contentPane.add(lblEscolta);
-		
-		JLabel lblAlaPivot = new JLabel("Ala- Pivot");
-		lblAlaPivot.setBounds(90, 160, 84, 16);
+		JLabel lblAlaPivot = new JLabel("Titulares");
+		lblAlaPivot.setBounds(116, 52, 84, 16);
 		contentPane.add(lblAlaPivot);
 		
-		JLabel fondodeimagen = new JLabel("");
-		fondodeimagen.setVisible(true);
-		fondodeimagen.setIcon(new ImageIcon("Imagenes/cancha.jpg"));
-		fondodeimagen.setBounds(16, 24, 306, 396);
-		contentPane.add(fondodeimagen);
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(79, 72, 155, 160);
+		contentPane.add(scrollPane);
+		
+		JList list = new JList();
+		scrollPane.setViewportView(list);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(79, 284, 155, 102);
+		contentPane.add(scrollPane_1);
+		
+		JList list_1 = new JList();
+		scrollPane_1.setViewportView(list_1);
 		
 		
-
-		listaJ=new ArrayList<Jugador>();
+		
+		listaJ=new ArrayList<UsuarioJugadores>();
 		lista=new ArrayList<Usuarios>();
 		
 		//JList<DefaultListModel> listo=new JList<DefaultListModel>();
@@ -201,10 +165,10 @@ public class VentanaEquipo extends JFrame implements ActionListener {
 					repaint();}}});
 		
 		*/
-		azar();
-		mostarMiEquipo();
+		
+		cargarJugadoresPlantilla();
 	}
-	
+/*	
 private void anyadirJugadoresALista() {
 
 	listaJ.clear();
@@ -244,7 +208,7 @@ private void anyadirUsuariosaLista() {
 	BaseDeDatos.initBD();
 	try {
 		st=BaseDeDatos.getStatement();
-		ResultSet rs=st.executeQuery("select * from usuarios");
+		ResultSet rs=st.executeQuery("select * from usuJugadores");
 		
 		Usuarios usuario=new Usuarios();
 		while(rs.next())
@@ -312,13 +276,14 @@ private void mostarMiEquipo() {
 		
 		try {
 			
-			int icon=0;
+			//int icon=0;
 			
 			st=BaseDeDatos.getStatement();
 			ResultSet rs=st.executeQuery("select nombre  from jugadores, usuJugadores where jugadores.id = usuJugadores.id and usuJugadores.idUsuario='" + idUsu + "'");
 			
 			while(rs.next()) {
 				
+				/*
 				switch (icon) {
 				
 				case 0:
@@ -344,6 +309,9 @@ private void mostarMiEquipo() {
 				}
 				
 				icon++;
+				
+				
+				
 				}
 			
 			
@@ -395,7 +363,7 @@ private void azar() {
 				
 				Statement st = BaseDeDatos.getStatement();
 				
-				String sentencia="INSERT INTO usujugadores values(";
+				String sentencia="INSERT INTO usujugadores values("idJug;
 				sentencia = sentencia + idJug + ","+ dameUltimoUsuario()+")";
 				
 				System.out.println(sentencia);
@@ -407,6 +375,42 @@ private void azar() {
 					e.printStackTrace();
 				}
 			}
+}
+*/
+private void cargarJugadoresPlantilla() 
+{
+	st=BaseDeDatos.getStatement();
+	String sentencia="select * from usujugadores,usuarios where usuarios.idUsuario=usujugadores.id_usuarios";
+	
+	try {
+		ResultSet rs=st.executeQuery(sentencia);
+		
+		while(rs.next())
+		{
+			UsuarioJugadores usujugadores=new UsuarioJugadores();
+			
+			usujugadores.setId_jugador(rs.getInt(1));
+			usujugadores.setId_usuarios(rs.getInt(2));
+			usujugadores.setPuntosTotales(rs.getInt(3));
+		
+			
+			
+			
+		//modelo.addElement(rs.getString("nombre"));
+		
+		listaJ.add(usujugadores);
+		modeloequipo.addElement(rs.getString("nombre"));
+			
+		}
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+	
+	
 }
 
 

@@ -17,6 +17,7 @@ import main.JInternalNoticias;
 import main.LogController;
 import main.VentanaComprar;
 import main.VentanaVender;
+import main.ventanDeCompra;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -84,7 +85,7 @@ public class VentanaMercado extends JFrame {
 		JButton btnComprar = new JButton("COMPRAR");
 		btnComprar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaComprar nuevaVentana = new VentanaComprar();
+				ventanDeCompra nuevaVentana = new ventanDeCompra();
 				nuevaVentana.setVisible(true);
 				VentanaMercado.this.dispose();
 			}
@@ -92,18 +93,6 @@ public class VentanaMercado extends JFrame {
 		});
 		btnComprar.setBounds(53, 98, 316, 81);
 		contentPane.add(btnComprar);
-		
-		JButton btnVender = new JButton("VENDER");
-		btnVender.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				VentanaVender nuevaVentana = new VentanaVender();
-				nuevaVentana.setVisible(true);
-				VentanaMercado.this.dispose();
-			}
-			
-		});
-		btnVender.setBounds(53, 175, 316, 89);
-		contentPane.add(btnVender);
 		
 		JButton btnActividad = new JButton("NOTICIAS");
 		btnActividad.addActionListener(new ActionListener() {

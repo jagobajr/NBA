@@ -6,7 +6,6 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Toolkit;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -40,11 +39,9 @@ import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import ventanas.VentanaMenu;
-import ventanas.VentanaMercado;
 
 import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
+
 import javax.swing.border.EmptyBorder;
 
 public class VentanaAdministrador extends JFrame implements ActionListener{
@@ -239,6 +236,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		contentPane.add(btnPuntuar);
 		
 		labelAnyadir = new JLabel("");
+		
 		labelAnyadir.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0)
@@ -345,7 +343,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		lblquieresAadirUn.setBounds(378, 212, 239, 14);
 		contentPane.add(lblquieresAadirUn);
 		
-		lblAdd = new JLabel("");
+		lblAdd = new JLabel("sapoooo");
 		lblAdd.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0)
@@ -359,7 +357,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 				spinner.setVisible(true);
 				btnAadir.setVisible(true);
 				
-				lblAdd.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("")));
+				lblAdd.setVisible(true);
 				
 				repaint();
 				

@@ -6819,3 +6819,2035 @@
   <message>Conectada base de datos </message>
 </record>
 </log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T12:52:52.630743Z</date>
+  <millis>1578487972630</millis>
+  <nanos>743000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T12:52:52.678816Z</date>
+  <millis>1578487972678</millis>
+  <nanos>816000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:13:46.817149Z</date>
+  <millis>1578489226817</millis>
+  <nanos>149000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:13:46.853160Z</date>
+  <millis>1578489226853</millis>
+  <nanos>160000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:13:46.965488Z</date>
+  <millis>1578489226965</millis>
+  <nanos>488000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:13:46 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:13:46.972126Z</date>
+  <millis>1578489226972</millis>
+  <nanos>126000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:13:46 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:13:46.976868Z</date>
+  <millis>1578489226976</millis>
+  <nanos>868000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:13:46 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:13:46.982797Z</date>
+  <millis>1578489226982</millis>
+  <nanos>797000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:13:46 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:13:54.118150Z</date>
+  <millis>1578489234118</millis>
+  <nanos>150000</nanos>
+  <sequence>6</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:14:09.586346Z</date>
+  <millis>1578489249586</millis>
+  <nanos>346000</nanos>
+  <sequence>7</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:15:34.019504Z</date>
+  <millis>1578489334019</millis>
+  <nanos>504000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:15:34.043671Z</date>
+  <millis>1578489334043</millis>
+  <nanos>671000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:15:34.157032Z</date>
+  <millis>1578489334157</millis>
+  <nanos>32000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:15:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:15:34.162792Z</date>
+  <millis>1578489334162</millis>
+  <nanos>792000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:15:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:15:34.167871Z</date>
+  <millis>1578489334167</millis>
+  <nanos>871000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:15:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:15:34.172997Z</date>
+  <millis>1578489334172</millis>
+  <nanos>997000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:15:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:16:00.059688Z</date>
+  <millis>1578489360059</millis>
+  <nanos>688000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:16:00.082347Z</date>
+  <millis>1578489360082</millis>
+  <nanos>347000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:16:00.172826Z</date>
+  <millis>1578489360172</millis>
+  <nanos>826000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:16:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:16:00.177942Z</date>
+  <millis>1578489360177</millis>
+  <nanos>942000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:16:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:16:00.183141Z</date>
+  <millis>1578489360183</millis>
+  <nanos>141000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:16:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T13:16:00.187582Z</date>
+  <millis>1578489360187</millis>
+  <nanos>582000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 14:16:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:34:27.731174Z</date>
+  <millis>1578519267731</millis>
+  <nanos>174000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:35:55.711281Z</date>
+  <millis>1578519355711</millis>
+  <nanos>281000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Fin de programa Wed Jan 08 22:35:55 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:41:06.547957Z</date>
+  <millis>1578519666547</millis>
+  <nanos>957000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Fin de programa Wed Jan 08 22:41:06 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:52:00.597358Z</date>
+  <millis>1578520320597</millis>
+  <nanos>358000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:52:00.630877Z</date>
+  <millis>1578520320630</millis>
+  <nanos>877000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:52:00.670746Z</date>
+  <millis>1578520320670</millis>
+  <nanos>746000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 22:52:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:52:00.676373Z</date>
+  <millis>1578520320676</millis>
+  <nanos>373000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 22:52:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:52:00.681581Z</date>
+  <millis>1578520320681</millis>
+  <nanos>581000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 22:52:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:52:00.687056Z</date>
+  <millis>1578520320687</millis>
+  <nanos>56000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 22:52:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:57:45.428442Z</date>
+  <millis>1578520665428</millis>
+  <nanos>442000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T21:57:45.458494Z</date>
+  <millis>1578520665458</millis>
+  <nanos>494000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:04:29.284275Z</date>
+  <millis>1578521069284</millis>
+  <nanos>275000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:04:29.312226Z</date>
+  <millis>1578521069312</millis>
+  <nanos>226000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:04:41.841432Z</date>
+  <millis>1578521081841</millis>
+  <nanos>432000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:04:41.865314Z</date>
+  <millis>1578521081865</millis>
+  <nanos>314000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:06:39.720321Z</date>
+  <millis>1578521199720</millis>
+  <nanos>321000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:06:39.760384Z</date>
+  <millis>1578521199760</millis>
+  <nanos>384000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:07:04.306221Z</date>
+  <millis>1578521224306</millis>
+  <nanos>221000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:07:04.337282Z</date>
+  <millis>1578521224337</millis>
+  <nanos>282000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:23:53.839939Z</date>
+  <millis>1578522233839</millis>
+  <nanos>939000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:23:53.868947Z</date>
+  <millis>1578522233868</millis>
+  <nanos>947000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:23:53.921105Z</date>
+  <millis>1578522233921</millis>
+  <nanos>105000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 23:23:53 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:23:53.926469Z</date>
+  <millis>1578522233926</millis>
+  <nanos>469000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 23:23:53 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:23:53.932057Z</date>
+  <millis>1578522233932</millis>
+  <nanos>57000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 23:23:53 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:23:53.937988Z</date>
+  <millis>1578522233937</millis>
+  <nanos>988000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Wed Jan 08 23:23:53 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:38.841133Z</date>
+  <millis>1578522398841</millis>
+  <nanos>133000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:38.864782Z</date>
+  <millis>1578522398864</millis>
+  <nanos>782000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:41.591449Z</date>
+  <millis>1578522401591</millis>
+  <nanos>449000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:43.760884Z</date>
+  <millis>1578522403760</millis>
+  <nanos>884000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:47.379639Z</date>
+  <millis>1578522407379</millis>
+  <nanos>639000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:48.079681Z</date>
+  <millis>1578522408079</millis>
+  <nanos>681000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:48.677210Z</date>
+  <millis>1578522408677</millis>
+  <nanos>210000</nanos>
+  <sequence>6</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:49.198925Z</date>
+  <millis>1578522409198</millis>
+  <nanos>925000</nanos>
+  <sequence>7</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:49.697020Z</date>
+  <millis>1578522409697</millis>
+  <nanos>20000</nanos>
+  <sequence>8</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:50.216417Z</date>
+  <millis>1578522410216</millis>
+  <nanos>417000</nanos>
+  <sequence>9</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:52.890760Z</date>
+  <millis>1578522412890</millis>
+  <nanos>760000</nanos>
+  <sequence>10</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:53.575217Z</date>
+  <millis>1578522413575</millis>
+  <nanos>217000</nanos>
+  <sequence>11</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:54.105465Z</date>
+  <millis>1578522414105</millis>
+  <nanos>465000</nanos>
+  <sequence>12</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:54.814183Z</date>
+  <millis>1578522414814</millis>
+  <nanos>183000</nanos>
+  <sequence>13</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:55.394853Z</date>
+  <millis>1578522415394</millis>
+  <nanos>853000</nanos>
+  <sequence>14</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:56.072018Z</date>
+  <millis>1578522416072</millis>
+  <nanos>18000</nanos>
+  <sequence>15</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:26:57.461387Z</date>
+  <millis>1578522417461</millis>
+  <nanos>387000</nanos>
+  <sequence>16</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:27:03.661193Z</date>
+  <millis>1578522423661</millis>
+  <nanos>193000</nanos>
+  <sequence>17</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:27:05.566141Z</date>
+  <millis>1578522425566</millis>
+  <nanos>141000</nanos>
+  <sequence>18</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:27:45.037555Z</date>
+  <millis>1578522465037</millis>
+  <nanos>555000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:27:45.075285Z</date>
+  <millis>1578522465075</millis>
+  <nanos>285000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:27:47.131653Z</date>
+  <millis>1578522467131</millis>
+  <nanos>653000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:27:47.618271Z</date>
+  <millis>1578522467618</millis>
+  <nanos>271000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:29.105174Z</date>
+  <millis>1578522569105</millis>
+  <nanos>174000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:29.133688Z</date>
+  <millis>1578522569133</millis>
+  <nanos>688000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:31.888596Z</date>
+  <millis>1578522571888</millis>
+  <nanos>596000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:32.674839Z</date>
+  <millis>1578522572674</millis>
+  <nanos>839000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:33.294666Z</date>
+  <millis>1578522573294</millis>
+  <nanos>666000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:35.120543Z</date>
+  <millis>1578522575120</millis>
+  <nanos>543000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:39.903906Z</date>
+  <millis>1578522579903</millis>
+  <nanos>906000</nanos>
+  <sequence>6</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:40.842431Z</date>
+  <millis>1578522580842</millis>
+  <nanos>431000</nanos>
+  <sequence>7</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:29:41.869396Z</date>
+  <millis>1578522581869</millis>
+  <nanos>396000</nanos>
+  <sequence>8</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:31:45.286716Z</date>
+  <millis>1578522705286</millis>
+  <nanos>716000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T22:31:45.309549Z</date>
+  <millis>1578522705309</millis>
+  <nanos>549000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:16:34.701099Z</date>
+  <millis>1578525394701</millis>
+  <nanos>99000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:16:34.730452Z</date>
+  <millis>1578525394730</millis>
+  <nanos>452000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:16:34.826992Z</date>
+  <millis>1578525394826</millis>
+  <nanos>992000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Thu Jan 09 00:16:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:16:34.832584Z</date>
+  <millis>1578525394832</millis>
+  <nanos>584000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Thu Jan 09 00:16:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:16:34.837483Z</date>
+  <millis>1578525394837</millis>
+  <nanos>483000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Thu Jan 09 00:16:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:16:34.842751Z</date>
+  <millis>1578525394842</millis>
+  <nanos>751000</nanos>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Thu Jan 09 00:16:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:16:41.162677Z</date>
+  <millis>1578525401162</millis>
+  <nanos>677000</nanos>
+  <sequence>6</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuario eliminado Thu Jan 09 00:16:41 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:21:48.862499Z</date>
+  <millis>1578525708862</millis>
+  <nanos>499000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:21:48.998762Z</date>
+  <millis>1578525708998</millis>
+  <nanos>762000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:25:35.994514Z</date>
+  <millis>1578525935994</millis>
+  <nanos>514000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:25:36.024851Z</date>
+  <millis>1578525936024</millis>
+  <nanos>851000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:40:29.829542Z</date>
+  <millis>1578526829829</millis>
+  <nanos>542000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:40:29.875070Z</date>
+  <millis>1578526829875</millis>
+  <nanos>70000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:40:30.039098Z</date>
+  <millis>1578526830039</millis>
+  <nanos>98000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Thu Jan 09 00:40:30 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:40:30.048842Z</date>
+  <millis>1578526830048</millis>
+  <nanos>842000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Thu Jan 09 00:40:30 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:40:30.058458Z</date>
+  <millis>1578526830058</millis>
+  <nanos>458000</nanos>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Usuarios cargados Thu Jan 09 00:40:30 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:40:41.200290Z</date>
+  <millis>1578526841200</millis>
+  <nanos>290000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:40:41.247493Z</date>
+  <millis>1578526841247</millis>
+  <nanos>493000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:41:26.358229Z</date>
+  <millis>1578526886358</millis>
+  <nanos>229000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:41:26.403266Z</date>
+  <millis>1578526886403</millis>
+  <nanos>266000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:41:46.810475Z</date>
+  <millis>1578526906810</millis>
+  <nanos>475000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:41:46.857860Z</date>
+  <millis>1578526906857</millis>
+  <nanos>860000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:42:00.290193Z</date>
+  <millis>1578526920290</millis>
+  <nanos>193000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:42:00.337519Z</date>
+  <millis>1578526920337</millis>
+  <nanos>519000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:42:02.817881Z</date>
+  <millis>1578526922817</millis>
+  <nanos>881000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:42:03.537841Z</date>
+  <millis>1578526923537</millis>
+  <nanos>841000</nanos>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:42:35.504640Z</date>
+  <millis>1578526955504</millis>
+  <nanos>640000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Fin de programa Thu Jan 09 00:42:35 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:42:56.911309Z</date>
+  <millis>1578526976911</millis>
+  <nanos>309000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:42:56.952253Z</date>
+  <millis>1578526976952</millis>
+  <nanos>253000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:42:59.737946Z</date>
+  <millis>1578526979737</millis>
+  <nanos>946000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:45:29.586627Z</date>
+  <millis>1578527129586</millis>
+  <nanos>627000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:45:29.627598Z</date>
+  <millis>1578527129627</millis>
+  <nanos>598000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:45:34.454851Z</date>
+  <millis>1578527134454</millis>
+  <nanos>851000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:46:59.174901Z</date>
+  <millis>1578527219174</millis>
+  <nanos>901000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:46:59.217748Z</date>
+  <millis>1578527219217</millis>
+  <nanos>748000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:47:02.834782Z</date>
+  <millis>1578527222834</millis>
+  <nanos>782000</nanos>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:48:00.166203Z</date>
+  <millis>1578527280166</millis>
+  <nanos>203000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:48:00.189523Z</date>
+  <millis>1578527280189</millis>
+  <nanos>523000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:48:20.180613Z</date>
+  <millis>1578527300180</millis>
+  <nanos>613000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:48:20.204445Z</date>
+  <millis>1578527300204</millis>
+  <nanos>445000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:53:08.362475Z</date>
+  <millis>1578527588362</millis>
+  <nanos>475000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-08T23:53:08.389404Z</date>
+  <millis>1578527588389</millis>
+  <nanos>404000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T00:08:49.920970Z</date>
+  <millis>1578528529920</millis>
+  <nanos>970000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T00:08:55.773467Z</date>
+  <millis>1578528535773</millis>
+  <nanos>467000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Fin de programa Thu Jan 09 01:08:55 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T00:09:26.210326Z</date>
+  <millis>1578528566210</millis>
+  <nanos>326000</nanos>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T00:09:31.168740Z</date>
+  <millis>1578528571168</millis>
+  <nanos>740000</nanos>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>14</thread>
+  <message>Fin de programa Thu Jan 09 01:09:31 CET 2020</message>
+</record>
+</log>
