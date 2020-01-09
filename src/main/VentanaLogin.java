@@ -99,7 +99,9 @@ public static int idUsuario;
 			        mod.setUsuario(txtusuario.getText());
 			        
 			       // mod.setIdUsuario(txtusuario.getText());
-			        vg.setIdUsu(Integer.parseInt(txtusuario.getText()));
+			       // vg.setIdUsu(Integer.parseInt(txtusuario.getText()));
+			       //falta guardar la id del usuario que va aqui aqui
+			        
 			        mod.setContra(nuevoPass);
 			            
 			        if (modSql.login(mod)) {
@@ -189,8 +191,12 @@ public static int idUsuario;
 	
 }
 
-	/*public static int getUsuarioId() {
+	public static int getUsuarioId() {
         return idUsuario;
-    }*/
+	}
+	
+	public  void  setUsuarioId(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
 
 }

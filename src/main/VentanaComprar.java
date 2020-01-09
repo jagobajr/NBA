@@ -557,6 +557,8 @@ public void comprarJugadoresBoton2(String idUsuario) {
 		
 		String sentSQL = "";
 		
+
+int a = VentanaLogin.getUsuarioId();
 		
 				
 		if(esNumerico(txtIntroducirCantidad2.toString())) {
@@ -565,7 +567,7 @@ public void comprarJugadoresBoton2(String idUsuario) {
 			if(valorCompra > Integer.parseInt(txtPre2.getText())){
 				//String sentencia="select * from mercadoDeFichajes";
 				try {
-					sentSQL = "insert into usuJugadores (" + idUsuario + "," +txtId_2.getText()+ ")" ;
+					sentSQL = "insert into usuJugadores (" +a + "," +txtId_2.getText()+ ")" ;
 					
 					int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
 					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
