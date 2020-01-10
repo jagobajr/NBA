@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import ventanas.VentanaMenu;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -35,6 +36,7 @@ import java.awt.Toolkit;
 
 import main.variablesGlobales;
 import main.Usuarios;
+import main.Idioma;
 
 public class VentanaLogin extends JFrame {
 
@@ -104,7 +106,7 @@ public static int idUsuario;
 			       // mod.setIdUsuario(txtusuario.getText());
 			       // vg.setIdUsu(Integer.parseInt(txtusuario.getText()));
 			       //falta guardar la id del usuario que va aqui aqui
-			        
+			        mod.setIdUsuario(txtusuario.getText());
 			        mod.setContra(nuevoPass);
 			            
 			        if (modSql.login(mod)) {
@@ -213,5 +215,150 @@ public static int idUsuario;
 	public  void  setUsuarioId(int idUsuario) {
 		this.idUsuario = idUsuario;
 	}
+	
+	/* public void VentanaLogin1() {
+	        initComponents();
+	 
+	        cambiarIdioma("Espanol");
+	    }
+	 
+	 /*   public void cambiarIdioma(String nombreIdioma){
+	 
+	        idioma=new Idioma(nombreIdioma);
+	 
+	        btnCambio.setText(idioma.getProperty("cambio"));
+	        this.setTitle(idioma.getProperty("titulo"));
+	        lblHola.setText(idioma.getProperty("saludo"));
+	 
+	        cmbIdiomas.removeAllItems();
+	 
+	        String idiomas[]={
+	                          idioma.getProperties("espanol"),
+	                          idioma.getProperty("ingles"),
+	                          idioma.getProperty("frances")
+	                          };
+	 
+	        for(int i=0;i<idiomas.length;i++){
+	            cmbIdiomas.addItem(idiomas[i]);
+	        }
+	 
+	    }
+	 
+	    @SuppressWarnings("unchecked")
+	    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+	    private void initComponents() {
+	 
+	        JButton btnCambio = new javax.swing.JButton();
+	        JLabel lblHola = new javax.swing.JLabel();
+	        JComboBox cmbIdiomas = new javax.swing.JComboBox();
+	 
+	        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+	 
+	        btnCambio.setText("jButton1");
+	        btnCambio.addActionListener(new java.awt.event.ActionListener() {
+	            public void actionPerformed(java.awt.event.ActionEvent evt) {
+	                actionPerformed(evt);
+	            }
+	        });
+	 
+	        lblHola.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+	        lblHola.setText("jLabel1");
+	 
+	        cmbIdiomas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Español", "Ingles", "Frances" }));
+	 
+	        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+	        getContentPane().setLayout(layout);
+	        layout.setHorizontalGroup(
+	            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+	            .addGroup(layout.createSequentialGroup()
+	                .addGap(145, 145, 145)
+	                .addComponent(btnCambio)
+	                .addContainerGap(120, Short.MAX_VALUE))
+	            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+	                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+	                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+	                    .addComponent(lblHola, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+	                    .addComponent(cmbIdiomas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+	                .addGap(75, 75, 75))
+	        );
+	        layout.setVerticalGroup(
+	            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+	            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+	                .addGap(35, 35, 35)
+	                .addComponent(lblHola, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                .addGap(44, 44, 44)
+	                .addComponent(cmbIdiomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                .addGap(35, 35, 35)
+	                .addComponent(btnCambio)
+	                .addContainerGap(67, Short.MAX_VALUE))
+	        );
+	 
+	        pack();
+	    }// </editor-fold>                        
+	 
+	    private void btnCambioActionPerformed(java.awt.event.ActionEvent evt) {                                          
+	 
+	        switch(cmbIdiomas.getSelectedIndex()){
+	 
+	            case 0:
+	                cambiarIdioma("Español");
+	                break;
+	            case 1:
+	                cambiarIdioma("Ingles");
+	                break;
+	            case 2:
+	                cambiarIdioma("Frances");
+	                break;
+	 
+	        }
+	 
+	    }                                         
+	 
+	    /**
+	     * @param args the command line arguments
+	     */
+	    public static void main1(String args[]) {
+	        /* Set the Nimbus look and feel */
+	        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+	        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+	         For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+	         
+	        try {
+	            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+	                if ("Nimbus".equals(info.getName())) {
+	                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+	                    break;
+	                }
+	            }
+	        } catch (ClassNotFoundException ex) {
+	            java.util.logging.Logger.getLogger(VentanaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	        } catch (InstantiationException ex) {
+	            java.util.logging.Logger.getLogger(VentanaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	        } catch (IllegalAccessException ex) {
+	            java.util.logging.Logger.getLogger(VentanaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+	            java.util.logging.Logger.getLogger(VentanaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+	        }
+	        //</editor-fold>
+	 
+	        /* Create and display the form 
+	        java.awt.EventQueue.invokeLater(new Runnable() {
+	            public void run() {
+	                new VentanaLogin().setVisible(true);
+	            }
+	        });
+	    }
+	 
+	    // Variables declaration - do not modify
+	    private javax.swing.JButton btnCambio;
+	    private javax.swing.JComboBox cmbIdiomas;
+	    private javax.swing.JLabel lblHola;
+	    // End of variables declaration
+	    private Idioma idioma; */
+	
 
 }
+
+}
+
+
