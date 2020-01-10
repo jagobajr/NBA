@@ -8851,3 +8851,483 @@
   <message>Fin de programa Thu Jan 09 01:09:31 CET 2020</message>
 </record>
 </log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T17:56:53</date>
+  <millis>1578589013639</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T18:29:11</date>
+  <millis>1578590951767</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T18:33:56</date>
+  <millis>1578591236643</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Fin de programa Thu Jan 09 18:33:56 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T18:40:30</date>
+  <millis>1578591630485</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Fin de programa Thu Jan 09 18:40:30 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:28:16</date>
+  <millis>1578594496313</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio aplicacion Thu Jan 09 19:28:16 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:28:25</date>
+  <millis>1578594505866</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Thu Jan 09 19:28:25 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:28:28</date>
+  <millis>1578594508607</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio aplicacion Thu Jan 09 19:28:28 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:29:03</date>
+  <millis>1578594543941</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Thu Jan 09 19:29:03 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:29:50</date>
+  <millis>1578594590846</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio aplicacion Thu Jan 09 19:29:50 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:33:30</date>
+  <millis>1578594810260</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Fin de programa Thu Jan 09 19:33:30 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:36:03</date>
+  <millis>1578594963793</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Thu Jan 09 19:36:03 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:39:57</date>
+  <millis>1578595197099</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Fichero cerrado Thu Jan 09 19:39:57 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T19:40:01</date>
+  <millis>1578595201560</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Fichero cerrado Thu Jan 09 19:40:01 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:30:02</date>
+  <millis>1578598202707</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:30:02 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:34:17</date>
+  <millis>1578598457578</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:34:17 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:34:39</date>
+  <millis>1578598479861</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:34:39 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:37:23</date>
+  <millis>1578598643414</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:37:23 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:39:29</date>
+  <millis>1578598769915</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:39:29 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:39:43</date>
+  <millis>1578598783452</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:39:43 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:40:05</date>
+  <millis>1578598805935</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:40:05 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:42:00</date>
+  <millis>1578598920660</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:42:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:42:51</date>
+  <millis>1578598971020</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:42:50 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:43:06</date>
+  <millis>1578598986623</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:43:06 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:43:27</date>
+  <millis>1578599007016</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:43:26 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:43:36</date>
+  <millis>1578599016968</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:43:36 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:43:49</date>
+  <millis>1578599029625</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:43:49 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:43:57</date>
+  <millis>1578599037540</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:43:57 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:44:08</date>
+  <millis>1578599048591</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:44:08 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:44:30</date>
+  <millis>1578599070862</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:44:30 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:44:58</date>
+  <millis>1578599098016</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:44:57 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-09T20:48:43</date>
+  <millis>1578599323549</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Archivo arbierto Thu Jan 09 20:48:43 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-10T04:50:49</date>
+  <millis>1578628249035</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio aplicacion Fri Jan 10 04:50:49 CET 2020</message>
+</record>
+</log>

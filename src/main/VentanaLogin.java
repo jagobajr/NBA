@@ -18,6 +18,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -160,15 +163,26 @@ public class VentanaLogin extends JFrame {
 		txtcontra.setBounds(6, 151, 300, 40);
 		contentPane.add(txtcontra);
 		
-		
-		
 		JButton btnAdmin = new JButton("ADMIN");
 		btnAdmin.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent arg0) {
 				AccesoAdministrador nuevaVentana = new AccesoAdministrador();
 				nuevaVentana.setVisible(true);
 				VentanaLogin.this.dispose();
-			}});
+			}}); 
+		
+		JButton btnConsulta = new JButton("Consulta nuestra politica de privacidad");
+		btnConsulta.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent arg0) {
+				AbrirFicheroTexto nuevaVentana = new AbrirFicheroTexto();
+				nuevaVentana.setVisible(true);
+
+			}
+
+		
+		
+		});
+		
 		btnAdmin.setBounds(6, 331, 83, 29);
 		contentPane.add(btnAdmin);
 		
@@ -177,6 +191,10 @@ public class VentanaLogin extends JFrame {
 		label.setBounds(0, 0, 380, 406);
 		contentPane.add(label);
 		
+		btnConsulta.setBounds(6, 252, 227, 29);
+		contentPane.add(btnConsulta);
+		
 		
 	
-}}
+}	
+}
