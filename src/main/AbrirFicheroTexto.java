@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
 import java.awt.Font;
+import java.awt.Window.Type;
 
 public class AbrirFicheroTexto extends JFrame {
 
@@ -40,8 +41,9 @@ public class AbrirFicheroTexto extends JFrame {
 	 * Create the frame.
 	 */
 	public AbrirFicheroTexto() {
+		setTitle("POLITICA DE PRIVACIDAD");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 729, 415);
+		setBounds(100, 100, 818, 629);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -49,7 +51,7 @@ public class AbrirFicheroTexto extends JFrame {
 		textArea.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
 		textArea.setEditable(false);
-		textArea.setBounds(0, 0, 707, 359);
+		textArea.setBounds(0, 0, 796, 573);
 		contentPane.add(textArea);
 		Leer();
 	}
