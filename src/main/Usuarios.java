@@ -75,4 +75,8 @@ public class Usuarios {
 	public void setPuntos(int puntos) {
 		this.puntos = puntos;
 	}
+	
+	//public static int getUsuarioId() {
+       // return idUsuario;
+    //}
 }

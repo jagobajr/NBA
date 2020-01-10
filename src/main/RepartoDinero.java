@@ -223,6 +223,8 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 	
 		return dinero;
 		
+		
+		
 	}
 
 }

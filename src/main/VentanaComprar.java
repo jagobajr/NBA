@@ -31,6 +31,9 @@ import javax.swing.event.ListSelectionListener;
 import ventanas.VentanaMenu;
 import ventanas.VentanaMercado;
 
+
+import main.Usuarios;
+
 import java.awt.Color;
 import java.awt.Label;
 import java.awt.Panel;
@@ -46,9 +49,9 @@ public class VentanaComprar extends JFrame  {
 
 	private JPanel contentPane;
 	private JTextField txtIntroducirCantidad;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField txtIntroducirCantidad2;
+	private JTextField txtIntroducirCantidad3;
+	private JTextField txtIntroducirCantidad4;
 	private ArrayList precios;
 	private ArrayList mercadoId;
 	Statement st=null;
@@ -58,6 +61,18 @@ public class VentanaComprar extends JFrame  {
 	private JList list;
 	private JLabel label;
 	private JList <DefaultListModel>lista ;
+	private JTextField txtId_1;
+	private JTextField txtId_2;
+	private JTextField txtId_3;
+	private JTextField txtId_4;
+	private JTextField txtNom1;
+	private JTextField txtNom2;
+	private JTextField txtNom3;
+	private JTextField txtNom4;
+	private JTextField txtPre1;
+	private JTextField txtPre2;
+	private JTextField txtPre3;
+	private JTextField txtPre4;
 	
 	/**
 	 * Launch the application.
@@ -118,16 +133,6 @@ public class VentanaComprar extends JFrame  {
 		lblImagen.setBounds(0, 0, 46, 73);
 		panelJugador.add(lblImagen);
 		
-		Label labelNomJugador = new Label("Nombre Jugador\r\n");
-		labelNomJugador.setFont(new Font(".AppleSystemUIFont", Font.PLAIN, 12));
-		labelNomJugador.setForeground(Color.BLACK);
-		labelNomJugador.setBounds(52, 10, 92, 27);
-		panelJugador.add(labelNomJugador);
-		
-		Label label_PrecioJug = new Label("Precio del jugador\r\n\r\n");
-		label_PrecioJug.setBounds(52, 41, 92, 22);
-		panelJugador.add(label_PrecioJug);
-		
 		Label label_Cont = new Label("Contador\r\n");
 		label_Cont.setBounds(302, 15, 52, 22);
 		panelJugador.add(label_Cont);
@@ -146,6 +151,27 @@ public class VentanaComprar extends JFrame  {
 		panelJugador.add(txtIntroducirCantidad);
 		txtIntroducirCantidad.setColumns(10);
 		
+		txtId_1 = new JTextField();
+		txtId_1.setVisible(false);
+		txtId_1.setText("id\r\n");
+		txtId_1.setBounds(144, 26, 26, 20);
+		panelJugador.add(txtId_1);
+		txtId_1.setColumns(10);
+		
+		txtNom1 = new JTextField();
+		txtNom1.setEnabled(false);
+		txtNom1.setText("Nombre");
+		txtNom1.setBounds(48, 15, 64, 20);
+		panelJugador.add(txtNom1);
+		txtNom1.setColumns(10);
+		
+		txtPre1 = new JTextField();
+		txtPre1.setEnabled(false);
+		txtPre1.setText("Precio");
+		txtPre1.setBounds(48, 43, 64, 20);
+		panelJugador.add(txtPre1);
+		txtPre1.setColumns(10);
+		
 		JPanel panel_jug2 = new JPanel();
 		panel_jug2.setBackground(new Color(245, 255, 250));
 		panel_jug2.setLayout(null);
@@ -156,14 +182,6 @@ public class VentanaComprar extends JFrame  {
 		JLabel label_4 = new JLabel("Imagen");
 		label_4.setBounds(0, 0, 46, 73);
 		panel_jug2.add(label_4);
-		
-		Label label_5 = new Label("Nombre Jugador\r\n");
-		label_5.setBounds(52, 10, 92, 27);
-		panel_jug2.add(label_5);
-		
-		Label label_6 = new Label("Precio del jugador\r\n\r\n");
-		label_6.setBounds(52, 41, 92, 22);
-		panel_jug2.add(label_6);
 		
 		Label label_7 = new Label("Contador\r\n");
 		label_7.setBounds(302, 15, 52, 22);
@@ -177,11 +195,32 @@ public class VentanaComprar extends JFrame  {
 		button.setBounds(196, 14, 89, 23);
 		panel_jug2.add(button);
 		
-		textField_2 = new JTextField();
-		textField_2.setText("Introducir cantidad");
-		textField_2.setColumns(10);
-		textField_2.setBounds(183, 41, 102, 20);
-		panel_jug2.add(textField_2);
+		txtIntroducirCantidad2 = new JTextField();
+		txtIntroducirCantidad2.setText("Introducir cantidad");
+		txtIntroducirCantidad2.setColumns(10);
+		txtIntroducirCantidad2.setBounds(183, 41, 102, 20);
+		panel_jug2.add(txtIntroducirCantidad2);
+		
+		txtId_2 = new JTextField();
+		txtId_2.setVisible(false);
+		txtId_2.setText("id\r\n");
+		txtId_2.setColumns(10);
+		txtId_2.setBounds(146, 17, 26, 20);
+		panel_jug2.add(txtId_2);
+		
+		txtNom2 = new JTextField();
+		txtNom2.setText("Nombre");
+		txtNom2.setEnabled(false);
+		txtNom2.setColumns(10);
+		txtNom2.setBounds(56, 15, 64, 20);
+		panel_jug2.add(txtNom2);
+		
+		txtPre2 = new JTextField();
+		txtPre2.setText("Precio");
+		txtPre2.setEnabled(false);
+		txtPre2.setColumns(10);
+		txtPre2.setBounds(56, 41, 64, 20);
+		panel_jug2.add(txtPre2);
 		
 		JPanel panel_jug3 = new JPanel();
 		panel_jug3.setBackground(new Color(245, 255, 250));
@@ -193,14 +232,6 @@ public class VentanaComprar extends JFrame  {
 		JLabel label_9 = new JLabel("Imagen");
 		label_9.setBounds(0, 0, 46, 73);
 		panel_jug3.add(label_9);
-		
-		Label label_10 = new Label("Nombre Jugador\r\n");
-		label_10.setBounds(52, 10, 92, 27);
-		panel_jug3.add(label_10);
-		
-		Label label_11 = new Label("Precio del jugador\r\n\r\n");
-		label_11.setBounds(52, 41, 92, 22);
-		panel_jug3.add(label_11);
 		
 		Label label_12 = new Label("Contador\r\n");
 		label_12.setBounds(302, 15, 52, 22);
@@ -214,11 +245,32 @@ public class VentanaComprar extends JFrame  {
 		button_1.setBounds(196, 14, 89, 23);
 		panel_jug3.add(button_1);
 		
-		textField_3 = new JTextField();
-		textField_3.setText("Introducir cantidad");
-		textField_3.setColumns(10);
-		textField_3.setBounds(183, 41, 102, 20);
-		panel_jug3.add(textField_3);
+		txtIntroducirCantidad3 = new JTextField();
+		txtIntroducirCantidad3.setText("Introducir cantidad");
+		txtIntroducirCantidad3.setColumns(10);
+		txtIntroducirCantidad3.setBounds(183, 41, 102, 20);
+		panel_jug3.add(txtIntroducirCantidad3);
+		
+		txtId_3 = new JTextField();
+		txtId_3.setVisible(false);
+		txtId_3.setText("id\r\n");
+		txtId_3.setColumns(10);
+		txtId_3.setBounds(144, 10, 26, 20);
+		panel_jug3.add(txtId_3);
+		
+		txtNom3 = new JTextField();
+		txtNom3.setText("Nombre");
+		txtNom3.setEnabled(false);
+		txtNom3.setColumns(10);
+		txtNom3.setBounds(56, 15, 64, 20);
+		panel_jug3.add(txtNom3);
+		
+		txtPre3 = new JTextField();
+		txtPre3.setText("Precio");
+		txtPre3.setEnabled(false);
+		txtPre3.setColumns(10);
+		txtPre3.setBounds(56, 41, 64, 20);
+		panel_jug3.add(txtPre3);
 		
 		JPanel panel_jug4 = new JPanel();
 		panel_jug4.setBackground(new Color(245, 255, 250));
@@ -230,14 +282,6 @@ public class VentanaComprar extends JFrame  {
 		JLabel label_14 = new JLabel("Imagen");
 		label_14.setBounds(0, 0, 46, 73);
 		panel_jug4.add(label_14);
-		
-		Label label_15 = new Label("Nombre Jugador\r\n");
-		label_15.setBounds(52, 10, 92, 27);
-		panel_jug4.add(label_15);
-		
-		Label label_16 = new Label("Precio del jugador\r\n\r\n");
-		label_16.setBounds(52, 41, 92, 22);
-		panel_jug4.add(label_16);
 		
 		Label label_17 = new Label("Contador\r\n");
 		label_17.setBounds(302, 15, 52, 22);
@@ -251,11 +295,32 @@ public class VentanaComprar extends JFrame  {
 		button_2.setBounds(196, 10, 89, 23);
 		panel_jug4.add(button_2);
 		
-		textField_4 = new JTextField();
-		textField_4.setText("Introducir cantidad");
-		textField_4.setColumns(10);
-		textField_4.setBounds(183, 41, 102, 20);
-		panel_jug4.add(textField_4);
+		txtIntroducirCantidad4 = new JTextField();
+		txtIntroducirCantidad4.setText("Introducir cantidad");
+		txtIntroducirCantidad4.setColumns(10);
+		txtIntroducirCantidad4.setBounds(183, 41, 102, 20);
+		panel_jug4.add(txtIntroducirCantidad4);
+		
+		txtId_4 = new JTextField();
+		txtId_4.setVisible(false);
+		txtId_4.setText("id\r\n");
+		txtId_4.setColumns(10);
+		txtId_4.setBounds(147, 10, 26, 20);
+		panel_jug4.add(txtId_4);
+		
+		txtNom4 = new JTextField();
+		txtNom4.setText("Nombre");
+		txtNom4.setEnabled(false);
+		txtNom4.setColumns(10);
+		txtNom4.setBounds(57, 15, 64, 20);
+		panel_jug4.add(txtNom4);
+		
+		txtPre4 = new JTextField();
+		txtPre4.setText("Precio");
+		txtPre4.setEnabled(false);
+		txtPre4.setColumns(10);
+		txtPre4.setBounds(56, 41, 64, 20);
+		panel_jug4.add(txtPre4);
 		
 		Panel panel_jug5 = new Panel();
 		panel_jug5.setBackground(new Color(230, 230, 250));
@@ -370,6 +435,8 @@ public class VentanaComprar extends JFrame  {
 		
 	private void cargarJugadoresMercado2() 
 	{
+		
+		int icon =0;
 		  ArrayList mercado =new ArrayList();
 		  DefaultListModel modeloMercado = null;
 		  java.sql.Statement st=null;
@@ -381,9 +448,40 @@ public class VentanaComprar extends JFrame  {
 			
 			while(rs.next())
 			{
-				modeloMercado.addElement(rs.getString("nombre"));
-				mercado.add(rs.getString("idJugador") +" ");
+				/*modeloMercado.addElement(rs.getString("nombre"));
+				mercado.add(rs.getString("idJugador") +" ");*/
 				
+				switch (icon) {
+				case 0:
+					txtNom1.setText(rs.getString("Nombre"));
+					txtPre1.setText(rs.getString("Precio"));
+					txtId_1.setText(rs.getString("idJugador"));
+					break;
+					
+				case 1:
+					txtNom2.setText(rs.getString("Nombre"));
+					txtPre2.setText(rs.getString("Precio"));
+					txtId_2.setText(rs.getString("idJugador"));
+					break;
+					
+				case 2:
+					txtNom3.setText(rs.getString("Nombre"));
+					txtPre3.setText(rs.getString("Precio"));
+					txtId_3.setText(rs.getString("idJugador"));
+					break;
+					
+				case 3:
+					txtNom4.setText(rs.getString("Nombre"));
+					txtPre4.setText(rs.getString("Precio"));
+					txtId_4.setText(rs.getString("idJugador"));
+					break;
+					
+				default:
+					
+					break;
+				} 
+				
+				icon ++;
 			}
 			
 		} catch (SQLException e) {
@@ -400,82 +498,230 @@ public class VentanaComprar extends JFrame  {
 		
 	
 
-	public void actionPerformed(ActionEvent arg0) 
-	{
-		switch(arg0.getActionCommand())
-		{
-		case "pujar":
-			
-			try
-			{
-				
-				
-				
-				int p1=Integer.parseInt(txtIntroducirCantidad.getText());
-				int p2=Integer.parseInt(textField_2.getText());
-				int p3=Integer.parseInt(textField_3.getText());
-				int p4=Integer.parseInt(textField_4.getText());
-			
+	
+	public void comprarJugadoresBoton1(String idUsuario) {
 		
-			if(p1<cargarDineroUsuario((String)label.getText()))
-			{
+		BaseDeDatos.initBD();
+		
+		String sentSQL = "";
+	
+		
+	 variablesGlobales idVg;
+		
+		int a = idVg.getIdUsu();
+		
 				
+		if(esNumerico(txtIntroducirCantidad.toString())) {
+			int valorCompra= Integer.valueOf(txtIntroducirCantidad.toString());
 			
-			
-			if(p1>p2)
-			{
-				JOptionPane.showMessageDialog(null, "El jugador NO ha aceptado la oferta, es demasiado baja");
+			if(valorCompra > Integer.parseInt(txtPre1.getText())){
+				//String sentencia="select * from mercadoDeFichajes";
+				try {
+					sentSQL = "insert into usuJugadores (" + a + "," +txtId_1.getText()+ ")" ;
+					
+					int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
+					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
+					if (val!=1) {  // Se tiene que añadir 1 - error si no
+						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+					}
+					
+					sentSQL = "delete from mercadoFichajes where idJugador = " +txtId_1.getText();
+					
+					int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
+					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
+					if (valDel!=1) {  // Se tiene que añadir 1 - error si no
+						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+					}
+					
+					}catch (SQLException e) {
+						log( Level.SEVERE, "Error en BD\t" + sentSQL, e );
+						e.printStackTrace();
+					}
+				
+				
+				
+				
+			}else {
+				JOptionPane.showMessageDialog(null, "Cantidad incorrecta");
 			}
-			if(p1<=p2)
-			{
-				JOptionPane.showMessageDialog(null, "el usuario "+label.getText()+" ha fichado a "+modelo.getElementAt(list.getSelectedIndex()));
+		}else {
+			JOptionPane.showMessageDialog(null, "El valor debe ser un numero");
+		}
+
+		
+			}
+	
+public void comprarJugadoresBoton2(String idUsuario) {
+		
+		BaseDeDatos.initBD();
+		
+		String sentSQL = "";
+		
+
+int a = VentanaLogin.getUsuarioId();
+		
+				
+		if(esNumerico(txtIntroducirCantidad2.toString())) {
+			int valorCompra= Integer.valueOf(txtIntroducirCantidad2.toString());
 			
-			 st = (Statement) BaseDeDatos.getStatement();
-			
-			String sentencia="insert into usujugadores values('"+label.getText()+"', '"+mercadoId.get(list.getSelectedIndex())+"')";
-			String sentencia2="delete from mercadodefichajes where idJugador = '"+mercadoId.get(list.getSelectedIndex())+"'";
-			
-			int dinero=cargarDineroUsuario((String)label.getText());
-			int dinero2=dinero-p2;
-			
-			String sentencia3="update usuarios set dinero ='"+dinero2+"' where id ='"+label.getText()+"'";
-			
+			if(valorCompra > Integer.parseInt(txtPre2.getText())){
+				//String sentencia="select * from mercadoDeFichajes";
+				try {
+					sentSQL = "insert into usuJugadores (" +a + "," +txtId_2.getText()+ ")" ;
+					
+					int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
+					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
+					if (val!=1) {  // Se tiene que añadir 1 - error si no
+						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+					}
+					
+					sentSQL = "delete from mercadoFichajes where idJugador = " +txtId_2.getText();
+					
+					int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
+					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
+					if (valDel!=1) {  // Se tiene que añadir 1 - error si no
+						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+					}
+					
+					}catch (SQLException e) {
+						log( Level.SEVERE, "Error en BD\t" + sentSQL, e );
+						e.printStackTrace();
+					}
+				
+				
+				
+				
+			}else {
+				JOptionPane.showMessageDialog(null, "Cantidad incorrecta");
+			}
+		}else {
+			JOptionPane.showMessageDialog(null, "El valor debe ser un numero");
+		}
+
+		
+			}
+	
+	
+	
+public void comprarJugadoresBoton3(String idUsuario) {
+	
+	BaseDeDatos.initBD();
+	
+	String sentSQL = "";
+	
 
 			
-				((java.sql.Statement) st).executeUpdate(sentencia);
-				((java.sql.Statement) st).executeUpdate(sentencia2);
-				((java.sql.Statement) st).executeUpdate(sentencia3);
-				dispose();
-				
-			}
-			}
-			
-			else
-			{
-				JOptionPane.showMessageDialog(null,"el usuario no tiene tanto dinero para fichar");
-				
-			}
-			}
-				
-			 catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			catch(NumberFormatException n)
-			{
-				JOptionPane.showMessageDialog(null, "inserta numeros lï¿½gicos por favor, puede que haya introducido una cantidad muy elevada, o puede que haya introducido texto,en vez de cifras");
-			}
-			
-			}
-			
-			
+	if(esNumerico(txtIntroducirCantidad3.toString())) {
+		int valorCompra= Integer.valueOf(txtIntroducirCantidad3.toString());
 		
+		if(valorCompra > Integer.parseInt(txtPre3.getText())){
+			//String sentencia="select * from mercadoDeFichajes";
+			try {
+				sentSQL = "insert into usuJugadores (" + idUsuario + "," +txtId_3.getText()+ ")" ;
+				
+				int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
+				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
+				if (val!=1) {  // Se tiene que añadir 1 - error si no
+					log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+				}
+				
+				sentSQL = "delete from mercadoFichajes where idJugador = " +txtId_3.getText();
+				
+				int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
+				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
+				if (valDel!=1) {  // Se tiene que añadir 1 - error si no
+					log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+				}
+				
+				}catch (SQLException e) {
+					log( Level.SEVERE, "Error en BD\t" + sentSQL, e );
+					e.printStackTrace();
+				}
+			
+			
+			
+			
+		}else {
+			JOptionPane.showMessageDialog(null, "Cantidad incorrecta");
+		}
+	}else {
+		JOptionPane.showMessageDialog(null, "El valor debe ser un numero");
+	}
+
+	
+		}
+
+
+public void comprarJugadoresBoton4(String idUsuario) {
+	
+	BaseDeDatos.initBD();
+	
+	String sentSQL = "";
+	
+	int idJug=0;
+			
+	if(esNumerico(txtIntroducirCantidad4.toString())) {
+		int valorCompra= Integer.valueOf(txtIntroducirCantidad4.toString());
+		
+		if(valorCompra > Integer.parseInt(txtPre4.getText())){
+			//String sentencia="select * from mercadoDeFichajes";
+			try {
+				sentSQL = "insert into usuJugadores (" + idUsuario + "," +txtId_4.getText()+ ")" ;
+				
+				int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
+				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
+				if (val!=1) {  // Se tiene que añadir 1 - error si no
+					log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+				}
+				
+				sentSQL = "delete from mercadoFichajes where idJugador = " +txtId_4.getText();
+				
+				int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
+				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
+				if (valDel!=1) {  // Se tiene que añadir 1 - error si no
+					log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+				}
+				
+				}catch (SQLException e) {
+					log( Level.SEVERE, "Error en BD\t" + sentSQL, e );
+					e.printStackTrace();
+				}
+			
+			
+			
+			
+		}else {
+			JOptionPane.showMessageDialog(null, "Cantidad incorrecta");
+		}
+	}else {
+		JOptionPane.showMessageDialog(null, "El valor debe ser un numero");
+	}
+
+	
 		}
 
 
 		
 		
+
+
+	private void log(Level info, String string, Object object) {
+		// TODO Auto-generated method stub
+		
 	}
 
+	public static boolean esNumerico(String valor){     
+	    try{
+	        if(valor!= null){
+	            Integer.parseInt(valor);
+	        }
+	    }catch(NumberFormatException nfe){
+			LogController.log ( Level.WARNING, "El valor introducido no es un numero" + (new Date()),nfe);
+	         return false; 
+	    }
+	    return false;
+	}
+	}
 
+	
  
