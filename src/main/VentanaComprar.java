@@ -508,7 +508,7 @@ public class VentanaComprar extends JFrame  {
 		
 	 variablesGlobales idVg;
 		
-		int a = idVg.getIdUsu();
+	 int a = VentanaLogin.getUsuarioId();
 		
 				
 		if(esNumerico(txtIntroducirCantidad.toString())) {
@@ -609,6 +609,7 @@ public void comprarJugadoresBoton3(String idUsuario) {
 	
 	String sentSQL = "";
 	
+	int a = VentanaLogin.getUsuarioId();
 
 			
 	if(esNumerico(txtIntroducirCantidad3.toString())) {
@@ -617,7 +618,7 @@ public void comprarJugadoresBoton3(String idUsuario) {
 		if(valorCompra > Integer.parseInt(txtPre3.getText())){
 			//String sentencia="select * from mercadoDeFichajes";
 			try {
-				sentSQL = "insert into usuJugadores (" + idUsuario + "," +txtId_3.getText()+ ")" ;
+				sentSQL = "insert into usuJugadores (" + a + "," +txtId_3.getText()+ ")" ;
 				
 				int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
 				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
@@ -659,6 +660,8 @@ public void comprarJugadoresBoton4(String idUsuario) {
 	String sentSQL = "";
 	
 	int idJug=0;
+	
+	int a = VentanaLogin.getUsuarioId();
 			
 	if(esNumerico(txtIntroducirCantidad4.toString())) {
 		int valorCompra= Integer.valueOf(txtIntroducirCantidad4.toString());
@@ -666,7 +669,7 @@ public void comprarJugadoresBoton4(String idUsuario) {
 		if(valorCompra > Integer.parseInt(txtPre4.getText())){
 			//String sentencia="select * from mercadoDeFichajes";
 			try {
-				sentSQL = "insert into usuJugadores (" + idUsuario + "," +txtId_4.getText()+ ")" ;
+				sentSQL = "insert into usuJugadores (" + a + "," +txtId_4.getText()+ ")" ;
 				
 				int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
 				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
