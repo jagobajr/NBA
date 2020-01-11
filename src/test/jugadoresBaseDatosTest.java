@@ -25,7 +25,6 @@ public class jugadoresBaseDatosTest {
 		j=new Jugador();
 		
 		num=j.testJugadoresEnBaseDatos(listaJugadores, st);
-	
 	}
 	
 	@After
@@ -33,15 +32,11 @@ public class jugadoresBaseDatosTest {
 		listaJugadores.clear();
 	}
 
-	
 	 // En este test, se comprueba que realmente estan todos los jugadores bien metidos en la base de datos
 	 
 	@Test
 	public void test() 
 	{
-		
 		assertEquals(num, 97);
-		
 	}
-
 }

@@ -135,7 +135,7 @@ public class JInternalNoticias extends JFrame implements ActionListener
 			
 			
 		} 
-		catch(IOException e)
+		catch(IOException e)  
 		{
 			e.printStackTrace();
 		}

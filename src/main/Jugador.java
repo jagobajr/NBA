@@ -73,15 +73,14 @@ public class Jugador
 	
 	
 	
-	public int testJugadoresEnBaseDatos(ArrayList <Jugador>lista,Statement st)
-	{
+	public int testJugadoresEnBaseDatos(ArrayList <Jugador>lista,Statement st){
 		
 		BaseDeDatos.initBD();
 		st=BaseDeDatos.getStatement();
 		lista.clear();
 		
 		try {
-			ResultSet rs=st.executeQuery("select * from jugadores");
+			ResultSet rs=st.executeQuery("select * from Jugadores");
 			
 			Jugador jugador=new Jugador();
 			while(rs.next())
@@ -89,18 +88,16 @@ public class Jugador
 				
 				jugador=new Jugador();
 				
-
-				jugador.setNombre(rs.getString(2));
-				jugador.setPrecio(rs.getInt(7));
-				jugador.setEquipo(rs.getString(3));
 				jugador.setId(rs.getString(1));
+				jugador.setNombre(rs.getString(2));
+				jugador.setPosicion(rs.getString(3));
+				jugador.setEquipo(rs.getString(4));
 				jugador.setPuntosJornada(rs.getInt(5));
 				jugador.setPuntosTotales(rs.getInt(6));
-				jugador.setPosicion(rs.getString(4));
+				jugador.setPrecio(rs.getInt(7));
 				
 				lista.add(jugador);
 				
-				BaseDeDatos.close();
 
 			}
 		} catch (SQLException e) {
