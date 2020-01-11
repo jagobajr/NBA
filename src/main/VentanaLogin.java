@@ -205,9 +205,9 @@ public static int idUsuario;
 		contentPane.add(label);
 		
 		
-		JButton btnCambioDeIdioma = new JButton("Cambio de Idioma");
-		btnCambioDeIdioma.setBounds(202, 16, 141, 29);
-		contentPane.add(btnCambioDeIdioma);
+		JButton btnCambio = new JButton("Cambio de Idioma");
+		btnCambio.setBounds(202, 16, 141, 29);
+		contentPane.add(btnCambio);
 		
 
 
