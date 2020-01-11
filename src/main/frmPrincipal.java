@@ -18,7 +18,7 @@ public class frmPrincipal extends javax.swing.JFrame {
     
     public void cambiarIdioma(String nombreIdioma){
         
-        Idioma idioma=new Idioma(nombreIdioma);
+        idioma=new Idioma(nombreIdioma);
         
         btnCambio.setText(idioma.getProperty("cambio"));
         this.setTitle(idioma.getProperty("titulo"));
@@ -27,9 +27,9 @@ public class frmPrincipal extends javax.swing.JFrame {
         cmbIdiomas.removeAllItems();
         
         String idiomas[]={
-                          idioma.getProperty("espanol.properties"),
-                          idioma.getProperty("ingles.properties"),
-                          idioma.getProperty("frances.properties")
+                          idioma.getProperty("espanol"),
+                          idioma.getProperty("ingles"),
+                          idioma.getProperty("frances")
                           };
         
         for(int i=0;i<idiomas.length;i++){
