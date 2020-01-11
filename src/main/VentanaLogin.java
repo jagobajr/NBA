@@ -196,13 +196,14 @@ public static int idUsuario;
 		btnAdmin.setBounds(6, 331, 83, 29);
 		contentPane.add(btnAdmin);
 		
+		btnConsulta.setBounds(6, 244, 271, 29);
+		contentPane.add(btnConsulta);
+		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("Imagenes/thumb-1920-467394.jpg"));
 		label.setBounds(0, 0, 380, 406);
 		contentPane.add(label);
 		
-		btnConsulta.setBounds(6, 244, 271, 29);
-		contentPane.add(btnConsulta);
 		
 		JButton btnCambioDeIdioma = new JButton("Cambio de Idioma");
 		btnCambioDeIdioma.setBounds(202, 16, 141, 29);
@@ -316,7 +317,8 @@ public static int idUsuario;
 	 
 	        }
 	 
-	    }                                         
+	    }         
+	    
 	 
 	    /**
 	     * @param args the command line arguments
@@ -362,6 +364,7 @@ public static int idUsuario;
 	
 
 }
+	    
 }
 
 
