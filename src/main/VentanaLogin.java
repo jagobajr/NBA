@@ -189,11 +189,7 @@ public static int idUsuario;
 				AbrirFicheroTexto nuevaVentana = new AbrirFicheroTexto();
 				nuevaVentana.setVisible(true);
 
-			}
-
-		
-		
-		});
+			}});
 		
 		btnAdmin.setBounds(6, 331, 83, 29);
 		contentPane.add(btnAdmin);
@@ -205,6 +201,8 @@ public static int idUsuario;
 		
 		btnConsulta.setBounds(6, 252, 227, 29);
 		contentPane.add(btnConsulta);
+		
+
 
 	}
 
