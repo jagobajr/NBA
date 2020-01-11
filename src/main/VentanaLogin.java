@@ -43,6 +43,8 @@ public class VentanaLogin extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtusuario;
 	private JPasswordField txtcontra;
+	JButton btnCambio;
+
 
 	//public variablesGlobales varId;
 public static int idUsuario;
@@ -133,7 +135,7 @@ public static int idUsuario;
 			}
 		});
 		btnLogIn.setBackground(UIManager.getColor("PopupMenu.selectionBackground"));
-		btnLogIn.setBounds(6, 207, 83, 29);
+		btnLogIn.setBounds(6, 199, 83, 29);
 		contentPane.add(btnLogIn);
 		
 		JLabel lblUsuario = new JLabel("Usuario:");
@@ -143,12 +145,12 @@ public static int idUsuario;
 		txtusuario = new JTextField();
 		txtusuario.setForeground(Color.GREEN);
 		txtusuario.setBackground(Color.WHITE);
-		txtusuario.setBounds(6, 82, 300, 36);
+		txtusuario.setBounds(6, 70, 300, 36);
 		contentPane.add(txtusuario);
 		txtusuario.setColumns(10);
 		
 		JLabel lblContrasea = new JLabel("Contrase\u00F1a:");
-		lblContrasea.setBounds(6, 119, 105, 16);
+		lblContrasea.setBounds(6, 122, 105, 16);
 		contentPane.add(lblContrasea);
 		
 		JButton btnAqui = new JButton("Aqui");
@@ -172,7 +174,7 @@ public static int idUsuario;
 		
 		txtcontra= new JPasswordField();
 		txtcontra.setBackground(new Color(255, 255, 255));
-		txtcontra.setBounds(6, 151, 300, 40);
+		txtcontra.setBounds(6, 143, 300, 40);
 		contentPane.add(txtcontra);
 		
 		JButton btnAdmin = new JButton("ADMIN");
@@ -199,8 +201,12 @@ public static int idUsuario;
 		label.setBounds(0, 0, 380, 406);
 		contentPane.add(label);
 		
-		btnConsulta.setBounds(6, 252, 227, 29);
+		btnConsulta.setBounds(6, 244, 271, 29);
 		contentPane.add(btnConsulta);
+		
+		JButton btnCambioDeIdioma = new JButton("Cambio de Idioma");
+		btnCambioDeIdioma.setBounds(202, 16, 141, 29);
+		contentPane.add(btnCambioDeIdioma);
 		
 
 
@@ -214,15 +220,15 @@ public static int idUsuario;
 		this.idUsuario = idUsuario;
 	}
 	
-	/* public void VentanaLogin1() {
+	 public void VentanaLogin1() {
 	        initComponents();
 	 
 	        cambiarIdioma("Espanol");
 	    }
 	 
-	 /*   public void cambiarIdioma(String nombreIdioma){
+	   public void cambiarIdioma(String nombreIdioma){
 	 
-	        idioma=new Idioma(nombreIdioma);
+	        Idioma idioma=new Idioma(nombreIdioma);
 	 
 	        btnCambio.setText(idioma.getProperty("cambio"));
 	        this.setTitle(idioma.getProperty("titulo"));
@@ -356,7 +362,6 @@ public static int idUsuario;
 	
 
 }
-
 }
 
 
