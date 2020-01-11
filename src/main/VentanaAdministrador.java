@@ -39,6 +39,7 @@ import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import ventanas.VentanaMercado;
 
 import javax.swing.JSpinner;
 
@@ -90,6 +91,7 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
     private JButton btnAadir;
     private JButton btnEliminarMercado;
     private  JButton btnEliminarUsuarios;
+    private JButton btnAtras;
 
    
     public static void main(String[] args) {
@@ -565,6 +567,18 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		});
 		btnAadirUnaNueva.setBounds(364, 613, 217, 29);
 		contentPane.add(btnAadirUnaNueva);
+		
+		btnAtras = new JButton("ATRAS");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaLogin nuevaVentana = new VentanaLogin();
+				nuevaVentana.setVisible(true);
+				VentanaAdministrador.this.dispose();
+			}
+				
+		});
+		btnAtras.setBounds(44, 713, 117, 29);
+		contentPane.add(btnAtras);
 		
 		lblPrecio.setVisible(true);
 		

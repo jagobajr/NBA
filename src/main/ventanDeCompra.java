@@ -35,6 +35,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import main.Usuarios;
+import ventanas.VentanaMercado;
 
 public class ventanDeCompra extends JFrame implements ActionListener {
 	
@@ -265,6 +266,18 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		lblNewLabel = new JLabel("Tu dinero:");
 		lblNewLabel.setBounds(701, 642, 80, 16);
 		contentPane.add(lblNewLabel);
+		
+		JButton btnAtras = new JButton("ATRAS");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaMercado nuevaVentana = new VentanaMercado();
+				nuevaVentana.setVisible(true);
+				ventanDeCompra.this.dispose();
+			}
+				
+		});
+		btnAtras.setBounds(49, 676, 117, 29);
+		contentPane.add(btnAtras);
 		
 		
 		
