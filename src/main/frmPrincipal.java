@@ -27,9 +27,9 @@ public class frmPrincipal extends javax.swing.JFrame {
         cmbIdiomas.removeAllItems();
         
         String idiomas[]={
-                          idioma.getProperty("espanol"),
-                          idioma.getProperty("ingles"),
-                          idioma.getProperty("frances")
+                          idioma.getProperty("espanol.properties"),
+                          idioma.getProperty("ingles.properties"),
+                          idioma.getProperty("frances.properties")
                           };
         
         for(int i=0;i<idiomas.length;i++){
