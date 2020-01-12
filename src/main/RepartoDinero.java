@@ -18,6 +18,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.logging.Level;
 
 import main.BaseDeDatos;
@@ -68,6 +69,7 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 	Statement st=null;
 	JTextField textField;
 	JTextField textField_1;
+	HashMap<Integer,String> map;
 	ArrayList usuarios;
 	
 	public RepartoDinero() {
@@ -132,6 +134,7 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 		getContentPane().add(btnAtras);
 		
 		usuarios=new ArrayList();
+		map= new HashMap<Integer,String>();
 		anyadirUsuariosALista();
 		
 	}
@@ -141,7 +144,9 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 		BaseDeDatos.initBD();
 		st=BaseDeDatos.getStatement();
 		modelo.clear();
+		map.clear();
 		usuarios.clear();
+		
 		
 		String sentencia="select * from usuarios";
 		
@@ -152,6 +157,7 @@ public class RepartoDinero extends JFrame implements ActionListener, ListSelecti
 			{
 				modelo.addElement(rs.getString("Usuario"));
 				usuarios.add(rs.getInt("Dinero"));
+				map.put(rs.getInt("Dinero"), rs.getString("Usuario"));
 				
 			}
 		} catch (SQLException e) {
