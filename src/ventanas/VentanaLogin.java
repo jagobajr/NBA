@@ -217,7 +217,6 @@ public static int idUsuario;
 			public void actionPerformed(ActionEvent arg0) {
 				SeleccionIdioma nuevaVentana = new SeleccionIdioma();
 				nuevaVentana.setVisible(true);
-				VentanaLogin.this.dispose();
 		
 			}}); 
 		

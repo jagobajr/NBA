@@ -31,6 +31,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import main.Usuarios;
+import main.AbrirFicheroTexto;
 import main.LogController;
 
 import java.awt.Color;
@@ -51,7 +52,7 @@ public class SeleccionIdioma extends JFrame  {
 	
 	public static void main(String[] args) {
 		
-		LogController.log ( Level.INFO, "Inicio Registro " + (new Date()),null);
+		LogController.log ( Level.INFO, "Seleccion de idioma " + (new Date()),null);
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -71,13 +72,14 @@ public class SeleccionIdioma extends JFrame  {
 
 	        @Override
 	        public void windowClosing(WindowEvent e) {
-				LogController.log ( Level.INFO, "Fin de programa " + (new Date()),null);
+				LogController.log ( Level.INFO, "Fin de ventana de idioma " + (new Date()),null);
 
 	        }
 	    });
 		}
 	
 	public SeleccionIdioma() {
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(new Rectangle(50, 55, 555, 355));
 		setResizable(false);
 		getContentPane().setName("contentPanel");
@@ -87,9 +89,10 @@ public class SeleccionIdioma extends JFrame  {
 		
 		JRadioButton rdbtnCastellano = new JRadioButton("Castellano");
 		JRadioButton rdbtnIngles = new JRadioButton("Ingles");
-		JRadioButton rdbtnFrances = new JRadioButton("Frances");
+		JRadioButton rdbtnFrances = new JRadioButton("Franc\u00E9s");
+
 		
-		rdbtnCastellano.setBounds(58, 92, 109, 23);
+		rdbtnCastellano.setBounds(172, 143, 109, 23);
 		getContentPane().add(rdbtnCastellano);
 		rdbtnCastellano.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent arg0) {
@@ -103,12 +106,7 @@ public class SeleccionIdioma extends JFrame  {
 
 			}});
 		
-		
-	//	JOptionPane.showMessageDialog(null, "No se ha podido iniciar sesion", "Error", 0);
-   
-		
-		//JRadioButton rdbtnIngles = new JRadioButton("Ingles");
-		rdbtnIngles.setBounds(169, 92, 95, 23);
+		rdbtnIngles.setBounds(302, 143, 89, 23);
 		getContentPane().add(rdbtnIngles);
 		rdbtnIngles.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent arg0) {
@@ -118,46 +116,37 @@ public class SeleccionIdioma extends JFrame  {
 				rdbtnFrances.setSelected(false);
 				
 				
-				JOptionPane.showMessageDialog(null, "Ha cambiado el idioma correctamente", "Aviso", 1);
+				JOptionPane.showMessageDialog(null, "You have changed the language correctly", "Warning", 1);
 
 			}});
 		
-		//JRadioButton rdbtnFrances = new JRadioButton("Frances");
-		rdbtnFrances.setBounds(266, 92, 124, 23);
+		rdbtnFrances.setBounds(409, 140, 89, 29);
 		getContentPane().add(rdbtnFrances);
 		rdbtnFrances.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent arg0) {
 				//AbrirFicheroTexto nuevaVentana = new AbrirFicheroTexto();
 				//nuevaVentana.setVisible(true);
 				rdbtnCastellano.setSelected(false);
-				rdbtnFrances.setSelected(false);
+				rdbtnIngles.setSelected(false);
 				
 				
-				JOptionPane.showMessageDialog(null, "Ha cambiado el idioma correctamente", "Aviso", 1);
+				JOptionPane.showMessageDialog(null, "Vous avez correctement changé la langue", "Parqueser", 1);
 
 			}});
 		
-		JButton btnVolver = new JButton("Volver");
-		btnVolver.setBounds(new Rectangle(24, 22, 27, 22));
-		btnVolver.setBounds(152, 185, 89, 23);
-		getContentPane().add(btnVolver);
+		
+		
 		
 		JLabel lblSeleccioneUnIdoma = new JLabel("Seleccione un idoma");
-		lblSeleccioneUnIdoma.setBounds(152, 11, 151, 23);
+		lblSeleccioneUnIdoma.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lblSeleccioneUnIdoma.setBounds(170, 92, 250, 50);
 		getContentPane().add(lblSeleccioneUnIdoma);
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("Imagenes/logotipos-de-los-equipos-de-nba-78105095.jpg"));
 		label.setBounds(-54, -142, 609, 527);
 		getContentPane().add(label);
-		btnVolver.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				VentanaLogin nuevaVentana = new VentanaLogin();
-				nuevaVentana.setVisible(true);
-				SeleccionIdioma.this.dispose();
-			}
-				
-		});
+		
 		
 	}
 }

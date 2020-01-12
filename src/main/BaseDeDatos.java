@@ -54,7 +54,7 @@ public class BaseDeDatos
 	public static Statement getStatement() {
 		return statement;
 	}
-	public static Connection initUsuario() {
+    public static Connection initUsuario() {
 		try {
 		    Class.forName("org.sqlite.JDBC");
 

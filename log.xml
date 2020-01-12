@@ -19230,3 +19230,2186 @@
   <message>El usuario ya existeSun Jan 12 19:07:57 CET 2020</message>
 </record>
 </log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:10:55</date>
+  <millis>1578852655978</millis>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:10:55 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:11:54</date>
+  <millis>1578852714477</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio Registro Sun Jan 12 19:11:54 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:12:07</date>
+  <millis>1578852727677</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:12:07</date>
+  <millis>1578852727726</millis>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:12:07</date>
+  <millis>1578852727753</millis>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Inicio de acceso de Admin Sun Jan 12 19:12:07 CET 2020</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (NOT NULL constraint failed: usuarios.IdUsuario)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>execute</method>
+      <line>854</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3PreparedStatement</class>
+      <method>execute</method>
+      <line>56</line>
+    </frame>
+    <frame>
+      <class>main.SqlUsuarios</class>
+      <method>registrar</method>
+      <line>32</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$3</class>
+      <method>actionPerformed</method>
+      <line>199</line>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton</class>
+      <method>fireActionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton$Handler</class>
+      <method>actionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>fireActionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>setPressed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.plaf.basic.BasicButtonListener</class>
+      <method>mouseReleased</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>javax.swing.JComponent</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>processEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>retargetMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Window</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:12:09</date>
+  <millis>1578852729295</millis>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>WARNING</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al guardar Sun Jan 12 19:12:09 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:12:11</date>
+  <millis>1578852731292</millis>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:12:11 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:21</date>
+  <millis>1578852801390</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio Registro Sun Jan 12 19:13:21 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:22</date>
+  <millis>1578852802121</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:22</date>
+  <millis>1578852802149</millis>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al crear tabla bases salidos </message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (table basesSalidos already exists)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>918</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec_utf8</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec</method>
+      <line>94</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeUpdate</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>main.BaseDeDatos</class>
+      <method>crearTablaBasesSalidos</method>
+      <line>130</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro</class>
+      <method>&lt;init&gt;</method>
+      <line>264</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$1</class>
+      <method>run</method>
+      <line>80</line>
+    </frame>
+    <frame>
+      <class>java.awt.event.InvocationEvent</class>
+      <method>dispatch</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:22</date>
+  <millis>1578852802179</millis>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al crear tabla escoltas salidos</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (table escoltasSalidos already exists)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>918</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec_utf8</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec</method>
+      <line>94</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeUpdate</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>main.BaseDeDatos</class>
+      <method>crearTablaEscoltasSalidos</method>
+      <line>142</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro</class>
+      <method>&lt;init&gt;</method>
+      <line>265</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$1</class>
+      <method>run</method>
+      <line>80</line>
+    </frame>
+    <frame>
+      <class>java.awt.event.InvocationEvent</class>
+      <method>dispatch</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:22</date>
+  <millis>1578852802224</millis>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al crear tabla aleros salidos</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (table alerosSalidos already exists)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>918</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec_utf8</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec</method>
+      <line>94</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeUpdate</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>main.BaseDeDatos</class>
+      <method>crearTablaAlerosSalidos</method>
+      <line>154</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro</class>
+      <method>&lt;init&gt;</method>
+      <line>266</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$1</class>
+      <method>run</method>
+      <line>80</line>
+    </frame>
+    <frame>
+      <class>java.awt.event.InvocationEvent</class>
+      <method>dispatch</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:22</date>
+  <millis>1578852802271</millis>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al crear tabla ala-pivots salidos</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (table alapivotSalidos already exists)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>918</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec_utf8</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec</method>
+      <line>94</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeUpdate</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>main.BaseDeDatos</class>
+      <method>crearTablaAlapivotSalidos</method>
+      <line>167</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro</class>
+      <method>&lt;init&gt;</method>
+      <line>267</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$1</class>
+      <method>run</method>
+      <line>80</line>
+    </frame>
+    <frame>
+      <class>java.awt.event.InvocationEvent</class>
+      <method>dispatch</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:22</date>
+  <millis>1578852802301</millis>
+  <sequence>6</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al crear tabla pivots salidos</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (table pivotSalidos already exists)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>throwex</method>
+      <line>918</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec_utf8</method>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.NativeDB</class>
+      <method>_exec</method>
+      <line>94</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3Statement</class>
+      <method>executeUpdate</method>
+      <line>109</line>
+    </frame>
+    <frame>
+      <class>main.BaseDeDatos</class>
+      <method>crearTablaPivotSalidos</method>
+      <line>181</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro</class>
+      <method>&lt;init&gt;</method>
+      <line>268</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$1</class>
+      <method>run</method>
+      <line>80</line>
+    </frame>
+    <frame>
+      <class>java.awt.event.InvocationEvent</class>
+      <method>dispatch</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:38</date>
+  <millis>1578852818389</millis>
+  <sequence>7</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:38</date>
+  <millis>1578852818431</millis>
+  <sequence>8</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:38</date>
+  <millis>1578852818455</millis>
+  <sequence>9</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Inicio de acceso de Admin Sun Jan 12 19:13:38 CET 2020</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (NOT NULL constraint failed: usuarios.IdUsuario)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>execute</method>
+      <line>854</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3PreparedStatement</class>
+      <method>execute</method>
+      <line>56</line>
+    </frame>
+    <frame>
+      <class>main.SqlUsuarios</class>
+      <method>registrar</method>
+      <line>32</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$3</class>
+      <method>actionPerformed</method>
+      <line>199</line>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton</class>
+      <method>fireActionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton$Handler</class>
+      <method>actionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>fireActionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>setPressed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.plaf.basic.BasicButtonListener</class>
+      <method>mouseReleased</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>javax.swing.JComponent</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>processEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>retargetMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Window</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:39</date>
+  <millis>1578852819828</millis>
+  <sequence>10</sequence>
+  <logger>main.LogController</logger>
+  <level>WARNING</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al guardar Sun Jan 12 19:13:39 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:13:41</date>
+  <millis>1578852821272</millis>
+  <sequence>11</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:13:41 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:14:30</date>
+  <millis>1578852870112</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio Registro Sun Jan 12 19:14:30 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:14:52</date>
+  <millis>1578852892347</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:14:52</date>
+  <millis>1578852892394</millis>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:14:52</date>
+  <millis>1578852892422</millis>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Inicio de acceso de Admin Sun Jan 12 19:14:52 CET 2020</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (NOT NULL constraint failed: usuarios.IdUsuario)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>execute</method>
+      <line>854</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3PreparedStatement</class>
+      <method>execute</method>
+      <line>56</line>
+    </frame>
+    <frame>
+      <class>main.SqlUsuarios</class>
+      <method>registrar</method>
+      <line>32</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$3</class>
+      <method>actionPerformed</method>
+      <line>199</line>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton</class>
+      <method>fireActionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton$Handler</class>
+      <method>actionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>fireActionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>setPressed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.plaf.basic.BasicButtonListener</class>
+      <method>mouseReleased</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>javax.swing.JComponent</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>processEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>retargetMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Window</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:14:53</date>
+  <millis>1578852893880</millis>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>WARNING</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al guardar Sun Jan 12 19:14:53 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:14:54</date>
+  <millis>1578852894932</millis>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:14:54 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:15:35</date>
+  <millis>1578852935356</millis>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>WARNING</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al guardar Sun Jan 12 19:15:35 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:16:04</date>
+  <millis>1578852964322</millis>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:16:04 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:18:04</date>
+  <millis>1578853084977</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio Registro Sun Jan 12 19:18:04 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:18:20</date>
+  <millis>1578853100324</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:18:20</date>
+  <millis>1578853100375</millis>
+  <sequence>2</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Conectada base de datos </message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:18:20</date>
+  <millis>1578853100397</millis>
+  <sequence>3</sequence>
+  <logger>main.LogController</logger>
+  <level>SEVERE</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Inicio de acceso de Admin Sun Jan 12 19:18:20 CET 2020</message>
+  <exception>
+    <message>org.sqlite.SQLiteException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (NOT NULL constraint failed: usuarios.IdUsuario)</message>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>941</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>newSQLException</method>
+      <line>953</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.core.DB</class>
+      <method>execute</method>
+      <line>854</line>
+    </frame>
+    <frame>
+      <class>org.sqlite.jdbc3.JDBC3PreparedStatement</class>
+      <method>execute</method>
+      <line>56</line>
+    </frame>
+    <frame>
+      <class>main.SqlUsuarios</class>
+      <method>registrar</method>
+      <line>32</line>
+    </frame>
+    <frame>
+      <class>ventanas.VentanaRegistro$3</class>
+      <method>actionPerformed</method>
+      <line>199</line>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton</class>
+      <method>fireActionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.AbstractButton$Handler</class>
+      <method>actionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>fireActionPerformed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.DefaultButtonModel</class>
+      <method>setPressed</method>
+    </frame>
+    <frame>
+      <class>javax.swing.plaf.basic.BasicButtonListener</class>
+      <method>mouseReleased</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>javax.swing.JComponent</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>processEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>processEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>retargetMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>processMouseEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.LightweightDispatcher</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.Container</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Window</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.Component</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEventImpl</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>access$500</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$3</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue$4</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>java.security.ProtectionDomain$JavaSecurityAccessImpl</class>
+      <method>doIntersectionPrivilege</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventQueue</class>
+      <method>dispatchEvent</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpOneEventForFilters</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForFilter</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEventsForHierarchy</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>pumpEvents</method>
+    </frame>
+    <frame>
+      <class>java.awt.EventDispatchThread</class>
+      <method>run</method>
+    </frame>
+  </exception>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:18:22</date>
+  <millis>1578853102394</millis>
+  <sequence>4</sequence>
+  <logger>main.LogController</logger>
+  <level>WARNING</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Error al guardar Sun Jan 12 19:18:22 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:18:24</date>
+  <millis>1578853104756</millis>
+  <sequence>5</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:18:24 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:26:50</date>
+  <millis>1578853610639</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:26:50 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:27:09</date>
+  <millis>1578853629951</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:27:09 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:27:50</date>
+  <millis>1578853670090</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:27:50 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:30:12</date>
+  <millis>1578853812910</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:30:12 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:31:13</date>
+  <millis>1578853873832</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:31:13 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:32:13</date>
+  <millis>1578853933391</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:32:13 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:32:34</date>
+  <millis>1578853954958</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:32:34 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:33:20</date>
+  <millis>1578854000392</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:33:20 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:34:36</date>
+  <millis>1578854076996</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:34:36 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:34:49</date>
+  <millis>1578854089509</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:34:49 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:35:04</date>
+  <millis>1578854104119</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:35:04 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:35:16</date>
+  <millis>1578854116050</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:35:15 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:35:43</date>
+  <millis>1578854143593</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:35:43 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:36:17</date>
+  <millis>1578854177198</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:36:17 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:37:22</date>
+  <millis>1578854242149</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:37:22 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:38:07</date>
+  <millis>1578854287114</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:38:07 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:39:51</date>
+  <millis>1578854391046</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:39:51 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:40:30</date>
+  <millis>1578854430588</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:40:30 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:41:00</date>
+  <millis>1578854460598</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:41:00 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:42:49</date>
+  <millis>1578854569893</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:42:49 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:43:03</date>
+  <millis>1578854583481</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio Registro Sun Jan 12 19:43:03 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:43:06</date>
+  <millis>1578854586425</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:43:06 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:43:09</date>
+  <millis>1578854589434</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio aplicacion Sun Jan 12 19:43:09 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:43:15</date>
+  <millis>1578854595259</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:43:15 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:43:18</date>
+  <millis>1578854598409</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Inicio aplicacion Sun Jan 12 19:43:18 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:43:25</date>
+  <millis>1578854605797</millis>
+  <sequence>1</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>16</thread>
+  <message>Fin de programa Sun Jan 12 19:43:25 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:43:43</date>
+  <millis>1578854623825</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:43:43 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:44:19</date>
+  <millis>1578854659766</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:44:19 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:44:37</date>
+  <millis>1578854677846</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:44:37 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:45:20</date>
+  <millis>1578854720908</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:45:20 CET 2020</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-01-12T19:45:59</date>
+  <millis>1578854759976</millis>
+  <sequence>0</sequence>
+  <logger>main.LogController</logger>
+  <level>INFO</level>
+  <class>main.LogController</class>
+  <method>log</method>
+  <thread>1</thread>
+  <message>Seleccion de idioma Sun Jan 12 19:45:59 CET 2020</message>
+</record>
+</log>
