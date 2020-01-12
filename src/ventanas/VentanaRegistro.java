@@ -259,23 +259,23 @@ public class VentanaRegistro extends JFrame {
 		
 		//BaseDeDatos.initBD();
 		
-		BaseDeDatos.crearTablaBasesSalidos();
+	/*	BaseDeDatos.crearTablaBasesSalidos();
 		BaseDeDatos.crearTablaEscoltasSalidos();
 		BaseDeDatos.crearTablaAlerosSalidos();
 		BaseDeDatos.crearTablaAlapivotSalidos();
 		BaseDeDatos.crearTablaPivotSalidos();
-
+*/
 	
 	}
 	
 	
 	
 	
-	
+	//No hemos conseguido asignar los jugadores mediante este metodó
 	
 
-
-	public void asignarjugadores(int IdUsuario)  {
+/*
+	 public void asignarjugadores(int IdUsuario)  {
 		Statement st=null;
 		BaseDeDatos.crearTablaUsuarioJugadores();
 		st=BaseDeDatos.getStatement();
@@ -816,7 +816,7 @@ public class VentanaRegistro extends JFrame {
 		}
 		
 		
-	}
+	}*/
 
 
 

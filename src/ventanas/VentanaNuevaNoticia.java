@@ -40,19 +40,6 @@ public class VentanaNuevaNoticia extends JFrame implements ActionListener
 	ObjectOutputStream oos;
 	Noticia noticia;
 	
-	public static void main(String[] args) {
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaNuevaNoticia frame = new VentanaNuevaNoticia();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	
 	private  void ConfigureCloseWindow(){
 	    this.addWindowListener( new WindowAdapter() {

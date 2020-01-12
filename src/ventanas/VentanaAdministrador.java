@@ -96,18 +96,6 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
     private JButton btnAtras;
 
    
-    public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					 VentanaAdministrador frame = new VentanaAdministrador();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
     
     private  void ConfigureCloseWindow(){
 	    this.addWindowListener( new WindowAdapter() {

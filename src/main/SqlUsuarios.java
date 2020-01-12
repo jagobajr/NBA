@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
 
-
+//Conexión con la base de datos para los metodos relacionados con el registro/inicio de sesion
 
 public class SqlUsuarios extends BaseDeDatos{
 	

@@ -65,18 +65,7 @@ public class VentanaEquipo extends JFrame implements ActionListener {
 	/**
 	 * Launch the application..
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					 VentanaEquipo frame = new VentanaEquipo();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 	
 	
 	private  void ConfigureCloseWindow(){

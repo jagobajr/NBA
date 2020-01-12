@@ -87,7 +87,18 @@ public class BaseDeDatos
 	}
 	
 	
-
+    public static void crearTablaMercadoDeFichajes(){
+		
+		if(statement==null) return;
+		try{
+			
+			statement.executeUpdate("create table mercadoDeFichajes " + "(idJugador string, nombre string, precio int, puntosTotales int" +")");
+		}catch(SQLException e){
+			
+		}
+		
+		
+	}
 
 	public static void tablaClasificacion(Usuarios usr) {
 		PreparedStatement ps = null;
@@ -122,7 +133,7 @@ public class BaseDeDatos
 	}
 	
 	
-    public static void crearTablaBasesSalidos(){
+    /*public static void crearTablaBasesSalidos(){
 		
 		if(statement==null) return;
 		try{
@@ -202,29 +213,10 @@ public class BaseDeDatos
 //		
 //		
 //	}
-    public static void crearTablaMercadoDeFichajes(){
-		
-		if(statement==null) return;
-		try{
-			
-			statement.executeUpdate("create table mercadoDeFichajes " + "(idJugador string, nombre string, precio int, puntosTotales int" +")");
-		}catch(SQLException e){
-			
-		}
-		
-		
-	}
-    public static void crearTablaClasificacion(){
-	if(statement==null) return;
+    
+   
 	
-	try{
-		statement.executeUpdate("create table clasificacion"+ "(Posicion string,idJugador string, PuntosJornada string,  PuntosTotales string"+")");
-	}catch(SQLException e){
-		
-	}
-	
-	
-}
+    }*/
    
 			
 			

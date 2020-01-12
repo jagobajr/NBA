@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 public class LogController {
 	
 	private static Logger log=Logger.getLogger("LOG");
-	
+	//Creacion de logger
 	
 	public static void log( Level level, String msg, Throwable ex ) throws SecurityException { 
        FileHandler  loghandler = null;
