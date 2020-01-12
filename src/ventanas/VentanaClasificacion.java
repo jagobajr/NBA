@@ -11,6 +11,9 @@ import javax.swing.table.DefaultTableModel;
 
 import main.BaseDeDatos;
 import main.LogController;
+import main.BaseDeDatos;
+import main.Jugador;
+import main.UsuarioJugadores;
 
 import java.awt.Color;
 import javax.swing.JLabel;
@@ -24,6 +27,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -36,6 +41,19 @@ public class VentanaClasificacion extends JFrame {
 	private JPanel contentPane;
 	private JLabel label_10;
     private JTable table;
+    private Statement st=null;
+    ArrayList usuarios;
+    UsuarioJugadores usu;
+    ArrayList<Jugador> jugadores;
+    ArrayList <Jugador>puntosJugadores;
+    ArrayList  <Jugador>puntosCadaUsuario;
+    ArrayList <UsuarioJugadores> definitivo;
+    ArrayList <UsuarioJugadores> usuj;
+    ArrayList<UsuarioJugadores> ordenados;
+    Jugador jugador;
+    int suma=0;
+    int cantidad=0;
+    	int puntosTotalUsuario=0;
  
 	
 	
@@ -252,4 +270,134 @@ public class VentanaClasificacion extends JFrame {
 		
 		
 	}
+	
+	private void calcularPuntosTotalesCadaUsuario() 
+    {
+		
+
+		for(int i=0;i<usuarios.size();i++)
+		{
+			usu=new UsuarioJugadores();
+			
+			
+			
+				usu.setId_usuarios((int) usuarios.get(i));
+				usu.setPuntosTotales(damePuntosUsuario((String)usuarios.get(i)));
+				definitivo.add(usu);
+			
+		}
+		
+		for(int i=0;i<definitivo.size();i++)
+		{
+			System.out.println(definitivo.get(i).getId_usuarios()+": "+definitivo.get(i).getPuntosTotales());
+		}
+		
+		
+		} 
+		
+				
+			
+
+	private int damePuntosUsuario(String idUsuario)
+	{
+		int contadorPuntos=0;
+		for(int i=0;i<usuj.size();i++)
+		{
+			if(idUsuario.equals(usuj.get(i).getId_usuarios()))
+					{
+					contadorPuntos=contadorPuntos+jugadores.get(i).getPuntosTotales();
+					}
+		}
+		
+		return contadorPuntos;
+		
+		
+	}
+
+
+
+	private void puntosCadaJugador() 
+    {
+    	st=BaseDeDatos.getStatement();
+    	
+    	String sentencia="select * from jugadores";
+    	
+    	try {
+			ResultSet rs=st.executeQuery(sentencia);
+			while(rs.next())
+			{
+			jugador=new Jugador();
+			jugador.setId(rs.getString("jugador_id"));
+			jugador.setPuntosTotales(rs.getInt("puntosTotales"));
+			
+			puntosJugadores.add(jugador);
+			}
+			
+			
+			for(int i=0;i<jugadores.size();i++)
+			{
+					for(int e=0;e<puntosJugadores.size();e++)
+					{
+						
+						if((jugadores.get(i).getId()).compareTo(puntosJugadores.get(e).getId())==0)
+						{
+							
+							jugadores.get(i).setPuntosTotales(puntosJugadores.get(e).getPuntosTotales());
+							
+						}
+						
+					}
+			}
+			
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	
+	
+	
 }
+
+
+
+
+
+	private void cargarUsuariosJugadores()
+    {
+	st=BaseDeDatos.getStatement();
+	String sentencia="select * from usuariojugadores";
+	
+	
+	
+	try {
+		ResultSet rs=st.executeQuery(sentencia);
+		
+		
+		while(rs.next())
+		{
+			usu=new UsuarioJugadores();
+			
+			usu.setId_usuarios(rs.getInt("Id_usuario"));
+			usu.setId_jugador(rs.getInt("id_jugagor"));
+			usuj.add(usu);
+			
+			jugador=new Jugador();
+//		usuarios.add(rs.getString("idUsuario"));
+		jugador.setId(rs.getString("idJugador"));
+		jugadores.add(jugador);
+		
+		
+		}
+		
+		
+		
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}}
