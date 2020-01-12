@@ -203,18 +203,20 @@ public static int idUsuario;
 		JButton btnCambio_1 = new JButton("Cambio de Idioma");
 		btnCambio_1.setBounds(165, 331, 141, 29);
 		contentPane.add(btnCambio_1);
+		btnCambio_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				SeleccionIdioma nuevaVentana = new SeleccionIdioma();
+				nuevaVentana.setVisible(true);
+				VentanaLogin.this.dispose();
+		
+			}}); 
+		
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("Imagenes/thumb-1920-467394.jpg"));
 		label.setBounds(0, 0, 380, 406);
 		contentPane.add(label);
-		btnCambio_1.addActionListener(new ActionListener() { 
-			public void actionPerformed(ActionEvent arg0) {
-				frmPrincipal nuevaVentana = new frmPrincipal ();
-				nuevaVentana.setVisible(true);
-				VentanaLogin.this.dispose();
-			}}); 
-	
+		
 		
 
 

@@ -9,6 +9,8 @@ import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class frmPrincipal extends javax.swing.JFrame {
+	
+	
 
     public frmPrincipal() {
         initComponents();
