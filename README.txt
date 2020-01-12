@@ -6,3 +6,5 @@ la que podra hacer fichajes en la ventana de mercado-comprar para poder tener su
 la ventana de equipo. Esos jugadores cada jornada(fin de semana normalmente) puntuaran una cierta cantidad de puntos y esos puntos
 se le iran sumando al jugador donde los podra ver en la ventana clasificacion y tambien podra ver la clasificacion global de todos
 los usuarios registrados.
+
+pd: el boton comprar esta totalmente programado pero a la hora de ejecutar el programa no sabemos porque no funciona y no encoontrasmo como solucionarlo.
