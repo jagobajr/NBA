@@ -1,12 +1,11 @@
-La aplicacion se inicia en la ventanaLogin, en la ventana de login podemos elegir el idioma en caso de ser extranjeros(properties) 
-y si no tenemos un usuario tendremos que registrarnos, la ventana de admin es exclusiva para los administradores
+La aplicación se inicia en la ventanaLogin, mediante esta podemos elegir el idioma en caso de ser extranjeros(properties), 
+registrarnos si no tenemos un usuario creado, revisar la politíca de privacidad y en caso de ser administrador acceder a la ventanaAdministrador
 (usuario:admin contraseÃ±a:admin)
-Despues de registrarnos o si ya tenemos una cuenta despues de hacer login se le asignara al usuario una cierta cantidad de dinero con
+Tras de registrarnos o si ya tenemos una cuenta después de hacer login se le asignará al usuario una cierta cantidad de dinero con
 la que podra hacer fichajes en la ventana de mercado-comprar para poder tener su equipo comprando 5 jugadores que se le asignaran en
-la ventana de equipo. Esos jugadores cada jornada(fin de semana normalmente) puntuaran una cierta cantidad de puntos y esos puntos
-se le iran sumando al jugador donde los podra ver en la ventana clasificacion y tambien podra ver la clasificacion global de todos
-los usuarios registrados.
+la ventana de equipo. Cada jornada los puntos de los jugadores serán actualizados(fin de semana normalmente)  y la suma de los puntos de los jugadores 
+de cada usuario, que se podrán visualizar en la ventanaClasificación ádemas de ver la clasifición globar de todos los usuarios que haya registrados.
 
-pd: el boton comprar esta totalmente programado pero a la hora de ejecutar el programa no sabemos porque no funciona y no encoontrasmo como solucionarlo. 
-    Tambien a la hora de asignar los jugadores nos han surgido multiples problemas, lo hemos intentando de dos maneras. Una con el codigo que se encuntra en
-    la clase jugadoresAzar y otra que se encuntra en la VentanaRegistro ambas han dado multiples problemas.
+pd: el boton comprar esta totalmente programado pero a la hora de ejecutar el programa no sabemos porque no funciona y no encoontramos como solucionarlo. 
+    También a la hora de asignar los jugadores nos han surgido múltiples problemas, lo hemos intentando de dos maneras. Una con el codigo que se encuntra en
+    la clase jugadoresAzar y otra que se encuntra en la VentanaRegistro ambas nos han provocado muchos problemas.
