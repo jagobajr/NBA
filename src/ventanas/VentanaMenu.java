@@ -81,7 +81,7 @@ public class VentanaMenu extends JFrame {
 			}
 		});
 		btnClasificacion.setForeground(Color.BLACK);
-		btnClasificacion.setBounds(41, 190, 218, 57);
+		btnClasificacion.setBounds(54, 142, 218, 57);
 		contentPane.add(btnClasificacion);
 		
 		JButton btnEquipo = new JButton("PLANTILLA");
@@ -94,7 +94,7 @@ public class VentanaMenu extends JFrame {
 			}
 		});
 		
-		btnEquipo.setBounds(41, 259, 218, 47);
+		btnEquipo.setBounds(54, 215, 218, 47);
 		contentPane.add(btnEquipo);
 		
 		
@@ -109,7 +109,7 @@ public class VentanaMenu extends JFrame {
 			}
 				
 		});
-		btnMercado.setBounds(41, 318, 218, 57);
+		btnMercado.setBounds(54, 278, 218, 57);
 		contentPane.add(btnMercado);
 		
 		JButton btnCerrarSesion = new JButton("CERRAR SESION");
@@ -121,7 +121,7 @@ public class VentanaMenu extends JFrame {
 			}
 		});
 		
-		btnCerrarSesion.setBounds(6, 415, 142, 42);
+		btnCerrarSesion.setBounds(15, 371, 142, 42);
 		contentPane.add(btnCerrarSesion);
 		
 		JLabel label = new JLabel("");

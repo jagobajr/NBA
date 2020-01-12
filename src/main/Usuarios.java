@@ -6,19 +6,17 @@ public class Usuarios {
 	private String contra;
 	private String correo;
 	private int dinero;
-	private String idTipo;
 	private int puntos;
 	
 	
 	
-	public Usuarios(String idUsuario, String usuario, String contra, String correo, int dinero, String idTipo, int puntos) {
+	public Usuarios(String idUsuario, String usuario, String contra, String correo, int dinero, int puntos) {
 		super();
 		this.idUsuario = idUsuario;
 		this.usuario = usuario;
 		this.contra = contra;
 		this.correo = correo;
 		this.dinero = dinero;
-		this.idTipo = idTipo;
 		this.puntos = puntos;
 	}
 	
@@ -29,7 +27,6 @@ public class Usuarios {
 		this.contra = contra;
 		this.correo = correo;
 		this.dinero = dinero;
-		this.idTipo = idTipo;
 		this.puntos = puntos;
 	}
 	public String getIdUsuario() {
@@ -63,12 +60,7 @@ public class Usuarios {
 	public void setDinero(int dinero) {
 		this.dinero = dinero;
 	}
-	public String getIdTipo() {
-		return idTipo;
-	}
-	public void setIdTipo(String idUsuario) {
-		this.idTipo = idUsuario;
-	}
+	
 	public int getPuntos() {
 		return dinero;
 	}

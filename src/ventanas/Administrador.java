@@ -1,4 +1,4 @@
-package main;
+package ventanas;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -32,11 +32,10 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import main.Administrador;
 import main.BaseDeDatos;
 import main.Jugador;
-import ventanas.RepartoDinero;
-import ventanas.VentanaNuevaNoticia;
+import main.LogController;
+import ventanas.Administrador;
 
 
 public class Administrador extends JFrame implements ActionListener

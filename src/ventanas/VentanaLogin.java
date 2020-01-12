@@ -10,7 +10,6 @@ import main.LogController;
 import main.SqlUsuarios;
 import ventanas.AccesoAdministrador;
 import ventanas.SeleccionIdioma;
-import main.AbrirFicheroTexto;
 import main.Hash;
 import ventanas.VentanaAdministrador;
 import main.variablesGlobales;

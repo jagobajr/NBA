@@ -1,4 +1,4 @@
-package main;
+package ventanas;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -28,12 +28,10 @@ import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import ventanas.VentanaLogin;
-import ventanas.VentanaMenu;
-import ventanas.VentanaMercado;
-
-
+import main.BaseDeDatos;
+import main.LogController;
 import main.Usuarios;
+import main.variablesGlobales;
 
 import java.awt.Color;
 import java.awt.Label;
