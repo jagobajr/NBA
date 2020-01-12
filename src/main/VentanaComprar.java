@@ -28,6 +28,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import ventanas.VentanaLogin;
 import ventanas.VentanaMenu;
 import ventanas.VentanaMercado;
 
@@ -520,16 +521,16 @@ public class VentanaComprar extends JFrame  {
 					sentSQL = "insert into usuJugadores (" + a + "," +txtId_1.getText()+ ")" ;
 					
 					int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
-					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
-					if (val!=1) {  // Se tiene que añadir 1 - error si no
+					log( Level.INFO, "BD aï¿½adida " + val + " fila\t" + sentSQL, null );
+					if (val!=1) {  // Se tiene que aï¿½adir 1 - error si no
 						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
 					}
 					
 					sentSQL = "delete from mercadoFichajes where idJugador = " +txtId_1.getText();
 					
 					int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
-					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
-					if (valDel!=1) {  // Se tiene que añadir 1 - error si no
+					log( Level.INFO, "BD aï¿½adida " + val + " fila\t" + sentSQL, null );
+					if (valDel!=1) {  // Se tiene que aï¿½adir 1 - error si no
 						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
 					}
 					
@@ -570,16 +571,16 @@ int a = VentanaLogin.getUsuarioId();
 					sentSQL = "insert into usuJugadores (" +a + "," +txtId_2.getText()+ ")" ;
 					
 					int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
-					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
-					if (val!=1) {  // Se tiene que añadir 1 - error si no
+					log( Level.INFO, "BD aï¿½adida " + val + " fila\t" + sentSQL, null );
+					if (val!=1) {  // Se tiene que aï¿½adir 1 - error si no
 						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
 					}
 					
 					sentSQL = "delete from mercadoFichajes where idJugador = " +txtId_2.getText();
 					
 					int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
-					log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
-					if (valDel!=1) {  // Se tiene que añadir 1 - error si no
+					log( Level.INFO, "BD aï¿½adida " + val + " fila\t" + sentSQL, null );
+					if (valDel!=1) {  // Se tiene que aï¿½adir 1 - error si no
 						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
 					}
 					
@@ -621,16 +622,16 @@ public void comprarJugadoresBoton3(String idUsuario) {
 				sentSQL = "insert into usuJugadores (" + a + "," +txtId_3.getText()+ ")" ;
 				
 				int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
-				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
-				if (val!=1) {  // Se tiene que añadir 1 - error si no
+				log( Level.INFO, "BD aï¿½adida " + val + " fila\t" + sentSQL, null );
+				if (val!=1) {  // Se tiene que aï¿½adir 1 - error si no
 					log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
 				}
 				
 				sentSQL = "delete from mercadoFichajes where idJugador = " +txtId_3.getText();
 				
 				int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
-				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
-				if (valDel!=1) {  // Se tiene que añadir 1 - error si no
+				log( Level.INFO, "BD aï¿½adida " + val + " fila\t" + sentSQL, null );
+				if (valDel!=1) {  // Se tiene que aï¿½adir 1 - error si no
 					log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
 				}
 				
@@ -672,16 +673,16 @@ public void comprarJugadoresBoton4(String idUsuario) {
 				sentSQL = "insert into usuJugadores (" + a + "," +txtId_4.getText()+ ")" ;
 				
 				int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
-				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
-				if (val!=1) {  // Se tiene que añadir 1 - error si no
+				log( Level.INFO, "BD aï¿½adida " + val + " fila\t" + sentSQL, null );
+				if (val!=1) {  // Se tiene que aï¿½adir 1 - error si no
 					log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
 				}
 				
 				sentSQL = "delete from mercadoFichajes where idJugador = " +txtId_4.getText();
 				
 				int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
-				log( Level.INFO, "BD añadida " + val + " fila\t" + sentSQL, null );
-				if (valDel!=1) {  // Se tiene que añadir 1 - error si no
+				log( Level.INFO, "BD aï¿½adida " + val + " fila\t" + sentSQL, null );
+				if (valDel!=1) {  // Se tiene que aï¿½adir 1 - error si no
 					log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
 				}
 				

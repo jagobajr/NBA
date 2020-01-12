@@ -1,4 +1,4 @@
-package main;
+package ventanas;
 
 import javax.swing.JFrame;
 
@@ -6,14 +6,13 @@ import java.awt.Toolkit;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
-
-import ventanas.VentanaMercado;
-
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 
-
+import main.AppendableOutputStream;
+import main.LogController;
+import main.Noticia;
 
 import java.awt.Color;
 import java.awt.EventQueue;

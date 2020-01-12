@@ -1,7 +1,14 @@
-package main;
+package ventanas;
 
-import ventanas.VentanaMenu;
 import java.awt.EventQueue;
+import main.Usuarios;
+import main.Jugador;
+import main.UsuarioJugadores;
+import main.BaseDeDatos;
+import main.LogController;
+import ventanas.VentanaAdministrador;
+import main.variablesGlobales;
+import ventanas.VentanaLogin;
 import main.azar;
 
 import javax.swing.JFrame;

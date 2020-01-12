@@ -35,7 +35,8 @@ import javax.swing.event.ListSelectionListener;
 import main.Administrador;
 import main.BaseDeDatos;
 import main.Jugador;
-import main.VentanaNuevaNoticia;
+import ventanas.RepartoDinero;
+import ventanas.VentanaNuevaNoticia;
 
 
 public class Administrador extends JFrame implements ActionListener
@@ -105,7 +106,7 @@ public class Administrador extends JFrame implements ActionListener
 		
 		setBounds(new Rectangle(0, 0, 2147483647, 2147483647));
 		setTitle("ADMINISTRADOR DE LA COMUNIDAD ");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Administrador.class.getResource(""))); //añadir foto
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Administrador.class.getResource(""))); //aï¿½adir foto
 		setBackground(new Color(0,128,0));
 		getContentPane().setLayout(null);
 		
@@ -342,14 +343,14 @@ public class Administrador extends JFrame implements ActionListener
 				spinner.setVisible(true);
 				btnAadir.setVisible(true);
 				
-				lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("")));//añadir una foto
+				lblAdd.setIcon(new ImageIcon(Administrador.class.getResource("")));//aï¿½adir una foto
 				
 				repaint();
 				
 			}
 			
 		});
-		lblAdd.setIcon(new ImageIcon(Administrador.class.getResource(""))); //añadir una foto
+		lblAdd.setIcon(new ImageIcon(Administrador.class.getResource(""))); //aï¿½adir una foto
 		lblAdd.setBounds(378, 253, 39, 30);
 		getContentPane().add(lblAdd);
 		
@@ -456,7 +457,7 @@ public class Administrador extends JFrame implements ActionListener
 							
 							
 						} catch (SQLException e1) {
-							LogController.log ( Level.WARNING, "Error al añadir el jugador al mercado de fichajes " + (new Date()),e1);
+							LogController.log ( Level.WARNING, "Error al aï¿½adir el jugador al mercado de fichajes " + (new Date()),e1);
 							e1.printStackTrace();
 						}
 				}
@@ -929,7 +930,7 @@ public class Administrador extends JFrame implements ActionListener
 				
 			}
 		} catch (SQLException e) {
-			LogController.log ( Level.WARNING, "Error al añadir  jugadores a la lista " + (new Date()),e);
+			LogController.log ( Level.WARNING, "Error al aï¿½adir  jugadores a la lista " + (new Date()),e);
 			e.printStackTrace();
 		}
 		

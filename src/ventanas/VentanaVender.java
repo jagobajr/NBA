@@ -1,4 +1,4 @@
-package main;
+package ventanas;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -19,10 +19,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
-
-import ventanas.VentanaMenu;
-import ventanas.VentanaMercado;
-
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -34,6 +30,12 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
+import main.Usuarios;
+import main.Jugador;
+import main.UsuarioJugadores;
+import main.BaseDeDatos;
+import main.LogController;
+import main.variablesGlobales;
 
 public class VentanaVender extends JFrame {
 

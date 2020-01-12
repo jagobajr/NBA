@@ -1,4 +1,4 @@
-package main;
+package ventanas;
 
 import javax.swing.JFrame;
 
@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 import javax.swing.JButton;
 
+import ventanas.VentanaAdministrador;
+import main.LogController;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

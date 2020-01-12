@@ -1,4 +1,4 @@
-package main;
+package ventanas;
 
 import javax.swing.JFrame;
 
@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.logging.Level;
 
 import main.BaseDeDatos;
-import main.VentanaAdministrador;
+import main.LogController;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JList;

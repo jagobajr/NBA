@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
+import ventanas.VentanaLogin;
+
 public class frmPrincipal extends javax.swing.JFrame {
 	
 	
@@ -59,7 +61,7 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         lblHola.setText("jLabel1");
 
-        cmbIdiomas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Español", "Ingles", "Frances" }));
+        cmbIdiomas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Espaï¿½ol", "Ingles", "Frances" }));
         
         JButton btnVolver = new JButton("Volver");
         btnVolver.addActionListener(new ActionListener() {
@@ -110,7 +112,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         switch(cmbIdiomas.getSelectedIndex()){
 
             case 0:
-                cambiarIdioma("Español");
+                cambiarIdioma("Espaï¿½ol");
                 break;
             case 1:
                 cambiarIdioma("Ingles");

@@ -1,14 +1,23 @@
-package main;
+package ventanas;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import main.Usuarios;
+import main.Jugador;
+import main.UsuarioJugadores;
+import main.BaseDeDatos;
+import main.LogController;
+import main.SqlUsuarios;
+import main.Hash;
+import main.variablesGlobales;
+import ventanas.VentanaLogin;
+import main.azar;
+import ventanas.VentanaMenu;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import ventanas.VentanaMenu;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;

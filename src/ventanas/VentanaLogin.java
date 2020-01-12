@@ -1,14 +1,24 @@
-package main;
+package ventanas;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import main.Usuarios;
+import main.Jugador;
+import main.UsuarioJugadores;
+import main.BaseDeDatos;
+import main.LogController;
+import ventanas.AccesoAdministrador;
+import ventanas.SeleccionIdioma;
+import main.AbrirFicheroTexto;
+import main.Hash;
+import main.SqlUsuarios;
+import ventanas.VentanaAdministrador;
+import main.variablesGlobales;
 
+import main.azar;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import ventanas.VentanaMenu;
-
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;

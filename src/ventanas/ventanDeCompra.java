@@ -1,4 +1,4 @@
-package main;
+package ventanas;
 
 import java.awt.Color;
 
@@ -35,7 +35,12 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import main.Usuarios;
-import ventanas.VentanaMercado;
+import main.Jugador;
+import main.UsuarioJugadores;
+import main.BaseDeDatos;
+import main.LogController;
+import main.variablesGlobales;
+
 
 public class ventanDeCompra extends JFrame implements ActionListener {
 	

@@ -1,7 +1,15 @@
-package main;
+package ventanas;
 
 import javax.swing.JFrame;
-
+import main.Usuarios;
+import main.Jugador;
+import main.UsuarioJugadores;
+import main.BaseDeDatos;
+import main.LogController;
+import ventanas.VentanaAdministrador;
+import main.variablesGlobales;
+import ventanas.VentanaLogin;
+import main.azar;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Toolkit;
@@ -38,9 +46,6 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
-import ventanas.VentanaMercado;
-
 import javax.swing.JSpinner;
 
 import javax.swing.border.EmptyBorder;
@@ -67,7 +72,6 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
     private JLabel lblNombre_1;
     private JLabel lblEquipo_1;
     private JLabel lblPosicion_1;
-    private JLabel lblAdd ;
     private JLabel labelAnyadir;
     private Statement st=null;
     private JSpinner spinner;
@@ -344,31 +348,6 @@ public class VentanaAdministrador extends JFrame implements ActionListener{
 		lblquieresAadirUn.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		lblquieresAadirUn.setBounds(378, 212, 239, 14);
 		contentPane.add(lblquieresAadirUn);
-		
-		lblAdd = new JLabel("sapoooo");
-		lblAdd.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0)
-			{
-				lblNombre_1.setVisible(true);
-				lblEquipo_1.setVisible(true);
-				lblPosicion_1.setVisible(true);
-				textFieldNNombre.setVisible(true);
-				TextFieldNEquipo.setVisible(true);
-				textFieldNPosicion.setVisible(true);
-				spinner.setVisible(true);
-				btnAadir.setVisible(true);
-				
-				lblAdd.setVisible(true);
-				
-				repaint();
-				
-			}
-			
-		});
-		lblAdd.setIcon(new ImageIcon(VentanaAdministrador.class.getResource("")));
-		lblAdd.setBounds(378, 253, 39, 30);
-		contentPane.add(lblAdd);
 		
 		lblNombre_1 = new JLabel("Nombre ");
 		lblNombre_1.setBounds(495, 247, 61, 14);
