@@ -7,4 +7,6 @@ la ventana de equipo. Esos jugadores cada jornada(fin de semana normalmente) pun
 se le iran sumando al jugador donde los podra ver en la ventana clasificacion y tambien podra ver la clasificacion global de todos
 los usuarios registrados.
 
-pd: el boton comprar esta totalmente programado pero a la hora de ejecutar el programa no sabemos porque no funciona y no encoontrasmo como solucionarlo.
+pd: el boton comprar esta totalmente programado pero a la hora de ejecutar el programa no sabemos porque no funciona y no encoontrasmo como solucionarlo. 
+    Tambien a la hora de asignar los jugadores nos han surgido multiples problemas, lo hemos intentando de dos maneras. Una con el codigo que se encuntra en
+    la clase jugadoresAzar y otra que se encuntra en la VentanaRegistro ambas han dado multiples problemas.
