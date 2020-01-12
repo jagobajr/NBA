@@ -2,13 +2,13 @@ package main;
 
 public class variablesGlobales {
 	
-	static int idUsu;
+	static String idUsu;
 
-	public static int getIdUsu() {
+	public static String getIdUsu() {
 		return idUsu;
 	}
 
-	public static void setIdUsu(int idUsu) {
+	public static void setIdUsu(String idUsu) {
 		variablesGlobales.idUsu = idUsu;
 	}
 	

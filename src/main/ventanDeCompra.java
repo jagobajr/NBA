@@ -67,6 +67,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
     private JTextField textField;
     private ArrayList mercadoId;
     private JLabel lblNewLabel;
+    private JTextField ids;
     
    
     public static void main(String[] args) {
@@ -149,7 +150,8 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 					anyadirJugadoresALista();
 					//cargarJugadoresEnLista();
 					pos=lista.getSelectedIndex();
-
+					
+					ids.setText(""+listaJ.get(pos).getId());
 					textFieldNombre.setText(""+listaJ.get(pos).getNombre());
 					textFieldEquipo.setText(""+listaJ.get(pos).getEquipo());
 					textFieldPosicion.setText(""+listaJ.get(pos).getPosicion());
@@ -261,7 +263,14 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		
 		
 		cargarJugadoresEnLista();
-		btnComprar.setActionCommand("comprar");
+		comprar(variablesGlobales.getIdUsu());
+		btnComprar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+					comprar(variablesGlobales.getIdUsu());
+			}
+				
+		});
+		//btnComprar.setActionCommand("comprar");
 		
 		lblNewLabel = new JLabel("Tu dinero:");
 		lblNewLabel.setBounds(701, 642, 80, 16);
@@ -278,6 +287,11 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		});
 		btnAtras.setBounds(49, 676, 117, 29);
 		contentPane.add(btnAtras);
+		
+		ids = new JTextField();
+		ids.setBounds(378, 564, 130, 26);
+		contentPane.add(ids);
+		ids.setColumns(10);
 		
 		
 		
@@ -479,7 +493,74 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		
 	}
 	
+public void comprar(String idUsuario) {
+		
+		BaseDeDatos.initBD();
+		
+		String sentSQL = "";
 	
+		
+	 variablesGlobales idVg;
+		
+	 int a = VentanaLogin.getUsuarioId();
+		
+				
+		if(esNumerico(textFieldPrecio.toString())) {
+			int valorCompra= Integer.valueOf(textFieldPrecio.toString());
+			
+			if(valorCompra > Integer.parseInt(textFieldEdad.getText())){
+				//String sentencia="select * from mercadoDeFichajes";
+				try {
+					sentSQL = "insert into usuJugadores (" + a + "," +ids.getText()+ ","+textFieldNombre.getText()+","+textFieldPuntosTotales.getText()+")" ;
+					
+					int val = ((java.sql.Statement) st).executeUpdate( sentSQL );
+					log( Level.INFO, "BD a�adida " + val + " fila\t" + sentSQL, null );
+					if (val!=1) {  // Se tiene que a�adir 1 - error si no
+						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+					}
+					
+					sentSQL = "delete from mercadoFichajes where nombre = " +textFieldNombre.getText();
+					
+					int valDel = ((java.sql.Statement) st).executeUpdate( sentSQL );
+					log( Level.INFO, "BD a�adida " + val + " fila\t" + sentSQL, null );
+					if (valDel!=1) {  // Se tiene que a�adir 1 - error si no
+						log( Level.SEVERE, "Error en insert de BD\t" + sentSQL, null );
+					}
+					
+					}catch (SQLException e) {
+						log( Level.SEVERE, "Error en BD\t" + sentSQL, e );
+						e.printStackTrace();
+					}
+				
+				
+				
+				
+			}else {
+				JOptionPane.showMessageDialog(null, "Cantidad incorrecta");
+			}
+		}else {
+			JOptionPane.showMessageDialog(null, "El valor debe ser un numero");
+		}
+
+		
+			}
+
+private void log(Level info, String string, Object object) {
+	// TODO Auto-generated method stub
+	
+}
+
+public static boolean esNumerico(String valor){     
+    try{
+        if(valor!= null){
+            Integer.parseInt(valor);
+        }
+    }catch(NumberFormatException nfe){
+		LogController.log ( Level.WARNING, "El valor introducido no es un numero" + (new Date()),nfe);
+         return false; 
+    }
+    return false;
+}
 
 
 	private void anyadirJugadoresALista() {
@@ -581,6 +662,8 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 			
 			}
 			
+		
+		
 			
 		
 		}
