@@ -1,11 +1,9 @@
 package ventanas;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import main.Usuarios;
 import main.Jugador;
-import main.UsuarioJugadores;
 import main.BaseDeDatos;
 import main.LogController;
 import main.SqlUsuarios;

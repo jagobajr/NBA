@@ -109,7 +109,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		BaseDeDatos.crearTablaMercadoDeFichajes();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1392, 828);
+		setBounds(100, 100, 1731, 1106);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(128, 128, 128));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -117,8 +117,8 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 		
 		
-		setBounds(new Rectangle(0, 0, 2147483647, 2147483647));
-		setTitle("ADMINISTRADOR DE LA COMUNIDAD ");
+		setBounds(new Rectangle(0, 0, 2147483601, 2147483647));
+		setTitle("COMPRA DE JUGADORES");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAdministrador.class.getResource("")));
 		setBackground(new Color(0,128,0));
 		contentPane.setLayout(null);
@@ -309,7 +309,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		
 		label = new JLabel("");
 		label.setIcon(new ImageIcon("Imagenes/screen-10.jpg"));
-		label.setBounds(6, -54, 1633, 1272);
+		label.setBounds(0, -101, 1924, 1272);
 		contentPane.add(label);
 		
 		

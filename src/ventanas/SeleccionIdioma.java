@@ -49,22 +49,7 @@ import java.awt.Rectangle;
 
 public class SeleccionIdioma extends JFrame  {
 	
-	public static void main(String[] args) {
-		
-		LogController.log ( Level.INFO, "Seleccion de idioma " + (new Date()),null);
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					SeleccionIdioma frame = new SeleccionIdioma();
-					frame.setVisible(true);
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		
-	}
+	
 	
 	private  void ConfigureCloseWindow(){
 	    this.addWindowListener( new WindowAdapter() {

@@ -23,7 +23,6 @@ import java.util.logging.Level;
 
 
 
-
 public class AccesoAdministrador extends JFrame implements ActionListener{
 	
 	private JTextField textFieldId;
@@ -38,22 +37,7 @@ public class AccesoAdministrador extends JFrame implements ActionListener{
 	int contador=0;
 	boolean hilo=true;
 	
-	
-    public static void main(String[] args) {
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					AccesoAdministrador frame = new AccesoAdministrador();
-					frame.setVisible(true);
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		
-	}
+
     
     private  void ConfigureCloseWindow(){
 	    this.addWindowListener( new WindowAdapter() {

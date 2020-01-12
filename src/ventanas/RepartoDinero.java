@@ -35,18 +35,6 @@ import javax.swing.event.ListSelectionListener;
 
 public class RepartoDinero extends JFrame implements ActionListener, ListSelectionListener{
 	
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					 RepartoDinero frame = new RepartoDinero();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	
 	private  void ConfigureCloseWindow(){
 	    this.addWindowListener( new WindowAdapter() {

@@ -29,18 +29,6 @@ public class VentanaMercado extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaMercado frame = new VentanaMercado();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	
 	private  void ConfigureCloseWindow(){
 	    this.addWindowListener( new WindowAdapter() {
@@ -60,7 +48,7 @@ public class VentanaMercado extends JFrame {
 		
 		ConfigureCloseWindow();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 431, 471);
+		setBounds(100, 100, 463, 638);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(102, 205, 170));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -88,7 +76,7 @@ public class VentanaMercado extends JFrame {
 			}
 			
 		});
-		btnComprar.setBounds(53, 98, 316, 81);
+		btnComprar.setBounds(53, 130, 316, 81);
 		contentPane.add(btnComprar);
 		
 		JButton btnActividad = new JButton("NOTICIAS");
@@ -100,17 +88,17 @@ public class VentanaMercado extends JFrame {
 			}
 			
 		});
-		btnActividad.setBounds(53, 257, 316, 89);
+		btnActividad.setBounds(53, 304, 316, 89);
 		contentPane.add(btnActividad);
 		
 		JLabel lblMercado = new JLabel("MERCADO");
 		lblMercado.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblMercado.setBounds(150, 29, 134, 37);
+		lblMercado.setBounds(168, 29, 134, 37);
 		contentPane.add(lblMercado);
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("Imagenes/screen-4.jpg"));
-		label.setBounds(0, 0, 446, 523);
+		label.setBounds(0, 0, 461, 582);
 		contentPane.add(label);
 	}
 }

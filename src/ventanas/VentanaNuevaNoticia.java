@@ -2,7 +2,6 @@ package ventanas;
 
 import javax.swing.JFrame;
 
-import java.awt.Toolkit;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
