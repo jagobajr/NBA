@@ -199,16 +199,16 @@ public static int idUsuario;
 		btnConsulta.setBounds(6, 244, 271, 29);
 		contentPane.add(btnConsulta);
 		
+		
+		JButton btnCambio_1 = new JButton("Cambio de Idioma");
+		btnCambio_1.setBounds(165, 331, 141, 29);
+		contentPane.add(btnCambio_1);
+		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("Imagenes/thumb-1920-467394.jpg"));
 		label.setBounds(0, 0, 380, 406);
 		contentPane.add(label);
-		
-		
-		JButton btnCambio = new JButton("Cambio de Idioma");
-		btnCambio.setBounds(202, 16, 141, 29);
-		contentPane.add(btnCambio);
-		btnAdmin.addActionListener(new ActionListener() { 
+		btnCambio_1.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent arg0) {
 				frmPrincipal nuevaVentana = new frmPrincipal ();
 				nuevaVentana.setVisible(true);
