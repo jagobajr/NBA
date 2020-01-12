@@ -7,11 +7,11 @@ import main.Jugador;
 import main.UsuarioJugadores;
 import main.BaseDeDatos;
 import main.LogController;
+import main.SqlUsuarios;
 import ventanas.AccesoAdministrador;
 import ventanas.SeleccionIdioma;
 import main.AbrirFicheroTexto;
 import main.Hash;
-import main.SqlUsuarios;
 import ventanas.VentanaAdministrador;
 import main.variablesGlobales;
 
@@ -118,7 +118,7 @@ public static int idUsuario;
 			       // mod.setIdUsuario(txtusuario.getText());
 			       // vg.setIdUsu(Integer.parseInt(txtusuario.getText()));
 			       //falta guardar la id del usuario que va aqui aqui
-			        mod.setIdUsuario(txtusuario.getText());
+			        mod.setUsuario(txtusuario.getText());
 			        mod.setContra(nuevoPass);
 			            
 			        if (modSql.login(mod)) {

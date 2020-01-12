@@ -190,6 +190,7 @@ public class VentanaRegistro extends JFrame {
 
 			                        String nuevoPass = Hash.sha1(pass);
 
+
 			                        mod.setUsuario(datos_usuario.getText());
 			                        mod.setContra(nuevoPass);
 			                        mod.setCorreo(correo.getText());
@@ -212,7 +213,7 @@ public class VentanaRegistro extends JFrame {
 			                    }
 			                } else {
 			                   JOptionPane.showMessageDialog(null, "El usuario ya existe");
-			                   LogController.log ( Level.WARNING, "El usuario ya existe" + (new Date()),null);
+			                   LogController.log ( Level.WARNING, "El usuario ya existe " + (new Date()),null);
 
 			                }
 

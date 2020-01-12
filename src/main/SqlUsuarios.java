@@ -14,7 +14,6 @@ import javax.swing.JOptionPane;
 
 
 
-
 public class SqlUsuarios extends BaseDeDatos{
 	
 	public boolean registrar (Usuarios usr) {
