@@ -134,6 +134,11 @@ public class VentanaEquipo extends JFrame implements ActionListener {
 		JList list_1 = new JList();
 		scrollPane_1.setViewportView(list_1);
 		
+		JLabel label = new JLabel("");
+		label.setBounds(-28, -36, 380, 691);
+		contentPane.add(label);
+		label.setIcon(new ImageIcon("Imagenes/file-JOpim3qYcQ.png"));
+		
 		
 		
 		listaJ=new ArrayList<UsuarioJugadores>();

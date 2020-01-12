@@ -148,6 +148,11 @@ public class SeleccionIdioma extends JFrame  {
 		JLabel lblSeleccioneUnIdoma = new JLabel("Seleccione un idoma");
 		lblSeleccioneUnIdoma.setBounds(152, 11, 151, 23);
 		getContentPane().add(lblSeleccioneUnIdoma);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("Imagenes/logotipos-de-los-equipos-de-nba-78105095.jpg"));
+		label.setBounds(-54, -142, 609, 527);
+		getContentPane().add(label);
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaLogin nuevaVentana = new VentanaLogin();

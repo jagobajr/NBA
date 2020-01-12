@@ -20,5 +20,20 @@
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/Downloads/cancha.jpg</locationURI>
 		</link>
+		<link>
+			<name>Imagenes/morant.png</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Downloads/morant.png</locationURI>
+		</link>
+		<link>
+			<name>Imagenes/morantdunk.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Downloads/morantdunk.jpg</locationURI>
+		</link>
+		<link>
+			<name>Imagenes/morantssuns.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Downloads/morantssuns.jpg</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>

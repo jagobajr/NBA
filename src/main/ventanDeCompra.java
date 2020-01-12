@@ -68,6 +68,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
     private ArrayList mercadoId;
     private JLabel lblNewLabel;
     private JTextField ids;
+    private JLabel label;
     
    
     public static void main(String[] args) {
@@ -103,7 +104,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		BaseDeDatos.crearTablaMercadoDeFichajes();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 324, 500);
+		setBounds(100, 100, 1392, 828);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(128, 128, 128));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -168,27 +169,33 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		});
 		
 		JLabel lblEstosSonLos_1 = new JLabel("Estos son los datos del jugador que has seleccionado");
+		lblEstosSonLos_1.setForeground(Color.WHITE);
 		lblEstosSonLos_1.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		lblEstosSonLos_1.setBounds(394, 424, 406, 14);
 		contentPane.add(lblEstosSonLos_1);
 		
 		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setForeground(Color.WHITE);
 		lblNombre.setBounds(394, 472, 60, 14);
 		contentPane.add(lblNombre);
 		
 		JLabel lblEquipo = new JLabel("Equipo");
+		lblEquipo.setForeground(Color.WHITE);
 		lblEquipo.setBounds(614, 472, 46, 14);
 		contentPane.add(lblEquipo);
 		
 		JLabel lblPosicion = new JLabel("Posicion");
+		lblPosicion.setForeground(Color.WHITE);
 		lblPosicion.setBounds(800, 472, 60, 14);
 		contentPane.add(lblPosicion);
 		
 		JLabel lblPuntosDeEsta = new JLabel("Precio");
+		lblPuntosDeEsta.setForeground(Color.WHITE);
 		lblPuntosDeEsta.setBounds(909, 472, 103, 14);
 		contentPane.add(lblPuntosDeEsta);
 		
 		JLabel lblPuntosTotales = new JLabel("Puntos Totales");
+		lblPuntosTotales.setForeground(Color.WHITE);
 		lblPuntosTotales.setBounds(1083, 472, 95, 14);
 		contentPane.add(lblPuntosTotales);
 		
@@ -240,6 +247,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		textFieldPrecio.setColumns(10);
 		
 		lblPrecio = new JLabel("INTRODUCE CANTIDAD ");
+		lblPrecio.setForeground(Color.WHITE);
 		lblPrecio.setBounds(617, 565, 164, 23);
 		contentPane.add(lblPrecio);
 		lblPrecio.setVisible(true);
@@ -263,7 +271,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		
 		
 		cargarJugadoresEnLista();
-		comprar(variablesGlobales.getIdUsu());
+		//comprar(variablesGlobales.getIdUsu());
 		btnComprar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 					comprar(variablesGlobales.getIdUsu());
@@ -273,6 +281,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		//btnComprar.setActionCommand("comprar");
 		
 		lblNewLabel = new JLabel("Tu dinero:");
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(701, 642, 80, 16);
 		contentPane.add(lblNewLabel);
 		
@@ -292,6 +301,11 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 		ids.setBounds(378, 564, 130, 26);
 		contentPane.add(ids);
 		ids.setColumns(10);
+		
+		label = new JLabel("");
+		label.setIcon(new ImageIcon("Imagenes/screen-10.jpg"));
+		label.setBounds(6, -54, 1633, 1272);
+		contentPane.add(label);
 		
 		
 		
@@ -426,30 +440,7 @@ public class ventanDeCompra extends JFrame implements ActionListener {
 
 	
 
-	private int checkearId()
-	{
-		anyadirJugadoresALista();
-		return listaJ.size();
-	}
 	
-	private String checkearIdMercado(String nombre)
-	{
-		String id="";
-		anyadirJugadoresALista();
-		
-		for(int i=0;i<listaJ.size();i++)
-		{
-			if(nombre.equals(listaJ.get(i).getNombre()))
-			{
-				id=listaJ.get(i).getId();
-				break;
-				
-			}
-		}
-		
-		return id;
-		
-	}
 	private int cargarDineroUsuario(String idUsuario)
 	{
 		
@@ -505,7 +496,7 @@ public void comprar(String idUsuario) {
 	 int a = VentanaLogin.getUsuarioId();
 		
 				
-		if(esNumerico(textFieldPrecio.toString())) {
+		//if(esNumerico(textFieldPrecio.toString())) {
 			int valorCompra= Integer.valueOf(textFieldPrecio.toString());
 			
 			if(valorCompra > Integer.parseInt(textFieldEdad.getText())){
@@ -538,9 +529,9 @@ public void comprar(String idUsuario) {
 			}else {
 				JOptionPane.showMessageDialog(null, "Cantidad incorrecta");
 			}
-		}else {
-			JOptionPane.showMessageDialog(null, "El valor debe ser un numero");
-		}
+		//}else {
+		//	JOptionPane.showMessageDialog(null, "El valor debe ser un numero");
+		//}
 
 		
 			}
@@ -550,6 +541,8 @@ private void log(Level info, String string, Object object) {
 	
 }
 
+
+/*
 public static boolean esNumerico(String valor){     
     try{
         if(valor!= null){
@@ -562,6 +555,7 @@ public static boolean esNumerico(String valor){
     return false;
 }
 
+*/
 
 	private void anyadirJugadoresALista() {
 		
